@@ -1,0 +1,1559 @@
+Imports Microsoft.VisualBasic
+Imports System.IO
+Imports VLEE_LaunchApp32
+
+
+Public Class Pushover
+    Private Shared obj_AppLaunch As New VLEE_LaunchApp32.VLEE_LaunchApp32_Modul
+
+    Private Declare Function OpenProcess Lib "kernel32.dll" (ByVal _
+     dwAccess As Long, ByVal fInherit As Integer, ByVal hObject _
+     As Long) As Long
+    Private Declare Function WaitForSingleObject Lib "kernel32" (ByVal _
+          hHandle As Long, ByVal dwMilliseconds As Long) As Long
+    Private Declare Function CloseHandle Lib "kernel32" (ByVal _
+          hObject As Long) As Long
+    Dim vectorx(10), vectory(10), colmatrix(20, 4), beamatrix(20, 8) As Object
+    Dim nzlevels, ncols, nvigas, lateralpattern, targetdisp, shr, rebar, nbl, dia, diah, s, tcl_path
+    Dim fpc, fy As Single
+    Dim nxaxes As Integer
+    Dim nnodes, nmat, nsections, nelements, recnodes, xx
+    Dim nodes(100, 6) As Object
+    Dim materials(100) As Object
+    Dim sections(1000) As Object
+    Dim elements(100) As Object
+    Dim eleloads(100) As Object
+    Dim ploads(100) As Object
+    Dim ploadsneg(100) As Object
+    Dim recorders(100) As Object
+    Dim coloutfiles(30, 9) As Object
+    Dim beamoutfiles(30, 9) As Object
+    Dim forcedisp(1000, 1) As Object
+    Dim colresponse(31, 101, 17) As Object 'for each element force, moment, curvature,skleru, strain , m, c, s
+    Dim beamresponse(31, 101, 17) As Object ', moment,704 ,curvature, 3956, curvature, strain , m,08 c,s
+    Const pi = 3.1415927
+
+
+    'VARIABLES DECLARADAS EN LA MIGRACION DESDE VISUAL BASIC 6.0
+    Dim RutaArchivosPushover As String = "C:\Inetpub\wwwroot\VLEE\Temp\Exp\Pushover\"
+    Dim n As Integer
+    Dim y As Single
+    Dim fif, fid, fjf, fjd, fist, fjst, fisb, fjsb As String
+    Dim dcrti As Single
+    Dim dcrtj As Single
+    Dim dcrbi As Single
+    Dim dcrbj As Single
+
+
+
+
+    Sub read_pushover(ByRef push)
+        tcl_path = push(0)
+        nxaxes = push(1)
+        nzlevels = push(2)
+        ncols = push(3)
+        nvigas = push(4)
+        lateralpattern = push(5)
+        targetdisp = push(6)
+    End Sub
+    Sub read_materials(ByRef vector)
+        fpc = vector(1)
+        fy = vector(2)
+        shr = vector(3)
+    End Sub
+    Sub read_vectorx(ByRef vector)
+        For n As Integer = 1 To nxaxes
+            vectorx(n) = vector(n)
+        Next
+    End Sub
+    Sub read_vectory(ByRef vector)
+        For n As Integer = 1 To nzlevels
+            vectory(n) = vector(n)
+        Next
+    End Sub
+    Sub read_colmatrix(ByRef vector)
+        For n As Integer = 1 To ncols
+            For i As Integer = 1 To 4
+                colmatrix(n, i) = vector(n, i)
+            Next
+        Next
+    End Sub
+    Sub read_beamatrix(ByRef vector)
+        For n As Integer = 1 To nvigas
+            For i As Integer = 1 To 8
+                beamatrix(n, i) = vector(n, i)
+            Next
+        Next
+    End Sub
+
+    Sub nanddiameter1()
+        Dim lstring As Object
+        Dim car As Object
+        lstring = Len(rebar)
+        For I As Object = 1 To lstring
+            car = Mid(rebar, I, 1)
+            If car = "D" Then
+                nbl = Val(Left(rebar, I - 1))
+                dia = Val(Right(rebar, I))
+            End If
+        Next
+    End Sub
+    Sub nanddiameter2()
+        Dim lstring As Object
+        Dim car As Object
+        lstring = Len(rebar)
+        For i As Object = 1 To lstring
+            car = Mid(rebar, i, 1)
+            If car = "@" Then
+                diah = Val(Left(rebar, i - 1))
+                s = Val(Right(rebar, i))
+            End If
+        Next
+    End Sub
+
+    Dim level As Integer
+    Sub pushover()
+        Dim nrecorders As Integer
+        Dim nsec As Integer
+        Dim linessec As Integer
+        Dim neleloads As Integer
+        Dim nploads As Integer
+        Dim ncofiles As Integer
+        Dim nbofiles As Integer
+        Dim fpce As Integer
+        Dim fye As Integer
+
+        'variables de lectura de resultados de vigas y columnas
+        Dim Vs As Object
+        Dim Pini As Object
+        Dim Mini As Object
+        Dim Vini As Object
+        Dim cini As Object
+        Dim Pfin As Object
+        Dim Mfin As Object
+        Dim Vfin As Object
+        Dim cfin As Object
+        Dim sti As Double
+        Dim sbi As Double
+        Dim stj As Double
+        Dim sbj As Double
+
+        recnodes = ""
+        nrecorders = 0
+        nnodes = 0
+        nmat = 0
+        nsec = 0
+        linessec = 0
+        nelements = 0
+        neleloads = 0
+        nploads = 0
+        ncofiles = 0
+        nbofiles = 0
+        'common materials
+        fpce = 1.3 * fpc * 1000 'kPa
+        fye = fy * 1.1 * 1000 'kPa
+        'unconfined concrete is 1
+        nmat = nmat + 1
+        materials(nmat) = "uniaxialMaterial  Concrete01 1 -" & fpce & " -0.002  0 -0.04"
+
+        'rebar is 2
+        nmat = nmat + 1
+        materials(nmat) = "uniaxialMaterial  Steel01 2 " & fye & " 200000000 " & shr
+
+        'Columns
+        Dim sb As Single
+        Dim sh As Single
+        Dim wi As Single
+        Dim conEc As Single
+        Dim clb As Single
+        Dim eco As Single
+        Dim esm As Single
+        Dim asbl As Single
+        Dim Avsx As Single
+        Dim Avsy As Single
+        Dim areacon As Single
+        Dim areast As Single
+        Dim rocc As Single
+        Dim rox As Single
+        Dim roy As Single
+        Dim ros As Single
+        Dim ke As Single
+        Dim ro As Single
+        Dim fpl As Single
+        Dim fsr As Single
+        Dim fpcc As Single
+        Dim ecc As Single
+        Dim Esec As Single
+        Dim r As Single
+        Dim ecu As Single
+        Dim x As Single
+        Dim fcu As Single
+        Dim yi As Single
+        Dim zi As Single
+        Dim yj As Single
+        Dim zj As Single
+        Dim yk As Single
+        Dim zk As Single
+        Dim yl As Single
+        Dim zl As Single
+        Dim stepp As Single
+        Dim aa As Integer
+        Dim y1 As Single
+        Dim y2 As Single
+        Dim xabsc As Integer
+        Dim y3 As Single
+        Dim y4 As Single
+        Dim varight As Single
+        Dim valeft As Single
+        Dim vtright As Single
+        Dim vtleft As Single
+        Dim yvaleft As Single
+        Dim yvaright As Single
+        Dim yvtleft As Single
+        Dim yvtright As Single
+        Dim i As Single
+        Dim a As Single
+        Dim nelement As Single
+
+
+        For n As Integer = 1 To ncols
+            sb = CDbl(colmatrix(n, 1)) 'base
+            sh = CDbl(colmatrix(n, 2)) 'height is what you see on elevation view
+            rebar = colmatrix(n, 3)
+            nanddiameter1() ' to get nbl and dia
+            rebar = colmatrix(n, 4)
+            nanddiameter2() ' to get diah and s
+            'confined concrete:
+            wi = 200 'mm
+            conEc = 4700000 * (fpce / 1000) ^ 0.5
+            clb = 40 'mm
+            eco = 0.002
+            esm = 0.1
+            asbl = dia ^ 2 * pi / 4
+            Avsx = diah ^ 2 * pi / 4 * 2
+            Avsy = Avsx
+            areacon = (sh * 1000 - 2 * clb) * (sb * 1000 - 2 * clb)
+            areast = asbl * nbl
+            rocc = areast / areacon
+            rox = Avsx / (s * sh * 1000)
+            roy = Avsy / (s * sb * 1000)
+            ros = rox + roy
+            ke = ((1 - wi ^ 2 / (6 * areacon)) * (1 - s / (2 * sb * 1000)) * (1 - s / (2 * sh * 1000))) / (1 - rocc)
+            ro = 0.5 * ros
+            fpl = ke * ro * fye
+            fsr = areast / (sb * sh * 1000000)
+            fpcc = (-1.254 + 2.254 * (1 + 7.94 * fpl / fpce) ^ 0.5 - 2 * fpl / fpce) * fpce
+            ecc = eco * (1 + 5 * (fpcc / fpce - 1))
+            Esec = fpcc / ecc
+            r = conEc / (conEc - Esec)
+            ecu = 1.5 * (0.004 + 1.4 * ros * fye * esm / fpcc)
+            x = (1 / ecc) * ecu
+            fcu = fpcc * x * r / (r - 1 + x ^ r)
+
+            nmat = nmat + 1
+            materials(nmat) = "uniaxialMaterial  Concrete01 " & nmat & " " & -fpcc & " " & -ecc & " " & -fcu & " " & -ecu
+            'fibersection
+            nsec = nsec + 1
+            linessec = linessec + 1
+            sections(linessec) = "section Fiber " & nsec & " {"
+            'confined core x
+            yi = -sh / 2 + clb / 1000
+            zi = -sb / 2 + clb / 1000
+            yj = sh / 2 - clb / 1000
+            zj = -sb / 2 + clb / 1000
+            yk = yj
+            zk = -zj
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad " & nmat & " 16 16 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'bottom cover
+            yi = -sh / 2
+            zi = -sb / 2
+            yj = yi + clb / 1000
+            zj = zi
+            yk = yj
+            zk = -zi
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 2 16 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'top cover
+            yi = sh / 2 - clb / 1000
+            zi = -sb / 2
+            yj = sh / 2
+            zj = zi
+            yk = yj
+            zk = -zi
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 2 16 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'left cover
+            yi = -sh / 2 + clb / 1000
+            zi = sb / 2 - clb / 1000
+            yj = -yi
+            zj = zi
+            yk = yj
+            zk = sb / 2
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 16 2 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'right cover
+            yi = -sh / 2 + clb / 1000
+            zi = -sb / 2
+            yj = -yi
+            zj = zi
+            yk = yj
+            zk = -sb / 2 + clb / 1000
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 16 2 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'bottom layer
+            stepp = (sb - 2 * clb / 1000) / (nbl / 4)
+            yi = -sh / 2 + clb / 1000
+            zi = sb / 2 - clb / 1000 - stepp
+            yj = yi
+            zj = -sb / 2 + clb / 1000
+            linessec = linessec + 1
+            sections(linessec) = "layer straight 2 " & nbl / 4 & " " & pi * dia ^ 2 / 4000000 & " " & yi & " " & zi & " " & yj & " " & zj
+            'top layer
+            stepp = (sb - 2 * clb / 1000) / (nbl / 4)
+            yi = sh / 2 - clb / 1000
+            zi = -sb / 2 + clb / 1000 + stepp
+            yj = yi
+            zj = sb / 2 - clb / 1000
+            linessec = linessec + 1
+            sections(linessec) = "layer straight 2 " & nbl / 4 & " " & pi * dia ^ 2 / 4000000.0# & " " & yi & " " & zi & " " & yj & " " & zj
+            'left layer
+            stepp = (sh - 2 * clb / 1000) / (nbl / 4)
+            yi = -sh / 2 + clb / 1000 + stepp
+            zi = -sb / 2 + clb / 1000
+            yj = sh / 2 - clb / 1000
+            zj = zi
+            linessec = linessec + 1
+            sections(linessec) = "layer straight 2 " & nbl / 4 & " " & pi * dia ^ 2 / 4000000.0# & " " & yi & " " & zi & " " & yj & " " & zj
+            'right layer
+            stepp = (sh - 2 * clb / 1000) / (nbl / 4)
+            stepp = (sh - 2 * clb / 1000) / (nbl / 4)
+            yi = sh / 2 - clb / 1000 - stepp
+            zi = sb / 2 - clb / 1000
+            yj = -sh / 2 + clb / 1000
+            zj = zi
+            linessec = linessec + 1
+            sections(linessec) = "layer straight 2 " & nbl / 4 & " " & pi * dia ^ 2 / 4000000.0# & " " & yi & " " & zi & " " & yj & " " & zj
+            linessec = linessec + 1
+            sections(linessec) = "}"
+            'add elastic uniaxial material
+            nmat = nmat + 1
+            materials(nmat) = "uniaxialMaterial Elastic " & nmat & " " & sb * sh * conEc * 1000
+            nsec = nsec + 1
+            linessec = linessec + 1
+            sections(linessec) = "section Aggregator " & nsec & " " & nmat & " Vy -section " & nsec - 1
+
+            Dim adriana As Integer
+            'defining element
+            If Int(n / nxaxes) = (n / nxaxes) Then aa = 0 Else aa = 1
+            adriana = Int(n / nxaxes)
+            level = Int(n / nxaxes) + aa
+            y1 = vectory(level)
+            y2 = vectory(level + 1)
+            xabsc = n - (level - 1) * nxaxes
+            x = vectorx(xabsc)
+
+
+
+
+            If checknode(x, y1) = 0 Then
+                nnodes = nnodes + 1
+                nodes(nnodes, 1) = x
+                nodes(nnodes, 2) = y1
+                nodes(nnodes, 3) = "node " & nnodes & " " & x & " " & y1
+                If y1 = 0 Then nodes(nnodes, 4) = "fix " & nnodes & " 1 1 1"
+            End If
+
+
+            'coming beam height
+            y3 = y1 : y4 = y2
+            varight = n - 1 - level
+            valeft = n - 2 - level
+            vtright = n + 1 - level
+            vtleft = n - level
+            If varight < 0 Then varight = 0
+            If valeft < 0 Then valeft = 0
+            If n - (level - 1) * nxaxes = 1 Then valeft = 0 : vtleft = 0
+            If n - (level - 1) * nxaxes = nxaxes Then varight = 0 : vtright = 0
+            If valeft > 0 Then yvaleft = beamatrix(valeft, 2)
+            If varight > 0 Then yvaright = beamatrix(varight, 2)
+            If yvaleft > yvaright Then y3 = yvaleft / 2 + y1 Else y3 = yvaright / 2 + y3
+            If vtleft > 0 Then yvtleft = beamatrix(vtleft, 2)
+            If vtright > 0 Then yvtright = beamatrix(vtright, 2)
+            If yvtleft > yvtright Then y4 = y2 - yvtleft / 2 Else y4 = y2 - yvtright / 2
+
+            i = sb * sh ^ 3 / 12 * 0.7
+            a = sb * sh
+            If y3 > y1 Then
+                nnodes = nnodes + 1
+                nodes(nnodes, 1) = x
+                nodes(nnodes, 2) = y3
+                nodes(nnodes, 3) = "node " & nnodes & " " & x & " " & y3
+                ' elastic element for node
+                nelement = nelement + 1
+                elements(nelement) = "element elasticBeamColumn " & nelement & " " & checknode(x, y1) & " " & nnodes & " " & a & " " & conEc & " " & i & " 1"
+            End If
+            'nonlinear element
+            nnodes = nnodes + 1
+            nodes(nnodes, 1) = x
+            nodes(nnodes, 2) = y4
+            nodes(nnodes, 3) = "node " & nnodes & " " & x & " " & y4
+            nelement = nelement + 1
+            elements(nelement) = "element beamWithHinges " & nelement & " " & nnodes - 1 & " " & nnodes & " " & nsec & " " & sh / 2 & " " & nsec & " " & sh / 2 & " " & conEc & " " & a & " " & i & " 1"
+
+
+            '--------------------
+            '--------------------
+            '--------------------
+            fif = tcl_path & "ele" & nelement & "sec1Force.txt"
+            fjf = tcl_path & "ele" & nelement & "sec6Force.txt"
+            fid = tcl_path & "ele" & nelement & "sec1defor.txt"
+            fjd = tcl_path & "ele" & nelement & "sec6defor.txt"
+            fist = tcl_path & "ele" & nelement & "sec1st.txt"
+            fisb = tcl_path & "ele" & nelement & "sec1sb.txt"
+            fjst = tcl_path & "ele" & nelement & "sec6st.txt"
+            fjsb = tcl_path & "ele" & nelement & "sec6sb.txt"
+            coloutfiles(n, 1) = fif
+            coloutfiles(n, 2) = fjf
+            coloutfiles(n, 3) = fid
+            coloutfiles(n, 4) = fjd
+            coloutfiles(n, 5) = fist
+            coloutfiles(n, 6) = fjst
+            coloutfiles(n, 7) = fisb
+            coloutfiles(n, 8) = fjsb
+            coloutfiles(n, 9) = ecu
+            'force
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fif & " -time -ele " & nelement & " section 1 force"
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fjf & " -time -ele " & nelement & " section 6 force"
+            'deformation
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fid & " -time -ele " & nelement & " section 1 deformation"
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fjd & " -time -ele " & nelement & " section 6 deformation"
+            'strain top
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fist & " -time -ele " & nelement & " section 1 fiber " & sh / 2 - clb / 1000 & " 0 stressStrain"
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fjst & " -time -ele " & nelement & " section 6 fiber " & sh / 2 - clb / 1000 & " 0 stressStrain"
+            'strain bottom
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fisb & " -time -ele " & nelement & " section 1 fiber " & -sh / 2 + clb / 1000 & " 0 stressStrain"
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fjsb & " -time -ele " & nelement & " section 6 fiber " & -sh / 2 + clb / 1000 & " 0 stressStrain"
+            '--------------------
+            '--------------------
+            '--------------------
+
+
+            neleloads = neleloads + 1
+            eleloads(neleloads) = "eleLoad -ele " & nelement & " -type -beamUniform 0 " & -sb * sh * 23.5
+            ' top elastic element
+            nnodes = nnodes + 1
+            nodes(nnodes, 1) = x
+            nodes(nnodes, 2) = y2
+            nodes(nnodes, 3) = "node " & nnodes & " " & x & " " & y2
+            ' elastic element for node
+            i = sb * sh ^ 3 / 12
+            a = sb * sh
+            nelement = nelement + 1
+            elements(nelement) = "element elasticBeamColumn " & nelement & " " & nnodes - 1 & " " & nnodes & " " & a & " " & conEc & " " & i & " 1"
+
+        Next ' ends column loop
+
+
+        Dim diacsup As Single
+        Dim nblcsup As Single
+        Dim diacinf As Single
+        Dim nblcinf As Single
+        Dim diarefini As Integer
+        Dim nblrefini As Single
+        Dim diareffin As Single
+        Dim nblreffin As Single
+        Dim distload As Single
+        Dim astopini As Single
+        Dim Asbot As Single
+        Dim astopfin As Single
+
+
+
+
+        'Beams
+        For n As Integer = 1 To nvigas
+
+            'beamatrix( b h continuosup continuoinf refini reffin estribos load)
+            sb = beamatrix(n, 1) 'base
+            sh = beamatrix(n, 2) 'height is what you see on elevation view
+            rebar = beamatrix(n, 3)
+            nanddiameter1() ' to get nbl and dia
+            diacsup = dia
+            nblcsup = nbl
+            rebar = beamatrix(n, 4)
+            nanddiameter1() ' to get nbl and dia
+            diacinf = dia
+            nblcinf = nbl
+            rebar = beamatrix(n, 5)
+            nanddiameter1() ' to get nbl and dia
+            diarefini = dia
+            nblrefini = nbl
+            rebar = beamatrix(n, 6)
+            nanddiameter1() ' to get nbl and dia
+            diareffin = dia
+            nblreffin = nbl
+            rebar = beamatrix(n, 7)
+            nanddiameter2() ' to get diah and s
+            distload = beamatrix(n, 8)
+
+            astopini = diacsup ^ 2 * pi / 4 * nblcsup + diarefini ^ 2 * pi / 4 * nblrefini
+            Asbot = diacinf ^ 2 * pi / 4 * nblcinf    'bar area
+            astopfin = diacsup ^ 2 * pi / 4 * nblcsup + diareffin ^ 2 * pi / 4 * nblreffin
+
+            'initial nonlinear section
+            'confined concrete
+            conEc = 4700000 * (fpce / 1000) ^ 0.5
+            eco = 0.002
+            asbl = astopini + Asbot
+            rocc = asbl / (sb * sh)
+            'confined concrete:
+            wi = 200 'mm
+            clb = 40 'mm
+            eco = 0.002
+            Avsx = diah ^ 2 * pi / 4 * 2
+            Avsy = Avsx
+            areacon = (sh * 1000 - 2 * clb) * (sb * 1000 - 2 * clb)
+            areast = astopini + Asbot
+            rocc = areast / areacon
+            rox = Avsx / (s * sh * 1000)
+            roy = Avsy / (s * sb * 1000)
+            ros = rox + roy
+            ke = ((1 - wi ^ 2 / (6 * areacon)) * (1 - s / (2 * sb * 1000)) * (1 - s / (2 * sh * 1000))) / (1 - rocc)
+            ro = 0.5 * ros
+            fpl = ke * ro * fy
+            fpcc = (-1.254 + 2.254 * (1 + 7.94 * fpl / fpce) ^ 0.5 - 2 * fpl / fpce) * fpce
+            ecc = eco * (1 + 5 * (fpcc / fpce - 1))
+            Esec = fpcc / ecc
+            r = conEc / (conEc - Esec)
+            ecu = 1.5 * (0.004 + 1.4 * ros * fy * esm / fpcc) 'revisar esto
+            x = (1 / ecc) * ecu
+            fcu = fpcc * x * r / (r - 1 + x ^ r)
+            'ecu = ecu * 100
+
+
+
+            nmat = nmat + 1
+            materials(nmat) = "uniaxialMaterial  Concrete01 " & nmat & " " & -fpcc & " " & -ecc & " " & -fcu & " " & -ecu
+            'fibersection
+            nsec = nsec + 1
+            linessec = linessec + 1
+            sections(linessec) = "section Fiber " & nsec & " {"
+            'confined core x
+            yi = -sh / 2 + clb / 1000
+            zi = -sb / 2 + clb / 1000
+            yj = sh / 2 - clb / 1000
+            zj = -sb / 2 + clb / 1000
+            yk = yj
+            zk = -zj
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad " & nmat & " 16 16 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'bottom cover
+            yi = -sh / 2
+            zi = -sb / 2
+            yj = yi + clb / 1000
+            zj = zi
+            yk = yj
+            zk = -zi
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 2 16 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'top cover
+            yi = sh / 2 - clb / 1000
+            zi = -sb / 2
+            yj = sh / 2
+            zj = zi
+            yk = yj
+            zk = -zi
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 2 16 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'left cover
+            yi = -sh / 2 + clb / 1000
+            zi = sb / 2 - clb / 1000
+            yj = -yi
+            zj = zi
+            yk = yj
+            zk = sb / 2
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 16 2 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'right cover
+            yi = -sh / 2 + clb / 1000
+            zi = -sb / 2
+            yj = -yi
+            zj = zi
+            yk = yj
+            zk = -sb / 2 + clb / 1000
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 16 2 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'bottom layer
+            yi = -sh / 2 + clb / 1000
+            zi = 0
+            linessec = linessec + 1
+            sections(linessec) = "fiber " & yi & " " & zi & " " & Asbot / 1000000 & " 2"
+            'top layer
+            yi = sh / 2 - clb / 1000
+            zi = 0
+            linessec = linessec + 1
+            sections(linessec) = "fiber " & yi & " " & zi & " " & astopini / 1000000 & " 2"
+            linessec = linessec + 1
+            sections(linessec) = "}"
+            'add elastic uniaxial material
+            nmat = nmat + 1
+            materials(nmat) = "uniaxialMaterial Elastic " & nmat & " " & sb * sh * conEc * 1000
+            nsec = nsec + 1
+            linessec = linessec + 1
+            sections(linessec) = "section Aggregator " & nsec & " " & nmat & " Vy -section " & nsec - 1
+
+
+            'final nonlinear section
+            'confined concrete
+            conEc = 4700000 * (fpce / 1000) ^ 0.5
+            eco = 0.002
+            asbl = astopfin + Asbot
+            rocc = asbl / (sb * sh)
+            'confined concrete:
+            wi = 200 'mm
+            clb = 40 'mm
+            eco = 0.002
+            Avsx = diah ^ 2 * pi / 4 * 2
+            Avsy = Avsx
+            areacon = (sh * 1000 - 2 * clb) * (sb * 1000 - 2 * clb)
+            areast = astopini + Asbot
+            rocc = areast / areacon
+            rox = Avsx / (s * sh * 1000)
+            roy = Avsy / (s * sb * 1000)
+            ros = rox + roy
+            ke = ((1 - wi ^ 2 / (6 * areacon)) * (1 - s / (2 * sb * 1000)) * (1 - s / (2 * sh * 1000))) / (1 - rocc)
+            ro = 0.5 * ros
+            fpl = ke * ro * fy
+            fpcc = (-1.254 + 2.254 * (1 + 7.94 * fpl / fpce) ^ 0.5 - 2 * fpl / fpce) * fpce
+            ecc = eco * (1 + 5 * (fpcc / fpce - 1))
+            Esec = fpcc / ecc
+            r = conEc / (conEc - Esec)
+            ecu = 1.5 * (0.004 + 1.4 * ros * fy * esm / fpcc) 'revisar esto
+            x = (1 / ecc) * ecu
+            fcu = fpcc * x * r / (r - 1 + x ^ r)
+            'ecu = ecu * 100
+
+            nmat = nmat + 1
+            materials(nmat) = "uniaxialMaterial  Concrete01 " & nmat & " " & -fpcc & " " & -ecc & " " & -fcu & " " & -ecu
+            'fibersection
+            nsec = nsec + 1
+            linessec = linessec + 1
+            sections(linessec) = "section Fiber " & nsec & " {"
+            'confined core x
+            yi = -sh / 2 + clb / 1000
+            zi = -sb / 2 + clb / 1000
+            yj = sh / 2 - clb / 1000
+            zj = -sb / 2 + clb / 1000
+            yk = yj
+            zk = -zj
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad " & nmat & " 16 16 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'bottom cover
+            yi = -sh / 2
+            zi = -sb / 2
+            yj = yi + clb / 1000
+            zj = zi
+            yk = yj
+            zk = -zi
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 2 16 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'top cover
+            yi = sh / 2 - clb / 1000
+            zi = -sb / 2
+            yj = sh / 2
+            zj = zi
+            yk = yj
+            zk = -zi
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 2 16 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'left cover
+            yi = -sh / 2 + clb / 1000
+            zi = sb / 2 - clb / 1000
+            yj = -yi
+            zj = zi
+            yk = yj
+            zk = sb / 2
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 16 2 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'right cover
+            yi = -sh / 2 + clb / 1000
+            zi = -sb / 2
+            yj = -yi
+            zj = zi
+            yk = yj
+            zk = -sb / 2 + clb / 1000
+            yl = yi
+            zl = zk
+            linessec = linessec + 1
+            sections(linessec) = "patch quad 1 16 2 " & yi & " " & zi & " " & yj & " " & zj & " " & yk & " " & zk & " " & yl & " " & zl
+            'bottom layer
+            yi = -sh / 2 + clb / 1000
+            zi = 0
+            linessec = linessec + 1
+            sections(linessec) = "fiber " & yi & " " & zi & " " & Asbot / 1000000 & " 2"
+            'top layer
+            yi = sh / 2 - clb / 1000
+            zi = 0
+            linessec = linessec + 1
+            sections(linessec) = "fiber " & yi & " " & zi & " " & astopfin / 1000000 & " 2"
+            linessec = linessec + 1
+            sections(linessec) = "}"
+            'add elastic uniaxial material
+            nmat = nmat + 1
+            materials(nmat) = "uniaxialMaterial Elastic " & nmat & " " & sb * sh * conEc * 1000
+            nsec = nsec + 1
+            linessec = linessec + 1
+            sections(linessec) = "section Aggregator " & nsec & " " & nmat & " Vy -section " & nsec - 1
+            Dim x1 As Single
+            Dim x2 As Single
+            Dim colbini As Single
+            Dim colbfin As Single
+            Dim x3 As Single
+            Dim x4 As Single
+            Dim x5 As Single
+            Dim ni As Single
+            Dim nj As Single
+
+
+            'creating elements
+            If Int(n / (nxaxes - 1)) = n / (nxaxes - 1) Then aa = 0 Else aa = 1
+            level = Int(n / (nxaxes - 1)) + aa
+            x1 = vectorx(n - (level - 1) * (nxaxes - 1))
+            x2 = vectorx(n - (level - 1) * (nxaxes - 1) + 1)
+            y = vectory(level + 1)
+            colbini = n + level - 1
+            colbfin = n + level
+            x3 = x1 + colmatrix(colbini, 2) / 2
+            x4 = x2 - colmatrix(colbfin, 2) / 2
+            x5 = (x3 + x4) / 2
+            i = sb * sh ^ 3 / 12
+            a = sb * sh
+
+            'elastic element
+            ni = checknode(x1, y)
+            nnodes = nnodes + 1
+            nodes(nnodes, 1) = x3
+            nodes(nnodes, 2) = y
+            nodes(nnodes, 3) = "node " & nnodes & " " & x3 & " " & y
+            ' elastic element for node
+            nelement = nelement + 1
+            elements(nelement) = "element elasticBeamColumn " & nelement & " " & ni & " " & nnodes & " " & a & " " & conEc & " " & i & " 1"
+            'nonlinear element
+            nnodes = nnodes + 1
+            nodes(nnodes, 1) = x4
+            nodes(nnodes, 2) = y
+            nodes(nnodes, 3) = "node " & nnodes & " " & x4 & " " & y
+            nelement = nelement + 1
+            elements(nelement) = "element beamWithHinges " & nelement & " " & nnodes - 1 & " " & nnodes & " " & nsec - 2 & " " & sh / 2 & " " & nsec & " " & sh / 2 & " " & conEc & " " & a & " " & i & " 1"
+            neleloads = neleloads + 1
+            eleloads(neleloads) = "eleLoad -ele " & nelement & " -type -beamUniform " & -distload
+
+            '--------------------
+            '--------------------
+            '--------------------
+            fif = tcl_path & "ele" & nelement & "sec1Force.txt"
+            fjf = tcl_path & "ele" & nelement & "sec6Force.txt"
+            fid = tcl_path & "ele" & nelement & "sec1defor.txt"
+            fjd = tcl_path & "ele" & nelement & "sec6defor.txt"
+            fist = tcl_path & "ele" & nelement & "sec1st.txt"
+            fisb = tcl_path & "ele" & nelement & "sec1sb.txt"
+            fjst = tcl_path & "ele" & nelement & "sec6st.txt"
+            fjsb = tcl_path & "ele" & nelement & "sec6sb.txt"
+            beamoutfiles(n, 1) = fif
+            beamoutfiles(n, 2) = fjf
+            beamoutfiles(n, 3) = fid
+            beamoutfiles(n, 4) = fjd
+            beamoutfiles(n, 5) = fist
+            beamoutfiles(n, 6) = fjst
+            beamoutfiles(n, 7) = fisb
+            beamoutfiles(n, 8) = fjsb
+            beamoutfiles(n, 9) = ecu
+            'force
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fif & " -time -ele " & nelement & " section 1 force"
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fjf & " -time -ele " & nelement & " section 6 force"
+            'deformation
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fid & " -time -ele " & nelement & " section 1 deformation"
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fjd & " -time -ele " & nelement & " section 6 deformation"
+            'strain top
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fist & " -time -ele " & nelement & " section 1 fiber " & sh / 2 - clb / 1000 & " 0 stressStrain"
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fjst & " -time -ele " & nelement & " section 6 fiber " & sh / 2 - clb / 1000 & " 0 stressStrain"
+            'strain bottom
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fisb & " -time -ele " & nelement & " section 1 fiber " & -sh / 2 + clb / 1000 & " 0 stressStrain"
+            nrecorders = nrecorders + 1
+            recorders(nrecorders) = "recorder Element -file " & fjsb & " -time -ele " & nelement & " section 6 fiber " & -sh / 2 + clb / 1000 & " 0 stressStrain"
+            '--------------------
+            '--------------------
+            '--------------------
+
+
+            'elastic element
+            nj = checknode(x2, y)
+            ' elastic element for node
+            nelement = nelement + 1
+            elements(nelement) = "element elasticBeamColumn " & nelement & " " & nnodes & " " & nj & " " & a & " " & conEc & " " & i & " 1"
+        Next ' ends beam loop
+
+        'load pattern for pushover analysis
+        Dim v As Integer
+        v = 0
+
+        For n As Integer = 1 To nnodes
+            y = nodes(n, 2)
+            If lateralpattern = "Triangular" Then v = v + y
+            If lateralpattern = "Uniform" And y > 0 Then v = v + 1
+        Next
+        For n As Integer = 1 To nnodes
+            y = nodes(n, 2)
+            If lateralpattern = "Uniform" And y > 0 Then y = 1
+            ploads(n) = "load " & n & " " & y / v & " 0 0"
+            ploadsneg(n) = "load " & n & " " & -y / v & " 0 0"
+        Next
+
+        recnodes = recnodes & " " & nnodes
+
+        Using archivoOut As StreamWriter = New StreamWriter(RutaArchivosPushover + "pushover.tcl")
+            archivoOut.Write("########################" & Chr(13))
+            archivoOut.Write("# PUSHOVER ANALYSIS    #" & Chr(13))
+            archivoOut.Write("########################" & Chr(13))
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Start of model generation" & Chr(13))
+            archivoOut.Write("# ========================= " & Chr(13))
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Create ModelBuilder " & Chr(13))
+            archivoOut.Write("# ------------------- " & Chr(13))
+            archivoOut.Write("model  BasicBuilder  -ndm  2  -ndf  3" & Chr(13))
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Define geometry " & Chr(13))
+            archivoOut.Write("# --------------- " & Chr(13))
+            archivoOut.Write("# Node coordinates " & Chr(13))
+            For n As Integer = 1 To nnodes
+                archivoOut.Write(nodes(n, 3) & Chr(13))
+            Next
+            archivoOut.Write("# Define Single Point Constraints" & Chr(13))
+            archivoOut.Write("# -------------------------------" & Chr(13))
+            For n As Integer = 1 To nnodes
+                If nodes(n, 4) <> "" Then archivoOut.Write(nodes(n, 4) & Chr(13))
+            Next
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Define material(s)" & Chr(13))
+            archivoOut.Write("# ------------------" & Chr(13))
+            For n = 1 To nmat
+                archivoOut.Write(materials(n) & Chr(13))
+            Next
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Define sections(s)" & Chr(13))
+            archivoOut.Write("# ------------------" & Chr(13))
+            For n As Integer = 1 To linessec
+                archivoOut.Write(sections(n) & Chr(13))
+            Next
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Define geometric transformation(s)" & Chr(13))
+            archivoOut.Write("# ----------------------------------" & Chr(13))
+            archivoOut.Write("geomTransf Linear 1" & Chr(13))
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Define element(s)" & Chr(13))
+            archivoOut.Write("# -----------------" & Chr(13))
+            For n As Integer = 1 To nelement
+                archivoOut.Write(elements(n) & Chr(13))
+            Next
+            archivoOut.Write(" ")
+            archivoOut.Write("# Start of anaysis generation" & Chr(13))
+            archivoOut.Write("# Analysis: DL" & Chr(13))
+            archivoOut.Write("# ++++++++++++" & Chr(13))
+            archivoOut.Write("# Define load pattern" & Chr(13))
+            archivoOut.Write("# -------------------" & Chr(13))
+            archivoOut.Write("set  Linear  " & Chr(34) & " Linear - factor + 1" & Chr(34) & Chr(13))
+            archivoOut.Write("pattern Plain 1 $Linear {" & Chr(13))
+            For n As Integer = 1 To neleloads
+                archivoOut.Write(eleloads(n) & Chr(13))
+            Next
+            archivoOut.Write("}" & Chr(13))
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Define recorder(s)" & Chr(13))
+            archivoOut.Write("# --------------------" & Chr(13))
+            archivoOut.Write("recorder Node -file " & tcl_path & "dispx.txt -time -node " & nnodes & " -dof 1 disp" & Chr(13))
+            archivoOut.Write("recorder Node -file " & tcl_path & "dispy.txt -time -node" & recnodes & " -dof 2 disp" & Chr(13))
+            For n As Integer = 1 To nrecorders
+                archivoOut.Write(recorders(n) & Chr(13))
+            Next
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("constraints Transformation" & Chr(13))
+            archivoOut.Write("numberer Plain" & Chr(13))
+            archivoOut.Write("system BandGeneral" & Chr(13))
+            archivoOut.Write("set Tol 1.e-8" & Chr(13))
+            archivoOut.Write("set maxNumIter 6" & Chr(13))
+            archivoOut.Write("set printFlag 0" & Chr(13))
+            archivoOut.Write("set TestType EnergyIncr" & Chr(13))
+            archivoOut.Write("test $TestType $Tol $maxNumIter $printFlag" & Chr(13))
+            archivoOut.Write("algorithm Newton" & Chr(13))
+            archivoOut.Write("integrator LoadControl  1" & Chr(13))
+            archivoOut.Write("analysis Static" & Chr(13))
+            archivoOut.Write("analyze 1" & Chr(13))
+            archivoOut.Write("puts " & Chr(34) & "gravity analysis completed " & Chr(34) & Chr(13))
+            archivoOut.Write("# Reset for next analysis case" & Chr(13))
+            archivoOut.Write("# ----------------------------" & Chr(13))
+            archivoOut.Write("loadConst -time 0.0" & Chr(13))
+            archivoOut.Write("wipeAnalysis" & Chr(13))
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Analysis: PUSH" & Chr(13))
+            archivoOut.Write("# ++++++++++++++" & Chr(13))
+            archivoOut.Write(" " & Chr(13))
+            archivoOut.Write("# Define load pattern" & Chr(13))
+            archivoOut.Write("# -------------------" & Chr(13))
+            archivoOut.Write("pattern Plain 2 $Linear {" & Chr(13))
+            For n As Integer = 1 To nnodes
+                archivoOut.Write(ploads(n) & Chr(13))
+            Next
+            archivoOut.Write("}" & Chr(13))
+            archivoOut.Write("# Define analysis options" & Chr(13))
+            archivoOut.Write("# -----------------------" & Chr(13))
+            archivoOut.Write("set IDctrlNode " & nnodes & Chr(13))
+            archivoOut.Write("set IDctrlDOF 1" & Chr(13))
+            archivoOut.Write("set Dmax " & targetdisp & Chr(13))
+            archivoOut.Write("set Dincr " & targetdisp / 100 & Chr(13))
+            archivoOut.Write("constraints Transformation" & Chr(13))
+            archivoOut.Write("numberer Plain" & Chr(13))
+            archivoOut.Write("system BandGeneral" & Chr(13))
+            archivoOut.Write("set Tol 1.e-4 " & Chr(13))
+            archivoOut.Write("set maxNumIter 500" & Chr(13))
+            archivoOut.Write("set printFlag 0" & Chr(13))
+            archivoOut.Write("set TestType EnergyIncr " & Chr(13))
+            archivoOut.Write("test $TestType $Tol $maxNumIter $printFlag" & Chr(13))
+            archivoOut.Write("set algorithmType Newton" & Chr(13))
+            archivoOut.Write("algorithm $algorithmType" & Chr(13))
+            archivoOut.Write("integrator DisplacementControl  $IDctrlNode   $IDctrlDOF $Dincr" & Chr(13))
+            archivoOut.Write("analysis Static" & Chr(13))
+            archivoOut.Write("#  ---------------------------------    perform Static Pushover Analysis" & Chr(13))
+            archivoOut.Write("set Nsteps [expr int($Dmax/$Dincr)]" & Chr(13))
+            archivoOut.Write("set ok [analyze $Nsteps]" & Chr(13))
+            archivoOut.Write("# ---------------------------------- in case of convergence problems" & Chr(13))
+            archivoOut.Write("if {$ok != 0} {" & Chr(13))
+            archivoOut.Write("# change some analysis parameters to achieve convergence" & Chr(13))
+            archivoOut.Write("# performance is slower inside this loop" & Chr(13))
+            archivoOut.Write("set ok 0;" & Chr(13))
+            archivoOut.Write("set controlDisp 0.0;        # start from zero" & Chr(13))
+            archivoOut.Write("set D0 0.0;     # start from zero" & Chr(13))
+            archivoOut.Write("set Dstep [expr ($controlDisp-$D0)/($Dmax-$D0)]" & Chr(13))
+            archivoOut.Write("while {$Dstep < 1.0 && $ok == 0} {" & Chr(13))
+            archivoOut.Write("set controlDisp [nodeDisp $IDctrlNode $IDctrlDOF ]" & Chr(13))
+            archivoOut.Write("set Dstep [expr ($controlDisp-$D0)/($Dmax-$D0)]" & Chr(13))
+            archivoOut.Write("set ok [analyze 1 ]" & Chr(13))
+            archivoOut.Write("if {$ok != 0} {" & Chr(13))
+            archivoOut.Write("test NormDispIncr   $Tol 2000  0" & Chr(13))
+            archivoOut.Write("algorithm Newton - initial" & Chr(13))
+            archivoOut.Write("set ok [analyze 1 ]" & Chr(13))
+            archivoOut.Write("test $TestType $Tol $maxNumIter  0" & Chr(13))
+            archivoOut.Write("algorithm $algorithmType" & Chr(13))
+            archivoOut.Write("        }" & Chr(13))
+            archivoOut.Write("if {$ok != 0} {" & Chr(13))
+            archivoOut.Write("algorithm Broyden 8" & Chr(13))
+            archivoOut.Write("set ok [analyze 1 ]" & Chr(13))
+            archivoOut.Write("algorithm $algorithmType" & Chr(13))
+            archivoOut.Write("        }" & Chr(13))
+            archivoOut.Write("if {$ok != 0} {" & Chr(13))
+            archivoOut.Write("algorithm NewtonLineSearch .8" & Chr(13))
+            archivoOut.Write("set ok [analyze 1 ]" & Chr(13))
+            archivoOut.Write("algorithm $algorithmType" & Chr(13))
+            archivoOut.Write("}" & Chr(13))
+            archivoOut.Write("}" & Chr(13))
+            archivoOut.Write("  };      # end if ok !0")
+
+            archivoOut.Close()
+        End Using
+
+
+
+        'Using archivoBat As StreamWriter = New StreamWriter(RutaArchivosPushover + "exec.bat")
+
+        '    archivoBat.Write(RutaArchivosPushover & "Opensees.exe " & Chr(34) & RutaArchivosPushover & "pushover.tcl" & Chr(34))
+
+        '    archivoBat.Close()
+        'End Using
+
+
+
+
+        'OJO PENDIENTE POSIBLE ERROR
+        Dim intNum As Integer
+        intNum = obj_AppLaunch.fucMain_Pushover(RutaArchivosPushover, RutaArchivosPushover)
+
+
+        '----------------------------------------------
+        '----------------------------------------------
+        '----------------------------------------------
+        '----------------------------------------------
+        '----------------------------------------------
+        '----------------------------------------------
+        '----------------------------------------------
+        '----------------------------------------------
+        '----------------------------------------------
+        '----------------------------------------------
+        'READ OUTPUT
+        Dim linea As String
+        Using archivoBat As StreamReader = New StreamReader(RutaArchivosPushover + "dispx.txt")
+
+            'OJO POSIBLE ERROR CON EL USO DE N
+
+            n = 0
+            'Dim forcedisp(,) As Object
+
+
+            Do
+                'ReDim Preserve forcedisp(n, 1)
+                linea = archivoBat.ReadLine
+                xx = 1
+                forcedisp(n, 1) = readvalor(linea)
+                forcedisp(n, 0) = readvalor(linea)
+
+
+                n = n + 1
+            Loop Until linea Is Nothing
+
+        End Using
+
+        'Open tcl_path & "dispx.txt" For Input As #1
+        '        n = 0
+        '        Do Until EOF(1)
+        'Line Input #1, linea
+        '            xx = 1
+        '            forcedisp(n, 1) = readvalor(linea)
+        '            forcedisp(n, 0) = readvalor(linea)
+        '            n = n + 1
+        '        Loop
+        'Close #1
+
+
+
+        For vig As Integer = 1 To nvigas
+
+            fif = beamoutfiles(vig, 1)
+            fid = beamoutfiles(vig, 3)
+            fjf = beamoutfiles(vig, 2)
+            fjd = beamoutfiles(vig, 4)
+            fist = beamoutfiles(vig, 5)
+            fjst = beamoutfiles(vig, 6)
+            fisb = beamoutfiles(vig, 7)
+            fjsb = beamoutfiles(vig, 8)
+
+
+            'Do
+            '    xx = 1
+            '    Vs = readvalor(linea)
+            '    Pini = readvalor(linea)
+            '    Mini = readvalor(linea)
+            '    Vini = readvalor(linea)
+            'Loop Until line Is Nothing
+
+            Using arch_1 As StreamReader = New StreamReader(fif)
+                Using arch_2 As StreamReader = New StreamReader(fid)
+                    Using arch_3 As StreamReader = New StreamReader(fjf)
+                        Using arch_4 As StreamReader = New StreamReader(fjd)
+                            Using arch_5 As StreamReader = New StreamReader(fist)
+                                Using arch_6 As StreamReader = New StreamReader(fisb)
+                                    Using arch_7 As StreamReader = New StreamReader(fjst)
+                                        Using arch_8 As StreamReader = New StreamReader(fjsb)
+                                            n = 0
+
+
+                                            Do
+                                                xx = 1
+                                                linea = arch_1.ReadLine
+                                                If linea Is Nothing Then Exit Do
+
+                                                Vs = readvalor(linea)
+                                                Pini = readvalor(linea)
+                                                Mini = readvalor(linea)
+                                                Vini = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_2.ReadLine
+                                                xx = 1
+                                                Vs = readvalor(linea)
+                                                cini = readvalor(linea)
+                                                cini = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_3.ReadLine
+
+                                                xx = 1
+                                                Vs = readvalor(linea)
+                                                Pfin = readvalor(linea)
+                                                Mfin = readvalor(linea)
+                                                Vfin = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_4.ReadLine
+                                                xx = 1
+                                                Vs = readvalor(linea)
+                                                cfin = readvalor(linea)
+                                                cfin = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_5.ReadLine
+                                                xx = 1
+                                                sti = readvalor(linea)
+                                                sti = readvalor(linea)
+                                                sti = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_6.ReadLine
+                                                xx = 1
+                                                sbi = readvalor(linea)
+                                                sbi = readvalor(linea)
+                                                sbi = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_7.ReadLine
+                                                xx = 1
+                                                stj = readvalor(linea)
+                                                stj = readvalor(linea)
+                                                stj = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_8.ReadLine
+                                                xx = 1
+                                                sbj = readvalor(linea)
+                                                sbj = readvalor(linea)
+                                                sbj = readvalor(linea)
+
+                                                'beamresponse(30, 100, 16) 'for each element: cdisp , d/c top i,d/c bottom i, moment i, curvature i, shear i, axial i, e top i, bottom i ,d/c top i,d/c bottom i, moment i, curvature i, shear i, axial j,  e top i, bottom i
+                                                '                                               0          1          2         3           4           5       6        7            8         9           10       11            12       13       14       15       16
+                                                beamresponse(vig, n, 0) = forcedisp(n, 0)
+                                                beamresponse(vig, n, 3) = Mini
+                                                beamresponse(vig, n, 4) = cini
+                                                beamresponse(vig, n, 5) = Vini
+                                                beamresponse(vig, n, 6) = Pini
+                                                beamresponse(vig, n, 11) = Mfin
+                                                beamresponse(vig, n, 12) = cfin
+                                                beamresponse(vig, n, 13) = Vfin
+                                                beamresponse(vig, n, 14) = Pfin
+                                                beamresponse(vig, n, 7) = sti
+                                                beamresponse(vig, n, 15) = stj
+                                                beamresponse(vig, n, 8) = sbi
+                                                beamresponse(vig, n, 16) = sbj
+                                                'assuming compresion strain is negative
+                                                If sti < 0 Then dcrti = -sti / beamoutfiles(vig, 9) Else dcrti = sti / 0.1
+                                                If stj < 0 Then dcrtj = -stj / beamoutfiles(vig, 9) Else dcrtj = stj / 0.1
+                                                If sbi < 0 Then dcrbi = -sbi / beamoutfiles(vig, 9) Else dcrbi = sbi / 0.1
+                                                If sbj < 0 Then dcrbj = -sbj / beamoutfiles(vig, 9) Else dcrbj = sbj / 0.1
+                                                beamresponse(vig, n, 1) = dcrti
+                                                beamresponse(vig, n, 2) = dcrbi
+                                                beamresponse(vig, n, 9) = dcrtj
+                                                beamresponse(vig, n, 10) = dcrbj
+                                                n = n + 1
+
+                                            Loop
+                                        End Using
+                                    End Using
+                                End Using
+                            End Using
+                        End Using
+                    End Using
+                End Using
+            End Using
+
+
+
+
+
+            'Open fif For Input As #1
+            'Open fid For Input As #2
+            'Open fjf For Input As #3
+            'Open fjd For Input As #4
+            'Open fist For Input As #5
+            'Open fisb For Input As #6
+            'Open fjst For Input As #7
+            'Open fjsb For Input As #8
+
+            '            n = 0
+            '            Do Until EOF(1)
+            'Line Input #1, linea
+            '                xx = 1
+            '                Vs = readvalor(linea)
+            '                Pini = readvalor(linea)
+            '                Mini = readvalor(linea)
+            '                Vini = readvalor(linea)
+            'Line Input #2, linea
+            '                xx = 1
+            '                Vs = readvalor(linea)
+            '                cini = readvalor(linea)
+            '                cini = readvalor(linea)
+            'Line Input #3, linea
+            '                xx = 1
+            '                Vs = readvalor(linea)
+            '                Pfin = readvalor(linea)
+            '                Mfin = readvalor(linea)
+            '                Vfin = readvalor(linea)
+            'Line Input #4, linea
+            '                xx = 1
+            '                Vs = readvalor(linea)
+            '                cfin = readvalor(linea)
+            '                cfin = readvalor(linea)
+            'Line Input #5, linea
+            '                xx = 1
+            '                sti = readvalor(linea)
+            '                sti = readvalor(linea)
+            '                sti = readvalor(linea)
+            'Line Input #6, linea
+            '                xx = 1
+            '                sbi = readvalor(linea)
+            '                sbi = readvalor(linea)
+            '                sbi = readvalor(linea)
+            'Line Input #7, linea
+            '                xx = 1
+            '                stj = readvalor(linea)
+            '                stj = readvalor(linea)
+            '                stj = readvalor(linea)
+            'Line Input #8, linea
+            '                xx = 1
+            '                sbj = readvalor(linea)
+            '                sbj = readvalor(linea)
+            '                sbj = readvalor(linea)
+
+            '                'beamresponse(30, 100, 16) 'for each element: cdisp , d/c top i,d/c bottom i, moment i, curvature i, shear i, axial i, e top i, bottom i ,d/c top i,d/c bottom i, moment i, curvature i, shear i, axial j,  e top i, bottom i
+            '                '                                               0          1          2         3           4           5       6        7            8         9           10       11            12       13       14       15       16
+            '                beamresponse(vig, n, 0) = forcedisp(n, 0)
+            '                beamresponse(vig, n, 3) = Mini
+            '                beamresponse(vig, n, 4) = cini
+            '                beamresponse(vig, n, 5) = Vini
+            '                beamresponse(vig, n, 6) = Pini
+            '                beamresponse(vig, n, 11) = Mfin
+            '                beamresponse(vig, n, 12) = cfin
+            '                beamresponse(vig, n, 13) = Vfin
+            '                beamresponse(vig, n, 14) = Pfin
+            '                beamresponse(vig, n, 7) = sti
+            '                beamresponse(vig, n, 15) = stj
+            '                beamresponse(vig, n, 8) = sbi
+            '                beamresponse(vig, n, 16) = sbj
+            '                'assuming compresion strain is negative
+            '                If sti < 0 Then dcrti = -sti / beamoutfiles(vig, 9) Else dcrti = sti / 0.1
+            '                If stj < 0 Then dcrtj = -stj / beamoutfiles(vig, 9) Else dcrtj = stj / 0.1
+            '                If sbi < 0 Then dcrbi = -sbi / beamoutfiles(vig, 9) Else dcrbi = sbi / 0.1
+            '                If sbj < 0 Then dcrbj = -sbj / beamoutfiles(vig, 9) Else dcrbj = sbj / 0.1
+            '                beamresponse(vig, n, 1) = dcrti
+            '                beamresponse(vig, n, 2) = dcrbi
+            '                beamresponse(vig, n, 9) = dcrtj
+            '                beamresponse(vig, n, 10) = dcrbj
+            '                n = n + 1
+            '            Loop
+            'Close #1
+            'Close #2
+            'Close #3
+            'Close #4
+            'Close #5
+            'Close #6
+            'Close #7
+            'Close #8
+        Next 'next viga
+
+
+        For col As Integer = 1 To ncols
+
+            fif = coloutfiles(col, 1)
+            fid = coloutfiles(col, 3)
+            fjf = coloutfiles(col, 2)
+            fjd = coloutfiles(col, 4)
+            fist = coloutfiles(col, 5)
+            fjst = coloutfiles(col, 6)
+            fisb = coloutfiles(col, 7)
+            fjsb = coloutfiles(col, 8)
+
+
+            Using arch_1 As StreamReader = New StreamReader(fif)
+                Using arch_2 As StreamReader = New StreamReader(fid)
+                    Using arch_3 As StreamReader = New StreamReader(fjf)
+                        Using arch_4 As StreamReader = New StreamReader(fjd)
+                            Using arch_5 As StreamReader = New StreamReader(fist)
+                                Using arch_6 As StreamReader = New StreamReader(fisb)
+                                    Using arch_7 As StreamReader = New StreamReader(fjst)
+                                        Using arch_8 As StreamReader = New StreamReader(fjsb)
+                                            n = 0
+                                            Do
+                                                xx = 1
+                                                linea = arch_1.ReadLine
+
+                                                If linea Is Nothing Then Exit Do
+
+                                                Vs = readvalor(linea)
+                                                Pini = readvalor(linea)
+                                                Mini = readvalor(linea)
+                                                Vini = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_2.ReadLine
+                                                xx = 1
+                                                Vs = readvalor(linea)
+                                                cini = readvalor(linea)
+                                                cini = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_3.ReadLine
+                                                xx = 1
+                                                Vs = readvalor(linea)
+                                                Pfin = readvalor(linea)
+                                                Mfin = readvalor(linea)
+                                                Vfin = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_4.ReadLine
+                                                xx = 1
+                                                Vs = readvalor(linea)
+                                                cfin = readvalor(linea)
+                                                cfin = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_5.ReadLine
+                                                xx = 1
+                                                sti = readvalor(linea)
+                                                sti = readvalor(linea)
+                                                sti = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_6.ReadLine
+                                                xx = 1
+                                                sbi = readvalor(linea)
+                                                sbi = readvalor(linea)
+                                                sbi = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_7.ReadLine
+                                                xx = 1
+                                                stj = readvalor(linea)
+                                                stj = readvalor(linea)
+                                                stj = readvalor(linea)
+                                                '-------------------------------------------------
+                                                linea = arch_8.ReadLine
+                                                xx = 1
+                                                sbj = readvalor(linea)
+                                                sbj = readvalor(linea)
+                                                sbj = readvalor(linea)
+
+                                                'beamresponse(30, 100, 16) 'for each element: cdisp , d/c top i,d/c bottom i, moment i, curvature i, shear i, axial i, e top i, bottom i ,d/c top i,d/c bottom i, moment i, curvature i, shear i, axial j,  e top i, bottom i
+                                                '                                               0          1          2         3           4           5       6        7            8         9           10       11            12       13       14       15       16
+                                                colresponse(col, n, 0) = forcedisp(n, 0)
+                                                colresponse(col, n, 3) = Mini
+                                                colresponse(col, n, 4) = cini
+                                                colresponse(col, n, 5) = Vini
+                                                colresponse(col, n, 6) = Pini
+                                                colresponse(col, n, 11) = Mfin
+                                                colresponse(col, n, 12) = cfin
+                                                colresponse(col, n, 13) = Vfin
+                                                colresponse(col, n, 14) = Pfin
+                                                colresponse(col, n, 7) = sti
+                                                colresponse(col, n, 15) = stj
+                                                colresponse(col, n, 8) = sbi
+                                                colresponse(col, n, 16) = sbj
+                                                'assuming compresion strain is negative
+                                                If sti < 0 Then dcrti = -sti / coloutfiles(col, 9) Else dcrti = sti / 0.1
+                                                If stj < 0 Then dcrtj = -stj / coloutfiles(col, 9) Else dcrtj = stj / 0.1
+                                                If sbi < 0 Then dcrbi = -sbi / coloutfiles(col, 9) Else dcrbi = sbi / 0.1
+                                                If sbj < 0 Then dcrbj = -sbj / coloutfiles(col, 9) Else dcrbj = sbj / 0.1
+                                                colresponse(col, n, 1) = dcrti
+                                                colresponse(col, n, 2) = dcrbi
+                                                colresponse(col, n, 9) = dcrtj
+                                                colresponse(col, n, 10) = dcrbj
+                                                n = n + 1
+
+                                            Loop
+                                        End Using
+                                    End Using
+                                End Using
+                            End Using
+                        End Using
+                    End Using
+                End Using
+            End Using
+
+
+
+            'Open fif For Input As #1
+            'Open fid For Input As #2
+            'Open fjf For Input As #3
+            'Open fjd For Input As #4
+            'Open fist For Input As #5
+            'Open fisb For Input As #6
+            'Open fjst For Input As #7
+            'Open fjsb For Input As #8
+
+            '            n = 0
+            '            Do Until EOF(1)
+            'Line Input #1, linea
+            '                xx = 1
+            '                Vs = readvalor(linea)
+            '                Pini = readvalor(linea)
+            '                Mini = readvalor(linea)
+            '                Vini = readvalor(linea)
+            'Line Input #2, linea
+            '                xx = 1
+            '                Vs = readvalor(linea)
+            '                cini = readvalor(linea)
+            '                cini = readvalor(linea)
+            'Line Input #3, linea
+            '                xx = 1
+            '                Vs = readvalor(linea)
+            '                Pfin = readvalor(linea)
+            '                Mfin = readvalor(linea)
+            '                Vfin = readvalor(linea)
+            'Line Input #4, linea
+            '                xx = 1
+            '                Vs = readvalor(linea)
+            '                cfin = readvalor(linea)
+            '                cfin = readvalor(linea)
+            'Line Input #5, linea
+            '                xx = 1
+            '                sti = readvalor(linea)
+            '                sti = readvalor(linea)
+            '                sti = readvalor(linea)
+            'Line Input #6, linea
+            '                xx = 1
+            '                sbi = readvalor(linea)
+            '                sbi = readvalor(linea)
+            '                sbi = readvalor(linea)
+            'Line Input #7, linea
+            '                xx = 1
+            '                stj = readvalor(linea)
+            '                stj = readvalor(linea)
+            '                stj = readvalor(linea)
+            'Line Input #8, linea
+            '                xx = 1
+            '                sbj = readvalor(linea)
+            '                sbj = readvalor(linea)
+            '                sbj = readvalor(linea)
+
+            '                'beamresponse(30, 100, 16) 'for each element: cdisp , d/c top i,d/c bottom i, moment i, curvature i, shear i, axial i, e top i, bottom i ,d/c top i,d/c bottom i, moment i, curvature i, shear i, axial j,  e top i, bottom i
+            '                '                                               0          1          2         3           4           5       6        7            8         9           10       11            12       13       14       15       16
+            '                colresponse(col, n, 0) = forcedisp(n, 0)
+            '                colresponse(col, n, 3) = Mini
+            '                colresponse(col, n, 4) = cini
+            '                colresponse(col, n, 5) = Vini
+            '                colresponse(col, n, 6) = Pini
+            '                colresponse(col, n, 11) = Mfin
+            '                colresponse(col, n, 12) = cfin
+            '                colresponse(col, n, 13) = Vfin
+            '                colresponse(col, n, 14) = Pfin
+            '                colresponse(col, n, 7) = sti
+            '                colresponse(col, n, 15) = stj
+            '                colresponse(col, n, 8) = sbi
+            '                colresponse(col, n, 16) = sbj
+            '                'assuming compresion strain is negative
+            '                If sti < 0 Then dcrti = -sti / coloutfiles(col, 9) Else dcrti = sti / 0.1
+            '                If stj < 0 Then dcrtj = -stj / coloutfiles(col, 9) Else dcrtj = stj / 0.1
+            '                If sbi < 0 Then dcrbi = -sbi / coloutfiles(col, 9) Else dcrbi = sbi / 0.1
+            '                If sbj < 0 Then dcrbj = -sbj / coloutfiles(col, 9) Else dcrbj = sbj / 0.1
+            '                colresponse(col, n, 1) = dcrti
+            '                colresponse(col, n, 2) = dcrbi
+            '                colresponse(col, n, 9) = dcrtj
+            '                colresponse(col, n, 10) = dcrbj
+            '                n = n + 1
+            '            Loop
+            'Close #1
+            'Close #2
+            'Close #3
+            'Close #4
+            'Close #5
+            'Close #6
+            'Close #7
+            'Close #8
+        Next 'next col
+
+    End Sub
+
+    Public Function return_forcedisp() As Object
+        return_forcedisp = forcedisp
+    End Function
+
+    Public Function return_beamresponse() As Object
+        return_beamresponse = beamresponse
+    End Function
+    Public Function return_colresponse() As Object
+        return_colresponse = colresponse
+    End Function
+
+
+    Function readvalor(ByVal linea) As String
+        Dim c As String
+        Dim LL As String
+        Dim cr As String
+        LL = Len(linea)
+        Do
+            c = Mid(linea, xx, 1)
+            xx = xx + 1
+            If c <> " " Or xx > LL + 1 Then Exit Do
+        Loop
+        If xx > LL + 1 Then readvalor = "end" : Exit Function
+        Do
+            cr = Mid(linea, xx, 1)
+            If cr = " " Or cr = "" Then Exit Do
+            c = c & cr
+            xx = xx + 1
+            If xx > LL Then Exit Do
+        Loop
+        readvalor = c
+    End Function
+    ''Function LaunchApp32(ByVal MYAppname As String) As Integer ' detiene los macros mientras opensees corre
+    ''    'On Error Resume Next
+    ''    Const SYNCHRONIZE = 1048576
+    ''    Const INFINITE = -1&
+    ''    Dim ProcessID&
+    ''    Dim ProcessHandle&
+    ''    Dim Ret&
+
+    ''    LaunchApp32 = -1
+    ''    ProcessID = Shell(MYAppname, vbNormalFocus)
+    ''    If ProcessID <> 0 Then
+    ''        ProcessHandle = OpenProcess(SYNCHRONIZE, True, ProcessID&)
+    ''        Ret = WaitForSingleObject(ProcessHandle, INFINITE)
+    ''        Ret = CloseHandle(ProcessHandle)
+    ''    Else
+    ''        MsgBox("ERROR : Unable to start " & MYAppname)
+    ''        LaunchApp32 = 0
+    ''    End If
+    ''    CloseHandle(ProcessHandle)
+    ''End Function
+
+
+    Function checknode(ByVal x, ByVal y) As Integer
+        Dim yy
+        For n As Integer = 1 To nnodes
+            xx = nodes(n, 1)
+            yy = nodes(n, 2)
+            If xx = x And yy = y Then
+                checknode = n
+                Exit For
+            Else
+                checknode = 0
+            End If
+        Next
+    End Function
+End Class

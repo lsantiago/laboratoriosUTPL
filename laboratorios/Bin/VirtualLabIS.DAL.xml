@@ -1,0 +1,129 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+VirtualLabIS.DAL
+</name>
+</assembly>
+<members>
+<member name="M:VirtualLabIS.DAL.VirtualLabIS.DAL.Cicha.cicha.AgregarCicha_Espc_Cir(System.Int32@,System.Int32@,VirtualLabIS.DTO.dsCicha.CICHA_ESPC_CIRDataTable@,VirtualLabIS.DTO.dsCicha.CICHA_ESPC_CIRRow@)">
+	<summary>
+ Agrega una fila o registro en la tabla CICHA_ESPC_CIR del Experimento CICHA
+ Los parametros que se envian a la capa FACADE son los que recibe de la capa de presentació
+ </summary>
+	<param name="intCirID">Enviado por referencia, para saber cual es el ID que inserto el SP "spInsertarCICHA_ESPC_CIR" </param>
+	<param name="intOrden">Enviado por referencia, se inicializada a partir de una consulta a la DB de esta tabla</param>
+	<param name="dtCICHA_ESPC_CIR">Con el fin de recorrer el DataTable para enviar dato a dato a la capa DAT</param>
+	<param name="drCICHA_ESPC_CIR">Con de obtener cada dato y enviarlo a la capa DAT</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAL.VirtualLabIS.DAL.Cicha.cicha.subObtenerNombre_CICHA_ESPC_CIR(System.String)">
+	<summary>
+ Extrae de la DB los nombres de los Especimenes de tipo Circular, para validar
+ si un specimen dedo como parámetro, existe ya en la DB
+ </summary>
+	<param name="strNombreSpec"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAL.VirtualLabIS.DAL.Cicha.cicha.subObtener_CICHA_ESPC_CIR(VirtualLabIS.DTO.dsCicha@)">
+	<summary>
+ Devuelve todos los datos de la table "CICHA_ESPC_CIR" en un DataSet
+ </summary>
+	<param name="dsCICHA"></param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAL.VirtualLabIS.DAL.Cicha.cicha.subCicha_ObtenerDataSpecRec(VirtualLabIS.DTO.dsCicha@)">
+	<summary>
+ Devuelve todos los datos de la table "CICHA_ESPC_REC" en un DataSet
+ </summary>
+	<param name="dsCICHA"></param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAL.VirtualLabIS.DAL.Cicha.cicha.subCicha_ObtenerNombreSpecRec(System.String)">
+	<summary>
+ Extrae de la DB los nombres de los Especimenes de tipo Rectangular, para validar
+ si un specimen dedo como parámetro, existe ya en la DB
+ </summary>
+	<param name="strNombreSpec"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:VirtualLabIS.DAL.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:VirtualLabIS.DAL.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="T:VirtualLabIS.DAL.My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="M:VirtualLabIS.DAL.VirtualLabIS.DAL.Columna.columna.AgregarColumna(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double,System.Int32,System.Double,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,VirtualLabIS.DTO.dsColumna.COLUMNADataTable@,VirtualLabIS.DTO.dsColumna.COLUMNARow@)">
+	<summary>
+ Agrega una fila o registro al DataTable COLUMNA del dsColumna estos datos son los que se envian como parametros.
+ </summary>
+	<param name="intColumna_Id">IDENTIFICADOR UNICO DE LA COLUMNA</param>
+	<param name="intExpColumna_Id">IDENTIFICADOR UNICO DEL EXPCOLUMNA </param>
+	<param name="intColumna_Dise_Secuencia">SECUENCIA DEL NUMERO DE ITERACIONES O DE ANALISIS EJECUTADO</param>
+	<param name="dobColumna_Dise_DiametroSeccion">DIÁMETRO DE LA SECCIÓN (mm)</param>
+	<param name="dobColumna_Dise_RecubrimientoVarillasLongitud">RECUBRIMIENTO DE LAS BARILLAS (mm)</param>
+	<param name="dobColumna_Dise_DiametroVarillasLongitudinales">DIÁMETRO DEL REFUERZO LONGITUDINAL (mm)</param>
+	<param name="intColumna_Dise_NumeroVarillasLongitud">NÚMERO DE BARILLAS LONGITUDINALES</param>
+	<param name="dobColumna_Dise_DiametroRefzTrans">DIÁMETRO DEL REFUERZO TRANSVERSAL (mm)</param>
+	<param name="strColumna_Dise_TipoEstribo">TIPO DE ESTRIBO</param>
+	<param name="dobColumna_Dise_EspaciamTransAcero">ESPACIAMIENTO TRANSVERSAL DEL ACERO (mm)</param>
+	<param name="dobColumna_Dise_ResistCompsConcret">RESISTENCIA A LA COMPRESIÓN DEL COMCRETO f'c (Mpa)</param>
+	<param name="dobColumna_Dise_RefzTensionLongitud">ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL fy</param>
+	<param name="dobColumna_Dise_RefzTensionTrans">ESFUERZO DE FLUENCIA DEL ACERO TRANSVERSAL fyh</param>
+	<param name="dobColumna_Dise_RefzMaxTensionLongitud">ESFUERZO ÚLTIMO DEL ACERO   fu (Mpa)</param>
+	<param name="dobColumna_Dise_CargaAxial">CARGA AXIAL  P (KN)</param>
+	<param name="douColumna_Dise_CuantiaAceroLongitud">CUANTÍA DEL ACERO LONGITUDINAL</param>
+	<param name="douColumna_Dise_CuantiaAceroTrans">CUANTÍA DEL ACERO TRANSVERSAL</param>
+	<param name="douColumna_Dise_RazonCargaAxial">RAZÓN DE CARGA AXIAL </param>
+	<param name="douColumna_Dise_ModuloElasticidadConcreto">MÓDULO DE ELÁSTICIDAD DEL CONCRETO</param>
+	<param name="douColumna_Dise_DeformacionFluenciaAceroLongitud">DEFORMACIÓN DE FLUENCIA DEL ACERO LONGITUDINAL</param>
+	<param name="dobColumna_Anal_PorcAceroLongitud"></param>
+	<param name="dobColumna_Anal_PorcCargaAxial"></param>
+	<param name="dobColumna_Anal_ModuloElasticidadConcreto"></param>
+	<param name="dobColumna_Anal_ControlDanoConcreto"></param>
+	<param name="dobColumna_Anal_Inercia"></param>
+	<param name="dobColumna_Anal_PrimerProductoMomento">MOMENTO DE PRIMERA FLUENCIA M'y (KNm)</param>
+	<param name="dobColumna_Anal_PrimerProductoCurvatura">PRIMERA CURVATURA DE FLUENCIA  O’y (1/m)</param>
+	<param name="dobColumna_Anal_FuerzaNominalMomento">MOMENTO NOMINAL Mn (KNm)</param>
+	<param name="dobColumna_Anal_CurvaturaNominal"></param>
+	<param name="dobColumna_Anal_MomentoControlDano"></param>
+	<param name="dobColumna_Anal_CurvaturaControlDano"></param>
+	<param name="dobColumna_Anal_PorcInclinacion"></param>
+	<param name="strColumna_Anal_DatosSalidaAnalisisMC">Matriz de Resultados AMC sumada en una sola cadena de datos String</param>
+	<param name="dobColumna_Anal_Ey_d"></param>
+	<param name="dobColumna_Anal_E1"></param>
+	<param name="douColumna_Anal_CurvaturaFluencia">CURVATURA DE FLUENCIA </param>
+	<param name="douColumna_Anal_InerciaGruesa">INERCIA GRUESA</param>
+	<param name="douColumna_Anal_InerciaAgrietada">INERCIA AGRIETADA</param>
+	<param name="dtColumna">DataTable COLUMNA</param>
+	<param name="drColumna">DataRow COLUMNA</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAL.VirtualLabIS.DAL.Columna.columna.Insertar_ExpColumna_Columna_Graficas(System.Int32,System.Int32@,System.String,System.DateTime,VirtualLabIS.DTO.dsColumna.COLUMNADataTable,VirtualLabIS.DTO.dsColumna.GRAFICASDataTable)">
+	<summary>
+ Inserta los Datos de los DataTables: COLUMNA, GRAFICAS, en la DB y en las siguientes tablas
+ EXPCOLUMNA, COLUMNA, GRAFICAS.
+ Para ello llama a los metodos: InsertarExperimentoColumna, InsertarColumna, InsertarGraficas dela
+ Capa DAL de Transacciones y Acceso a la DB.
+ </summary>
+	<param name="intUsersID">ID del Usuario único extraido desde la DB del DotNetNuke</param>
+	<param name="intExpColumna_Id">Campo de tipo IDENTITY, autogenerado cuando se inserta un nuevo resgistro en la DB, el proceso devuelve del ExpColumna_ID insertado</param>
+	<param name="strExpColumna_nombre">Nombre del ExpColumna con el cual el usuarios se relacionará</param>
+	<param name="dateExpColumna_FechaCreacion">Fecha en la cual el usuario crea el Experimento Columna</param>
+	<param name="dtColumna">DataTable COLUMNA</param>
+	<param name="dtGraficas">DataTable GRAFICAS</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAL.VirtualLabIS.DAL.Columna.columna.Eliminar_ExperimentoColumna_Columna_Graficas(System.Int32,System.Int32)">
+	<summary>
+ Elimina los datos del la DB de un ExperimentoColumna dado, los datos de borran de las siguientes tablas
+ EXPCOLUMNA, COLUMNA, GRAFICAS
+ </summary>
+	<param name="intUserID">ID unico del Usuario</param>
+	<param name="intExpColumna_Id">ID del Experimento Columna</param>        ''' <remarks></remarks>
+</member>
+</members>
+</doc>

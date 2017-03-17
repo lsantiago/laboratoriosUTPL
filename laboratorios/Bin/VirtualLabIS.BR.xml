@@ -1,0 +1,238 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+VirtualLabIS.BR
+</name>
+</assembly>
+<members>
+<member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Columna.columna.Convertir_MatrizResultadosAMC_A_strCadena(System.Object)">
+	<summary>
+ Dada una matriz de orden [i,j] se recorre sus elementos y se los suma un una sola cadena de tipo string 
+ </summary>
+	<param name="fileMatriz_out">Matriz[99][5] Object contiene datos del "Moment Curvature Analysis" </param>
+	<returns>Una cadena que contiene todos los elementos de la Matriz sumados separados por un espacio " "</returns>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Columna.columna.AsignarParametrosDesigner(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Object@)">
+	<summary>
+ Recibe los parametros de diseño de la columna y los asigna a un arreglo para correr el AMC
+ </summary>
+	<param name="strColumna_Dise_DiametroSeccion">DIÁMETRO DE LA SECCIÓN (mm)</param>
+	<param name="strColumna_Dise_RecubrimientoVarillasLongitud">RECUBRIMIENTO DE LAS BARILLAS (mm)</param>
+	<param name="strColumna_Dise_DiametroVarillasLongitudinales">DIÁMETRO DEL REFUERZO LONGITUDINAL (mm)</param>
+	<param name="strColumna_Dise_NumeroVarillasLongitud">NÚMERO DE BARILLAS LONGITUDINALES</param>
+	<param name="strColumna_Dise_DiametroRefzTrans">DIÁMETRO DEL REFUERZO TRANSVERSAL (mm)</param>
+	<param name="strColumna_Dise_TipoEstribo">TIPO DE ESTRIBO</param>
+	<param name="strColumna_Dise_EspaciamTransAcero">ESPACIAMIENTO TRANSVERSAL DEL ACERO (mm)</param>
+	<param name="strColumna_Dise_ResistCompsConcret">RESISTENCIA A LA COMPRESIÓN DEL COMCRETO f'c (Mpa) </param>
+	<param name="strColumna_Dise_RefzTensionLongitud">ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL fy </param>
+	<param name="strColumna_Dise_RefzTensionTrans">ESFUERZO DE FLUENCIA DEL ACERO TRANSVERSAL fyh </param>
+	<param name="strColumna_Dise_RefzMaxTensionLongitud">ESFUERZO ÚLTIMO DEL ACERO   fu (Mpa)</param>
+	<param name="strColumna_Dise_CargaAxial">CARGA AXIAL  P (KN)</param>
+	<param name="file_in">Arreglo[26 elementos] (por referencia) el cual sera enviado al AMC</param>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Columna.columna.EjecutarAnalisisMomentoCurvatura(System.Object,System.Object@,System.Object@)">
+	<summary>
+ Llama la DLL "AnalisisMomentoCurvatura" Enviandole el file_in[26 elementos] que contiene los paramentros de Diseño
+ </summary>
+	<param name="file_in">Arreglo[26 elementos con los Parametros de Diseño]</param>
+	<param name="fileArray_out">Arreglo[12 elementos] que se llena con tos resultados "General analysis info"</param>
+	<param name="fileMatriz_out">Matriz[99 filas][5 columanas] que se llenara con el Resultados "Moment Curvature Analysis"</param>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Columna.columna.AgregarColumna(System.Int32,System.Int32,System.Int32,System.Object,System.Object,System.Object,VirtualLabIS.DTO.dsColumna.COLUMNADataTable@,VirtualLabIS.DTO.dsColumna.COLUMNARow@)">
+	<summary>
+ Agrega un Registro al DataTable "COLUMNA" (en Forma Deconectada), este contiene los datos de Diseño y 
+ Análisis se un iteración dada
+ </summary>
+	<param name="intColumna_Id">Identificador único de la Columna</param>
+	<param name="intExpColumna_Id">Identificador único del Experimento</param>
+	<param name="intColumna_Dise_Secuencia">Secuencia o número de iteración de Análisis</param>
+	<param name="file_in">Arreglo[26 elementos] con lo parametros de Diseño</param>
+	<param name="fileArray_out">Arreglo[12 elementos] con los resultados "General analysis info"</param>
+	<param name="fileMatriz_out">Matriz[98 Filas][5 Columna] Con los resultados del "Moment Curvature Analysis"</param>
+	<param name="dtColumna">DataTable de tipo "COLUMNA" en el cual se agregara los datos del Diseño y Análisis</param>
+	<param name="drColumna">DataRow de tipo "COLUMNA" en el cual se agregara los datos del Diseño y Análisis</param>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Columna.columna.Analisis_MomentoCurvatura(System.Int32,System.Int32@,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,VirtualLabIS.DTO.dsColumna.COLUMNADataTable@,VirtualLabIS.DTO.dsColumna.COLUMNARow@)">
+	<summary>
+ Asigna los parametros de Diseño "AsignarParametrosDesigner" a un Arreglo para posteriormente enviar a ejcutar en AMC
+ "EjecutarAnalisisMomentoCurvatura" retornar sus Resultados a finalmente agregar los: Parametros de Diseño y los Resultados
+ del AMC al DataTable de tipo "COLUMNA"
+ </summary>
+	<param name="intColumna_Id">Identificador único de la Columna</param>
+	<param name="intExpColumna_Id">Identificador único del Experimento</param>
+	<param name="intColumna_Dise_Secuencia">Secuencia o número de iteración de Análisis</param>
+	<param name="strColumna_Dise_DiametroSeccion">DIÁMETRO DE LA SECCIÓN (mm)</param>
+	<param name="strColumna_Dise_RecubrimientoVarillasLongitud">RECUBRIMIENTO DE LAS BARILLAS (mm)</param>
+	<param name="strColumna_Dise_DiametroVarillasLongitudinales">DIÁMETRO DEL REFUERZO LONGITUDINAL (mm)</param>
+	<param name="strColumna_Dise_NumeroVarillasLongitud">NÚMERO DE BARILLAS LONGITUDINALES</param>
+	<param name="strColumna_Dise_DiametroRefzTrans">DIÁMETRO DEL REFUERZO TRANSVERSAL (mm)</param>
+	<param name="strColumna_Dise_TipoEstribo">TIPO DE ESTRIBO</param>
+	<param name="strColumna_Dise_EspaciamTransAcero">ESPACIAMIENTO TRANSVERSAL DEL ACERO (mm)</param>
+	<param name="strColumna_Dise_ResistCompsConcret">RESISTENCIA A LA COMPRESIÓN DEL COMCRETO f'c (Mpa) </param>
+	<param name="strColumna_Dise_RefzTensionLongitud">ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL fy </param>
+	<param name="strColumna_Dise_RefzTensionTrans">ESFUERZO DE FLUENCIA DEL ACERO TRANSVERSAL fyh </param>
+	<param name="strColumna_Dise_RefzMaxTensionLongitud">ESFUERZO ÚLTIMO DEL ACERO   fu (Mpa)</param>
+	<param name="strColumna_Dise_CargaAxial">CARGA AXIAL  P (KN)</param>
+	<param name="dtColumna">DataTable COLUMNA</param>
+	<param name="drColumna">DataRow COLUMNA</param>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.ITHA.ITHA.funcLeerResultados(System.String)">
+	<summary>
+ Lee los resultados del ITHA del archivo ddbdout.txt
+</summary>
+	<remarks></remarks>
+	<history>
+ 	[lsantiago]	 Creado el 2k7-01-05	
+ </history>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.ITHA.ITHA.funcSimular(System.String,System.String,System.String)">
+	<summary>
+ Ejecuta el análisis ITHA 
+</summary>
+	<remarks></remarks>
+	<history>
+ 	[lsantiago]	 Creado el 2k7-01-05	
+ </history>
+</member><member name="P:VirtualLabIS.BR.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:VirtualLabIS.BR.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="T:VirtualLabIS.BR.My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Cicha.cicha.EjecutarAnalisis_CICHA(System.String,System.String,System.String,System.Object,System.Object,System.String)">
+	<summary>
+ Ejecuta el Analisis de Columnas de Hormigon Armado CICHA, levantando OpenSees y reciviendo las rutas
+ en donde se encuentran los archivos necesarios para ello como los arreglos de la DLL CICHA recive
+ como parametros.
+ </summary>
+	<param name="pathFiles_IN">Ruta en donde se escribiran los archivo de entrada</param>
+	<param name="pathFiles_OUT">Ruta en donde se escribiran los archivo de resultados</param>
+	<param name="pathFiles_EXE">Ruta en donde se escribiran los archivos durante el proceso de ejecución</param>
+	<param name="file_in_Simul">Arreglo con los parametros para ejecutar el proceso de simulación</param>
+	<param name="file_in_Spec">Arreglo con los valores del spec real dado (circular) (rectangular)</param>
+	<param name="strNomSpec">Nombre del Spec. Con la finalidad de buscar la ruta del archivoSpec_TCL.tct</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Cicha.cicha.fucAnalisis_CICHA(System.Int32,System.String,System.Object,System.Object,System.String)">
+	<summary>
+ Ejecuta el Analisis de Columnas de Hormigon Armado CICHA, levantando OpenSees.
+ </summary>
+	<param name="intUserID"></param>
+	<param name="strUserName"></param>
+	<param name="file_in_Simul"></param>
+	<param name="file_in_Spec"></param>
+	<param name="strNomSpec"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Cicha.cicha.subAgregar_ExpEspc(System.Int32,System.Int32,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Int32,System.Int32,System.Int32,System.Int32,VirtualLabIS.DTO.dsCicha.CICHA_EXP_ESPCDataTable@,VirtualLabIS.DTO.dsCicha.CICHA_EXP_ESPCRow@)">
+	<summary>
+ Agrega al DataTable "dtCICHA_EXP_ESPC" una nueva fila con los valores de una Iteracion
+ </summary>
+	<param name="intExpEspc_Id">Id del Specimen</param>
+	<param name="intExp_Id">Id del Experimento Virtual</param>
+	<param name="douCoreCircunfer_Y">Divisiones en Sentido Y "Concreto Confinado"</param>
+	<param name="douCoreRadial_Z">Divisiones en Sentido Z "Concreto Confinado"</param>
+	<param name="douCoverCircunfer_Y">Divisiones en Sentido Y "Concreto NO Confinado"</param>
+	<param name="douCoverRadial_Z">Divisiones en Sentido Z "Concreto NO Confinado"</param>
+	<param name="douNumSubElementos">Numero de Sub Elementos</param>
+	<param name="douNumPuntosInters">Numero de Puntos de Integracion</param>
+	<param name="intModeloAcero">Modelo de Acero</param>
+	<param name="intModeloConcreto">Modelo de Concreto</param>
+	<param name="intPenetracDeform">Considerar Penetracion de Deformacion</param>
+	<param name="intEfectPdelta">Considerar Penetracion P Delta</param>
+	<param name="dtCICHA_EXP_ESPC">DataTable del Specimen</param>
+	<param name="drCICHA_EXP_ESPC">DataRow del Specimen</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Cicha.cicha.subEscribirArchivoSimulacion(System.Int32,System.String,System.Int32,System.Int32,System.Object@,VirtualLabIS.DTO.dsCicha.CICHA_EXP_ESPCDataTable@,VirtualLabIS.DTO.dsCicha.CICHA_EXP_ESPCRow@)">
+	<summary>
+ Codigo Util mientras las simulaciones las Ejecuta el Servidor Web, cuando las simulaciones se ejecuten
+ en un ambiente distribuido el codigo anteriormente comentado es el que se debe ejecutar en lugar de este.
+ El presente codigo, asigna los parametros de Simulacion a un Arreglo, independientemente del Tipod e Specimen
+ Este arreglo es el cual recibe como entrada la DLL CICHA.
+ </summary>
+	<param name="intUserID">Id del Usuario</param>
+	<param name="strUserName">Nombre del Usuario</param>
+	<param name="intTipoSeccion">Tipo de Seccion</param>
+	<param name="intOrdenSeccion">Orden de la Seccion</param>
+	<param name="file_in_Simul">Areglo de parametrizacion para la Simulacion</param>
+	<param name="dtCICHA_EXP_ESPC">DataTable del Specimen</param>
+	<param name="drCICHA_EXP_ESPC">DataRow del Specimen</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Cicha.cicha.subWriteFile_InfSpec_SpecTCL_CIRCULAR(System.Int32,System.String,System.Object@,VirtualLabIS.DTO.dsCicha.CICHA_ESPC_CIRDataTable,VirtualLabIS.DTO.dsCicha.CICHA_ESPC_CIRRow)">
+	<summary>
+ Parametriza un arreglo con la informacion del Specimen de tipo Circular y Escribe fisicamente 
+ en disco un archivo TCL de este mismo especimen para la simulacion
+ </summary>
+	<param name="intUserID"></param>
+	<param name="strUserName"></param>
+	<param name="file_in_Spec_Cir"></param>
+	<param name="dtCICHA_ESPC_CIR"></param>
+	<param name="drCICHA_ESPC_CIR"></param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Cicha.cicha.subWriteFile_InfSpec_SpecTCL_RECTANGULAR(System.Int32,System.String,System.Object@,VirtualLabIS.DTO.dsCicha.CICHA_ESPC_RECDataTable,VirtualLabIS.DTO.dsCicha.CICHA_ESPC_RECRow)">
+	<summary>
+ Parametriza un arreglo con la informacion del Specimen de tipo Rectangular y Escribe fisicamente 
+ en disco un archivo TCL de este mismo especimen para la simulacion.
+ </summary>
+	<param name="intUserID"></param>
+	<param name="strUserName"></param>
+	<param name="file_in_Spec_Rec"></param>
+	<param name="dtCICHA_ESPC_REC"></param>
+	<param name="drCICHA_ESPC_REC"></param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Cicha.cicha.fucObtenerFileSimulacion(System.Int32,System.String,System.Boolean@)">
+	<summary>
+ Una vez ejecutada la simulacion, se accede a disco y se recupera el archivo de resultados de la simulacion
+ con la finalidad de graficarlo.
+ </summary>
+	<param name="intUserID"></param>
+	<param name="strUserName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Puente.puente.#ctor">
+	<summary>
+ Constructor que inicializa el objeto "objDLLBridge" 
+ el cual hace referencia a la DLL "VLEE_DDBD_Bridge.dll"
+ </summary>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Puente.puente.funcLeerResultados(System.String)">
+	<summary>
+ Lee los resultados del DDBD del archivo ddbdout.txt
+</summary>
+	<remarks></remarks>
+	<history>
+ 	[lsantiago]	 Creado el 2k7-01-05	
+ </history>
+</member><member name="M:VirtualLabIS.BR.VirtualLabIS.BR.Puente.puente.funcSimular(System.String,System.String,System.String)">
+	<summary>
+ Ejecuta el análisis DDBD 
+</summary>
+	<remarks></remarks>
+	<history>
+ 	[lsantiago]	 Creado el 2k7-01-05	
+ </history>
+</member>
+</members>
+</doc>

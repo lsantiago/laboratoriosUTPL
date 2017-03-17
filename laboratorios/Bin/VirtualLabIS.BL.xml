@@ -1,0 +1,259 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+VirtualLabIS.BL
+</name>
+</assembly>
+<members>
+<member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Cicha.cicha.fucObtenerMatrizDouble_ArrayByt(System.Byte[])">
+	<summary>
+ Obtiene una Matriz de Doubles a partir de un arreglo de Byte.
+ </summary>
+	<param name="bytFile">Arreglo de Byte</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Cicha.cicha.fucObtenerArray_Matriz(System.Int32,System.Double[0:,0:])">
+	<summary>
+ De la Matriz de dimension: [99 filas] y [5 columna] del "Moment Curvature Analysis" 
+ selecionara una Columna dada y la devolvera como Array: [99 filas] [1 columna]
+ </summary>
+	<param name="intNumColumna">Número de Columna de la Matriz[99][5] que se desea recuperar (cero es la primera posición)</param>
+	<param name="douMatrizFile_out">Matriz[99][5]</param>
+	<returns>Array[99][1]</returns>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Cicha.cicha.fucObtenerArray_Metro_Milimetro(System.Double[])">
+	<summary>
+ Dado un arreglo de valores Doubles todos en Milimetros. Se los transforma a Metros.
+ Es decir, se multiplica a cada uno para mil.
+ </summary>
+	<param name="douArray_in">Arreglo de Entrada a transformar</param>
+	<returns>Arreglo transformado de Milimetros a Metros</returns>
+	<remarks></remarks>
+</member><member name="P:VirtualLabIS.BL.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:VirtualLabIS.BL.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:VirtualLabIS.BL.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.Convertir_strCadena_A_MatrizResultadosAMC(System.String)">
+	<summary>
+ Dada una Cadena String, se convierte a un arreglo de string y este a su vez a una Matriz[99][5] de contiene datos del "Moment Curvature Analysis" 
+ </summary>
+	<param name="strCadena">Cadena de Longtitud larga</param>
+	<returns>Una Matriz[99][5] Double con los datos del "Moment Curvature Analysis" </returns>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerMatrizResultadosAMC(System.Int32,System.Int32,VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Devuelve una Matriz de dimension: [99 filas] y [5 columna], la cual contiene los datos de salida 
+ del Análisis Momento Curvatura llamados "Moment Curvature Analysis" 
+ </summary>
+	<param name="intColumna_Id">Identificador Unico de la Columna</param>
+	<param name="intColumna_Dise_Secuencia">Secuencia o número de iteración de Análisis</param>
+	<param name="dtColumna">DataTable Tipificado, contiene TODOS los datos de TODOS los Análisis</param>
+	<returns>Matriz[99][5] de resultados "Moment Curvature Analysis"</returns>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerColumnaMatrizAMC(System.Int32,System.Double[0:,0:])">
+	<summary>
+ De la Matriz de dimension: [99 filas] y [5 columna] del "Moment Curvature Analysis" 
+ selecionara una Columna dada y la devolvera como Array: [99 filas] [1 columna]
+ </summary>
+	<param name="intNumColumna">Número de Columna de la Matriz[99][5] que se desea recuperar (cero es la primera posición)</param>
+	<param name="douMatrizFile_out">Matriz[99][5]</param>
+	<returns>Array[99][1]</returns>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosDesignerGraficaMomenCurv(System.Int32,System.Int32,VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Devuelve los Datos de Diseño de una Columna dada (todos sumados en una sola Cadena) 
+ </summary>
+	<param name="intColumna_Id">Identificador único de la Columna</param>
+	<param name="intColumna_Dise_Secuencia">Secuencia o número de iteración de Análisis</param>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns></returns>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerIndicadoresAMC(System.Int32,System.Int32,VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Devuelve los Datos correspondientes a los Indicadores del Analisis Momento Curvatura, todos ellos sumados en una sola
+ cadena de caraceres; Estos datos son:
+ MOMENTO DE PRIMERA FLUENCIA, PRIMERA CURVATURA DE FLUENCIA, MOMENTO NOMINAL, CURVATURA DE FLUENCIA, 
+ INERCIA GRUESA, INERCIA AGRIETADA, INERCIA AGRIETADA/INERCIA GRUESA
+ </summary>
+	<param name="intColumna_Id">Identificador único de la Columna</param>
+	<param name="intColumna_Dise_Secuencia">Secuencia o número de iteración de Análisis</param>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.Insertar_ExpColumna_Columna_Graficas(System.Int32,System.Int32@,System.String,System.DateTime,VirtualLabIS.DTO.dsColumna.COLUMNADataTable,VirtualLabIS.DTO.dsColumna.GRAFICASDataTable)">
+	<summary>
+ Inserta los Datos de los DataTables: COLUMNA, GRAFICAS en la DB y en las siguientes tablas
+ EXPCOLUMNA, COLUMNA, GRAFICAS
+ </summary>
+	<param name="intUserID">Identificador único del Usuario</param>
+	<param name="intExpColumna_Id">Identificador único del ExperimentoColumna(conjunto de las columnas) Se autoAsigna de la DB por que el campo es de tipo IDENTITY</param>
+	<param name="strExpColumna_nombre">Nombre del ExpColumna con el cual el usuarios se relacionará</param>
+	<param name="dateExpColumna_FechaCreacion">Fecha en la cual el usuario crea el Experimento Columna</param>
+	<param name="dtColumna">DataTable COLUMNA</param>
+	<param name="dtGraficas">DataTable GRAFICAS</param>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.EliminarColumna(System.Int32,System.Int32,VirtualLabIS.DTO.dsColumna.COLUMNADataTable@)">
+	<summary>
+ Elimina una columna dada (una fila del DataTable COLUMNA)
+ </summary>
+	<param name="intColumna_Id">Identificador único de la Columna</param>
+	<param name="intColumna_Dise_Secuencia">Secuencia o número de iteración de Análisis</param>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns></returns>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ActualizarSecuencia(System.Int32,System.Int32,VirtualLabIS.DTO.dsColumna.COLUMNADataTable@)">
+	<summary>
+ Actualiza la Secuencia del DataTable COLUMNA por cada vez que se elimina una Iteracion o Análisis
+ con la finalidad de presentar secuencialmente las Iteraciones.
+ Iteracion o Análisis 1
+ Iteracion o Análisis 2
+ Iteracion o Análisis n
+ </summary>
+	<param name="intColumna_Id">Identificador único de la Columna</param>
+	<param name="intColumna_Dise_Secuencia">Secuencia o número de iteración de Análisis</param>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGraficaEstmCuvtauraFluenciaX(VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Retorna los datos Para hacer el levantamiento gráfico en su coordenada X de la  "GRÁFICA # 2: ESTIMACIÓN DE CURVATURA DE FLUENCIA"
+ </summary>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns>Un arreglo con el número de elementos totales del dtColumna (Número total de Iteraciones)</returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGraficaEstmCuvtauraFluenciaY(VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Retorna los datos Para hacer el levantamiento gráfico en su coordenada "Y" de la  "GRÁFICA # 2: ESTIMACIÓN DE CURVATURA DE FLUENCIA"
+ </summary>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns>Un arreglo con el número de elementos totales del dtColumna (Número total de Iteraciones)</returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGraficaResistenciaRigidezX(VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Retorna los datos Para hacer el levantamiento gráfico en su coordenada "X" de la  "GRÁFICA # 3: RELACIÓN ENTRE RESISTENCIA Y RIGIDEZ"
+ </summary>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns>Un arreglo con el número de elementos totales del dtColumna (Número total de Iteraciones)</returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGraficaResistenciaRigidezY(VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Retorna los datos Para hacer el levantamiento gráfico en su coordenada "Y" de la  "GRÁFICA # 3: RELACIÓN ENTRE RESISTENCIA Y RIGIDEZ"
+ </summary>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns>Un arreglo con el número de elementos totales del dtColumna (Número total de Iteraciones)</returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGraficaMomenCurv_Linea(System.Int32,System.Int32,VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Dado un DataTable Busca la Columna con el intColumna_Id y crea un arreglo con los siguientes valores
+ douXinical=0, douYinicial=0, douCurvaturaNominal, douFuerzaNominalMomento, douCurvaturaControlDano, douMomentoControlDano
+ que son las posiciones para la segunda linea de la Grafica #1 "Momento Curvatura"
+ </summary>
+	<param name="intColumna_Id">Identificador Unico de la Columna</param>
+	<param name="intColumna_Dise_Secuencia">Secuencia o número de iteración de Análisis</param>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns>arrayDatosGraficaMomenCurvLinea2 {douXinical, douYinicial, douCurvaturaNominal, douFuerzaNominalMomento, douCurvaturaControlDano, douMomentoControlDano} </returns>
+	<remarks></remarks>
+	<history>
+ [pdirene]	Creado 2k7-12-07  
+ </history>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGraficaInerciaGruesa_AgrietadaX(VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Retorna los datos Para hacer el levantamiento gráfico en su coordenada "X" de la  "GRÁFICA # 4: RELACIÓN ENTRE INERCIA GRUESA / INERCIA AGRIETADA Y LA CUANTÍA DE ACERO"
+ </summary>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns>Un arreglo con el número de elementos totales del dtColumna (Número total de Iteraciones)</returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGrafic3aInerciaGruesa_AgrietadaY(VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Retorna los datos Para hacer el levantamiento gráfico en su coordenada "Y" de la  "GRÁFICA # 4: RELACIÓN ENTRE INERCIA GRUESA / INERCIA AGRIETADA Y LA CUANTÍA DE ACERO"
+ </summary>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns>Un arreglo con el número de elementos totales del dtColumna (Número total de Iteraciones)</returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGraficaInercGruesAgriet_Real_CalculadaX(VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Retorna los datos Para hacer el levantamiento gráfico en su coordenada "X" de la  "GRÁFICA # 5: RELACIÓN DE LA INERCIA GRUESA / INERCIA AGRIETADA REAL Y LA INERCIA GRUESA / INERCIA AGRIETADA CALCULADA"
+ </summary>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns>Un arreglo con el número de elementos totales del dtColumna (Número total de Iteraciones)</returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGraficaInercGruesAgriet_Real_CaluladaY(VirtualLabIS.DTO.dsColumna.COLUMNADataTable)">
+	<summary>
+ Retorna los datos Para hacer el levantamiento gráfico en su coordenada "Y" de la  "GRÁFICA # 5: RELACIÓN DE LA INERCIA GRUESA / INERCIA AGRIETADA REAL Y LA INERCIA GRUESA / INERCIA AGRIETADA CALCULADA"
+ </summary>
+	<param name="dtColumna">DataTable Tipificado, contiene los datos de TODOS los Diseños y Análisis</param>
+	<returns>Un arreglo con el número de elementos totales del dtColumna (Número total de Iteraciones)</returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerDatosGraficaRelacionDeformacionUnitaria_Curvatura_X(System.Double[]@,System.Double)">
+	<summary>
+ Retorna modificado el arreglo que se envia como parametro y en el, los datos para hacer el 
+ levantamiento gráfico en su coordenada "X" de la  
+ "GRÁFICA # 6: RELACIÓN ENTRE DEFORMACIÓN UNITARIA DEL CONCRETO Y CURVATURA"
+ Nota: Para la coordenada en Y, el metodo que retorna estos datos es "ObtenerColumnaMatrizAMC"
+       el cual retorna una columna dada de la matriz del "Analisis Momento Curvatura"
+ </summary>
+	<param name="arrayDouDatosGraficaRelacionDeformacionUnitaria_Curvatura_X">Arreglo en el cual se colocan los elementos para hacer el levantamiento Gráfico</param>
+	<param name="douDiametro">Diametro con el cual se multiplicaran para uno de lo elementos del arreglo 
+ que ingresa como parametro por referencia "arrayDouDatosGraficaRelacionDeformacionUnitaria_Curvatura_X"</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerSumaArreglosDeDatosGraficaRelacionDeformacionUnitaria_Curvatura(System.Double[]@,System.Double[])">
+	<summary>
+ Calcula la sumatoria de los arreglos que sirven para realizar el levantamiento gráfico:
+ GRÁFICA # 6: RELACIÓN ENTRE DEFORMACIÓN UNITARIA DEL CONCRETO Y CURVATURA
+ GRÁFICA # 7: RELACIÓN ENTRE DEFORMACIÓN UNITARIA DEL ACERO Y CURVATURA
+ Esta sumatoria servira posteriormente para calcular un Promedio
+ </summary>
+	<param name="arrayDouPromedioDatosGraficaRelacionDeformacionUnitaria_Curvatura_out">Arreglo sobre el cual se iran agregando cada valor del 2do arreglo y calculando su promedio</param>
+	<param name="arrayDouPromedioDatosGraficaRelacionDeformacionUnitaria_Curvatura_in">Arreglo con los nuevo valores a ser sumados</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.ObtenerPromedioArreglosDeDatosGraficaRelacionDeformacionUnitaria_Curvatura(System.Double[]@,System.Int32)">
+	<summary>
+ Calcula el promedio de un conjunto de datos que sirven para realizar el levantamiento gráfico:
+ GRÁFICA # 6: RELACIÓN ENTRE DEFORMACIÓN UNITARIA DEL CONCRETO Y CURVATURA
+ GRÁFICA # 7: RELACIÓN ENTRE DEFORMACIÓN UNITARIA DEL ACERO Y CURVATURA
+ </summary>
+	<param name="arrayDouPromedioDatosGraficaRelacionDeformacionUnitaria_Curvatura">Arreglo sobre el cual se calculara el promedio
+ contiene el valor de la sumatoria, el cual se elimina no sin antes calcular su promedio</param>
+	<param name="douNumeroIteraciones">Número total de iteraciones (o análisis ejecutado)</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.BL.VirtualLabIS.BL.Columna.columna.Eliminar_ExperimentoColumna_Columna_Graficas(System.Int32,System.Int32)">
+	<summary>
+ Elimina los datos del la DB de un ExperimentoColumna dado, los datos de borran de las siguientes tablas
+ EXPCOLUMNA, COLUMNA, GRAFICAS
+ </summary>
+	<param name="intUserID">ID unico del Usuario</param>
+	<param name="intExpColumna_Id">ID del Experimento Columna</param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

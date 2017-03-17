@@ -1,0 +1,202 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+VirtualLabIS.DAT
+</name>
+</assembly>
+<members>
+<member name="P:VirtualLabIS.DAT.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:VirtualLabIS.DAT.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:VirtualLabIS.DAT.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Columna.columna.InsertarExperimentoColumna(System.Int32,System.Int32@,System.String,System.DateTime)">
+	<summary>
+ Se inserta en la DB una fila o registro a la Tabla EXPCOLUMNA, es decir un nuevo experimento columna
+ </summary>
+	<param name="intUserID">Identificador único del Usuario</param>
+	<param name="intExpColumna_Id">Identificador único del ExperimentoColumna(conjunto de las columnas) Se autoAsigna de la DB por que el campo es de tipo IDENTITY</param>
+	<param name="strExpColumna_nombre">Nombre del ExpColumna con el cual el usuarios se relacionará</param>
+	<param name="dateExpColumna_FechaCreacion">Fecha en la cual el usuario crea el Experimento Columna</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Columna.columna.InsertarColumna(System.Int32@,System.Int32,System.Int32,System.Double,System.Double,System.Double,System.Int32,System.Double,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.String,System.Double,System.Double,System.Double,System.Double,System.Double)">
+	<summary>
+ Inserta en la DB una fila o registro a la Tabla COLUMNA, es decir n COLUMNAS un solo Experimento Columna
+ </summary>
+	<param name="intColumna_Id">Identificador único de la Columna</param>
+	<param name="intExpColumna_Id">Identificador único del ExperimentoColumna(conjunto de las columnas) Se autoAsigna de la DB por que el campo es de tipo IDENTITY</param>
+	<param name="intColumna_Dise_Secuencia">Secuencia o número de iteración de Análisis</param>
+	<param name="dobColumna_Dise_DiametroSeccion">DIÁMETRO DE LA SECCIÓN (mm)</param>
+	<param name="dobColumna_Dise_RecubrimientoVarillasLongitud">RECUBRIMIENTO DE LAS BARILLAS (mm)</param>
+	<param name="dobColumna_Dise_DiametroVarillasLongitudinales">DIÁMETRO DEL REFUERZO LONGITUDINAL (mm)</param>
+	<param name="intColumna_Dise_NumeroVarillasLongitud">NÚMERO DE BARILLAS LONGITUDINALES</param>
+	<param name="dobColumna_Dise_DiametroRefzTrans">DIÁMETRO DEL REFUERZO TRANSVERSAL (mm)</param>
+	<param name="strColumna_Dise_TipoEstribo">TIPO DE ESTRIBO</param>
+	<param name="dobColumna_Dise_EspaciamTransAcero">ESPACIAMIENTO TRANSVERSAL DEL ACERO (mm)</param>
+	<param name="dobColumna_Dise_ResistCompsConcret">RESISTENCIA A LA COMPRESIÓN DEL COMCRETO f'c (Mpa)</param>
+	<param name="dobColumna_Dise_RefzTensionLongitud">ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL fy</param>
+	<param name="dobColumna_Dise_RefzTensionTrans">ESFUERZO DE FLUENCIA DEL ACERO TRANSVERSAL fyh</param>
+	<param name="dobColumna_Dise_RefzMaxTensionLongitud">ESFUERZO ÚLTIMO DEL ACERO   fu (Mpa)</param>
+	<param name="dobColumna_Dise_CargaAxial">CARGA AXIAL  P (KN)</param>
+	<param name="douColumna_Dise_CuantiaAceroLongitud">CUANTÍA DEL ACERO LONGITUDINAL</param>
+	<param name="douColumna_Dise_CuantiaAceroTrans">CUANTÍA DEL ACERO TRANSVERSAL</param>
+	<param name="douColumna_Dise_RazonCargaAxial">RAZÓN DE CARGA AXIAL</param>
+	<param name="douColumna_Dise_ModuloElasticidadConcreto">MÓDULO DE ELÁSTICIDAD DEL CONCRETO</param>
+	<param name="douColumna_Dise_DeformacionFluenciaAceroLongitud">DEFORMACIÓN DE FLUENCIA DEL ACERO LONGITUDINAL</param>
+	<param name="dobColumna_Anal_PorcAceroLongitud"></param>
+	<param name="dobColumna_Anal_PorcCargaAxial"></param>
+	<param name="dobColumna_Anal_ModuloElasticidadConcreto"></param>
+	<param name="dobColumna_Anal_ControlDanoConcreto"></param>
+	<param name="dobColumna_Anal_Inercia"></param>
+	<param name="dobColumna_Anal_PrimerProductoMomento">MOMENTO DE PRIMERA FLUENCIA M'y (KNm)</param>
+	<param name="dobColumna_Anal_PrimerProductoCurvatura">PRIMERA CURVATURA DE FLUENCIA  O’y (1/m)</param>
+	<param name="dobColumna_Anal_FuerzaNominalMomento">MOMENTO NOMINAL Mn (KNm)</param>
+	<param name="dobColumna_Anal_CurvaturaNominal"></param>
+	<param name="dobColumna_Anal_MomentoControlDano"></param>
+	<param name="dobColumna_Anal_CurvaturaControlDano"></param>
+	<param name="dobColumna_Anal_PorcInclinacion"></param>
+	<param name="strColumna_Anal_DatosSalidaAnalisisMC">Matriz de Resultados AMC sumada en una sola cadena de datos String</param>
+	<param name="dobColumna_Anal_Ey_d"></param>
+	<param name="dobColumna_Anal_E1"></param>
+	<param name="douColumna_Anal_CurvaturaFluencia">CURVATURA DE FLUENCIA</param>
+	<param name="douColumna_Anal_InerciaGruesa">INERCIA GRUESA</param>
+	<param name="douColumna_Anal_InerciaAgrietada">INERCIA AGRIETADA</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Columna.columna.InsertarGraficas(System.Int32,System.Int32,System.String,System.Byte[])">
+	<summary>
+ Inserta en la DB una fila o registro a la Tabla GRAFICAS, es decir n GRAFICAS un solo Experimento Columna
+ </summary>
+	<param name="intGraficas_Id">Identificador único de la Columna, Se autoAsigna de la DB por que el campo es de tipo IDENTITY</param>
+	<param name="intExpColumna_Id">Identificador único del ExperimentoColumna(conjunto de las columnas) Se autoAsigna de la DB por que el campo es de tipo IDENTITY</param>
+	<param name="strGraficas_Nombre">Nombre de la Gráfica</param>
+	<param name="bytGraficas_Imagen">Imagen de tipo Areglo de Bytes</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Columna.columna.Eliminar_ExperimentoColumna_Columna_Graficas(System.Int32,System.Int32)">
+	<summary>
+ Elimina los datos del la DB de un ExperimentoColumna dado, los datos de borran de las siguientes tablas
+ EXPCOLUMNA, COLUMNA, GRAFICAS
+ </summary>
+	<param name="intUserID">ID unico del Usuario</param>
+	<param name="intExpColumna_Id">ID del Experimento Columna</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Cicha.cicha.subObtener_CICHA_ESPC_CIR_CICHA_ESPC_REC(System.String)">
+	<summary>
+ Devuelve todos los datos de la table "CICHA_ESPC_CIR" o "CICHA_ESPC_REC"
+ dependiendo del nombre de la tabla que se recibe como parametro
+ </summary>
+	<param name="strNombreTabla"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Cicha.cicha.Insertar_Cicha_Espc_Cir(System.Int32@,System.Int32,System.String,System.String,System.Double,System.Double,System.Double,System.Int32,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Byte[],System.Byte[])">
+	<summary>
+ Agrega una fila o registro en la tabla CICHA_ESPC_CIR del Experimento CICHA
+ Los parametros que se reciben son dela capa DAL y esta a su vez de la de presentación
+ </summary>
+	<param name="intCirID">Identidicador único del Especimen Circular</param>
+	<param name="intOrden">Orden de almacemaciento del registro en la tabla</param>
+	<param name="strNombreSpec">Nombre del Especimen Circular</param>
+	<param name="strReferenciaSpec">Datos de referencia del Especimen</param>
+	<param name="bouDiametroSeccion">Diametro de la Seccion D(mm)</param>
+	<param name="bouLongitudColumna">Longitud de la Columna L(mm)</param>
+	<param name="douDiametroRefLong">Diametro del Refuerzo Longitudinal dbl(mm)</param>
+	<param name="intNumBarLong"># de Barillas Longitudinales (Unidades)</param>
+	<param name="douIndiceRefLong">Indice del Refuerzo Longitudinal (%)</param>
+	<param name="douDiametroRefTrans">Diametro del Refuerzo Transversal dbt(mm)</param>
+	<param name="douEspamientoTrans">Espaciamiento Transversal del Acero et(mm)</param>
+	<param name="douIndiceRefTrans">Indice del Refuerzo Transversal (%)</param>
+	<param name="douRecubrimientoEstrib">Recubrimiento al Centro del Estribo r(mm)</param>
+	<param name="douCargaAxial">Carga Axial P(KN)</param>
+	<param name="douResistCompConcret">Resistencia a la Comprención del Concreto f'c(Mpa)</param>
+	<param name="douEsfFluencLong">Esfuerzo de Fluencia del Acero Longitudinal fy(mpa)</param>
+	<param name="douEsfUltimoLong">Esfuerzo Último del Acero Longitudinal fu(Mpa)</param>
+	<param name="douEsfFluencTrans">Esfuerzo de Fluencia del Acero Transversal fyh(Mpa)</param>
+	<param name="bytIngRespuestaReal">Registro Sismico del Efecto REAl de la Sección</param>
+	<param name="bytIngArchivoTCL">Archivo TCL que parametriza la sección real</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Cicha.cicha.subObtenerNum_CICHA_ESPC_CIR">
+	<summary>
+ Obtiene el número de registros almacenados en la tabla "CICHA_ESPC_CIR"
+ Con el fin de ingresar una nueva con un orden.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Cicha.cicha.subObtenerNombre_CICHA_ESPC_CIR(System.String)">
+	<summary>
+ Extrae de la DB los nombres de los Especimenes de tipo Circular, para validar
+ si un specimen dedo como parámetro, existe ya en la DB
+ </summary>
+	<param name="strNombreSpec"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Cicha.cicha.subObtener_CICHA_ESPC_CIR(VirtualLabIS.DTO.dsCicha@)">
+	<summary>
+ Devuelve todos los datos de la table "CICHA_ESPC_CIR" en un DataSet
+ </summary>
+	<param name="dsCICHA">Parametro pasado por referencia para descargar
+ en este los datos que devuelve la consulta.</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Cicha.cicha.SubCicha_AgregarCicha_Spec_Rec(System.Int32@,System.Int32,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Int32,System.Double,System.Int32,System.Double,System.Int32,System.Double,System.Double,System.Int32,System.Double,System.Double,System.Int32,System.Double,System.Double,System.Double,System.Double,System.Double,System.Byte[],System.Byte[])">
+	<summary>
+ Agrega una fila o registro en la tabla CICHA_ESPC_REC del Experimento CICHA
+ Los parametros que se reciben son dela capa DAL y esta a su vez de la de presentación
+ </summary>
+	<param name="intRecID">Identidicador único del Especimen Rectangular</param>
+	<param name="intOrden">Orden de almacemaciento del registro en la tabla</param>
+	<param name="strNombreSpec">Nombre del Especimen Circular</param>
+	<param name="strReferenciaSpec">Datos de referencia del Especimen</param>
+	<param name="douAnchoSeccion">Ancho de la Seccción b(mm)</param>
+	<param name="douProfundidaSeccion">Profundidad de la Sección h(mm)</param>
+	<param name="douLongitudPila">Longitud de la Pila (mm)</param>
+	<param name="douDiametroRefLong">Diametro del Refuerzo Longitudinal db(mm)</param>
+	<param name="intNumBarLong">Número de Barillas Longitudinales (Unidades)</param>
+	<param name="douRecubrimientoZ">Recubrimiento rZ(mm) "Sentido Perpendicular a la carga lateral"</param>
+	<param name="intNumBarZ">Número de Barillar Intermedias  Z(Unidades) "Sentido Perpendicular a la carga lateral"</param>
+	<param name="douRecubrimientoY">Recubrimiento rY(mm) "Sentido Paralelo a la carga lateral"</param>
+	<param name="intNumBarY">Número de Barillar Intermedias Y(Unidades)"Sentido Paralelo a la carga lateral"</param>
+	<param name="douIndiceRefLong">Indice del Refuerzo Longitudinal %</param>
+	<param name="douDiametroRefTrans">Diametro del Refuerzo Transversal dbt(mm)</param>
+	<param name="intNumBarTrans">Número de Barillas Transversales (Unidades)</param>
+	<param name="douEspamientoTrans">Espaciamiento Transversal del Acero et(mm)</param>
+	<param name="douIndiceRefTrans">Indice del Refuerzo Transvesal %</param>
+	<param name="intNumBarCortante">Número de Barillas a Cortante (Unidades)</param>
+	<param name="douCargaAxial">Carga Axial P(KN)</param>
+	<param name="douResistCompConcret">Resistencia a la Concreción del Concreto f'c(Mpa)</param>
+	<param name="douEsfFluencLong">Esfuerzo de Fluencia del Acero Longitudinal fy(mMpa)</param>
+	<param name="douEsfUltimoLong">Esfuerzo Último del Acero Longitudinal fu(Mpa)</param>
+	<param name="douEsfFluencTrans">Esfuerzo de Fluencia del Acero Transversal fyh(Mpa)</param>
+	<param name="bytIngRespuestaReal">Registro Sismico del Efecto REAl de la Sección</param>
+	<param name="bytIngArchivoTCL">Archivo TCL que parametriza la sección real</param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Cicha.cicha.subCicha_ObtenerDataSpecRec(VirtualLabIS.DTO.dsCicha@)">
+	<summary>
+ Devuelve todos los datos de la table "CICHA_ESPC_REC" en un DataSet
+ </summary>
+	<param name="dsCICHA"></param>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Cicha.cicha.subCicha_ObtenerNombreSpecRec(System.String)">
+	<summary>
+ Extrae de la DB los nombres de los Especimenes de tipo Rectangular, para validar
+ si un specimen dedo como parámetro, existe ya en la DB
+ </summary>
+	<param name="strNombreSpec"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:VirtualLabIS.DAT.VirtualLabIS.DAT.Cicha.cicha.subObtenerNum_CICHA_ESPC_REC">
+	<summary>
+ Obtiene el número de registros almacenados en la tabla "CICHA_ESPC_REC"
+ Con el fin de ingresar una nueva con un orden.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

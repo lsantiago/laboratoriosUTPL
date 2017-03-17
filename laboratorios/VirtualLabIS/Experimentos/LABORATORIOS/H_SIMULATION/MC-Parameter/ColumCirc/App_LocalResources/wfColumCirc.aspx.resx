@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCargarEjemplo.Text" xml:space="preserve">
+    <value>LOAD EXAMPLE DATA</value>
+    <comment>COMAND BUTTOM</comment>
+  </data>
+  <data name="btnGraficar.Text" xml:space="preserve">
+    <value>RUN PARAMETER ANALYSIS</value>
+    <comment>COMAND BUTTOM</comment>
+  </data>
+  <data name="imgRutaTitulo.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/Portal/TituloVirtualLab-EN.png</value>
+    <comment>GRAFICA DEL TITULO</comment>
+  </data>
+  <data name="lblAxialLoad.Text" xml:space="preserve">
+    <value>AXIAL LOAD (kN)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblCoverMain.Text" xml:space="preserve">
+    <value>COVER UP MAIN TO REINFORCEMENT REBAR CENTRE r (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblDiamMain.Text" xml:space="preserve">
+    <value>DIAMETER OF MAIN REBARS (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblDiamTrans.Text" xml:space="preserve">
+    <value>DIAMETER OF TRANSVERSE REINFORCEMENT(mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblFc.Text" xml:space="preserve">
+    <value>CONCRETE COMPRESSIVE STRENGTH (MPa)</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblFigura2.Text" xml:space="preserve">
+    <value>YIELD CURVATURE HAS BEEN FOUND TO BE DIRECTLY PROPORTIONAL TO εy/D</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblFigura3.Text" xml:space="preserve">
+    <value>FOR SECTIONS OF SAME DIAMETER AND 
+WITH SAME MATERIALS PROPERTIES, Фy 
+IS A CONSTANT AND My IS PROPORTIONAL TO THE STIFFNESS</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblFigura4.Text" xml:space="preserve">
+    <value>KEEPING CONSTANT THE AXIAL LOAD 
+RATIO, Icr/Ig IS PROPORTIONAL TO 
+THE LONGITUDINAL STEEL RATIO</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblFigura5.Text" xml:space="preserve">
+    <value>THESE FIGURES SHOW THE RELATION 
+BETWEEN STRAIN AND THE PRODUCT 
+OF CURVATURE AND DIAMETER. THE 
+RELATION IS ALMOST LINEAR.</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblFigura6.Text" xml:space="preserve">
+    <value>THESE FIGURES SHOW THE RELATION 
+BETWEEN STRAIN AND THE PRODUCT 
+OF CURVATURE AND DIAMETER. THE 
+RELATION IS ALMOST LINEAR.</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblFyLon.Text" xml:space="preserve">
+    <value>LONG STEEL YIELDING STRESS (MPa)</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblFyTrans.Text" xml:space="preserve">
+    <value>TRANSVERSE STEEL YIELDING STRESS (MPa)</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblInputData1.Text" xml:space="preserve">
+    <value>INPUT DATA</value>
+    <comment>TITULO INPUT DATA</comment>
+  </data>
+  <data name="lblNumMainBars.Text" xml:space="preserve">
+    <value># BARS OF MAIN REINFORCEMENT</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblNumSections.Text" xml:space="preserve">
+    <value>NUMBER OF SECTIONS TO ANALYZE</value>
+    <comment>INPUT DATA NUMERO DE SECCIONES</comment>
+  </data>
+  <data name="lblResults.Text" xml:space="preserve">
+    <value>RESULTS</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblSectionDiameter.Text" xml:space="preserve">
+    <value>SECTION DIAMETER D(mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblSectionGraf.Text" xml:space="preserve">
+    <value>SECTION</value>
+    <comment>ROTULO DE GRAFICO</comment>
+  </data>
+  <data name="lblSectionNumber.Text" xml:space="preserve">
+    <value>SECTION NUMBER:</value>
+    <comment>INPUT DATA NUMERO DE SECCIONES</comment>
+  </data>
+  <data name="lblShearSpan.Text" xml:space="preserve">
+    <value>SHEAR SPAN (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblSpacingTrans.Text" xml:space="preserve">
+    <value>SPACING OF TRANSVERSE REINFORCEMENT (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblSteelRatio.Text" xml:space="preserve">
+    <value>STEEL HARDENING RATIO</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblTituloExp.Text" xml:space="preserve">
+    <value>M-C PARAMETER : CIRCULAR COLUMNS</value>
+    <comment>TITULO GENERAL </comment>
+  </data>
+  <data name="lblTituloFig1.Text" xml:space="preserve">
+    <value>FIG. 2 YIELD CURVATURE ASSESSMENT</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblTituloFig2.Text" xml:space="preserve">
+    <value>FIG. 3 RELATION BETWEEN STRENGTH AND STIFFNESS</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblTituloFig3.Text" xml:space="preserve">
+    <value>FIG. 4 CRACKED TO GROSS INERTIA RATIO VS. LONGITUDINAL STEEL RATIO</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblTituloFig5.Text" xml:space="preserve">
+    <value>FIG. 5 RELATION BETWEEN CONCRETE STRAIN AND CURVATURE</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblTituloFig6.Text" xml:space="preserve">
+    <value>FIG. 6 RELATION BETWEEN STEEL STRAIN AND CURVATURE</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblTituloGeneral.Text" xml:space="preserve">
+    <value>PARAMETER STUDY OF MOMENT-CURVATURE RESPONSE OF RC SECTIONS</value>
+    <comment>TITULO GENERAL </comment>
+  </data>
+  <data name="lblTituloMaterialProper.Text" xml:space="preserve">
+    <value>MATERIAL PROPERTIES</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblTituloMCR.Text" xml:space="preserve">
+    <value>FIG.1 MOMENT-CURVATURE RESPONSE</value>
+    <comment>RESULTS</comment>
+  </data>
+  <data name="lblTituloSeccionProper.Text" xml:space="preserve">
+    <value>SECTION PROPERTIES</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblTypeTrans.Text" xml:space="preserve">
+    <value>TYPE OF TRANSVERSE REINFORCEMENT</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+</root>

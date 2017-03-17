@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "laboratorios", "laboratorios\", "{64D672EF-89F3-471C-8420-10C2177DF536}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58102"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\laboratorios\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58102\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58102"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\laboratorios\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58102\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58102"
+		SlnRelativePath = "..\..\WebSites\laboratorios\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VLEE", "http://localhost:81/VLEE", "{882F5041-DBF6-450D-B671-4504A74347EA}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/VLEE"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\VLEE\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\VLEE\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/VLEE"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\VLEE\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\VLEE\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\..\..\..\inetpub\wwwroot\VLEE\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64D672EF-89F3-471C-8420-10C2177DF536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D672EF-89F3-471C-8420-10C2177DF536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882F5041-DBF6-450D-B671-4504A74347EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882F5041-DBF6-450D-B671-4504A74347EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

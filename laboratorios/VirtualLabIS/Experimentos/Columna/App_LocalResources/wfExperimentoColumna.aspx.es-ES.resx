@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCargarEjemplo.Text" xml:space="preserve">
+    <value>CARGAR EJEMPLO</value>
+    <comment>Carga un Ejemplo para el Análisis Momento Curvatura</comment>
+  </data>
+  <data name="btnEliminarTest.Text" xml:space="preserve">
+    <value>ELIMINAR RESPUESTA</value>
+    <comment>ELIMINAR RESPUESTA (Es una Iteracion del AMC)</comment>
+  </data>
+  <data name="btnGraficar.Text" xml:space="preserve">
+    <value>EJECUTAR MOMENTO - CURVATURA</value>
+    <comment>EJECUTAR EL AMC</comment>
+  </data>
+  <data name="btnInforme.Text" xml:space="preserve">
+    <value>IMPRIMIR REPORTE</value>
+    <comment>REPORTE El Reporte de Todas las Iteraciones del AMC</comment>
+  </data>
+  <data name="btnLimpiar.Text" xml:space="preserve">
+    <value>LIMPIAR TODO</value>
+    <comment>LIMPIAR Todas del Iteraciones del AMC</comment>
+  </data>
+  <data name="hplRegistrarse.Text" xml:space="preserve">
+    <value>REGISTRARSE AQUI</value>
+    <comment>Es un Link para al Default del VLEE para registrarse o Logearse.</comment>
+  </data>
+  <data name="imgRutaTitulo.Text" xml:space="preserve">
+    <value>../../Varios/Archivos/Imagenes/Portal/TituloVirtualLab-ES.png</value>
+    <comment>Ruta de Acceso para mostrar el Titulo del VLEE. La ruta para LVIS sera &lt;../../Varios/Archivos/Imagenes/Portal/TituloVirtualLab-ES.png&gt;</comment>
+  </data>
+  <data name="lblAnalysis.Text" xml:space="preserve">
+    <value>ANALISIS</value>
+    <comment>Titulo que agrupa a los valores que se presentan cuando finaliza el ingreso de valores (ANALYSIS INDEXES) y el AMC (ANALYSIS RESULT)</comment>
+  </data>
+  <data name="lblAnalysisResult.Text" xml:space="preserve">
+    <value>RESULTADOS DEL ANALISIS</value>
+    <comment>RESULTADOS DE LOS ANALISIS (Titulo del bloque de 7 valores mostrados despues de ejecutar el AMC)</comment>
+  </data>
+  <data name="lblAxialLoad.Text" xml:space="preserve">
+    <value>CARGA AXIAL P (KN)</value>
+    <comment>CARGA AXIAL P (N) (Propiedades de los Materiales)</comment>
+  </data>
+  <data name="lblAxialLoadRatio.Text" xml:space="preserve">
+    <value>RAZON DE CARGA AXIAL (0-20%)</value>
+    <comment>RAZON DE CARGA AXIAL (0-20%) (Valores que se van calculando al finalizar el ingreso)</comment>
+  </data>
+  <data name="lblConcrComprStrength.Text" xml:space="preserve">
+    <value>RESISTENCIA A LA COMPRESIÓN DEL CONCRETO f'ce (Mpa)</value>
+    <comment>RESISTENCIA A LA COMPRESIÓN DEL CONCRETO f'ce (Mpa) (Propiedades de los Materiales)</comment>
+  </data>
+  <data name="lblConvertLB.Text" xml:space="preserve">
+    <value>RECUBRIMIENTO r (mm)</value>
+    <comment>RECUBRIMIENTO r (mm) (Propiedades de la Seccion)</comment>
+  </data>
+  <data name="lblCurvaturaFluencia.Text" xml:space="preserve">
+    <value>CURVATURA DE FLUENCIA</value>
+    <comment>CURVATURA DE FLUENCIA (Resultados del AMC)</comment>
+  </data>
+  <data name="lblDeformacionFluenciaAceroLongitudinal.Text" xml:space="preserve">
+    <value>&lt;P&gt;DEFORMACIÓN DE FLUENCIA DEL ACERO LONGITUDINAL ε&lt;SUB&gt;y&lt;/SUB&gt;</value>
+    <comment>DEFORMACIÓN DE FLUENCIA DEL ACERO LONGITUDINAL (Propiedades de los Materiales)</comment>
+  </data>
+  <data name="lblIcrIg.Text" xml:space="preserve">
+    <value>INERCIA GRUESA / INERCIA AGRIETADA</value>
+    <comment>INERCIA GRUESA / INERCIA AGRIETADA (Resultados del AMC)</comment>
+  </data>
+  <data name="lblIncerciaAgrietada.Text" xml:space="preserve">
+    <value>INERCIA AGRIETADA lcr(m^4)</value>
+    <comment>INERCIA AGRIETADA lcr(m^4) (Resultados del AMC)</comment>
+  </data>
+  <data name="lblInerciaGruesa.Text" xml:space="preserve">
+    <value>INERCIA GRUESA lg(m^4)</value>
+    <comment>INERCIA GRUESA lg(m^4) (Rsultados del AMC)</comment>
+  </data>
+  <data name="lblInputData1.Text" xml:space="preserve">
+    <value>DATOS DE ENTRADA</value>
+    <comment>DATOS DE ENTRADA (Titulo del bloque de datos: Propiedades de la Sección y de los Materiales de Construcción)</comment>
+  </data>
+  <data name="lblLongBarDiameter.Text" xml:space="preserve">
+    <value>DIÁMETRO DEL REFUERZO LONGITUDINAL dbl (mm) </value>
+    <comment>DIÁMETRO DEL REFUERZO LONGITUDINAL dbl (mm) (Propiedades de la Sección)</comment>
+  </data>
+  <data name="lblLongRMX.Text" xml:space="preserve">
+    <value>ESFUERZO ULTIMO DEL ACERO fu (Mpa) </value>
+    <comment>ESFUERZO ULTIMO DEL ACERO fu (Mpa) (Propiedades de los Materiales de Construcción)</comment>
+  </data>
+  <data name="lblLongRR.Text" xml:space="preserve">
+    <value>CUANTIA DE ACERO LONGITUDINAL (1-4%) </value>
+    <comment>CUANTIA DEL ACERO LONGITUDINAL (1-4%) (Valores que se van calculando al finalizar el ingreso)</comment>
+  </data>
+  <data name="lblLongRYS.Text" xml:space="preserve">
+    <value>ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL fy (Mpa)</value>
+    <comment>ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL fy (Mpa) (Propiedades de los Materiales de Construccion)</comment>
+  </data>
+  <data name="lblMensajeRegistrarse.Text" xml:space="preserve">
+    <value>Si Ud. desea ver el Reporte, por favor Regístrese</value>
+    <comment>Alerta cuando los usuarios no estan registrados o cuando no se Logean</comment>
+  </data>
+  <data name="lblModuloElasticidadAcero.Text" xml:space="preserve">
+    <value>MODULO DE ELASTICIDAD DEL ACERO Es (MPa)</value>
+    <comment>MODULO DE ELASTICIDAD DEL ACERO (Propiedades de los Materiales)</comment>
+  </data>
+  <data name="lblModuloElasticidadConcreto.Text" xml:space="preserve">
+    <value>MODULO DE ELASTICIDAD DEL CONCRETO Ec (MPa)</value>
+    <comment>MODULO DE ELASTICIDA DEL CONCRETO (MPa) (Propiedades de los Materiales)</comment>
+  </data>
+  <data name="lblMomentoNominal.Text" xml:space="preserve">
+    <value>MOMENTO MONINAL</value>
+    <comment>MOMENTO MONINAL (Resultados del AMC)</comment>
+  </data>
+  <data name="lblMomentoPrimeraFluencia.Text" xml:space="preserve">
+    <value>MOMENTO DE PRIMERA FLUENCIA</value>
+    <comment>MOMENTO DE PRIMERA FLUENCIA (Resultados del AMC)</comment>
+  </data>
+  <data name="lblNumberLongBars.Text" xml:space="preserve">
+    <value># DE BARILLAS LONGITUDINALES </value>
+    <comment>NÚMERO DE BARILLAS LONGITUDINALES (Propiedades de la Sección)</comment>
+  </data>
+  <data name="lblPrimeraCurvaturaFluencia.Text" xml:space="preserve">
+    <value>PRIMERA CURVATURA DE FLUENCIA</value>
+    <comment>PRIMERA CURVATURA DE FLUENCIA (Resultados de AMC)</comment>
+  </data>
+  <data name="lblResults.Text" xml:space="preserve">
+    <value>RESULTADOS</value>
+    <comment>Titulo General para mostrar los resultados del AMC desde el segundo cuardro ANALYSIS y MOMENT-CURVATURE RESPONSE</comment>
+  </data>
+  <data name="lblSectionDiameter.Text" xml:space="preserve">
+    <value>DIÁMETRO DE LA SECCIÓN D (mm)</value>
+    <comment>DIÁMETRO DE LA SECCIÓN D (mm) (Propiedades de la Sección)</comment>
+  </data>
+  <data name="lblSpacingTransSteel.Text" xml:space="preserve">
+    <value>ESPACIAMIENTO TRANSVERSAL DEL ACERO et(mm) </value>
+    <comment>ESPACIAMIENTO TRANSVERSAL DEL ACERO et(mm) (Propiedades de la Sección)</comment>
+  </data>
+  <data name="lblTeoria1.Text" xml:space="preserve">
+    <value>SE HA ENCONTRADO QUE LA CURVATURA DE FLUENCIA ES DIRECTAMENTE PROPORCIONAL A εy/D. EL FACTOR PROPORCIONAL HA SIDO REPORTADO COMO 2.25 (PRIESTLEY)</value>
+    <comment>Teoria de la gráfica #1: ESTIMACIÓN DE CURVATURA DE FLUENCIA</comment>
+  </data>
+  <data name="lblTeoria2.Text" xml:space="preserve">
+    <value>PARA SECCIONES DEL MISMO DIÁMETRO &lt;br&gt; Y CON LAS MISMAS PROPIEDADES DE MATERIAL,  Fy ES UNA CONSTANTE Y My ES PROPORCIONAL A EI.</value>
+    <comment>Teoria de la gráfica #2: RELACIÓN ENTRE RESISTENCIA Y RIGIDEZ</comment>
+  </data>
+  <data name="lblTeoria3.Text" xml:space="preserve">
+    <value>MANTENIENDO CONSTANTE LA VARIACIÓN DE CARGA AXIAL, ICR/IG ES PROPORCIONAL AL RADIO DE ACERO LONGITUDINAL.</value>
+    <comment>Teoria de la gráfica #3: RELACIÓN ENTRE INERCIA GRUESA  Y AGRIETADA VS CUANTIA DEL ACERO LONGITUDINAL</comment>
+  </data>
+  <data name="lblTeoria4.Text" xml:space="preserve">
+    <value>LA FIGURA PRESENTA Icr/Ig A PARTIR DEL ANÁLISIS MOMENTO CURVATURA Y Icr/I CON UN MODELO DE KOWALSKY (2000).</value>
+    <comment>Teoria de la gráfica #4: EVALUACIÓN DEL MODELO DE ESTIMACIÓN Icr/Ig  </comment>
+  </data>
+  <data name="lblTeoria5.Text" xml:space="preserve">
+    <value>ESTAS FIGURAS MUESTRAN LA RELACIÓN ENTRE LA DEFORMACIÓN Y EL PRODUCTO DE LA CURVATURA Y EL DIÁMETRO. LA RELACIÓN ES CASI LINEAL.</value>
+    <comment>Teoria de la gráfica #5: RELACIÓN ENTRE LA DEFORMACIÓN DEL CONCRETO Y CURVATURA</comment>
+  </data>
+  <data name="lblTipo.Text" xml:space="preserve">
+    <value>TIPO DE ESTRIBO</value>
+    <comment>TIPO DE ESTRIBO (Propiedades de la Sección)</comment>
+  </data>
+  <data name="lblTituloAnalysisIndex.Text" xml:space="preserve">
+    <value>INDEX DE ANALISIS</value>
+    <comment>INDEX DE ANALISIS (Titulo que agrupa a los valores que se muestran al finalizar el ingreso de valores)</comment>
+  </data>
+  <data name="lblTituloEsquemaColumna.Text" xml:space="preserve">
+    <value>ESQUEMA DE LA COLUMNA</value>
+    <comment>Titulo del Esquema de la Columna: ESQUEMA DE LA COLUMNA</comment>
+  </data>
+  <data name="lblTituloExp.Text" xml:space="preserve">
+    <value>HERRAMIENTA DE SIMULACIÓN RIGIDEZ, RESISTENCIA Y CURVATURA DE FLUENCIA &lt;br&gt; DE SECCIONES DE HORMIGÓN ARMADO</value>
+    <comment>Titulo del Principal del Experimento Columna: HERRAMIENTA DE SIMULACIÓN RIGIDEZ, RESISTENCIA Y CURVATURA DE FLUENCIAS DE SECCIONES DE HORMIGÓN ARMADO</comment>
+  </data>
+  <data name="lblTituloFig1.Text" xml:space="preserve">
+    <value>FIG. 1 ESTIMACIÓN DE LA CURVATURA DE FLUENCIA</value>
+    <comment>FIG. 1 ESTIMACIÓN DE LA CURVATURA DE FLUENCIA</comment>
+  </data>
+  <data name="lblTituloFig2.Text" xml:space="preserve">
+    <value>FIG 2. RELACIÓN ENTRE RESISTENCIA Y RIGIDEZ</value>
+    <comment>FIG 2. RELACIÓN ENTRE RESISTENCIA Y RIGIDEZ</comment>
+  </data>
+  <data name="lblTituloFig3.Text" xml:space="preserve">
+    <value>FIG 3. RELACIÓN ENTRE INERCIA GRUESA  Y AGRIETADA VS. CUANTIA DE ACERO LONGITUDINAL </value>
+    <comment>FIG 3. RELACIÓN ENTRE INERCIA GRUESA  Y AGRIETADA VS. CUANTIA DEL ACERO LONGITUDINAL </comment>
+  </data>
+  <data name="lblTituloFig4.Text" xml:space="preserve">
+    <value>FIG 4. EVALUACIÓN DEL MODELO PARA ESTIMACIÓN DE Icr/Ig </value>
+    <comment>FIG 4. EVALUACIÓN DEL MODELO PARA ESTIMACIÓN DE Icr/Ig </comment>
+  </data>
+  <data name="lblTituloFig5.Text" xml:space="preserve">
+    <value>FIG 5. RELACIÓN ENTRE DEFORMACIÓN DEL CONCRETO Y CURVATURA </value>
+    <comment>FIG 5. RELACIÓN ENTRE DEFORMACIÓN DEL CONCRETO Y CURVATURA </comment>
+  </data>
+  <data name="lblTituloFig6.Text" xml:space="preserve">
+    <value>FIG 6. RELACIÓN ENTRE DEFORMACIÓN DEL ACERO Y CURVATURA</value>
+    <comment>FIG 6. RELACIÓN ENTRE DEFORMACIÓN DEL ACERO Y CURVATURA</comment>
+  </data>
+  <data name="lblTituloMaterialProper.Text" xml:space="preserve">
+    <value>PROPIEDADES DE LOS MATERIALES</value>
+    <comment>PROPIEDADES DE LOS MATERIALES (Titulo que agrupa a los valores de los Materiales de Construcción)</comment>
+  </data>
+  <data name="lblTituloMCR.Text" xml:space="preserve">
+    <value>RESPUESTA DE MOMENTO CURVATURA</value>
+    <comment>RESPUESTA DE MOMENTO CURVATURA (Titulo de la Primera Gráfica-gráfica 0 AMC)</comment>
+  </data>
+  <data name="lblTituloSeccionProper.Text" xml:space="preserve">
+    <value>PROPIEDADES DE LA SECCIÓN</value>
+    <comment>PROPIEDADES DE LA SECCIÓN (Titulo que agrupa a los valores de las Propiedades de la Sección)</comment>
+  </data>
+  <data name="lblTituloTeoria.Text" xml:space="preserve">
+    <value>DESCRIPCIÓN</value>
+    <comment>DESCRIPCIÓN</comment>
+  </data>
+  <data name="lblTransRR.Text" xml:space="preserve">
+    <value>CUANTIA DE ACERO TRANSVERSAL (0.2-1%) </value>
+    <comment>CUANTIA DEL ACERO TRANSVERSAL (0.2-1%) (Valores que se van calculando al finalizar el ingreso)</comment>
+  </data>
+  <data name="lblTransRYS.Text" xml:space="preserve">
+    <value>ESFUERZO DE FLUENCIA DE ACERO TRANSVERSAL fyh (Mpa) </value>
+    <comment>ESFUERZO DE FLUENCIA DEL ACERO TRANSVERSAL fyh (Mpa) (Propiedades de los Materiales)</comment>
+  </data>
+  <data name="lblTransverseReinfDiam.Text" xml:space="preserve">
+    <value>DIÁMETRO DEL REFUERZO TRANSVERSAL dbt (mm) </value>
+    <comment>DIÁMETRO DEL REFUERZO TRANSVERSAL dbt (mm) (Propiedades de la Sección)</comment>
+  </data>
+</root>

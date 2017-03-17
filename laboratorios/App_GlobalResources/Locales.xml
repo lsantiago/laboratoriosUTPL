@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <language name="English (United States)" key="en-US" fallback="" />
+  <language name="Español (España)" key="es-ES" fallback="en-US" />
+  <browserDetection enabled="true" />
+  <languageInUrl enabled="true" />
+  <language name="Español (Ecuador)" key="es-EC" fallback="en-US" />
+</root>

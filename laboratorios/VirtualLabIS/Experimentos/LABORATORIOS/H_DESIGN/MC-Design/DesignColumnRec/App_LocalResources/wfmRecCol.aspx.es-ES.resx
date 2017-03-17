@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCargarEjemplo.Text" xml:space="preserve">
+    <value>CARGAR EJEMPLO</value>
+    <comment>Boton de Ejecucion</comment>
+  </data>
+  <data name="btnGraficar.Text" xml:space="preserve">
+    <value>DISEÑAR</value>
+    <comment>Boton de Ejecucion</comment>
+  </data>
+  <data name="imgModeloAcero.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/aceroES.jpg</value>
+    <comment>GRAFICO MODELO DEL CONCRETO</comment>
+  </data>
+  <data name="imgModeloConcreto.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/concretoES.jpg</value>
+    <comment>GRAFICO MODELO DEL CONCRETO</comment>
+  </data>
+  <data name="imgRutaTitulo.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/Portal/TituloVirtualLab-ES.png</value>
+    <comment>Grafico de encabezado</comment>
+  </data>
+  <data name="lblaltura.Text" xml:space="preserve">
+    <value>ALTURA DE LA SECCIÓN H (mm)</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblAnalysis.Text" xml:space="preserve">
+    <value>ANÁLISIS</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblAnalysisIndex.Text" xml:space="preserve">
+    <value>ÍNDICES DEL ANÁLISIS</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblAnalysisResults.Text" xml:space="preserve">
+    <value>RESULTADOS DEL ANÁLISIS</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblAngle.Text" xml:space="preserve">
+    <value>ANGULO BIAXIAL (Θ)</value>
+    <comment>Input Data Design Forces</comment>
+  </data>
+  <data name="lblAxialLoad.Text" xml:space="preserve">
+    <value>CARGA AXIAL (kN)</value>
+    <comment>Input Data Design Forces</comment>
+  </data>
+  <data name="lblAxialLoadRatio.Text" xml:space="preserve">
+    <value>RELACIÓN DE CARGA AXIAL  (0-20%)</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblbase.Text" xml:space="preserve">
+    <value>BASE DE LA SECCIÓN B (mm)</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblConcrComprStrength.Text" xml:space="preserve">
+    <value>RESISTENCIA A LA COMPRESIÓN DEL CONCRETO NO CONFINADO f'c (Mpa)</value>
+    <comment>Input Data Material Properties</comment>
+  </data>
+  <data name="lblConcreteModel.Text" xml:space="preserve">
+    <value>MODELO DEL CONCRETO </value>
+    <comment>Rotulos de Graficas</comment>
+  </data>
+  <data name="lblCoverLateral.Text" xml:space="preserve">
+    <value>RECUBRIMIENTO AL CENTRO DE LA VARILLA LATERAL r (mm)</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblcoverTopBottom.Text" xml:space="preserve">
+    <value>RECUBRIMIENTO AL CENTRO DE LA VARILLA SUPERIOR E INFERIOR r´(mm)</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblCurvaturaFluencia.Text" xml:space="preserve">
+    <value>CURVATURA DE FLUENCIA</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblDamageControl.Text" xml:space="preserve">
+    <value>CURVATURA DE CONTROL DE DAÑO</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblDamConMom.Text" xml:space="preserve">
+    <value>MOMENTO DE CONTROL DE DAÑO</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lbldefConc.Text" xml:space="preserve">
+    <value>DEFORMCIÓN DEL CONCRETO EN EL ESFUERZO NOMINAL</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblDesignForces.Text" xml:space="preserve">
+    <value>FUERZAS DE DISEÑO</value>
+    <comment>Input Data Design Forces</comment>
+  </data>
+  <data name="lblDesignResults.Text" xml:space="preserve">
+    <value>RESULTADOS DEL DISEÑO</value>
+    <comment>Design Results</comment>
+  </data>
+  <data name="lblDiameterStirrup.Text" xml:space="preserve">
+    <value>DIAMETRO DE LOS ESTRIBOS (mm)</value>
+    <comment>Design Results</comment>
+  </data>
+  <data name="lblDiameterTop.Text" xml:space="preserve">
+    <value>REFUERZO TRANSVERSAL</value>
+    <comment>Design Results</comment>
+  </data>
+  <data name="lblGeneralTitle.Text" xml:space="preserve">
+    <value>DISEÑO DE SECCIONES DE CONCRETO REFORZADO</value>
+    <comment>Título General</comment>
+  </data>
+  <data name="lblIncerciaAgrietada.Text" xml:space="preserve">
+    <value>INERCIA AGRIETADA lcr(m^4)</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblLateralBars.Text" xml:space="preserve">
+    <value># DE RAMAS DE ESTRIBO QUE RESISTEN CORTE EN LA DIRECCIÓN "Y"</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblLongFy.Text" xml:space="preserve">
+    <value>ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL fy (Mpa)</value>
+    <comment>Input Data Material Properties</comment>
+  </data>
+  <data name="lblLongRR.Text" xml:space="preserve">
+    <value>CUANTÍA DE ACERO LONGITUDINAL (1%-4%)</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblMaterialProperties.Text" xml:space="preserve">
+    <value>PROPIEDADES DE LOS MATERIALES</value>
+    <comment>Input Data Material Properties</comment>
+  </data>
+  <data name="lblMCResponse.Text" xml:space="preserve">
+    <value>RESPUESTA MOMENTO-CURVATURA</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblMCResults.Text" xml:space="preserve">
+    <value>RESULTADOS DEL ANÁLISIS MOMENTO-CURVATURA</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblMoment.Text" xml:space="preserve">
+    <value>MOMENTO (kN-m)</value>
+    <comment>Input Data Design Forces</comment>
+  </data>
+  <data name="lblMomentoNominal.Text" xml:space="preserve">
+    <value>MOMENTO NOMINAL</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblMomentoPrimeraFluencia.Text" xml:space="preserve">
+    <value>MOMENTO DE PRIMERA FLUENCIA</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblMomentResponse.Text" xml:space="preserve">
+    <value>RESPUESTA DEL MOMENTO</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblNumBarsTopBottom.Text" xml:space="preserve">
+    <value># NÚMERO DE BARRAS SUPERIORES E INFERIORES</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblNumberLateral.Text" xml:space="preserve">
+    <value># NÚMERO DE BARRAS DE ACERO LATERAL</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblNumStirrups.Text" xml:space="preserve">
+    <value># DE RAMAS DE ESTRIBO QUE RESISTEN CORTE EN LA DIRECCIÓN "X"</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblPrimeraCurvaturaFluencia.Text" xml:space="preserve">
+    <value>CURVATURA DE PRIMERA FLUENCIA</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblShearSpan.Text" xml:space="preserve">
+    <value>LONGITUD DE CORTE (mm)</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblSlopeRatio.Text" xml:space="preserve">
+    <value>COEFICIENTE DE RIGIDEZ POS-FLUENCIA</value>
+    <comment>MC Results</comment>
+  </data>
+  <data name="lblSpacingStirrups.Text" xml:space="preserve">
+    <value>ESPACIAMIENTO DE LOS ESTRIBOS (mm)</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblSteelModel.Text" xml:space="preserve">
+    <value>MODELO DEL ACERO</value>
+    <comment>Rotulos de Graficas</comment>
+  </data>
+  <data name="lblTituloAnalysisIndex.Text" xml:space="preserve">
+    <value>REFUERZO LONGITUDINAL</value>
+    <comment>Design Results</comment>
+  </data>
+  <data name="lblTituloEsquemaColumna.Text" xml:space="preserve">
+    <value>SECCIÓN</value>
+    <comment>Rotulos de Graficas</comment>
+  </data>
+  <data name="lblTituloExp.Text" xml:space="preserve">
+    <value>DISEÑO : COLUMNA RECTANGULAR</value>
+    <comment>Título General</comment>
+  </data>
+  <data name="lblTituloSeccionProper.Text" xml:space="preserve">
+    <value>PROPIEDADES DE LA SECCIÓN</value>
+    <comment>Input Data Section Properties</comment>
+  </data>
+  <data name="lblTransFy.Text" xml:space="preserve">
+    <value>ESFUERZO DE FLUENCIA DEL ACERO TRANSVERSAL fyh (Mpa)</value>
+    <comment>Input Data Material Properties</comment>
+  </data>
+  <data name="lblTransRR.Text" xml:space="preserve">
+    <value>CUANTÍA DE ACERO TRANSVERSAL (0.2%-1%)</value>
+    <comment>MC Results</comment>
+  </data>
+</root>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- 
+Specify timezones here 
+-->
+  <timezone name="(UTC -12:00) Línea internacional de fecha del oeste" key="-720" />
+  <timezone name="(UTC -11:00) Midway Island, Samoa" key="-660" />
+  <timezone name="(UTC -10:00) Hawaii" key="-600" />
+  <timezone name="(UTC -09:00) Alaska" key="-540" />
+  <timezone name="(UTC -08:00) Hora del Pacífico (EE.UU. &amp; Canadá); Tijuana" key="-480" />
+  <timezone name="(UTC -07:00) Hora de las Montañas Rocosas (EE.UU. &amp; Canadá)" key="-420" />
+  <timezone name="(UTC -06:00) América Central" key="-360" />
+  <timezone name="(UTC -05:00) Hora Oriental (EE.UU. &amp; Canadá); Bogotá, Lima, Quito" key="-300" />
+  <timezone name="(UTC -04:00) Hora del Atlántico (Canadá);Caracas, La Paz, Santiago" key="-240" />
+  <timezone name="(UTC -03:30) NewfoundLand Time (Canadá)" key="-210" />
+  <timezone name="(UTC -03:00) Buenos Aires, Georgetown" key="-180" />
+  <timezone name="(UTC -02:00) Atlántico Central" key="-120" />
+  <timezone name="(UTC -01:00) Cape Verde Is." key="-60" />
+  <timezone name="(UTC  00:00) Dublin, Edinburgh, Lisbon, London" key="0" />
+  <timezone name="(UTC +01:00) Berlín, Madrid, Roma, París, Viena" key="60" />
+  <timezone name="(UTC +02:00) Athens, Bucharest, Istanbul, Minsk" key="120" />
+  <timezone name="(UTC +03:00) Moscow, St. Petersburg, Volgograd" key="180" />
+  <timezone name="(UTC +03:30) Tehran" key="210" />
+  <timezone name="(UTC +04:00) Abu Dhabi, Muscat" key="240" />
+  <timezone name="(UTC +04:30) Kabul" key="270" />
+  <timezone name="(UTC +05:00) Islamabad, Karachi, Tashkent" key="300" />
+  <timezone name="(UTC +05:30) Calcutta, Chennai, Mumbai,New Delhi" key="330" />
+  <timezone name="(UTC +05:45) Kathmandu" key="345" />
+  <timezone name="(UTC +06:00) Astana,Almaty, Dhaka, Novosibirsk" key="360" />
+  <timezone name="(UTC +06:30) Rangoon (Yangon, Burma)" key="390" />
+  <timezone name="(UTC +07:00) Bangkok, Hanoi, Jakarta" key="420" />
+  <timezone name="(UTC +08:00) Beijing, Chongqing, Hong Kong, Urumqi" key="480" />
+  <timezone name="(UTC +09:00) Osaka, Sapporo, Tokyo" key="540" />
+  <timezone name="(UTC +09:30) Adelaide, Darwin" key="570" />
+  <timezone name="(UTC +10:00) Canberra, Melbourne, Sydney, Vladvostok" key="600" />
+  <timezone name="(UTC +11:00) Magadan, Solomon Is., New Caledonia" key="660" />
+  <timezone name="(UTC +12:00) Auckland, Fiji, Kamchatka, Marshall Is." key="720" />
+  <timezone name="(UTC +13:00) Nuku'alofa" key="780" />
+</root>

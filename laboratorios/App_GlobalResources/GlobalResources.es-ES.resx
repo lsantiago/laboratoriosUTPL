@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SyndicateModule.Action">
+    <value>Syndicate</value>
+  </data>
+  <data name="ExportModule.Action">
+    <value>Exportar Contenido</value>
+  </data>
+  <data name="ImportModule.Action">
+    <value>Importar Contenido</value>
+  </data>
+  <data name="OnlineHelp.Action">
+    <value>Ayuda en línea</value>
+  </data>
+  <data name="ModuleHelp.Action">
+    <value>Ayuda</value>
+  </data>
+  <data name="ModuleSettings.Action">
+    <value>Configuraciones</value>
+  </data>
+  <data name="DeleteModule.Action">
+    <value>Eliminar</value>
+  </data>
+  <data name="PrintModule.Action">
+    <value>Imprimir</value>
+  </data>
+  <data name="ClearCache.Action">
+    <value>Limpiar Cache</value>
+  </data>
+  <data name="MoveTop.Action">
+    <value>Mover al Principio</value>
+  </data>
+  <data name="MoveUp.Action">
+    <value>Mover hacia arriba</value>
+  </data>
+  <data name="MoveDown.Action">
+    <value>Mover hacia abajo</value>
+  </data>
+  <data name="MoveBottom.Action">
+    <value>Mover al Final</value>
+  </data>
+  <data name="MovePane.Action">
+    <value>Mover a</value>
+  </data>
+  <data name="MoveRoot.Action">
+    <value>Mover</value>
+  </data>
+  <data name="Admin.String">
+    <value>Admin</value>
+  </data>
+  <data name="Site Settings.String">
+    <value>Configuraciones del Sitio</value>
+  </data>
+  <data name="Tabs.String">
+    <value>Páginas</value>
+  </data>
+  <data name="Security Roles.String">
+    <value>Roles de Seguridad</value>
+  </data>
+  <data name="User Accounts.String">
+    <value>Cuentas de Usuario</value>
+  </data>
+  <data name="Vendors.String">
+    <value>Vendedores</value>
+  </data>
+  <data name="Site Log.String">
+    <value>Log del Sitio</value>
+  </data>
+  <data name="Bulk Email.String">
+    <value>Noticias</value>
+  </data>
+  <data name="File Manager.String">
+    <value>Administrador de Archivos</value>
+  </data>
+  <data name="Recycle Bin.String">
+    <value>Papelera de Reciclaje</value>
+  </data>
+  <data name="Log Viewer.String">
+    <value>Visor de Log</value>
+  </data>
+  <data name="Skins.String">
+    <value>Skins</value>
+  </data>
+  <data name="Host.String">
+    <value>Host</value>
+  </data>
+  <data name="Host Settings.String">
+    <value>Configuraciones del Host</value>
+  </data>
+  <data name="Portals.String">
+    <value>Portales</value>
+  </data>
+  <data name="Module Definitions.String">
+    <value>Definiciones de Módulos</value>
+  </data>
+  <data name="SQL.String">
+    <value>SQL</value>
+  </data>
+  <data name="Schedule.String">
+    <value>Planificador de Tareas</value>
+  </data>
+  <data name="Languages.String">
+    <value>Idiomas</value>
+  </data>
+  <data name="BannerType.Banner.String">
+    <value>Banner</value>
+  </data>
+  <data name="BannerType.MicroButton.String">
+    <value>MicroBotón</value>
+  </data>
+  <data name="BannerType.Button.String">
+    <value>Botón</value>
+  </data>
+  <data name="BannerType.Block.String">
+    <value>Bloque</value>
+  </data>
+  <data name="BannerType.Skyscraper.String">
+    <value>Skyscraper</value>
+  </data>
+  <data name="BannerType.Text.String">
+    <value>Texto</value>
+  </data>
+  <data name="BannerType.Script.String">
+    <value>Script</value>
+  </data>
+  <data name="Search Admin.String">
+    <value>Administrador de Búsquedas</value>
+  </data>
+  <data name="Lists.String">
+    <value>Listas</value>
+  </data>
+  <data name="Superuser Accounts.String">
+    <value>Cuentas de Superusuarios</value>
+  </data>
+  <data name="View.Permission">
+    <value>Ver Módulo</value>
+  </data>
+  <data name="Edit.Permission">
+    <value>Editar Módulo</value>
+  </data>
+  <data name="View Tab.Permission">
+    <value>Ver Página</value>
+  </data>
+  <data name="Edit Tab.Permission">
+    <value>Editar Página</value>
+  </data>
+  <data name="View Folder.Permission">
+    <value>Ver Carpeta</value>
+  </data>
+  <data name="Write to Folder.Permission">
+    <value>Escribir en Carpeta</value>
+  </data>
+  <data name="EMAIL_SMTP_TEST_SUBJECT.Text">
+    <value>[Host:HostTitle] Test de configuración SMTP</value>
+  </data>
+  <data name="MESSAGE_PORTAL_PRIVACY.Text">
+    <value>[Portal:PortalName] está comprometida a proteger su privacidad y la tecnología de desarrollo que le brinda la experiencia en línea más potente y segura. Esta Declaración de Privacidad está relacionada con el sitio Web de [Portal:PortalName] y abarca la recolección de datos y su uso. Al utilizar el sitio [Portal:PortalName], Usted acepta las prácticas utilizadas en relación a los datos que se describen en esta declaración. &lt;br&gt;&lt;br&gt; 
+&lt;span class="SubHead"&gt;Recolección de su Información Personal&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] recolecta información de identificación personal, como su dirección de correo electrónico (e-mail), nombre, dirección del trabajo o de su casa, o su número telefónico. [Portal:PortalName] también recaba información demográfica anónima, en el sentido que no es aplicable sólo a Usted, como por ejemplo el código postal, edad, sexo, preferencias, intereses y favoritos.&lt;br&gt;&lt;br&gt;
+También existe información acerca del hardware y software de su computador personal, que se recaba automáticamente por [Portal:PortalName]. Esta información puede incluir: su dirección IP, tipo de explorador de Internet usado, nombres de dominio, tiempos de acceso y direcciones de sitios Web que hacen referencia a éste. Esta información es utilizada por [Portal:PortalName] para la operación del servicio, para mantener la calidad del servicio prestado y para brindar estadísticas generales acerca del uso del sitio  [Portal:PortalName].&lt;br&gt;&lt;br&gt; 
+Por favor tenga en cuenta que si Usted divulga directamente información de identificación personal o datos privados a través de las herramientas públicas de comunicación en línea ofrecidas por [Portal:PortalName], dicha información puede ser recogida y usada por otros. Nota: [Portal:PortalName] no lee ninguna de sus comunicaciones en línea privadas.&lt;br&gt;&lt;br&gt; 
+[Portal:PortalName] lo alienta a que revise las declaraciones de privacidad de otros sitios Web a los que Usted elija vincular desde [Portal:PortalName] de manera que pueda comprender cómo recogen éstos su información y si eventualmente la comparten con otros. [Portal:PortalName] no es responsable por declaraciones de privacidad ni otros contenidos que se encuentren en sitios Web fuera de [Portal:PortalName] y de la familia de sitios Web de [Portal:PortalName].&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;Utilización de su Información Personal&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] recaba y utiliza su información personal para operar el sitio Web  [Portal:PortalName] y brindarle los servicios que Usted haya solicitado. [Portal:PortalName] también utiliza la información de su identificación personal para informarlo acerca de otros productos o servicios disponibles en [Portal:PortalName] y sus subsidiarias. [Portal:PortalName] puede también ponerse en contacto con Usted mediante encuestas, para conocer su opinión sobre los servicios prestados actualmente o potenciales servicios a ofrecer en el futuro.&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] no vende, alquila o arrienda su lista de clientes a terceras partes. Esporádicamente [Portal:PortalName] puede contactarlo de parte de socios de negocios externos para ofrecerle alguna oferta particular que pueda ser de su interés. En estos casos, la información de su identificación personal (e-mail, nombre, dirección, teléfono) no es transferida al socio de negocios. Además, [Portal:PortalName] sí puede compartir datos con socios confiables que ayudan y/o en los que delega el análisis estadístico, el envío de correo electrónico o postal, la atención al cliente, o los arreglos para la distribución y entrega. Todas estas terceras partes tienen expresamente prohibido el uso de la información personal que pueda identificarlo salvo para poder proveer estos servicios a [Portal:PortalName], y están obligados a mantener la confidencialidad de su información.&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] no utiliza ni divulga información personal privada como raza, religión o afiliaciones políticas sin su consentimiento expreso.&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] rastrea los sitios Web y las páginas que visitan nuestros clientes dentro de [Portal:PortalName], para poder determinar cuáles son los servicios de [Portal:PortalName] más populares. 
+Estos datos son utilizados para presentar contenidos y publicidades personalizadas en el sitio de [Portal:PortalName] a clientes cuyo comportamiento indica que tienen un particular interés en un área determinada. &lt;br&gt;&lt;br&gt;
+Los sitios Web de [Portal:PortalName] divulgarán su información personal, sin notificarlo, sólo cuando así sea requerido por la ley o cuando se crea de buena fe que dicha acción es necesaria para: (a) conformar edictos legales o el cumplimiento de un proceso legal realizado sobre [Portal:PortalName] o el sitio; (b) proteger y defender los derechos o propiedad de [Portal:PortalName]; y, (c) actuar bajo circunstancias extremas, para proteger la seguridad de los usuarios de [Portal:PortalName], o del público.&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;Uso de "Cookies"&lt;/span&gt;&lt;br&gt;&lt;br&gt; 
+El sitio Web [Portal:PortalName] utiliza "cookies" para almacenar sus preferencias ayudándolo a personalizar su experiencia en línea. Una cookie es un archivo de texto que es grabado en su disco duro por un servidor de páginas Web. Las cookies no pueden ser utilizadas para ejecutar programas o distribuir virus informáticos a su computadora. Las cookies son asignadas a Usted por el servidor en relación uno-a-uno, y pueden ser leídas únicamente por un servidor miembro del dominio que emitió la cookie para Usted.&lt;br&gt;&lt;br&gt;
+Una de las principales ventajas de las cookies es que le ahorran tiempo. El propósito de una cookie es informarle al servidor Web que Usted ha regresado a una página específica. Por ejemplo, cuando Usted personaliza páginas en [Portal:PortalName], o cuando se registra en el sitio [Portal:PortalName], la cookie grabada permite al servidor Web de 
+[Portal:PortalName] recuperar su información específica en las subsiguientes visitas. Esto simplifica el proceso de registrar su información personal como dirección de cobro, dirección de envío, etc. La próxima vez que regrese al mimo sitio Web de [Portal:PortalName], la información que Usted suministró anteriormente puede ser recuperada de la cookie, y así las opciones que Usted haya personalizado en su visita anterior a [Portal:PortalName] estarán disponibles sin necesidad de que deba ingresarlas nuevamente. &lt;br&gt;&lt;br&gt;
+Usted tiene la posibilidad de aceptar o rechazar cookies. La mayoría de los exploradores de Internet aceptan las cookies automáticamente, pero si lo prefiere Usted puede modificar la configuración para que las rechace. Si escoge que el explorador rechace cookies, es probable que no pueda aprovechar en su totalidad las características interactivas de los servicios ofrecidos en [Portal:PortalName] o en los sitios Web que visite.&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;Seguridad de su Información Personal&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] asegura su información personal frente al acceso, uso o divulgación no autorizados. [Portal:PortalName] mantiene la información de identificación personal que Usted haya provisto, en servidores ubicados en un ambiente controlado y seguro, protegidos del acceso, uso o divulgación no autorizados. En caso de que información personal (como el número de su tarjeta de crédito) sea transmitida a otros sitios Web, ésta se protege mediante el uso de protocolos cifrados como el protocolo SSL (Secure Sockets Layer).&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;Modificaciones a esta Declaración&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] podrá ocasionalmente actualizar esta Declaración de Privacidad para reflejar las sugerencias tanto de la compañía como de los clientes. En [Portal:PortalName] lo alentamos a que revise periódicamente esta Declaración para estar informado de cómo [Portal:PortalName] protege su información.&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;Información de Contacto&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] recibe con agrado sus comentarios relativos a esta Declaración de Privacidad. Si Usted cree que [Portal:PortalName] no se ha ceñido a esta Declaración, por favor, póngase en contacto con [Portal:PortalName] a través de &lt;a href="mailto:[Portal:Email]"&gt;[Portal:Email]&lt;/a&gt;. Pondremos nuestros mejores esfuerzos comercialmente razonables para determinar rápidamente el problema y remediarlo cuanto antes.
+&lt;br&gt;
+&lt;br&gt;</value>
+  </data>
+  <data name="EMAIL_PORTAL_SIGNUP_SUBJECT.Text">
+    <value>[Host:HostTitle] Entrada de demostración</value>
+  </data>
+  <data name="EMAIL_PORTAL_SIGNUP_BODY.Text">
+    <value>Estimado [User:FullName],
+
+Tu Portal Web ha sido creado. Por favor lea con cuidado la siguiente información y asegurese de guardar este mensaje un un sitio seguro para futuras referencias.
+
+Portal Website Address: [Portal:URL]
+Usuario: [Membership:UserName]
+Contraseña: [Membership:Password]
+Código de verificación: [User:VerificationCode]
+
+Por favor, visite el sitio web para revisar su contenido y darse cuenta de sus muchas funcionalidades.
+
+Gracias, apreciamos su apoyo...
+
+[Host:HostTitle]
+
+</value>
+  </data>
+  <data name="MESSAGE_PORTAL_TERMS.Text">
+    <value>&lt;span class="SubHead"&gt;ACUERDO ENTRE EL USUARIO Y [Portal:PortalName]&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+El Sitio Web [Portal:PortalName] está compuesto de varias páginas Web operadas por  [Portal:PortalName].&lt;br&gt;&lt;br&gt;
+El sitio Web [Portal:PortalName] se le ofrece a Usted condicionado a la aceptación sin excepciones de los términos, condiciones y avisos aquí contenidos. El uso por su parte del sitio Web [Portal:PortalName] constituye en sí mismo su aceptación a todos sus términos, condiciones y avisos. &lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;MODIFICACIONES A ESTOS TÉRMINOS DE USO&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] se reserva el derecho a modificar los términos, condiciones y avisos bajo los cuales se ofrece el sitio Web [Portal:PortalName], incluyendo, pero no limitado a, los cargos asociados por el uso del sitio Web [Portal:PortalName] &lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;VÍNCULOS A SITIOS DE TERCERAS PARTES&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+El sitio Web [Portal:PortalName] puede contener vínculos a otros sitios Web Site ("Sitios Vinculados"). Los Sitios Vinculados no están bajo el control de [Portal:PortalName] y por tanto [Portal:PortalName] no es responsable de los contenidos de ningún Sitio Vinculado, incluyendo sin limitaciones, todo vínculo contenido en un Sitio Vinculado, o todo cambio o actualización de un Sitio Vinculado. 
+[Portal:PortalName] no es responsable de difusiones vía Web ni mediante cualquier otra forma de transmisión recibida desde cualquier Sitio Vinculado. [Portal:PortalName] provee estos vínculos solamente para su conveniencia, y la inclusión de estos vínculos no implica aprobación por parte de  [Portal:PortalName] del sitio, ni asociación con sus operadores. &lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;NO USO ILEGAL O PROHIBIDO&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+Como una condición al uso por su parte del sitio Web [Portal:PortalName], Usted garantiza a [Portal:PortalName] que no usará el sitio Web [Portal:PortalName] para propósitos ilegales o prohibidos por estos términos, condiciones y avisos. Usted no puede usar el sitio Web [Portal:PortalName] de tal forma que pudiera dañar, deshabilitar, sobrecargar o deteriorar el sitio Web [Portal:PortalName] o interferir con el uso y provecho del sitio Web [Portal:PortalName] por terceras partes. Usted no puede obtener ni intentar obtener material o información utilizando otros medios que aquellos expresa e intencionalmente ofrecidos a tal efecto en el sitio Web [Portal:PortalName].&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;USO DE SERVICIOS DE COMUNICACION&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+El sitio Web [Portal:PortalName] puede contener servicios de BBS, áreas de Chat, grupos de usuarios, foros de discusión, comunidades, páginas Web personales, calendarios y/o otras facilidades de mensajería o comunicación, diseñadas para permitirle a Usted comunicarse con el público en general o con un grupo de personas (en adelante, "Servicios de Comunicación"). Usted acepta usar los Servicios de Comunicación sólo para anunciar, enviar o recibir mensajes y material que sea apropiado y relativo al Servicio de Comunicación en particular.  A modo de ejemplo,  y no limitado a, Usted acepta que cuando utilice un Servicio de Comunicación, no podrá: &lt;br&gt;&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+Difamar, abusar, acosar, acechar, amenazar o de alguna forma violar los derechos legales (como los derechos de privacidad y publicidad) de otros. &lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Publicar, anunciar, subir, distribuir o diseminar ningún tópico, nombre, material o información, que sea inapropiada, indecente, transgresora, difamatoria, obscena o ilegal. &lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Subir archivos que contengan software u otro material protegido por leyes de propiedad intelectual ( o derechos de privacidad o publicidad) a menos que Usted sea el propietario o controle los derechos respectivos, o haya recibido el necesario consentimiento expreso. &lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Subir archivos que contengan virus, archivos corruptos, o cualquier otro software o programas que puedan dañar la operación del computador de otro.&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Publicar u ofrecer a la venta o a la compra cualquier bien o servicio con propósitos comerciales, excepto en el caso que dicho Servicio de Comunicación permita específicamente ese tipo de mensajes.&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Dirigir o reenviar encuestas, certámenes, cadenas de cartas o esquemas piramidales.&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Bajar archivos subidos por otro usuario de un Servicio de Comunicación cuando Usted tuviera o razonablemente debiera tener conocimiento de que no deban distribuirse legalmente de esa forma.&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Falsificar o eliminar cualquier referencia al autor, referencia legal o avisos o designaciones propietarias o rótulos del origen o fuente del software u otro material contenidos en un archivo que se sube.&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Restringir o inhibir que otros usuarios puedan usar y disfrutar de los Servicios de Comunicación.&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Violar cualesquiera códigos de conducta u otras guías que puedan aplicarse a un Servicio de Comunicación en particular.&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Recoger o cualquier forma de recolectar información acerca de otros, incluyendo direcciones de correo electrónico sin su consentimiento. &lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;
+Violar leyes o regulaciones aplicables.&lt;/li&gt;
+&lt;/ul&gt;
+[Portal:PortalName] no tiene obligación de monitorear los Servicios de Comunicación. 
+No obstante, [Portal:PortalName] se reserva el derecho de revisar los materiales anunciados en los Servicios de Comunicación y quitarlos a discreción. 
+[Portal:PortalName] se reserva el derecho de quitarle a Usted el acceso a cualquiera o todos los Servicios de Comunicación, en cualquier momento sin previo aviso y por la razón que sea.&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] se reserva el derecho en cualquier momento a revelar información cuando sea necesario cumplir con cualesquiera leyes aplicables, regulaciones, procesos legales, pedidos del gobierno, o editar, denegar la publicación, o eliminar cualquier información o material, en su totalidad o en parte, a la sola discreción de  [Portal:PortalName].&lt;br&gt;&lt;br&gt;
+Sea siempre cuidadoso al dar cualquier información personal que lo identifique a Usted o a sus hijos en todo Servicio de Comunicación. 
+[Portal:PortalName] no controla ni aprueba el contenido, mensajes, o información encontrada en los Servicios de Comunicación y, por tanto, [Portal:PortalName] niega específicamente cualquier responsabilidad en relación con los Servicios de Comunicación y con cualesquiera acciones resultantes de su participación en cualquier Servicio de Comunicación. Los administradores y anfitriones no son voceros autorizados de  [Portal:PortalName], y sus puntos de vista no necesariamente reflejan aquellos de  [Portal:PortalName].&lt;br&gt;&lt;br&gt;
+Los materiales subidos a un Servicio de Comunicación pueden estar sujetos a limitaciones en el uso, reproducción o difusión dispuestas por la persona que los haya subido. Usted es responsable de cumplir con dichas limitaciones si baja esos materiales. &lt;br&gt;&lt;br&gt; 
+&lt;span class="SubHead"&gt;MATERIALES SUMINISTRADOS A [Portal:PortalName] O  PUBLICADOS EN CUALQUIER SITIO WEB DE [Portal:PortalName] &lt;/span&gt;&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] no reclama la propiedad de los materiales que Usted suministre a 
+[Portal:PortalName] (incluyendo comentarios y sugerencias) o anuncie, publique, suba, ingrese, envíe o entregue a cualquier sitio Web de [Portal:PortalName] o sus servicios asociados (en adelante "Entregas"). Sin embargo, al anunciar, publicar, subir, ingresar, suministrar o entregar sus Entregas, Usted está otorgando permiso a [Portal:PortalName], a sus compañías afiliadas y licenciatarios necesarios, para usar dichas Entregas en relación con la operación de sus respectivos negocios en Internet, incluyendo, sin limitaciones, los derechos a copiar, distribuir, transmitir, mostrar públicamente, representar públicamente, reproducir, editar, traducir y dar nuevo formato a su Entrega; y a publicitar su nombre en conexión con su Entrega.&lt;br&gt;&lt;br&gt; 
+No se pagará ninguna compensación respecto al uso de su Entrega, tal como se describe aquí. [Portal:PortalName] no tiene ninguna obligación de anunciar, publicar o usar ninguna de las Entregas que Usted pueda suministrar, y puede eliminar o quitar cualquier Entrega que Usted haya suministrado, en cualquier momento y a la sola discreción de [Portal:PortalName].&lt;br&gt;&lt;br&gt;
+Por el solo hecho de anunciar, subir, ingresar, suministrar o entregar sus Entregas, Usted garantiza y representa que Usted es el propietario o de alguna manera controla todos los derechos de su Entrega, como se describe en esta sección; incluyendo, sin limitaciones, todos los derechos necesarios para que Usted suministre, anuncie, suba, ingrese, entregue  o envíe las Entregas. &lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;RENUNCIA DE OBLIGACIÓN&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+LA INFORMACIÓN, SOFTWARE, PRODUCTOS Y SERVICIOS INCLUIDOS EN, O DISPONIBLES A TRAVÉS DEL SITIO WEB [Portal:PortalName] PUEDEN CONTENER INEXACTITUDES O ERRORES TIPOGRÁFICOS. PERIÓDICAMENTE SE REALIZAN MODIFICACIONES Y AGREGADOS A LA INFORMACIÓN AQUÍ CONTENIDA. [Portal:PortalName] Y/O SUS PROVEEDORES PUEDEN REALIZAR EN CUALQUIER MOMENTO MODIFICACIONES O MEJORAS AL SITIO WEB DE [Portal:PortalName]. LOS CONSEJOS QUE PUEDAN RECIBIRSE A TRAVÉS DEL SITIO WEB [Portal:PortalName] NO DEBERIAN TENERSE EN CUENTA PARA LA TOMA DE DECISIONES PERSONALES, MÉDICAS, LEGALES O FINANCIERAS Y USTED DEBERÍA CONSULTAR A UN PROFESIONAL PARA EL ASESORAMIENTO ESPECÍFICO Y A LA MEDIDA DE SU SITUACIÓN.&lt;br&gt;&lt;br&gt; 
+[Portal:PortalName] Y/O SUS PROVEEDORES, NO SON REPRESENTACIÓN DE LA CONVENIENCIA, CONFIABILIDAD, DISPONIBILIDAD, ACTUALIDAD, NI LA EXACTITUD DE LA INFORMACIÓN, SOFTWARE, PRODUCTOS, SERVICIOS Y GRÁFICOS RELACIONADOS; CONTENIDOS EN EL SITIO WEB DE [Portal:PortalName], SEA CUAL FUERE SU PROPÓSITO. DE ACUERDO AL MÁXIMO ALCANCE PERMITIDO POR LAS LEYES APLICABLES, DICHA INFORMACIÓN, SOFTWARE, PRODUCTOS, SERVICIOS Y GRÁFICOS RELACIONADOS, SE ENTRGAN "COMO SON", SIN NINGÚN TIPO DE GARANTÍA O CONDICIÓN. 
+[Portal:PortalName] Y/O SUS PROVEEDORES RECHAZAN POR ESTE MEDIO TODAS LAS GARANTÍAS Y CONDICIONES EN RELACIÓN CON ESTA INFORMACIÓN, SOFTWARE, PRODUSCTOS, SERVICIOS Y GRÁFICOS RELACIONADOS, INCLUYENDO TODAS LAS GARANTÍAS O CONDICIONES IMPLÍCITAS EN LA COMERCIALIZACIÓN, ADECUACIÓN A UN PROPÓSITO ESPECÍFICO, TITULACIÓN Y/O INFRACCIÓN. &lt;br&gt;&lt;br&gt; 
+DE ACUERDO AL MÁXIMO ALCANCE PERMITIDO POR LAS LEYES APLICABLES, EN NINGÚN CASO [Portal:PortalName] Y/O SUS PROVEEDORES SERÁN RESPONSABLES POR NINGÚN DAÑO DIRECTO, INDIRECTO, PUNITIVO, INCIDENTAL, ESPECIAL, CONSECUENTE, O CUALESQUIERA DAÑOS INCLUYENDO, SIN LIMITACIONES,  DAÑOS POR PÉRDIDA DE USO, DE DATOS O DE BENEFICIOS SURGIDOS DEL USO, O DE ALGUNA MANERA RELACIONADOS CON EL USO O RENDIMINETO DEL SITIO WEB DE 
+[Portal:PortalName], CON LA DEMORA O LA IMPOSIBILIDAD DE USO DEL SITIO WEB [Portal:PortalName] O SUS SERVICIOS RELACIONADOS, LA PROVISIÓN O FALLA EN LA PROVISIÓN DE SERVICIOS, O POR CUALQUIER INFORMACIÓN, SOFTWARE, PRODUCTOS, SERVICIOS Y GRÁFICOS RELACIONADOS OBTENIDOS A TRAVÉS DEL SITIO WEB DE  [Portal:PortalName], O DE ALGUNA OTRA MANERA SURGIDOS A PARTIR DEL USO DEL SITIO WEB DE [Portal:PortalName], YA SEA QUE SE BASEN EN UN CONTRATO, AGRAVIO, NEGLIGENCIA, ESTRICTA RESPONSABILIDAD, O CUALQUIER OTRA FORMA, AUN CUANDO [Portal:PortalName] O CUALQUIERA DE SUS PROVEEDORES HAYAN SIDO AVISADOS ACERCA DE LA POSIBILIDAD DE DAÑOS. COMO EN ALGUNAS JURISDICCIONES NO SE PERMITE LA EXCLUSIÓN O LIMITACIÓN DE RESPONSABILIDAD POR DAÑOS INCIDENTALES O CONSECUENTES, LA LIMITACIÓN ARRIBA DETALLADA PUEDE QUE NO SE APLQUE A USTED. SI NO SE ENCUENTRA SATISFECHO CON ALGUNA PARTE DEL SITIO WEB DE [Portal:PortalName], O CON ALGUNO DE ESTOS TÉRMINOS DE USO, SU ÚNICO Y EXCLUSIVO REMEDIO ES DEJAR DE USAR EL SITIO WEB DE [Portal:PortalName].&lt;br&gt;&lt;br&gt; 
+CONTACTO DEL SERVICIO: [Portal:Email]&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;FINALIZACIÓN/RESTRICCIÓN DE ACCESO&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+[Portal:PortalName] se reserva el derecho, a su sola discreción, a finalizar su acceso al sitio Web de [Portal:PortalName], así como a sus servicios relacionados o a cualquier parte de éstos, en cualquier momento y sin previa notificación. &lt;span class="SubHead "&gt; GENERAL:&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+De acuerdo al alcance máximo permitido por la ley, este acuerdo está gobernado por las leyes del estado de Washington, U.S.A. y por consiguiente Usted consiente como jurisdicción exclusiva y lugar donde se reúnen las cortes a King County, Washington, U.S.A. en todas las disputas que surjan del uso o relativas al uso del sitio Web de  [Portal:PortalName]. El uso del sitio Web de [Portal:PortalName] no está autorizado en jurisdicción alguna que no haga efectivas todas las provisiones de estos términos y condiciones, incluyendo, sin limitaciones, las contenidas en este párrafo. Usted asiente que como resultado de este acuerdo o por el uso del sitio Web de [Portal:PortalName] , no existe asociación, joint venture, relación de dependencia o empleo, o relación de agencia alguna, entre Usted y [Portal:PortalName]. 
+El cumplimiento de este acuerdo por parte de [Portal:PortalName] está sujeto a las leyes vigentes y al proceso legal, y nada contenido en este acuerdo constituye una derogación al derecho de [Portal:PortalName] a obrar de acuerdo a los requisitos, solicitudes o imposiciones legales, del gobierno o de la corte, relacionados con el uso por Usted del sitio Web de [Portal:PortalName], o a información recogida o suministrada a  [Portal:PortalName] respecto de dicho uso. En caso que se determinara legalmente que alguna parte de este acuerdo fuera inválida o no exigible de acuerdo a la ley, incluyendo sin limitaciones, el rechazo de garantías y las limitaciones a la responsabilidad establecidas más arriba, entonces la provisión inválida o no exigible se considerará sustituida  por una provisión válida y exigible, que se acerque lo más posible a la intención de la provisión original, y el resto del acuerdo continuará en efecto. Salvo lo especificado aquí, este acuerdo constituye el acuerdo completo entre el usuario y  [Portal:PortalName] respecto del sitio Web de [Portal:PortalName] y reemplaza a todas las comunicaciones y propuestas anteriores o contemporáneas,  hayan sido éstas electrónicas, orales o escritas, entre el usuario y [Portal:PortalName] respecto del sitio Web de [Portal:PortalName]. Una versión impresa de este acuerdo y de cualquier notificación enviada en forma electrónica, serán admitidas en procedimientos judiciales o administrativos basados en este acuerdo o relacionados con él, y tendrán el mismo alcance y estarán sujetas a las mismas condiciones que otros documentos y registros comerciales generados y mantenidos originalmente en forma impresa. Es el deseo expreso de las partes que este acuerdo y los documentos relacionados sean escritos en español.&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;DERECHO DE PROPIEDAD Y MARCAS COMERCIALES:&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+Todos los contenidos del sitio Web de [Portal:PortalName] son: 
+[Portal:FooterText] y /o sus proveedores. Todos los derechos reservados.&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;MARCAS COMERCIALES&lt;/span&gt;&lt;br&gt;&lt;br&gt; 
+Los nombres de compañías y productos reales mencionados aquí pueden ser marcas comerciales de sus respectivos propietarios.&lt;br&gt;&lt;br&gt;
+Los nombres usados en ejemplos de compañías, organizaciones, productos, personas y eventos descritos aquí son ficticios. No debe asociarse o inferirse relación alguna con ninguna compañía, organización, producto, persona o evento reales.
+&lt;br&gt;&lt;br&gt;
+Cualesquiera drechos no expresamente otorgados aquí son reservados.&lt;br&gt;&lt;br&gt;
+&lt;span class="SubHead"&gt;NOTIFICACIONES Y PROCEDIMIENTO DE RECLAMOS DE VIOLACIÓN A LOS DERECHOS DE PROPIEDAD &lt;/span&gt;&lt;br&gt;&lt;br&gt;
+Procediendo de acuerdo al Title 17, United States Code, Section 512(c)(2), las notificaciones de reclamos a violaciones a los derechos de propiedad bajo la ley de  derechos de propiedad de los Estados Unidos, deben ser enviados al Agente Designado del Proveedor de Servicios. TODA PETICION QUE NO SEA RELEVANTE AL SIGUIENTE PROCEDIMIENTO NO RECIBIRÁ RESPUESTA. Vea Notificaciones y Procedimiento de Reclamos de Violación a los Derechos de Propiedad.
+&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_ADMINISTRATOR_SUBJECT.Text">
+    <value>[Portal:PortalName] Nuevo registro de usuario</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_ADMINISTRATOR_BODY.Text">
+    <value>Fecha: [Date:Current]
+Nombre: [Profile:FirstName]
+Apellido: [Profile:LastName]
+Unidad: [Profile:Unit]
+Calle: [Profile:Street]
+Ciudad: [Profile:City]
+Región: [Profile:Region]
+Pais: [Profile:Country]
+Código Postal: [Profile:PostalCode]
+Teléfono: [Profile:Telephone]
+Correo Electrónico: [Membership:Email]
+</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PRIVATE_SUBJECT.Text">
+    <value>[Portal:PortalName] Nuevo Registro de Usuario</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PRIVATE_BODY.Text">
+    <value>		Estimado [User:FullName],
+
+Gracias por registrarte en el portal web [Portal:PortalName]. Lea la siguiente información con cuidad y asegurese de guardar este mensaje en un lugar seguro para futuras consultas.
+
+Dirección web del portal: [Portal:URL]
+Usuario: [Membership:UserName]
+Contraseña: [Membership:Password]
+
+Los detalles de tu cuenta han sido revisados por el Administrador y recivirás una noticación con la activación de tu cuenta.
+
+Gracias, Apreciamos tu ayuda...
+
+[Portal:PortalName]
+
+</value>
+  </data>
+  <data name="MESSAGE_REGISTRATION_INSTRUCTIONS.Text">
+    <value />
+  </data>
+  <data name="EMAIL_ROLE_ASSIGNMENT_SUBJECT.Text">
+    <value>[Portal:PortalName] Cuenta de usuario actualizada</value>
+  </data>
+  <data name="EMAIL_ROLE_ASSIGNMENT_BODY.Text">
+    <value>Estimado [User:FullName],
+
+Tu cuenta de usuario en el portal web [Portal:PortalName] ha sido recientemente actualizada para incluir acceso a los siguientes Roles de Seguridad:
+
+Rol: [Custom:0]
+Descripción: [Custom:1]
+Fecha de caducidad: [Custom:2]
+
+Gracias, Apreciamos tu ayuda...
+[Portal:PortalName]
+</value>
+  </data>
+  <data name="EMAIL_ROLE_UNASSIGNMENT_SUBJECT.Text">
+    <value>[Portal:PortalName] Cuenta de usuario actualizada</value>
+  </data>
+  <data name="EMAIL_ROLE_UNASSIGNMENT_BODY.Text">
+    <value>Estimado [User:FullName],
+
+Tu cuenta de usuario en el portal web [Portal:PortalName] ha sido recientemente actualizada para restrigir el acceso a los siguientes Roles de Seguridad:
+
+Rol: [Custom:0]
+Descripcion: [Custom:1]
+Fecha de Caducidad: [Custom:2]
+
+Gracias, Apreciamos tu ayuda...
+[Portal:PortalName]
+</value>
+  </data>
+  <data name="MESSAGE_LOGIN_INSTRUCTIONS.Text">
+    <value />
+  </data>
+  <data name="EMAIL_PASSWORD_REMINDER_SUBJECT.Text">
+    <value>[Portal:PortalName] Recordatorio de contraseña</value>
+  </data>
+  <data name="EMAIL_PASSWORD_REMINDER_BODY.Text">
+    <value>[Profile:FullName],
+
+Has solicitado recordar tu contraseña en el portal [Portal:PortalName].
+
+Por favor, inice sesión en la web usando la siguiente información:
+
+Dirección web del Portal: [Portal:URL]
+Usuario:   [Membership:Username]
+Contraseña: [Membership:Password]
+Código de verificación: [User:VerificationCode]
+Autorizado: [Membership:Approved]
+
+Sinceramente,
+[Portal:PortalName]
+
+*Nota: Si no has pedido el recordatorio de contraseña, por favor, borre este mensaje.
+</value>
+  </data>
+  <data name="EMAIL_USER_UNREGISTER_SUBJECT.Text">
+    <value>[Portal:PortalName] Usuario no registrado</value>
+  </data>
+  <data name="EMAIL_USER_UNREGISTER_BODY.Text">
+    <value>Fecha: [Date:Current]
+Nombre: [Profile:FirstName]
+Apellidos: [Profile:LastName]
+Unidad: [Profile:Unit]
+Calle: [Profile:Street]
+Ciudad: [Profile:City]
+Región: [Profile:Region]
+Pais: [Profile:Country]
+Código Postal: [Profile:PostalCode]
+Teléfono: [Profile:Telephone]
+Correo Electrónico: [Membership:Email]
+		</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PUBLIC_SUBJECT.Text">
+    <value>			[Portal:PortalName] Nuevo Registro de Usuario
+		</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PUBLIC_BODY.Text">
+    <value>Estimado [User:FullName],
+
+Estamos contentos de informar que usted ha sido añadido como un Usuario Certificado al Portal Web [Portal:PortalName]. Por favor lea la información siguiente con cuidado y asegurese de guardarla en un lugar seguro para una futura referencia.
+
+Dirección Portal Web: [Portal:URL]
+Usuario: [Membership:UserName]
+Contraseña: [Membership:Password]
+Código de Verificación: [User:VerificationCode]
+
+Por favor tome la oportunidad de visitar el website para repasar su contenido y aprovechar sus muchas funcionalidades.
+
+Gracias, apreciamos su apoyo...
+
+[Portal:PortalName]
+
+</value>
+  </data>
+  <data name="EMAIL_AFFILIATE_NOTIFICATION_SUBJECT.Text">
+    <value>[Portal:PortalName] Notificación de registro</value>
+  </data>
+  <data name="EMAIL_AFFILIATE_NOTIFICATION_BODY.Text">
+    <value>[Custom:0],
+
+Tu cuenta para el [Portal:PortalName] ha sido creada.
+
+Para comenzar a utilizarla, por favor use la siguiente URL para vincularse a nuestro sitio: [Custom:1]
+
+Gracias,
+[Portal:PortalName]
+
+</value>
+  </data>
+  <data name="Site Wizard.String">
+    <value>Asistente del Sitio</value>
+  </data>
+</root>

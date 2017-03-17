@@ -1,0 +1,255 @@
+﻿body {
+}
+#EstiloP
+
+{
+	margin :-1px auto 0 auto;
+	width :804px;
+	color: #222;
+	
+	background-color: #f7f8fb;
+	text-align: center;
+	border: 1px solid #999999;
+}
+
+body
+{
+ /*margin :1%;
+ padding:2%;*/
+ background: url(/VLEE/VirtualLabIS/Varios/Archivos/Imagenes/Columna/Titulos_Otros/page_bg.gif) top left repeat-x;
+ background-color:#FFFFFF; 
+  /*background-image: url(images/page_bg.gif); */
+ font-family:Verdana; 
+ font-size:10px;
+ color:#3F3F3F; 
+}
+
+.TablaGeneral
+{
+  background-color : #FFFFFF; 
+  background-image:url(/VLEE/VirtualLabIS/Varios/Archivos/Imagenes/Columna/Titulos_Otros/main_tableBg.gif);
+  border: 1px solid #999999; 
+}
+
+.TablaDatosEntrada
+{
+	font-size: 8pt;
+	color: #222;
+	font-family: arial;
+	background-color: #efefee;
+	text-align: center;
+	border-top: activeborder 2px groove;
+	border-right: activeborder 2px groove;
+	border-left: activeborder 2px groove;
+	border-bottom: activeborder 2px groove;
+}
+
+.TablaDatos-Graficas
+{
+	font-size: 8pt;
+	color: #222;
+	font-family: arial;
+	background-color: #efefee;
+	border-top: activeborder 2px groove;
+	border-right: activeborder 2px groove;
+	border-left: activeborder 2px groove;
+	border-bottom: activeborder 2px groove;
+}
+
+.Tabla-Principales
+{
+	font-size: 8pt;
+	color: #222;
+	font-family: arial;
+	background-color: #f7f8fb;
+	text-align: center;
+	border: 1px solid #999999;
+}
+
+.Funcionalidad-titulo
+{
+	color: #222;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: verdana;
+}
+
+.Funcionalidad-subtitulo
+{
+	color: #3366ff;
+	font-weight: bold;
+	font-size: 8pt;
+	font-family: verdana, arial;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.Funcionalidad-etiqueta-dato
+{ 
+    color: #212121; 
+	font-size: 9pt; 
+	font-family: arial, verdana; 
+	text-align: left; 
+	margin-left: 8px;
+	padding: 1px; 
+	border-top: #dedede; 
+	border-right: #dedede; 
+	border-bottom: #adadad; 
+	border-left: #dedede 
+}
+
+.Funcionalidad-datos-entrada
+{
+	text-align: left;
+	font-size: 7pt;
+	font-family: verdana, arial;
+}
+
+.Funcionalidad-indicadores
+{
+	text-align: left;
+	font-size: 6pt;
+	font-family: verdana, arial;
+}
+
+.Funcionalidad-textbox-habilitado	
+{ 
+	font-size: 9pt; 
+	font-family: arial; 
+	text-align: left; 
+	margin-left: 8px; 
+	border: solid 1px #bdbdbd; 
+}
+
+.Funcionalidad-textbox-noHabilitado
+{
+	font-size: 7pt;
+	font-family: arial;
+	background-color: #efefef;
+	text-align: left;
+	margin-left: 5px;
+	border: solid 1px #bdbdbd;
+}
+
+.Funcionalidad-boton	
+{ 
+	color: #25529d; 
+	background-color: #eae2c3; 
+	font-weight: bold; 
+	font-size: 9pt; 
+	font-family: arial, verdana; 
+	text-align: center; 
+	vertical-align: middle; 
+	padding-top: 2px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dccf9b; 
+}
+
+.Funcionalidad-Link
+{
+	color: #3366cc;
+	font-size: 9px;
+	list-style: square;
+	margin-bottom: 0pt;
+	margin-top: 0pt;
+	font-family: Verdana;
+	font-weight: bold;
+}
+
+.Funcionalidad-Link2
+{
+	color: #3366cc;
+	font-size: 8px;
+	list-style: square;
+	margin-bottom: 0pt;
+	margin-top: 0pt;
+	font-family: Verdana;
+	font-weight: bold;
+}
+
+.Funcionalidad-Mensajes-Links
+{
+	color: #ff9999;
+	font-size: 9px;
+	list-style: square;
+	margin-bottom: 0pt;
+	margin-top: 0pt;
+	font-family: Verdana;
+	font-weight: bold;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.texto
+{
+	border-right: #6f99c2 1px solid;
+	padding-right: 2px;
+	padding-left: 4px;
+	font-size: 9pt;
+	padding-bottom: 2px;
+	color: #212121;
+	padding-top: 2px;
+	border-bottom: #6f99c2 1px solid;
+	font-family: arial, verdana;
+	background-color: #d6daff;
+	text-align: justify;
+}
+
+.texto-interno
+{
+	font-size: 9pt;
+	color: #212121;
+	font-family: arial, verdana;
+	text-align: justify;
+}
+
+.texto-interno-pequeno
+{
+	font-size: 7pt;
+	color: #212121;
+	font-family: arial, verdana;
+	text-align: justify;
+}
+
+.Ocultar-texto
+{
+	color: #f7f8fb;
+}
+
+.PanelHeader
+{
+   background-image: url(/VLEE/VirtualLabIS/Varios/Archivos/Imagenes/Columna/Titulos_Otros/panel_headerBg.gif); 
+  color: #666666; 
+  font-family:Verdana; 
+  font-size:11px;
+  font-weight:bold;
+  padding-left: 5px;
+}
+
+.Boton
+{
+	color: #222;
+	font-family: arial;
+	/*background-color: #efefee;*/
+	background: url(/VLEE/VirtualLabIS/Varios/Archivos/Imagenes/Columna/Titulos_Otros/panel_headerBg.gif) top left repeat-x;
+	text-align: center;
+	top:0px;
+	left:0px;
+	position:static ;
+	
+	BORDER-RIGHT: darkgray thin solid; 
+	BORDER-TOP: darkgray thin solid; 
+	BORDER-LEFT: darkgray thin solid; 
+	BORDER-BOTTOM: darkgray thin solid;
+}
+
+.popupControl
+{
+  background-color:#efefee;
+  position: absolute;
+  visibility: hidden;
+  border-style: solid;
+  border-color: Black;
+  border-width: 2px;
+}

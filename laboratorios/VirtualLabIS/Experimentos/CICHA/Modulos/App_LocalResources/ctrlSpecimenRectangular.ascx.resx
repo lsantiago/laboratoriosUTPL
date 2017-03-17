@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblAnchoSeccion.Text" xml:space="preserve">
+    <value>SECTION WIDTH b(mm):</value>
+    <comment>ANCHO DE LA SECCIÓN b(mm):</comment>
+  </data>
+  <data name="lblCargaAxial.Text" xml:space="preserve">
+    <value>AXIAL LOAD P(kN):</value>
+    <comment>CARGA AXIAL P(kN):</comment>
+  </data>
+  <data name="lblCargaParalY.Text" xml:space="preserve">
+    <value>PARALLEL SENSE TO LATERAL LOAD (Y):</value>
+    <comment>SENTIDO PARALELO A LA CARGA LATERAL (Y):</comment>
+  </data>
+  <data name="lblCargaPerpenZ.Text" xml:space="preserve">
+    <value>PERPENDICULAR SENSE TO LATERAL LOAD (Z)</value>
+    <comment>SENTIDO PERPENDICULAR A LA CARGA LATERAL (Z)</comment>
+  </data>
+  <data name="lblDiametroRefLong.Text" xml:space="preserve">
+    <value>LONGITUDINAL BAR DIAMETER dbl(m):</value>
+    <comment>DIAMETRO DEL REFUERZO LONGITUDINAL  dbl(m):</comment>
+  </data>
+  <data name="lblDiametroRefTrans.Text" xml:space="preserve">
+    <value>TRANSVERSE BAR DIAMETER dbt(mm):</value>
+    <comment>DIAMETRO DEL REFUERZO TRANSVERSAL dbt(mm):</comment>
+  </data>
+  <data name="lblEsfFluencLong.Text" xml:space="preserve">
+    <value>YIELD STRESS OF LONGITUDINAL BAR fy(Mpa):</value>
+    <comment>ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL fy(Mpa):</comment>
+  </data>
+  <data name="lblEsfFluencTrans.Text" xml:space="preserve">
+    <value>YIELD STREESS OF TRANSVERSE BAR fyh(Mpa):</value>
+    <comment>ESFUERZO DE FLUENCIA DEL ACERO TRANSVERSAL fyh(Mpa):</comment>
+  </data>
+  <data name="lblEsfUltimoLong.Text" xml:space="preserve">
+    <value>ULTIMATE TENSION STRENGTH OF LONGITUDINAL BAR fu(Mpa):</value>
+    <comment>ESFUERZO ULTIMO DEL ACERO LONGITUDINAL fu(Mpa):</comment>
+  </data>
+  <data name="lblEspamientoTrans.Text" xml:space="preserve">
+    <value>SPACING OF TRANSVERSE BAR et(mm):</value>
+    <comment>ESPACIAMIENTO TRANSVERSAL DEL ACERO et(mm):</comment>
+  </data>
+  <data name="lblIndiceRefLong.Text" xml:space="preserve">
+    <value>LONGITUDINAL STEEL RATIO %:</value>
+    <comment>INDICE DEL REFUERZO LONGITUDINAL %:</comment>
+  </data>
+  <data name="lblIndiceRefTrans.Text" xml:space="preserve">
+    <value>TRANSVERSE STEEL RATIO %:</value>
+    <comment>INDICE DEL REFUERZO TRANSVERSAL %:</comment>
+  </data>
+  <data name="lblInfGeneral.Text" xml:space="preserve">
+    <value>GENERAL INFORMATION</value>
+    <comment>INFORMACIÓN GENERAL</comment>
+  </data>
+  <data name="lblLongitudPila.Text" xml:space="preserve">
+    <value>MEDIUM PILE LENGTH L(mm):</value>
+    <comment>LONGITUD MEDIA DE LA PILA L(mm):</comment>
+  </data>
+  <data name="lblNombreSpec.Text" xml:space="preserve">
+    <value>TEST PERFORMED BY:</value>
+    <comment>NOMBRE DEL ESPECIMEN:</comment>
+  </data>
+  <data name="lblNumBarCortante.Text" xml:space="preserve">
+    <value># SHEAR BOUGH (Unit):</value>
+    <comment># DE BARRILLAS A CORTANTE </comment>
+  </data>
+  <data name="lblNumBarLong.Text" xml:space="preserve">
+    <value># LONGITUDINAL BARS (Unit):</value>
+    <comment># DE BARILLAS LONGITUDINALES (Unidades):</comment>
+  </data>
+  <data name="lblNumBarTrans.Text" xml:space="preserve">
+    <value># TRANSVERSE BAR (Unit):</value>
+    <comment># DE BARILLAS TRANSVERSALES (Unidades):</comment>
+  </data>
+  <data name="lblNumBarY.Text" xml:space="preserve">
+    <value># MIDDLE BAR Y(Unit):</value>
+    <comment># DE BARILLAS INTERMEDIAS Y(Unidades):</comment>
+  </data>
+  <data name="lblNumBarZ.Text" xml:space="preserve">
+    <value># MIDDLE BAR Z(Unit):</value>
+    <comment># DE BARILLAS INTERMEDIAS Z(Unidades):</comment>
+  </data>
+  <data name="lblProfundidadSeccion.Text" xml:space="preserve">
+    <value>SECTION HEIGHT h(mm):</value>
+    <comment>PROFUNDIDAD  DE LA SECCIÓN h(mm):</comment>
+  </data>
+  <data name="lblPropiedadMateriales.Text" xml:space="preserve">
+    <value>MATERIAL PROPERTIES</value>
+    <comment>PROPIEDADES DE LOS MATERIALES</comment>
+  </data>
+  <data name="lblPropiedadSeccion.Text" xml:space="preserve">
+    <value>SECTION PROPERTIES</value>
+    <comment>PROPIEDADES DE LA SECCIÓN</comment>
+  </data>
+  <data name="lblRecubrimientoY.Text" xml:space="preserve">
+    <value>COVER rY(mm):</value>
+    <comment>RECUBRIMIENTO rY(mm):</comment>
+  </data>
+  <data name="lblRecubrimientoZ.Text" xml:space="preserve">
+    <value>COVER rZ(mm):</value>
+    <comment>RECUBRIMIENTO rZ(mm):</comment>
+  </data>
+  <data name="lblReferenciaSpec.Text" xml:space="preserve">
+    <value>REFERENCE:</value>
+    <comment>REFERENCIA:</comment>
+  </data>
+  <data name="lblResistCompConcret.Text" xml:space="preserve">
+    <value>CONCRETE STRENGHT f'c(Mpa):</value>
+    <comment>RESISTENCIA A LA COMPRESIÓN DEL CONCRETO f'c(Mpa):</comment>
+  </data>
+  <data name="lblSpecimenInf.Text" xml:space="preserve">
+    <value>SPECIMEN INFORMATION</value>
+    <comment>INFORMACIÓN DEL ESPECIMEN</comment>
+  </data>
+  <data name="lblTipoSpec.Text" xml:space="preserve">
+    <value>SECTION TYPE:</value>
+    <comment>TIPO DE SECCIÓN:</comment>
+  </data>
+  <data name="lblTituloEsq.Text" xml:space="preserve">
+    <value>FIG 1. SECTION</value>
+    <comment>FIG 1. SECCIÓN</comment>
+  </data>
+  <data name="lblTituloExpReal.Text" xml:space="preserve">
+    <value>FIG 2. SCHEMATIC EXPERIMENTAL SETUP</value>
+    <comment>FIG 2. ESQUEMA DEL EXPERIMENTO</comment>
+  </data>
+</root>

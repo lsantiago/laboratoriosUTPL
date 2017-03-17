@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCargarEjemplo.Text" xml:space="preserve">
+    <value>CARGAR DATOS DE EJEMPLO</value>
+  </data>
+  <data name="btnGraficar.Text" xml:space="preserve">
+    <value>REALIZAR ANÁLISIS PUSHOVER</value>
+  </data>
+  <data name="btnGraficarColumnas.Text" xml:space="preserve">
+    <value>GRAFICAR</value>
+  </data>
+  <data name="btnGraficarVigas.Text" xml:space="preserve">
+    <value>GRAFICAR</value>
+  </data>
+  <data name="cbBeam1.Text" xml:space="preserve">
+    <value>VIGA 1</value>
+  </data>
+  <data name="cbBeam2.Text" xml:space="preserve">
+    <value>VIGA 2</value>
+  </data>
+  <data name="cbBeam3.Text" xml:space="preserve">
+    <value>VIGA 3</value>
+  </data>
+  <data name="cbBeam4.Text" xml:space="preserve">
+    <value>VIGA 4</value>
+  </data>
+  <data name="cbColumn1.Text" xml:space="preserve">
+    <value>COLUMNA 1</value>
+  </data>
+  <data name="cdColumn2.Text" xml:space="preserve">
+    <value>COLUMNA 2</value>
+  </data>
+  <data name="cdColumn3.Text" xml:space="preserve">
+    <value>COLUMNA 3</value>
+  </data>
+  <data name="cdColumn4.Text" xml:space="preserve">
+    <value>COLUMNA 4</value>
+  </data>
+  <data name="cdColumn5.Text" xml:space="preserve">
+    <value>COLUMNA 5</value>
+  </data>
+  <data name="cdColumn6.Text" xml:space="preserve">
+    <value>COLUMNA 6</value>
+  </data>
+  <data name="CheckBoxAllColumns.Text" xml:space="preserve">
+    <value>SELECCIONAR TODAS LAS COLUMNAS</value>
+  </data>
+  <data name="CheckBoxSelectAll.Text" xml:space="preserve">
+    <value>SELECCIONAR TODAS LAS VIGAS</value>
+  </data>
+  <data name="imgColumn.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/ESQUEMA COLUMNA.jpg</value>
+  </data>
+  <data name="imgPortico.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/ESQUEMA PORTICO.jpg</value>
+  </data>
+  <data name="imgRutaTitulo.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/Portal/TituloVirtualLab-ES.png</value>
+    <comment>Rotulo Título</comment>
+  </data>
+  <data name="imgViga.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/ESQUEMA VIGA.jpg</value>
+  </data>
+  <data name="lblAlturaColumna.Text" xml:space="preserve">
+    <value>ALTURA Hc (m)</value>
+  </data>
+  <data name="lblBaseColumna.Text" xml:space="preserve">
+    <value>BASE Bc (m)</value>
+  </data>
+  <data name="lblBeam1.Text" xml:space="preserve">
+    <value>Viga1</value>
+  </data>
+  <data name="lblBeam11.Text" xml:space="preserve">
+    <value>DEFORMACIÓN EN EL EXTREMO SUPERIOR IZQUIERDO</value>
+  </data>
+  <data name="lblBeam12.Text" xml:space="preserve">
+    <value>DEFORMACIÓN EN EL EXTREMO INFERIOR IZQUIERDO</value>
+  </data>
+  <data name="lblBeam13.Text" xml:space="preserve">
+    <value>DEFORMACIÓN EN EL EXTREMO SUPERIOR DERECHO</value>
+  </data>
+  <data name="lblBeam14.Text" xml:space="preserve">
+    <value>DEFORMACIÓN EN EL EXTREMO INFERIOR DERECHO</value>
+  </data>
+  <data name="lblBeam2.Text" xml:space="preserve">
+    <value>Viga2</value>
+  </data>
+  <data name="lblBeam21.Text" xml:space="preserve">
+    <value>DCR EN EL EXTREMO SUPERIOR IZQUIERDO</value>
+  </data>
+  <data name="lblBeam22.Text" xml:space="preserve">
+    <value>DCR EN EL EXTREMO INFERIOR IZQUIERDO</value>
+  </data>
+  <data name="lblBeam23.Text" xml:space="preserve">
+    <value>DCR EN EL EXTREMO SUPERIOR DERECHO</value>
+  </data>
+  <data name="lblBeam24.Text" xml:space="preserve">
+    <value>DCR EN EL EXTREMO INFERIOR DERECHO</value>
+  </data>
+  <data name="lblBeam3.Text" xml:space="preserve">
+    <value>Viga3</value>
+  </data>
+  <data name="lblBeam31.Text" xml:space="preserve">
+    <value>MOMENTO EN EL EXTREMO IZQUIERDO</value>
+  </data>
+  <data name="lblBeam32.Text" xml:space="preserve">
+    <value>CURVATURA EN EL EXTREMO IZQUIERDO</value>
+  </data>
+  <data name="lblBeam33.Text" xml:space="preserve">
+    <value>MOMENTO EN EL EXTEMO DERECHO</value>
+  </data>
+  <data name="lblBeam34.Text" xml:space="preserve">
+    <value>CURVATURA EN EL EXTREMO DERECHO</value>
+  </data>
+  <data name="lblBeam4.Text" xml:space="preserve">
+    <value>Viga4</value>
+  </data>
+  <data name="lblBeam41.Text" xml:space="preserve">
+    <value>CORTE EN EL EXTREMO IZQUIERDO</value>
+  </data>
+  <data name="lblBeam42.Text" xml:space="preserve">
+    <value>CARGA AXIAL EN EL EXTREMO IZQUIERDO</value>
+  </data>
+  <data name="lblBeam43.Text" xml:space="preserve">
+    <value>CORTE EN EL EXTREMO DERECHO</value>
+  </data>
+  <data name="lblBeam44.Text" xml:space="preserve">
+    <value>CARGA AXIAL EN EL EXTREMO DERECHO</value>
+  </data>
+  <data name="lblBeamNumber.Text" xml:space="preserve">
+    <value>NUMERO DE VIGA:</value>
+  </data>
+  <data name="lblBeamNumberC.Text" xml:space="preserve">
+    <value>NÚMERO DE COLUMNA:</value>
+  </data>
+  <data name="lblBeams.Text" xml:space="preserve">
+    <value>VIGAS</value>
+  </data>
+  <data name="lblColumnas.Text" xml:space="preserve">
+    <value>COLUMNAS</value>
+  </data>
+  <data name="lblColumnsDraw.Text" xml:space="preserve">
+    <value>SELECCIONE LAS COLUMNAS DE LAS CUALES DESEA GRAFICAR LOS RESULTADOS,  LUEGO PRESIONE EL BOTON "GRAFICAR RESULTADOS"</value>
+  </data>
+  <data name="lblColumnsResults.Text" xml:space="preserve">
+    <value>COLUMNAS</value>
+  </data>
+  <data name="lblDatosAnálisis.Text" xml:space="preserve">
+    <value>DATOS DE ANÁLISIS</value>
+  </data>
+  <data name="lblDesplazamientoMeta.Text" xml:space="preserve">
+    <value>DESPLAZAMIENTO OBJETIVO (m)</value>
+  </data>
+  <data name="lblDraw.Text" xml:space="preserve">
+    <value>SELECCIONE LAS VIGAS DE LAS CUALES DESEA GRAFICAR LOS RESULTADOS, LUEGO PRESIONE EL BOTON "GRAFICAR RESULTADOS"</value>
+  </data>
+  <data name="lblFc.Text" xml:space="preserve">
+    <value>RESISTENCIA A COMPRESÓN DEL CONCRETO fc (MPa)</value>
+  </data>
+  <data name="lblFrame.Text" xml:space="preserve">
+    <value>CONFIGURACIÓN DEL PÓRTICO</value>
+    <comment>Rotulo Título</comment>
+  </data>
+  <data name="lblFy.Text" xml:space="preserve">
+    <value>ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL fy (MPa)</value>
+  </data>
+  <data name="lblGeometryProperties.Text" xml:space="preserve">
+    <value>PROPIEDADES GEOMÉTRICAS</value>
+    <comment>Subtitulo</comment>
+  </data>
+  <data name="lblGravityLoad.Text" xml:space="preserve">
+    <value>CARGA GRAVITACIONAL</value>
+  </data>
+  <data name="lblHStory1.Text" xml:space="preserve">
+    <value>ALTURA DEL PRIMER PISO (Y1)</value>
+  </data>
+  <data name="lblHStory2.Text" xml:space="preserve">
+    <value>ALTURA DEL SEGUNDO PISO (Y2)</value>
+  </data>
+  <data name="lblInputData1.Text" xml:space="preserve">
+    <value>DATOS DE ENTRADA</value>
+    <comment>Rotulo Título</comment>
+  </data>
+  <data name="lblLoads.Text" xml:space="preserve">
+    <value>CARGAS</value>
+  </data>
+  <data name="lblMaterialProperties.Text" xml:space="preserve">
+    <value>PROPIEDADES DE LOS MATERIALES</value>
+  </data>
+  <data name="lblPatronCarga.Text" xml:space="preserve">
+    <value>PATRÓN DE CARGA LATERAL</value>
+  </data>
+  <data name="lblPushover.Text" xml:space="preserve">
+    <value>PUSHOVER</value>
+  </data>
+  <data name="lblRefuerzoCInferior.Text" xml:space="preserve">
+    <value>REFUERZO CONTINUO INFERIOR (BCR) |Número"D"Diámetro mm|</value>
+  </data>
+  <data name="lblRefuerzoCSuperior.Text" xml:space="preserve">
+    <value>REFUERZO CONTINUO SUPERIOR (TRC) |Número"D"Diámetro mm|</value>
+  </data>
+  <data name="lblRefuerzoDerecho.Text" xml:space="preserve">
+    <value>REFUERZO NEGATIVO EN EL EXTREMO DERECHO (RR) |Número"D"Diámetro mm|</value>
+  </data>
+  <data name="lblRefuerzoIzquierdo.Text" xml:space="preserve">
+    <value>REFUERZO NEGATIVO EN EL EXTREMO IZQUIERDO (RL) |Número"D"Diámetro mm|</value>
+  </data>
+  <data name="lblRefuerzoLong.Text" xml:space="preserve">
+    <value>REFUERZO LONGITUDINAL (LR) |Número"D"Diámetro mm|</value>
+  </data>
+  <data name="lblRefuerzoTransv.Text" xml:space="preserve">
+    <value>REFUERZO TRANSVERSAL  |Diámetro(mm)"@"Espaciamiento(mm)|</value>
+  </data>
+  <data name="lblRefuerzoTransversal.Text" xml:space="preserve">
+    <value>ESTRIBOS  |Diámetro(mm)"@"Espaciamiento(mm)|</value>
+  </data>
+  <data name="lblResults.Text" xml:space="preserve">
+    <value>RESULTADOS</value>
+  </data>
+  <data name="lblSectionBase.Text" xml:space="preserve">
+    <value>BASE B (m)</value>
+  </data>
+  <data name="lblSectionHeight.Text" xml:space="preserve">
+    <value>ALTURA H (m)</value>
+  </data>
+  <data name="lblSectionProperties.Text" xml:space="preserve">
+    <value>PROPIEDADES DE LA SECCIÓN</value>
+  </data>
+  <data name="lblSpan1.Text" xml:space="preserve">
+    <value>PRIMER VANO (X1)</value>
+  </data>
+  <data name="lblSpan2.Text" xml:space="preserve">
+    <value>SEGUNDO VANO (X2)</value>
+  </data>
+  <data name="lblTituloExp.Text" xml:space="preserve">
+    <value>ANÁLISIS PUSHOVER:PÓRTICOS FORMADOS POR DOS PISOS Y DOS VANOS</value>
+    <comment>Rotulo Título</comment>
+  </data>
+  <data name="lblTituloGeneral.Text" xml:space="preserve">
+    <value>ANÁLISIS PUSHOVER PARA PÓRTICOS</value>
+    <comment>Rotulo Título</comment>
+  </data>
+  <data name="lblTituloSeccionProper.Text" xml:space="preserve">
+    <value>PROPIEDADES DE LA SECCIÓN</value>
+    <comment>Subtitulo</comment>
+  </data>
+  <data name="lblVigas.Text" xml:space="preserve">
+    <value>VIGAS</value>
+  </data>
+</root>

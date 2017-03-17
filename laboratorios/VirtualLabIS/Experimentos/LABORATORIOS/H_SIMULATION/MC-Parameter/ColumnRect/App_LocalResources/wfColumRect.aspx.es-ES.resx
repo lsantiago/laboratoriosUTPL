@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCargarEjemplo.Text" xml:space="preserve">
+    <value>CARGAR DATOS DE EJEMPLO</value>
+    <comment>BOTON DE COMANDO</comment>
+  </data>
+  <data name="btnGraficar.Text" xml:space="preserve">
+    <value>EJECUTAR ANÁLISIS PARAMÉTRICO</value>
+    <comment>BOTON DE COMANDO</comment>
+  </data>
+  <data name="imgRutaTitulo.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/Portal/TituloVirtualLab-EN.png</value>
+    <comment>GRAFICO TITULO</comment>
+  </data>
+  <data name="lblAxialLoad.Text" xml:space="preserve">
+    <value>CARGA AXIAL (kN)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblBiaxialAngle.Text" xml:space="preserve">
+    <value>ANGULO BIAXIAL (Θ)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblCoverLateral.Text" xml:space="preserve">
+    <value>RECUBRIMIENTO AL CENTRO DE LA VARILLA LATERAL r  (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblCoverTopBottom.Text" xml:space="preserve">
+    <value>RECUBRIMIENTO AL CENTRO DE LA VARILLA SUPERIOR E INFERIOR r´ (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblDiamLateral.Text" xml:space="preserve">
+    <value>DIÁMETRO DE VARILLAS LATERALES</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblDiamStirrups.Text" xml:space="preserve">
+    <value>DIÁMETRO DE LOS ESTRIBOS (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblDiamTopBottom.Text" xml:space="preserve">
+    <value>DIÁMETRO DE LAS VARILLAS SUPERIORES E INFERIORES</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblFc.Text" xml:space="preserve">
+    <value>RESISTENCIA A LA COMPRESIÓN DEL CONCRETO (MPa)</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblFigura2.Text" xml:space="preserve">
+    <value>Se ha encontrado que la curvatura de fluencia es directamente proporcional a εy/D</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblFigura3.Text" xml:space="preserve">
+    <value>Para secciones del mismo diámetro y con las mismas propiedades del material Фy  es constante y My es proporcional a la rigidez</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblFigura4.Text" xml:space="preserve">
+    <value>Manteniendo constante la relación de carga axial, Icr/Ig es proporcional  a la cuantía de acero longitudinal</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblFigura5.Text" xml:space="preserve">
+    <value>Esta figura muestra la relación entre deformación producto de la curvatura y el diámetro. La relación es casi lineal</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblFigura6.Text" xml:space="preserve">
+    <value>Esta figura muestra la relación entre deformación producto de la curvatura y el diámetro. La relación es casi lineal</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblFy.Text" xml:space="preserve">
+    <value>ESFUERZO DE FLUENCIA DEL ACERO LONGITUDINAL (MPa)</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblFytrans.Text" xml:space="preserve">
+    <value>ESFUERZO DE FLUENCIA DEL ACERO TRANSVERSAL (MPa)</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblInputData1.Text" xml:space="preserve">
+    <value>DATOS DE ENTRADA</value>
+    <comment>INPUT DATA</comment>
+  </data>
+  <data name="lblNumBars.Text" xml:space="preserve">
+    <value># DE VARILLAS DE ACERO SUPERIOR E INFERIOR</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblNumBarsLateral.Text" xml:space="preserve">
+    <value># DE VARILLAS DE ACERO LATERAL</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblNumLegsX.Text" xml:space="preserve">
+    <value># DE RAMAS DE ESTRIBO QUE RESISTEN CORTE EN DIRECCIÓN "X"</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblNumLegsY.Text" xml:space="preserve">
+    <value># DE RAMAS DE ESTRIBO QUE RESISTEN CORTE EN DIRECCIÓN "Y"</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblNumSec.Text" xml:space="preserve">
+    <value>NÚMERO DE SECCIÓN</value>
+    <comment>INPUT DATA</comment>
+  </data>
+  <data name="lblNumSecciones.Text" xml:space="preserve">
+    <value>NÚMERO DE SECCIONES A SER ANALIZADAS</value>
+    <comment>INPUT DATA</comment>
+  </data>
+  <data name="lblResults.Text" xml:space="preserve">
+    <value>RESULTADOS</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblRotuloGrafico.Text" xml:space="preserve">
+    <value>SECCIÓN</value>
+    <comment>ROTULO GRAFICO</comment>
+  </data>
+  <data name="lblSectionBase.Text" xml:space="preserve">
+    <value>BASE DE LA SECCIÓN  B (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblSectionHeight.Text" xml:space="preserve">
+    <value>ALTURA DE LA SECCIÓN H (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblShearSpan.Text" xml:space="preserve">
+    <value>LONGITUD DE CORTE (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblSpacingStirrups.Text" xml:space="preserve">
+    <value>ESPACIAMIENTO DE LOS ESTRIBOS (mm)</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="lblSteelRatio.Text" xml:space="preserve">
+    <value>ÍNDICE DEL ENDURECIMIENTO DEL ACERO</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblTituloExp.Text" xml:space="preserve">
+    <value>M-C PARAMÉTRICO : COLUMNAS RECTANGULARES</value>
+    <comment>TITULO GENERAL</comment>
+  </data>
+  <data name="lblTituloFig1.Text" xml:space="preserve">
+    <value>FIG. 2 ESTIMACIÓN DE LA CURVATURA DE FLUENCIA</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblTituloFig2.Text" xml:space="preserve">
+    <value>FIG. 3 RELACIÓN ENTRE RESISTENCIA Y RIGIDEZ</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblTituloFig3.Text" xml:space="preserve">
+    <value>FIG. 4 RELACIÓN ENTRE INERCIA GRUESA/INERCIA AGRIETADA Y LA CURVATURA DEL ACERO</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblTituloFig5.Text" xml:space="preserve">
+    <value>FIG. 5 RELACIÓN ENTRE LA DEFORMACIÓN UNITARIA DEL CONCRETO Y LA CURVATURA</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblTituloFig6.Text" xml:space="preserve">
+    <value>FIG. 6 RELACIÓN ENTRE LA DEFORMACIÓN UNITARIA DEL ACERO Y LA CURVATURA</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblTituloGenerel.Text" xml:space="preserve">
+    <value>ESTUDIO PARÁMETRICO DE LA RESPUESTA AL ANÁLISIS MOMENTO CURVATURA DE SECCIONES DE CONCRETO REFORZADO</value>
+    <comment>TITULO GENERAL</comment>
+  </data>
+  <data name="lblTituloMaterialProper.Text" xml:space="preserve">
+    <value>PROPIEDADES DE LOS MATERIALES</value>
+    <comment>INPUT DATA MATERIAL PROPERTIES</comment>
+  </data>
+  <data name="lblTituloMCR.Text" xml:space="preserve">
+    <value> FIG.1 RESPUESTA AL ANÁLISIS MOMENTO-CURVATURA</value>
+    <comment>RESULTADOS</comment>
+  </data>
+  <data name="lblTituloSeccionProper.Text" xml:space="preserve">
+    <value>PROPIEDADES DE LA SECCIÓN</value>
+    <comment>INPUT DATA SECTION PROPERTIES</comment>
+  </data>
+  <data name="String1.Text" xml:space="preserve">
+    <value />
+  </data>
+</root>

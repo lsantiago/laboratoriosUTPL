@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="View.Permission" xml:space="preserve">
+    <value>Ver módulo</value>
+  </data>
+  <data name="View Tab.Permission" xml:space="preserve">
+    <value>Ver página</value>
+  </data>
+  <data name="View Folder.Permission" xml:space="preserve">
+    <value>Ver carpeta</value>
+  </data>
+  <data name="Write to Folder.Permission" xml:space="preserve">
+    <value>Escribir en carpeta</value>
+  </data>
+  <data name="Tabs.String">
+    <value>Páginas</value>
+  </data>
+  <data name="TokenReplaceRestrictedProperty.Text">
+    <value>Error de acceso [{0}:{1}], el acceso a {1} está restiringido for base de datos{0}.</value>
+  </data>
+  <data name="MESSAGE_RETRIEVEPASSWORD_INSTRUCTIONS.Text">
+    <value>Para to retrieve your password, you will need to provide your user name, and the
+			answer to the Password Question.		
+		</value>
+  </data>
+  <data name="Module Definitions.String">
+    <value>Definiciones de módulo</value>
+  </data>
+  <data name="ModuleHelp.Action">
+    <value>Ayuda</value>
+  </data>
+  <data name="ModuleSettings.Action">
+    <value>Configuración</value>
+  </data>
+  <data name="OnlineHelp.Action">
+    <value>Ayuda Online</value>
+  </data>
+  <data name="Portals.String">
+    <value>Portales</value>
+  </data>
+  <data name="PrintModule.Action">
+    <value>Imprimir</value>
+  </data>
+  <data name="Return.Text">
+    <value>Retorno al sitio</value>
+  </data>
+  <data name="Schedule.String">
+    <value>Horario</value>
+  </data>
+  <data name="Admin.String">
+    <value>Administrador</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PUBLIC_SUBJECT.Text">
+    <value>[Portal:PortalName] Nuevo Registro Registro</value>
+  </data>
+  <data name="Languages.String">
+    <value>Lenguaje</value>
+  </data>
+  <data name="MoveRoot.Action">
+    <value>Mover</value>
+  </data>
+  <data name="EMAIL_PASSWORD_REMINDER_SUBJECT.Text">
+    <value>[Portal:PortalName] Recordatorio de Clave</value>
+  </data>
+  <data name="EMAIL_PORTAL_SIGNUP_BODY.Text">
+    <value>Querido [User:DisplayName],
+
+Su portal ha sido creado. Por favor lea la siguiente información cudiadosamente y asegúrese de guardar este mnsaje en un lugar seguro para futuras referencias.
+
+Dirección del Portal Sitio Web: [Portal:URL]
+Nombre de usuario: [Membership:UserName]
+Código de verificación: [User:VerificationCode]
+
+Por favor, tome la oportunidad de visitar el sitio web para revisar su contenido y aproveche sus múltiples caractrerísticas.
+Gracias, nosotros apreciamos su ayuda...
+
+[Host:HostTitle]
+
+</value>
+  </data>
+  <data name="EMAIL_PROFILE_UPDATED_BODY.Text">
+    <value>Querido [User:DisplayName],
+
+Su perfil en[Portal:PortalName] ha sido actualizado éxitosamente.
+Sincerely,
+[Portal:PortalName]
+
+</value>
+  </data>
+  <data name="Edit.Permission">
+    <value>Editar módulo</value>
+  </data>
+  <data name="EMAIL_AFFILIATE_NOTIFICATION_BODY.Text">
+    <value>Estimado [Custom:0],
+
+Your account for the [Portal:PortalName] Affiliate Program has been created.
+
+To begin earning rewards, please use the following URL to link to our site:
+
+[Custom:1]
+
+Thank you,
+[Portal:PortalName]
+
+</value>
+  </data>
+  <data name="EMAIL_AFFILIATE_NOTIFICATION_SUBJECT.Text">
+    <value>[Portal:PortalName] Notificación de Afiliación</value>
+  </data>
+</root>

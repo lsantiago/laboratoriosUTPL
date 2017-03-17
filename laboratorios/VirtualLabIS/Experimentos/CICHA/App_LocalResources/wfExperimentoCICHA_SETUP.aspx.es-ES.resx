@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ckbEfectPDelta.Text" xml:space="preserve">
+    <value>EFECTOS P-DELTA</value>
+    <comment>EFECTOS P-DELTA</comment>
+  </data>
+  <data name="ckbPenetracDeform.Text" xml:space="preserve">
+    <value>PENETRACIÓN DE DEFORMACIÓN</value>
+    <comment>PENETRACIÓN DE DEFORMACIÓN</comment>
+  </data>
+  <data name="cmdEliminarTest.Text" xml:space="preserve">
+    <value>ELIMINAR ANALISIS</value>
+    <comment>ELIMINAR ANALISIS</comment>
+  </data>
+  <data name="cmdLimpiar.Text" xml:space="preserve">
+    <value>LIMPIAR</value>
+    <comment>LIMPIAR</comment>
+  </data>
+  <data name="cmdSimular.Text" xml:space="preserve">
+    <value>SIMULAR</value>
+    <comment>SIMULAR</comment>
+  </data>
+  <data name="imgAyudaParchesConctConfinado1.ImageUrl" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgCoreRectangular-ES.GIF</value>
+    <comment>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgCoreRectangular-ES.GIF</comment>
+  </data>
+  <data name="imgAyudaParchesConctConfinado1.ImageUrl_Cir" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgCoreCircular-ES.GIF</value>
+    <comment>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgCoreCircular-ES.GIF</comment>
+  </data>
+  <data name="imgAyudaParchesConctNoConfinado.ImageUrl" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgCoverRectangular-ES.GIF</value>
+    <comment>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgCoverRectangular-ES.GIF</comment>
+  </data>
+  <data name="imgAyudaParchesConctNoConfinado.ImageUrl_Cir" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgCoverCircular-ES.GIF</value>
+    <comment>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgCoverCircular-ES.GIF</comment>
+  </data>
+  <data name="imgElementosSeccion.ImageUrl" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgElementosSeccion-ES.GIF</value>
+    <comment>~/VirtualLabIS/Varios/Archivos/Imagenes/CICHA/ImagenesAyuda/imgElementosSeccion-Es.GIF</comment>
+  </data>
+  <data name="imgRutaTitulo.Text" xml:space="preserve">
+    <value>../../Varios/Archivos/Imagenes/Portal/TituloVirtualLab-ES.png</value>
+  </data>
+  <data name="lblAyudaConsiderar.Text" xml:space="preserve">
+    <value>Penetración de deformación: &lt;br&gt; Ocurre a lo largo de las barras del refuerzo longitudinal que se encuentran totalmente ancladas dentro de las conexiones de elementos estructurales de concreto, causando un deslizamiento en las barras a lo largo de una parte de la longitud anclada. Provoca una elongación de la barra concentrada en la sección de conexión. Ignorar la penetración de deformación, subestima las deflexiones y elongaciones de miembro, la rigidez y la capacidad de disipación de energía histerética, deformaciones y curvatura de sección. &lt;br&gt; &lt;br&gt; Efecto Pdelta: &lt;br&gt; Es causado por la excentricidad de la carga presente en la parte superior de la estructura, produce momentos secundarios aumentando las deflexiones horizontales y las fuerzas internas. </value>
+    <comment>Penetración de deformación: &lt;br&gt; Ocurre a lo largo de las barras del refuerzo longitudinal que se encuentran totalmente ancladas dentro de las conexiones de elementos estructurales de concreto, causando un deslizamiento en las barras a lo largo de una parte de la longitud anclada. Provoca una elongación de la barra concentrada en la sección de conexión. Ignorar la penetración de deformación, subestima las deflexiones y elongaciones de miembro, la rigidez y la capacidad de disipación de energía histerética, deformaciones y curvatura de sección. &lt;br&gt; &lt;br&gt;Efecto Pdelta: &lt;br&gt; Es causado por la excentricidad de la carga presente en la parte superior de la estructura, produce momentos secundarios aumentando las deflexiones horizontales y las fuerzas internas. </comment>
+  </data>
+  <data name="lblAyudaElementosSeccion.Text" xml:space="preserve">
+    <value>En el análisis de elementos finitos, al modelar se subdivide el sistema en elementos y nudos, para definir la acción de cargas, y las restricciones nodales. En punto se debe definir el número de nudos y puntos de integración en los que la sección será dividida para el análisis.</value>
+    <comment>En el análisis de elementos finitos, al modelar se subdivide el sistema en elementos y nudos, para definir la acción de cargas, y las restricciones nodales. En punto se debe definir el número de nudos y puntos de integración en los que la sección será dividida para el análisis.</comment>
+  </data>
+  <data name="lblAyudaFibrasSeccion.Text" xml:space="preserve">
+    <value>OpenSees modela secciones tipo fibra con configuración geométrica y subregiones simples y regulares denominadas parches. Permite definir la discretización de las secciones y dentro de la sección fibras individuales con propiedades diferentes, pudiendo asi dentro de una misma sección definir fibras de concreto confinado, no confinado y capas de refuerzo.</value>
+    <comment>OpenSees modela secciones tipo fibra con configuración geométrica y subregiones simples y regulares denominadas parches. Permite definir la discretización de las secciones y dentro de la sección fibras individuales con propiedades diferentes, pudiendo asi dentro de una misma sección definir fibras de concreto confinado, no confinado y capas de refuerzo.</comment>
+  </data>
+  <data name="lblAyudaModeloMaterialesAcero.Text" xml:space="preserve">
+    <value>Se utilizan para construir un objeto uniaxial que representa relaciones uniaxiales fuerza-deformación. Esto definirá el modelo con el que se simulará la respuesta de los materiales.</value>
+    <comment>Se utilizan para construir un objeto uniaxial que representa relaciones uniaxiales fuerza-deformación. Esto definirá el modelo con el que se simulará la respuesta de los materiales.</comment>
+  </data>
+  <data name="lblAyudaModeloMaterialesAcero1.Text" xml:space="preserve">
+    <value>Acero 1 : &lt;br&gt; Permite modelar un material con propiedades esfuerzo-deformación que siguen un diagrama bilineal con endurecimiento cinemático e  isotrópico descrito por una ecuación no lineal.</value>
+    <comment>Acero 1 : &lt;br&gt; Permite modelar un material con propiedades esfuerzo-deformación que siguen un diagrama bilineal con endurecimiento cinemático e  isotrópico descrito por una ecuación no lineal.</comment>
+  </data>
+  <data name="lblAyudaModeloMaterialesAcero2.Text" xml:space="preserve">
+    <value>STEEL 2 : &lt;br&gt; Se obtiene un material de acero uniaxial con endurecimiento de deformación isotrópico, provee control sobre la transición de la región elástica a la plástica. Los efectos de endurecimiento de deformación son opcionales y pueden ser especificados en compresión o tensión.  </value>
+    <comment>STEEL 2 : &lt;br&gt; Se obtiene un material de acero uniaxial con endurecimiento de deformación isotrópico, provee control sobre la transición de la región elástica a la plástica. Los efectos de endurecimiento de deformación son opcionales y pueden ser especificados en compresión o tensión.  </comment>
+  </data>
+  <data name="lblAyudaModeloMaterialesConcreto1.Text" xml:space="preserve">
+    <value>Concreto 1: &lt;br&gt; Se usa para construir un material con una degradación lineal de la rigidez, en las zonas da carga y descarga, asume que el concreto no posee ninguna resistencia a la tensión. </value>
+    <comment>Concreto 1: &lt;br&gt; Se usa para construir un material con una degradación lineal de la rigidez, en las zonas da carga y descarga, asume que el concreto no posee ninguna resistencia a la tensión. </comment>
+  </data>
+  <data name="lblAyudaModeloMaterialesConcreto2.Text" xml:space="preserve">
+    <value>Concreto 2: &lt;br&gt; Asume que el concreto además de su resistencia a la comprensión posee  resistencia a la tensión la misma que se modela con un comportamiento lineal.</value>
+    <comment>Concreto 2: &lt;br&gt; Asume que el concreto además de su resistencia a la comprensión posee  resistencia a la tensión la misma que se modela con un comportamiento lineal.</comment>
+  </data>
+  <data name="lblAyudaModeloMaterialesConcreto3.Text" xml:space="preserve">
+    <value>Concreto 3: &lt;br&gt; Considera que el concreto resiste a tensión, en este caso la degradación de la rigidez es modelado con un suavizado no lineal.</value>
+    <comment>Concreto 3: &lt;br&gt; Considera que el concreto resiste a tensión, en este caso la degradación de la rigidez es modelado con un suavizado no lineal.</comment>
+  </data>
+  <data name="lblAyudaModeloMaterialesConcreto4.Text" xml:space="preserve">
+    <value>Concreto 4: &lt;br&gt; Construye un material con degradación lineal de la rigidez en las zonas de carga y descarga, considera una resistencia a la tensión cuyo comportamiento está determinado por un deceso exponencial  de la rigidez en la zona de tensión.</value>
+    <comment>Concreto 4: &lt;br&gt; Construye un material con degradación lineal de la rigidez en las zonas de carga y descarga, considera una resistencia a la tensión cuyo comportamiento está determinado por un deceso exponencial  de la rigidez en la zona de tensión.</comment>
+  </data>
+  <data name="lblAyudaParchesConctConfinado.Text" xml:space="preserve">
+    <value>FIGURA 1.</value>
+    <comment>FIGURA 1.</comment>
+  </data>
+  <data name="lblAyudaParchesConctNoConfinado.Text" xml:space="preserve">
+    <value>FIGURA 2.</value>
+    <comment>FIGURA 2.</comment>
+  </data>
+  <data name="lblConsiderar.Text" xml:space="preserve">
+    <value>CONSIDERAR</value>
+    <comment>CONSIDERAR</comment>
+  </data>
+  <data name="lblCoreCircunfer_Y.Text" xml:space="preserve">
+    <value>Nf2</value>
+    <comment>DIVISIONES EN SENTIDO Y</comment>
+  </data>
+  <data name="lblCoreCircunfer_Y.Text_Cir" xml:space="preserve">
+    <value>Nf2</value>
+    <comment>DIVISIONES EN SENTIDO CIRCUNFERENCIAL</comment>
+  </data>
+  <data name="lblCoreRadial_Z.Text" xml:space="preserve">
+    <value>Nf1</value>
+    <comment>DIVISIONES EN SENTIDO Z</comment>
+  </data>
+  <data name="lblCoreRadial_Z.Text_Cir" xml:space="preserve">
+    <value>Nf1</value>
+    <comment>DIVISIONES EN SENTIDO RADIAL</comment>
+  </data>
+  <data name="lblCoverCircunfer_Y.Text" xml:space="preserve">
+    <value>Nh2</value>
+    <comment>DIVISIONES EN SENTIDO Y</comment>
+  </data>
+  <data name="lblCoverCircunfer_Y.Text_Cir" xml:space="preserve">
+    <value>Nh2</value>
+    <comment>DIVISIONES EN SENTIDO CIRCUNFERENCIAL</comment>
+  </data>
+  <data name="lblCoverRadial_Z.Text" xml:space="preserve">
+    <value>Nh1</value>
+    <comment>DIVISIONES EN SENTIDO Z</comment>
+  </data>
+  <data name="lblCoverRadial_Z.Text_Cir" xml:space="preserve">
+    <value>Nh1</value>
+    <comment>DIVISIONES EN SENTIDO RADIAL</comment>
+  </data>
+  <data name="lblElementosSeccion.Text" xml:space="preserve">
+    <value>ELEMENTOS DE LA SECCIÓN</value>
+    <comment>ELEMENTOS DE LA SECCIÓN</comment>
+  </data>
+  <data name="lblFibrasSeccion.Text" xml:space="preserve">
+    <value>FIBRAS DE LA SECCIÓN</value>
+    <comment>FIBRAS DE LA SECCIÓN</comment>
+  </data>
+  <data name="lblInstrucciones.Text" xml:space="preserve">
+    <value>INSTRUCCIONES</value>
+    <comment>INSTRUCCIONES</comment>
+  </data>
+  <data name="lblInstruccionesTodas.Text" xml:space="preserve">
+    <value>1) Ingrese parámetros en el panel de arriba. &lt;br&gt;2) Presione el botón SIMULAR. &lt;br&gt;3) Presione los botones PLAY – PAUSE – STOP. &lt;br&gt;4) Cambie los parámetros del panel de arriba. &lt;br&gt;5) Repita desde el paso 2. &lt;br&gt;</value>
+    <comment>1) Ingrese parámetros en el panel de arriba. &lt;br&gt;2) Presione el botón SIMULAR. &lt;br&gt;3) Presione los botones PLAY – PAUSE – STOP. &lt;br&gt;4) Cambie los parámetros del panel de arriba. &lt;br&gt;5) Repita desde el paso 2. &lt;br&gt;</comment>
+  </data>
+  <data name="lblLinksGraficaCore.Text" xml:space="preserve">
+    <value>VER TUTORIAL PARA MAYOR DETALLE</value>
+    <comment>VER TUTORIAL PARA MAYOR DETALLE</comment>
+  </data>
+  <data name="lblLinksGraficaCover.Text" xml:space="preserve">
+    <value>SEE TUTORIAL FOR MORE DETALLED EXPLANATION</value>
+    <comment>VER TUTORIAL PARA MAYOR DETALLE</comment>
+  </data>
+  <data name="lblLinksGraficaElementosSeccion.Text" xml:space="preserve">
+    <value>SEE TUTORIAL FOR MORE DETALLED EXPLANATION</value>
+    <comment>VER TUTORIAL PARA MAYOR DETALLE</comment>
+  </data>
+  <data name="lblModeloAcero.Text" xml:space="preserve">
+    <value>MODELO DE ACERO</value>
+    <comment>MODELO DE ACERO</comment>
+  </data>
+  <data name="lblModeloConcreto.Text" xml:space="preserve">
+    <value>MODELO DE CONCRETO</value>
+    <comment>MODELO DE CONCRETO</comment>
+  </data>
+  <data name="lblModeloMateriales.Text" xml:space="preserve">
+    <value>MODELO DE MATERIALES</value>
+    <comment>MODELO DE MATERIALES</comment>
+  </data>
+  <data name="lblNumPuntosInters.Text" xml:space="preserve">
+    <value># DE PUNTOS DE INTEGRACIÓN</value>
+    <comment># DE PUNTOS DE INTEGRACIÓN</comment>
+  </data>
+  <data name="lblNumSubElementos.Text" xml:space="preserve">
+    <value># DE ELEMENTOS</value>
+    <comment># DE ELEMENTOS</comment>
+  </data>
+  <data name="lblParametros.Text" xml:space="preserve">
+    <value>PARAMETROS</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblParamModel.Text" xml:space="preserve">
+    <value>PARAMETROS DEL MODELO EN OPENSEES</value>
+    <comment>PARAMETROS DEL MODELO EN OPENSEES</comment>
+  </data>
+  <data name="lblParchesConctConfinado.Text" xml:space="preserve">
+    <value># DE FIBRAS EN EL NUCLEO</value>
+    <comment># DE FIBRAS EN EL NUCLEO</comment>
+  </data>
+  <data name="lblParchesConctNoConfinado.Text" xml:space="preserve">
+    <value># DE FIBRAS EN EL RECUBRIMIENTO</value>
+    <comment># DE FIBRAS EN EL RECUBRIMIENTO</comment>
+  </data>
+  <data name="lblSliderExtPlayUnidades.Text" xml:space="preserve">
+    <value>TIEMPO DE ACTUALIZACIÓN (ms)</value>
+    <comment>TIEMPO DE ACTUALIZACIÓN (ms)</comment>
+  </data>
+  <data name="lblTituloExp.Text" xml:space="preserve">
+    <value>ANÁLISIS DEL COMPORTAMIENTO  INELÁSTICO DE &lt;br&gt; COLUMNAS DE HORMIGÓN ARMADO"</value>
+    <comment>ANÁLISIS DEL COMPORTAMIENTO  INELÁSTICO DE &lt;br&gt; COLUMNAS DE HORMIGÓN ARMADO"</comment>
+  </data>
+  <data name="lblTituloFigElementosSeccion.Text" xml:space="preserve">
+    <value>FIGURE 3.</value>
+    <comment>FIGURA 3.</comment>
+  </data>
+  <data name="lblTituloFigModeloMaterialesAcero1.Text" xml:space="preserve">
+    <value>FIGURA 4.</value>
+    <comment>FIGURA 4.</comment>
+  </data>
+  <data name="lblTituloFigModeloMaterialesAcero2.Text" xml:space="preserve">
+    <value>FIGURA 5.</value>
+    <comment>FIGURA 5.</comment>
+  </data>
+  <data name="lblTituloFigModeloMaterialesConcreto1.Text" xml:space="preserve">
+    <value>FIGURA 6.</value>
+    <comment>FIGURA 6.</comment>
+  </data>
+  <data name="lblTituloFigModeloMaterialesConcreto2.Text" xml:space="preserve">
+    <value>FIGURA 7.</value>
+    <comment>FIGURA 7.</comment>
+  </data>
+  <data name="lblTituloFigModeloMaterialesConcreto3.Text" xml:space="preserve">
+    <value>FIGURA 8.</value>
+    <comment>FIGURA 8.</comment>
+  </data>
+</root>

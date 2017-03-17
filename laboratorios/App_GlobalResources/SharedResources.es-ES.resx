@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DeleteItem.Text">
+    <value>Está seguro que desea eliminar este elemento?</value>
+  </data>
+  <data name="Calendar.Text">
+    <value>Calendario</value>
+  </data>
+  <data name="Yes.Text">
+    <value>Sí</value>
+  </data>
+  <data name="No.Text">
+    <value>No</value>
+  </data>
+  <data name="Not_Specified.Text">
+    <value>Sin especificar</value>
+  </data>
+  <data name="None_Specified.Text">
+    <value>Ninguno Especificado</value>
+  </data>
+  <data name="cmdCancel.Text">
+    <value>Cancelar</value>
+  </data>
+  <data name="cmdDelete.Text">
+    <value>Eliminar</value>
+  </data>
+  <data name="cmdDisplay.Text">
+    <value>Mostrar</value>
+  </data>
+  <data name="cmdGo.Text">
+    <value>Ir</value>
+  </data>
+  <data name="cmdUpdate.Text">
+    <value>Actualizar</value>
+  </data>
+  <data name="cmdUpload.Text">
+    <value>Subir Archivo Nuevo</value>
+  </data>
+  <data name="Select.Text">
+    <value>Seleccionar</value>
+  </data>
+  <data name="Upload.Text">
+    <value>Subida</value>
+  </data>
+  <data name="Add.Text">
+    <value>Agregar</value>
+  </data>
+  <data name="All.Text">
+    <value>Todos</value>
+  </data>
+  <data name="Unauthorized.Text">
+    <value>Desautorizados</value>
+  </data>
+  <data name="Today.Text">
+    <value>Hoy</value>
+  </data>
+  <data name="Close.Text">
+    <value>Cerrar</value>
+  </data>
+  <data name="cmdReturn.Text">
+    <value>Volver</value>
+  </data>
+  <data name="cmdDownLoad.Text">
+    <value>Descargar</value>
+  </data>
+  <data name="Seconds.Text">
+    <value>Segundos</value>
+  </data>
+  <data name="Second.Text">
+    <value>Segundo</value>
+  </data>
+  <data name="Minutes.Text">
+    <value>Minutos</value>
+  </data>
+  <data name="Minute.Text">
+    <value>Minuto</value>
+  </data>
+  <data name="Hours.Text">
+    <value>Horas</value>
+  </data>
+  <data name="Hour.Text">
+    <value>Hora</value>
+  </data>
+  <data name="Days.Text">
+    <value>Días</value>
+  </data>
+  <data name="Day.Text">
+    <value>Día</value>
+  </data>
+  <data name="DeleteItems.Text">
+    <value>Está seguro que desea eliminar estos elemento?</value>
+  </data>
+  <data name="cmdEdit.Text">
+    <value>Editar</value>
+  </data>
+  <data name="Edit.Text">
+    <value>Editar</value>
+  </data>
+  <data name="Unknown.Text">
+    <value>Desconocido</value>
+  </data>
+  <data name="Weeks.Text">
+    <value>Semanas</value>
+  </data>
+  <data name="Week.Text">
+    <value>Semana</value>
+  </data>
+  <data name="Months.Text">
+    <value>Meses</value>
+  </data>
+  <data name="Month.Text">
+    <value>Mes</value>
+  </data>
+  <data name="Years.Text">
+    <value>Años</value>
+  </data>
+  <data name="Year.Text">
+    <value>Año</value>
+  </data>
+  <data name="New.Text">
+    <value>Nuevo</value>
+  </data>
+  <data name="DeleteModule.Confirm">
+    <value>confirm('Está seguro que desea eliminar este Módulo ?')</value>
+  </data>
+  <data name="EXCEPTION.Log">
+    <value>EXCEPCION: {0}</value>
+  </data>
+  <data name="PURGE.Log">
+    <value>El log del sitio ha sido vaciado satisfactoriamente</value>
+  </data>
+  <data name="SkinObjects.Text">
+    <value>[Skin Objects]</value>
+  </data>
+  <data name="SkinObjectsDescription.Text">
+    <value>Skin Objects son "User Controls" que pueden ser usados para proveer de funcionalidad a sus archivos de Skin.</value>
+  </data>
+  <data name="ReadError.Text">
+    <value>No se han podido leer todos los datos: {0}/{1}</value>
+  </data>
+  <data name="Help.Text">
+    <value>Ayuda</value>
+  </data>
+  <data name="PURGEUSERS.Log">
+    <value>La lista de usuarios en línea ha sido vaciada satisfactoriamente</value>
+  </data>
+  <data name="ErrorOccurred.Text">
+    <value>Ha ocurrido un error.</value>
+  </data>
+  <data name="ModuleUnavailable.Text">
+    <value>Error: {0} no está disponible en este momento.</value>
+  </data>
+  <data name="PURGEDSCHEDULE.Log">
+    <value>La historia del planificador ha sido vaciada</value>
+  </data>
+  <data name="TESTCOMPLETE.Log">
+    <value>Prueba realizada.  Se esperó por {0} milisegundos.</value>
+  </data>
+  <data name="UserEmailExists.Text">
+    <value>Ya existe un usuario con la cuenta de correo especificada. Por favor, inicie sesión con la cuenta de usuario correspondiente a esa dirección de correo.</value>
+  </data>
+  <data name="InvalidAnswer.Text">
+    <value>La respuesta establecida es inválida.  Por favor, responda a la pregunta con una respuesta válida.</value>
+  </data>
+  <data name="InvalidEmail.Text">
+    <value>La dirección de correo es inválida.  Por favor, establezca una dirección de correo válida.</value>
+  </data>
+  <data name="InvalidPassword.Text">
+    <value>La contraseña es inválida.  Por favor, especifique una contraseña válida.</value>
+  </data>
+  <data name="InvalidQuestion.Text">
+    <value>La pregunta es inválida.  Por favor, especifique una pregunta válida.</value>
+  </data>
+  <data name="InvalidUserName.Text">
+    <value>El nombre de usuario es inválido.  Por favor, especifique un nombre de usuario válido.</value>
+  </data>
+  <data name="UserRejected.Text">
+    <value>El registro de usuario ha sido rechazado. Por favor contáctese con el administrador del sitio por mayor información.</value>
+  </data>
+  <data name="UserNameExists.Text">
+    <value>Ya existe un usuario con ese nombre. Por favor, regístrese nuevamente utilizando otro nombre.</value>
+  </data>
+  <data name="RegError.Text">
+    <value>Un error inesperado ha ocurrido durante el proceso de registración. Por favor, contáctese con el administrador del sitio por mayor información.</value>
+  </data>
+  <data name="PaneNotFound.Error">
+    <value>No se pudo ubicar el "ContentPane" para el Skin</value>
+  </data>
+  <data name="ContractExpired.Error">
+    <value>El contrato de hosting para{0} expiró el {1}. Por favor contactar a&lt;a href="mailto:{2}"&gt;{2}&lt;/a&gt; por mayor información.</value>
+  </data>
+  <data name="TabAccess.Error">
+    <value>No tiene el nivel de acceso requerido para ver esta página en el sitio.</value>
+  </data>
+  <data name="ModuleAccess.Error">
+    <value>No tiene el nivel de acceso necesario para ver este módulo en el sitio.</value>
+  </data>
+  <data name="CriticalError.Error">
+    <value>Ha ocurrido un error crítico.</value>
+  </data>
+  <data name="ModuleLoad.Error">
+    <value>Error no manejado cargando módulo.</value>
+  </data>
+  <data name="ModuleAdd.Error">
+    <value>Error no manejado al agregar el módulo a {0}</value>
+  </data>
+  <data name="ContainerLoad.Error">
+    <value>No pudo cargarse el Container: {0}</value>
+  </data>
+  <data name="BeginZip.Text">
+    <value>Comenzar a procesar el archivo zip</value>
+  </data>
+  <data name="CreateDir.Text">
+    <value>Creando directorio</value>
+  </data>
+  <data name="WriteFile.Text">
+    <value>Escribiendo archivo</value>
+  </data>
+  <data name="FileError.Text">
+    <value>Error al procesar el archivo</value>
+  </data>
+  <data name="EndZip.Text">
+    <value>Finalizó el proceso del archivo zip</value>
+  </data>
+  <data name="FileRestricted.Text">
+    <value>{0} es un tipo de archivo restringido. Los tipos válidos de archivo son ( *.{1}). Por favor póngase en contacto con su proveedor si necesita subir un tipo de archivo actualmente no permitido.</value>
+  </data>
+  <data name="Skins.Text">
+    <value>Skins</value>
+  </data>
+  <data name="Containers.Text">
+    <value>Containers</value>
+  </data>
+  <data name="StartProcessor.Text">
+    <value>Inicio del procesador para archivos skin/container</value>
+  </data>
+  <data name="PackageLoad.Text">
+    <value>Archivo de atributos del paquete cargado</value>
+  </data>
+  <data name="PackageLoad.Error">
+    <value>Error al cargar archivo de atributos del paquete: ({0})</value>
+  </data>
+  <data name="DuplicateSkinObject.Error">
+    <value>Descartando el skin object duplicado para el token {0}</value>
+  </data>
+  <data name="DuplicateSkinObject.Detail">
+    <value>Cualquier skin que referencia este token, utilizará el "skin control" registrado primero {0} en lugar de aquel especificado por el duplicado ({1}).  Como resultado el skin puede cargarse de manera incorrecta.</value>
+  </data>
+  <data name="LoadingSkinToken.Text">
+    <value>Cargando el skin object para el token {0}</value>
+  </data>
+  <data name="BeginSkinFile.Text">
+    <value>Comenzar a procesar el archivo</value>
+  </data>
+  <data name="EndSkinFile.Text">
+    <value>Finalizó el proceso del archivo </value>
+  </data>
+  <data name="EndSkinFiles.Text">
+    <value>Finalizó el proceso del archivo de skin/container </value>
+  </data>
+  <data name="FileFormat.Error">
+    <value>Error en el formato del archivo</value>
+  </data>
+  <data name="FileFormat.Detail">
+    <value>{0} no contiene un "ContentPane".</value>
+  </data>
+  <data name="SkinFileLoad.Text">
+    <value>Cargando archivo de atributos</value>
+  </data>
+  <data name="SkinFileLoad.Error">
+    <value>Error al cargar archivo de atributos</value>
+  </data>
+  <data name="FileWrite.Text">
+    <value>Escribiendo archivo</value>
+  </data>
+  <data name="ControlDirective.Text">
+    <value>Directiva de formato de control</value>
+  </data>
+  <data name="ControlRegister.Text">
+    <value>Directiva de formato de registración</value>
+  </data>
+  <data name="Substituting.Text">
+    <value>Sustituyendo</value>
+  </data>
+  <data name="Substituting.Detail">
+    <value>{0}&lt;br&gt;Con: {1}</value>
+  </data>
+  <data name="ProcessToken.Text">
+    <value>Procesando token</value>
+  </data>
+  <data name="SkinToken.Text">
+    <value>El Token es skin object</value>
+  </data>
+  <data name="PaneToken.Text">
+    <value>El Token es Content Pane</value>
+  </data>
+  <data name="TokenFound.Text">
+    <value>Se encontró el Token en el archivo de atributos</value>
+  </data>
+  <data name="TokenFormat.Text">
+    <value>Dando formato al atributo del "Token"</value>
+  </data>
+  <data name="TokenNotFoundInFile.Text">
+    <value>No se encontró el Token en el archivo de atributos</value>
+  </data>
+  <data name="ControlFormat.Text">
+    <value>Sentencia de formato de control</value>
+  </data>
+  <data name="TokenNotFound.Text">
+    <value>No se encontró el Token</value>
+  </data>
+  <data name="cmdNext.Text">
+    <value>Siguiente</value>
+  </data>
+  <data name="cmdBack.Text">
+    <value>Atrás</value>
+  </data>
+  <data name="cmdFinish.Text">
+    <value>Finalizar</value>
+  </data>
+  <data name="cmdBack.Help">
+    <value>Haga clic para moverse a la página anterior</value>
+  </data>
+  <data name="cmdNext.Help">
+    <value>Haga clic para moverse a la página siguiente</value>
+  </data>
+  <data name="Left.Text">
+    <value>Izquierda</value>
+  </data>
+  <data name="Right.Text">
+    <value>Derecha</value>
+  </data>
+  <data name="Center.Text">
+    <value>Centro</value>
+  </data>
+  <data name="Maximized.Text">
+    <value>Maximizado</value>
+  </data>
+  <data name="Minimized.Text">
+    <value>Minimizado</value>
+  </data>
+  <data name="None.Text">
+    <value>Ninguno</value>
+  </data>
+  <data name="Pages.Text">
+    <value>Página {0} de {1}</value>
+  </data>
+  <data name="cmdHelp.Text">
+    <value>Ayuda</value>
+  </data>
+  <data name="cmdHelp.Help">
+    <value>Haga clic para mostrar ayuda acerca de esta página</value>
+  </data>
+  <data name="DNN_Reading.Text">
+    <value>Leyendo archivo DNN</value>
+  </data>
+  <data name="DNN_Success.Text">
+    <value>La carga DNN finalizó correctamente</value>
+  </data>
+  <data name="DNN_Valid.Text">
+    <value>El archivo DNN está en un formato válido {0} .</value>
+  </data>
+  <data name="DNN_ValidSkinObject.Text">
+    <value>El archivo DNN está en un formato SkinObject 2.0 válido.</value>
+  </data>
+  <data name="EXCEPTION.Text">
+    <value>Excepción</value>
+  </data>
+  <data name="EXCEPTION_DesktopSrc.Text">
+    <value>Un control de módulo debe tener un valor para "Desktopsrc", abortando</value>
+  </data>
+  <data name="EXCEPTION_FileLoad.Text">
+    <value>La carga del archivo falló, abortando</value>
+  </data>
+  <data name="EXCEPTION_FileName.Text">
+    <value>Un archivo debe tener un valor nombre, abortando</value>
+  </data>
+  <data name="EXCEPTION_FileRead.Text">
+    <value>No se pudieron leer todos los datos: </value>
+  </data>
+  <data name="EXCEPTION_FolderDesc.Text">
+    <value>Una carpeta debe tener una descripción, abortando</value>
+  </data>
+  <data name="EXCEPTION_FolderName.Text">
+    <value>Una carpeta debe tener un valor para "name", abortando</value>
+  </data>
+  <data name="EXCEPTION_FolderProvider.Text">
+    <value>Una carpeta debe tener un valor para el "provider type", abortando</value>
+  </data>
+  <data name="EXCEPTION_FolderVersion.Text">
+    <value>Una carpeta debe tener un valor para la versión, abortando</value>
+  </data>
+  <data name="EXCEPTION_Format.Text">
+    <value>Formato Dnn inválido, abortando</value>
+  </data>
+  <data name="EXCEPTION_LoadFailed.Text">
+    <value>La carga del archivo Dnn falló, abortando</value>
+  </data>
+  <data name="EXCEPTION_MissingDnn.Text">
+    <value>No se encontró un archivo .dnn </value>
+  </data>
+  <data name="EXCEPTION_MissingResource.Text">
+    <value>El archivo de recursos especificado en dnn no fue encontrado en el archivo zip: </value>
+  </data>
+  <data name="EXCEPTION_MultipleDnn.Text">
+    <value>Se encontraron múltiples archivos .dnn en el archivo zip: </value>
+  </data>
+  <data name="EXCEPTION_Src.Text">
+    <value>Un control de módulo debe tener un valor "src", abortando</value>
+  </data>
+  <data name="EXCEPTION_Type.Text">
+    <value>Un control de módulo debe tener un valor "type", abortando</value>
+  </data>
+  <data name="FILE_Created.Text">
+    <value>Creado </value>
+  </data>
+  <data name="FILE_Found.Text">
+    <value>Se encontró un camino válido ({0}) para {1}.</value>
+  </data>
+  <data name="FILE_Loading.Text">
+    <value>Cargando</value>
+  </data>
+  <data name="FILE_NotFound.Text">
+    <value>El archivo especificado en el dnn, no fue encontrado en el archivo zip: </value>
+  </data>
+  <data name="FILE_ReadSuccess.Text">
+    <value>El archivo {0} fue leído satisfactoriamente</value>
+  </data>
+  <data name="FILES_Created.Text">
+    <value>Archivos creados</value>
+  </data>
+  <data name="FILES_CreatedResources.Text">
+    <value>Archivos de Recursos creados</value>
+  </data>
+  <data name="FILES_Creating.Text">
+    <value>Creando archivos</value>
+  </data>
+  <data name="FILES_Expanding.Text">
+    <value>Expandiendo archivo de recursos</value>
+  </data>
+  <data name="FILES_Loading.Text">
+    <value>Cargando información de archivos</value>
+  </data>
+  <data name="FILES_Reading.Text">
+    <value>Leyendo archivos</value>
+  </data>
+  <data name="FILES_ReadingEnd.Text">
+    <value>Lectura de archivos completada.</value>
+  </data>
+  <data name="INSTALL_Start.Text">
+    <value>Comenzando instalación</value>
+  </data>
+  <data name="INSTALL_Success.Text">
+    <value>Instalación exitosa.</value>
+  </data>
+  <data name="MODULES_ControlInfo.Text">
+    <value>Cargando información de control para el módulo '{0}' </value>
+  </data>
+  <data name="MODULES_Loading.Text">
+    <value>Cargando información de Módulos</value>
+  </data>
+  <data name="REGISTER_Controls.Text">
+    <value>Registrando Controles</value>
+  </data>
+  <data name="REGISTER_Definition.Text">
+    <value>Registrando Definiciones</value>
+  </data>
+  <data name="REGISTER_End.Text">
+    <value>Registro finalizado</value>
+  </data>
+  <data name="REGISTER_Module.Text">
+    <value>Registrando DesktopModule</value>
+  </data>
+  <data name="SQL_Begin.Text">
+    <value>Comienzo de ejecución SQL</value>
+  </data>
+  <data name="SQL_BeginFile.Text">
+    <value>Comenzar ejecución SQL: archivo {0}</value>
+  </data>
+  <data name="SQL_End.Text">
+    <value>Finalizó ejecución SQL</value>
+  </data>
+  <data name="SQL_EndFile.Text">
+    <value>Finalizar ejecución SQL: archivo {0}</value>
+  </data>
+  <data name="SQL_Exceptions.Text">
+    <value>Como resultado de la ejecución SQL, surgieron las siguientes excepciones: {0}{1}</value>
+  </data>
+  <data name="SQL_Executing.Text">
+    <value>Ejecutando</value>
+  </data>
+  <data name="SQL_UnknownFile.Text">
+    <value>Codificación de archivo desconocida para {0}, abortando</value>
+  </data>
+  <data name="XML_Loaded">
+    <value>Se cargó el xml.</value>
+  </data>
+  <data name="Folders.Text">
+    <value>Carpetas:</value>
+  </data>
+  <data name="Files.Text">
+    <value>Archivos:</value>
+  </data>
+  <data name="Page.Text">
+    <value>Página:</value>
+  </data>
+  <data name="URL.Text">
+    <value>URL:</value>
+  </data>
+  <data name="Home.Text">
+    <value>Inicio</value>
+  </data>
+  <data name="Maximize.Text">
+    <value>Maximizar</value>
+  </data>
+  <data name="Minimize.Text">
+    <value>Minimizar</value>
+  </data>
+  <data name="EXCEPTION_DirectoryExists.Text">
+    <value>El Directorio ya existe</value>
+  </data>
+  <data name="EXCEPTION.DuplicateLocale.Text">
+    <value>Este escenario ya se encuentra definido</value>
+  </data>
+  <data name="EXCEPTION.SaveLocale.Text">
+    <value>Ha fallado una operación de archivo. Por favor verifique los permisos sobre los archivos de recursos de manera que éstos sean editables.</value>
+  </data>
+  <data name="LOG.LangPack.LoadFiles">
+    <value>Carga {0} archivos de recursos.</value>
+  </data>
+  <data name="LOG.LangPack.Global">
+    <value>global</value>
+  </data>
+  <data name="LOG.LangPack.Control">
+    <value>control</value>
+  </data>
+  <data name="LOG.LangPack.Module">
+    <value>módulo</value>
+  </data>
+  <data name="LOG.LangPack.Admin">
+    <value>admin</value>
+  </data>
+  <data name="LOG.LangPack.ArchiveFiles">
+    <value>Crear archivo paquete de recursos para archivar.</value>
+  </data>
+  <data name="LOG.LangPack.LoadFromFolder">
+    <value>Cargando archivos de recursos desde carpeta: {0}</value>
+  </data>
+  <data name="LOG.LangPack.LoadFileName">
+    <value>Cargando archivo de recursos: {0}</value>
+  </data>
+  <data name="LOG.LangPack.SerializeManifest">
+    <value>El archivo con el manifiesto ha sido creado con éxito.</value>
+  </data>
+  <data name="LOG.LangPack.SavedFile">
+    <value>Archivo de Recursos {0} salvado al paquete de recursos.</value>
+  </data>
+  <data name="LOG.LangPack.CreateArchive">
+    <value>Agregando archivos al paquete de recursos: {0}</value>
+  </data>
+  <data name="LOG.LangPack.ERROR.SavingFile">
+    <value>Ocurrió un error al salvar un archivo al paquete de recursos: {0}</value>
+  </data>
+  <data name="LOG.LangPack.ERROR.CreatingFile">
+    <value>Ocurrió un error al crear el archivo con el paquete de recursos: {0}</value>
+  </data>
+  <data name="LOG.LangPack.ERROR.ManifestFile">
+    <value>Ocurrió un error al crear el archivo con el manifiesto: {0}</value>
+  </data>
+  <data name="EXCEPTION.LangPack.ManifestZip">
+    <value>Ocurrió un error al leer el archivo del manifiesto del paquete de idiomas desde el archivo zip. Error: {0}</value>
+  </data>
+  <data name="EXCEPTION.LangPack.ManifestLoad">
+    <value>Ocurrió un error al cargar el archivo del manifiesto del paquete de idiomas. Error: {0}</value>
+  </data>
+  <data name="EXCEPTION.LangPack.FileMissing">
+    <value>El archivo {0} no aparece en el manifiesto del paquete de Idiomas.</value>
+  </data>
+  <data name="EXCEPTION.LangPack.Install">
+    <value>Ocurrió un error al cargar un archivo de recursos del paquete de idiomas. Error: {0}</value>
+  </data>
+  <data name="LOG.LangPack.Job.LoadManifest">
+    <value>Carga del archivo con el manifiesto.</value>
+  </data>
+  <data name="LOG.LangPack.Job.DeserializeManifest">
+    <value>Interpretando el archivo con el manifiesto.</value>
+  </data>
+  <data name="LOG.LangPack.Job.LoadFiles">
+    <value>Descomprimiendo archivos de idioma</value>
+  </data>
+  <data name="LOG.LangPack.Job.SaveFiles">
+    <value>Importando archivos de idioma</value>
+  </data>
+  <data name="LOG.LangPack.Job.CreateLocale">
+    <value>Creando/Actualizando el Escenario</value>
+  </data>
+  <data name="Wizard.Success.SuccessTitle">
+    <value>Felicitaciones:</value>
+  </data>
+  <data name="Wizard.Success.SuccessDetail">
+    <value>&lt;p&gt;
+					Felicitaciones!  El Asistente ha finalizado con éxito.
+				&lt;/p&gt;</value>
+  </data>
+  <data name="Wizard.Success.FailureTitle">
+    <value>El Asistente falló:</value>
+  </data>
+  <data name="Wizard.Success.FailureDetail">
+    <value>&lt;P&gt;Lamentablemente ha ocurrido un error con este asistente. Por favor revise el mensaje que aprece más bajo y notifique a su Proveedor.&lt;/P&gt;</value>
+  </data>
+  <data name="LOG.LangPackReader.LoadFiles">
+    <value>Descomprimiendo archivo de idioma: {0}</value>
+  </data>
+  <data name="LOG.LangPackReader.UnzipFiles">
+    <value>Importar achivo: {0}</value>
+  </data>
+  <data name="LOG.LangPackReader.CreateLocale">
+    <value>Creando Escenario: {0}</value>
+  </data>
+  <data name="LOG.PAWriter.CreateManifest">
+    <value>Crear archivo con manifiesto. {0}</value>
+  </data>
+  <data name="LOG.PAWriter.CreateArchive">
+    <value>Agregando archivos al Private Assembly: {0}</value>
+  </data>
+  <data name="LOG.PAWriter.SavedFile">
+    <value>Archivo {0} salvado al Private Assembly.</value>
+  </data>
+  <data name="LOG.PAWriter.ERROR.SavingFile">
+    <value>Existió un error al salvar un archivo al Private Assembly: {0}</value>
+  </data>
+  <data name="LOG.PAWriter.CreateZipFile">
+    <value>Creando Private Assembly: {0}</value>
+  </data>
+  <data name="ModuleVisibleAdministrator.Text">
+    <value>Sólo Visible a los Administradores</value>
+  </data>
+  <data name="LOG.PALogger.Info">
+    <value>Información</value>
+  </data>
+  <data name="LOG.PALogger.Warning">
+    <value>Advertencia</value>
+  </data>
+  <data name="LOG.PALogger.Failure">
+    <value>Fallo</value>
+  </data>
+  <data name="LOG.PALogger.StartJob">
+    <value>ComenzarTrabajo</value>
+  </data>
+  <data name="LOG.PALogger.EndJob">
+    <value>FinalizarTrabajo</value>
+  </data>
+  <data name="AllUsers.Text">
+    <value>Todos los Usuarios</value>
+  </data>
+  <data name="Superuser.Text">
+    <value>Superusuario</value>
+  </data>
+  <data name="UnauthenticatedUsers.Text">
+    <value>Usuarios no autenticados</value>
+  </data>
+  <data name="RestrictedFileType.Text">
+    <value>El archivo {0} tiene un tipo de fichero restringido. Los Tipos de Archivo Válidos Incluyen ( *. {1} ).
+Por favor Póngase en contacto con su administrador si usted necesita a cargar un Tipo de Archivo que no está soportado.</value>
+  </data>
+  <data name="SaveFileError.Text">
+    <value>ha ocurrido un error al intentar salvar el archivo {0}. Por favor, póngase en contacto con su Proveedor, para asegurarse que hayan sido habilitadas en el servidor las configuraciones de seguridad adecuadas.</value>
+  </data>
+  <data name="DiskSpaceExceeded.Text">
+    <value>El archivo{0} excede la cantidad de espacio en disco disponible para Usted en este momento. Por favor, póngase en contacto con su Proveedor por consultas relativas al aumento del espacio en disco de su portal.</value>
+  </data>
+  <data name="WordCleanButton.Text">
+    <value>Limpiar MS Word HTML</value>
+  </data>
+  <data name="INSTALL_Aborted.Text">
+    <value>Instalación abortada- La nueva versión es mas vieja que la versión instalada</value>
+  </data>
+</root>

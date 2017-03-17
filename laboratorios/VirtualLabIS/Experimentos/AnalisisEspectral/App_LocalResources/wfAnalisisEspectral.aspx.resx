@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnGetResult1.Text" xml:space="preserve">
+    <value>Download Results</value>
+    <comment>DESCARGAR</comment>
+  </data>
+  <data name="btnGetResult2.Text" xml:space="preserve">
+    <value>Download Results</value>
+    <comment>DESCARGAR</comment>
+  </data>
+  <data name="btnGetResult3.Text" xml:space="preserve">
+    <value>Download Results</value>
+    <comment>DESCARGAR</comment>
+  </data>
+  <data name="btnGetResult4.Text" xml:space="preserve">
+    <value>Download Results</value>
+    <comment>DESCARGAR</comment>
+  </data>
+  <data name="btnGraficar.Text" xml:space="preserve">
+    <value>RUN ANALYSIS</value>
+    <comment>CONTROL</comment>
+  </data>
+  <data name="img1.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/1_EN.jpg</value>
+  </data>
+  <data name="img2.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/6_EN.jpg</value>
+  </data>
+  <data name="img3.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/7_EN.jpg</value>
+  </data>
+  <data name="lblAcelerograma.Text" xml:space="preserve">
+    <value>ACCELERATION RECORD</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblAElastico.Text" xml:space="preserve">
+    <value>ELASTIC ANALYSIS</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblAInelastico.Text" xml:space="preserve">
+    <value>INELASTIC ANALYSIS</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblCargaSinusoidal.Text" xml:space="preserve">
+    <value>HARMONIC FUNCTION</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblCoefRigidez.Text" xml:space="preserve">
+    <value>POST YIELD STIFFNESS FACTOR -r-</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblDamping1.Text" xml:space="preserve">
+    <value>DAMPING 1 (%)</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblDamping2.Text" xml:space="preserve">
+    <value>DAMPING 2 (%)</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblDamping3.Text" xml:space="preserve">
+    <value>MASS PROPORTIONAL DAMPING (%)</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblMasa.Text" xml:space="preserve">
+    <value>MASS (tonne)</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblNumCurvas.Text" xml:space="preserve">
+    <value>NUMBER OF SPECTRUM CURVES</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblNumCurvas2.Text" xml:space="preserve">
+    <value>NUMBER OF SPECTRUM CURVES</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblNumPuntos.Text" xml:space="preserve">
+    <value>NUMBER OF SPECTRAL POINTS</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblPeriodo1.Text" xml:space="preserve">
+    <value>PERIOD 1(s)</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblPeriodo2.Text" xml:space="preserve">
+    <value>PERIOD 2(s)</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblR1.Text" xml:space="preserve">
+    <value>FORCE REDUCTION 1 -R1-</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblR2.Text" xml:space="preserve">
+    <value>FORCE REDUCTION 2 -R2-</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblTituloEsquemaColumna.Text" xml:space="preserve">
+    <value>SECTION</value>
+    <comment>ESQUEMA</comment>
+  </data>
+  <data name="lblTituloExp.Text" xml:space="preserve">
+    <value>SPECTRAL ANALYSIS OF EARTHQUAKE RECORDS AND HARMONIC FUNCTIONS</value>
+    <comment>TITULO</comment>
+  </data>
+  <data name="lblTituloFig1.Text" xml:space="preserve">
+    <value>FIG. 1 ACCELERATION SPECTRA</value>
+    <comment>GRAFICOS</comment>
+  </data>
+  <data name="lblTituloFig2.Text" xml:space="preserve">
+    <value>FIG. 2 VELOCITY SPECTRA</value>
+    <comment>GRAFICOS</comment>
+  </data>
+  <data name="lblTituloFig3.Text" xml:space="preserve">
+    <value>FIG. 3 DISPLACEMENT SPECTRA</value>
+    <comment>GRAFICOS</comment>
+  </data>
+  <data name="lblTituloFig4.Text" xml:space="preserve">
+    <value>FIG. 4 DUCTILITY SPECTRA</value>
+    <comment>GRAFICOS</comment>
+  </data>
+  <data name="lblTituloMaterialProper.Text" xml:space="preserve">
+    <value>TYPES OF EXCITATION</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="lblTituloSeccionProper.Text" xml:space="preserve">
+    <value>PARAMETERS</value>
+    <comment>PARAMETROS</comment>
+  </data>
+  <data name="urlTitulo.Text" xml:space="preserve">
+    <value>~/VirtualLabIS/Varios/Archivos/Imagenes/Portal/TituloVirtualLab-EN.png</value>
+    <comment>TITULO</comment>
+  </data>
+</root>

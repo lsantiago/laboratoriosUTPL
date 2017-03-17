@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<locales>
+  <inactive>
+    <locale>es-ES</locale>
+  </inactive>
+  <browserDetection enabled="true" />
+  <languageInUrl enabled="true" />
+</locales>
