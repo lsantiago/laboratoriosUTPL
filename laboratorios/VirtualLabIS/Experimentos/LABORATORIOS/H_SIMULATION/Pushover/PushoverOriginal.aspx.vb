@@ -43,7 +43,10 @@ Namespace VirtualLabIS.VLEE
 #End Region
 
 #Region "Variables Globales"
-        Private Shared obj_Push As New Pushover
+        'MATENIMIENTO
+        'Private Shared obj_Push As New Pushover
+        'END MATENIMIENTO
+
         Private objFacade As Facade.VirtualLabIS.Facade.Columna.IColumna = New Facade.VirtualLabIS.Facade.Columna.Columna
         Private objConstDTO As [Global].Clases.VirtualLabIS.Common.Global.Clases.Constantes
         Private dtColumna As DTO.dsColumna.COLUMNADataTable
@@ -736,14 +739,18 @@ Namespace VirtualLabIS.VLEE
         Protected Sub btnGraficar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnGraficar.Click
             Limpiar()
             obtenerDatos()
-            obj_Push.read_pushover(pushover)
-            obj_Push.read_materials(materials)
-            obj_Push.read_vectorx(vectorx)
-            obj_Push.read_vectory(vectory)
-            obj_Push.read_colmatrix(colmatrix)
-            obj_Push.read_beamatrix(beamatrix)
-            obj_Push.pushover()
-            forcedisp = obj_Push.return_forcedisp
+
+            'MANTENIMIENTO
+            'obj_Push.read_pushover(pushover)
+            'obj_Push.read_materials(materials)
+            'obj_Push.read_vectorx(vectorx)
+            'obj_Push.read_vectory(vectory)
+            'obj_Push.read_colmatrix(colmatrix)
+            'obj_Push.read_beamatrix(beamatrix)
+            'obj_Push.pushover()
+            'forcedisp = obj_Push.return_forcedisp
+            'END MATENIMIENTO
+
             subPresentarResultados()
             subGraficar()
             subCrearWebChartViewer()
@@ -758,10 +765,11 @@ Namespace VirtualLabIS.VLEE
 
         Sub subPresentarResultados()
 
-            forcedisp = obj_Push.return_forcedisp
-            beamresponse = obj_Push.return_beamresponse
-            colresponse = obj_Push.return_colresponse
-
+            'MANTENIMIENTO
+            'forcedisp = obj_Push.return_forcedisp
+            'beamresponse = obj_Push.return_beamresponse
+            'colresponse = obj_Push.return_colresponse
+            'END MATENIMIENTO
 
             'Figuras()
             'grafica2()
