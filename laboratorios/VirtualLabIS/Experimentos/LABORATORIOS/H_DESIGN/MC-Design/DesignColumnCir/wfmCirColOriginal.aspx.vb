@@ -16,19 +16,18 @@ Imports DotNetNuke.UI.Utilities
 
 
 Namespace VirtualLabIS.VLEE
-    Partial Class VirtualLabIS_Experimentos_LABORATORIOS_H_DESIGN_MC_Design_DesignColumnRec_wfmRecCol
+    Partial Class VirtualLabIS_Experimentos_LABORATORIOS_H_DESIGN_MC_Design_DesignColumnCir_wfmCirCol
         Inherits System.Web.UI.Page
 
 #Region "Constantes"
         'Alpha Rojo Verde Azul   - AA RR GG BB son los componentes que pueden ir desde 00 - FF (0 -255)
         Dim colores() As Integer = {&HFF0000, &H22AAFF, &H336622, &H44CCAA, &H551188, &H66EE44, &H77FF77, &H8899AA, &H9944BB, &HAA8822, &HDD8866, &H22EEEE, &HDDAABB}
-
         Dim arrTextoEjes(,) As String = {{"MOMENTO (kN-m)", _
                                           "CURVATURA (1/m)"}, _
                                         {"MOMENT(kN-m)", _
                                          "CURVATURE (1/m)"}}
-        Dim arrTextoResultados(,) As String = {{"RC-Diseño: Software para el Diseño de Secciones de Concreto Reforzado", _
-                                           "", _
+        Dim arrTextoResultados(,) As String = {{"RC-Diseño", _
+                                           "Análisis Momento Curvatura Secciones de Concreto Reforzado", _
                                            "Autor: Vinicio Suarez, vasuarez@utpl.edu.ec", _
                                            "RESULTADOS DEL ANÁLISIS", _
                                            "PROPIEDADES DE LOS MATERIALES", _
@@ -67,8 +66,8 @@ Namespace VirtualLabIS.VLEE
                                            """Mv"" es la demanda de momento para desarrollar resistencia al corte calculada  con el modelo UCSD modificado", _
                                            "Curvatura(1/m)	Momento (kN.m)	c (m)		ec		es		Mv(kN-m) ", _
                                            "Resultados del Análisis Momento Curvatura "}, _
-                                       {"RC-Design: Software for design of reinforce concrete sections", _
-                                           "", _
+                                       {"RC-Diseño", _
+                                           "Moment Curvature Analysis of Reinforced Concrete Sections", _
                                            "Author: Vinicio Suarez, vasuarez@utpl.edu.ec", _
                                            "ANALYSIS OUTPUT", _
                                            "MATERIAL PROPERTIES", _
@@ -109,44 +108,35 @@ Namespace VirtualLabIS.VLEE
                                            "Moment Curvature Analysis Results"}}
         Dim arrTextoResultadosDesign(,) As String = {{"RC-Diseño: Software para el Diseño de Secciones de Concreto Reforzado", _
                                            "Autor: Vinicio Suarez, vasuarez@utpl.edu.ec", _
-                                           "DISEÑO DE COLUMNAS RECTANGULARES", _
+                                           "DISEÑO DE Columnas Circulares", _
                                            "Factor de Reducción de Resistencia por Flexión", _
                                            "Factor de Reducción de Resistencia por Corte", _
-                                           "Demanda de Cortante Último Basado en el Momento de Sobre-Resistencia (Se usa un factor de sobre-resistencia de 1.25)""Dirección x""", _
-                                           "Demanda de Cortante Último Basado en el Momento de Sobre-Resistencia (Se usa un factor de sobre-resistencia de 1.25)""Dirección x""", _
-                                           "Contribución del Concreto en la Resistencia a Corte ""Dirección x""", _
-                                           "Contribución del Concreto en la Resistencia a Corte ""Dirección y""", _
-                                           "Contribución del Refuerzo en la Resistencia a Corte ""Dirección x""", _
-                                           "Contribución del Refuerzo en la Resistencia a Corte ""Dirección y""", _
+                                           "Demanda de Cortante Último Basado en el Momento de Sobre-Resistencia (Se usa un factor de sobre-resistencia de 1.25)", _
+                                           "Contribución del Concreto en la Resistencia a Corte", _
+                                           "Contribución del Refuerzo en la Resistencia a Corte", _
                                            "Diámetro de los Estribos", _
                                            "Deformación de Diseño del Concreto", _
-                                           "Deformación Máxima de Tensión Cuando las Fibras Inferiores están Tensionadas", _
+                                           "Deformación Máxima de Tensión ", _
                                            "Profundidad del Eje Neutro ", _
                                            "Diámetro Requerido para el Refuerzo Longitudinal"}, _
                                        {"RC-Design: Software for design of reinforce concrete sections", _
                                            "Author: Vinicio Suarez, vasuarez@utpl.edu.ec", _
-                                           "RECTANGULAR COLUMN DESIGN", _
+                                           "CIRCULAR COLUMN DESIGN", _
                                            "Strength reduction factor for flexure", _
                                            "Strength reduction factor for shear", _
-                                           "Ultimate shear demand based on moment over-strength (an over-strength factor of 1.25 is used) ""x direction""", _
-                                           "Ultimate shear demand based on moment over-strength (an over-strength factor of 1.25 is used) ""y direction""", _
-                                           "Concrete contribution to shear resistance ""x direction""", _
-                                           "Concrete contribution to shear resistance ""y direction""", _
-                                           "Reinforcement contribution to shear resistance ""x direction""", _
-                                           "Reinforcement contribution to shear resistance ""y direction""", _
+                                           "Ultimate shear demand based on moment over-strength (an over-strength factor of 1.25 is used)", _
+                                           "Concrete contribution to shear resistance", _
+                                           "Reinforcement contribution to shear resistance", _
                                            "Diameter of stirrup bar", _
                                            "Concrete design strain", _
-                                           "Maximum tensile strain when bottom fibers are in tension", _
+                                           "Maximum tensile strain", _
                                            "Neutral axis depth ", _
                                            "Requiered diameter of longitudinal reinforcemen"}}
-
-
 #End Region
 
 #Region "Variables Globales"
         'Private Shared objVLEE_AMC As VLEE_AMC150.VLEE_AMC150_CMain
         Private Shared objVLEE_AMC As MomentoCurvatura = New MomentoCurvatura
-        'Private objFacade As Facade.VirtualLabIS.Facade.Columna.IColumna = New Facade.VirtualLabIS.Facade.Columna.Columna
         Private objConstDTO As [Global].Clases.VirtualLabIS.Common.Global.Clases.Constantes
         Private dtColumna As DTO.dsColumna.COLUMNADataTable
         Private drColumna As DTO.dsColumna.COLUMNARow
@@ -172,13 +162,14 @@ Namespace VirtualLabIS.VLEE
         Dim materialpropertiesR(30, 10) As Object
         Dim sectionpropertiesR(30, 10) As Object
         Dim MCcurvesR(10, 100, 10) As Object
-        Dim file_in(16) As Object
+        Dim file_in(10) As Object
         Dim designresultR(30) As Object
         Dim graficaMC(50, 2) As Single
         Dim matriz1(50, 6) As Double
         Dim matriz2(50, 6) As Double
         Shared arrayDatosGraficaEstimCurvaturaFluenciaX As Double()
         Shared arrayDatosGraficaEstimCurvaturaFluenciaY As Double()
+
         Shared idIdioma As Integer
 #End Region
 #Region "Configuracion de gráficos"
@@ -258,10 +249,7 @@ Namespace VirtualLabIS.VLEE
             CrearGraficasXYChart(60, 5, 250, 250, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 0), "Arial Bold Italic", 9, 0, 3, arrTextoEjes(idIdioma, 1), "Arial Bold Italic", 9, 0, 3, XYChart_Grafica_MomentoCurvatura)
             legendBox = XYChart_Grafica_MomentoCurvatura.addLegend(intAddLegend_Coord_x, intAddLegend_Coord_y, bolAddLegend_Bool, strAddLegend_Font, intAddLegend_FontSize)
             legendBox.setBackground(Chart.Transparent)
-
-            
         End Sub
-
 
 
 #End Region
@@ -295,81 +283,67 @@ Namespace VirtualLabIS.VLEE
         Private Sub subAsignarIdiomaACtrls()
             'INPUT DATA
 
+            lblTransRR.Text = GetLocalResourceObject("lblTransRR.Text").ToString()
+            lblTransFy.Text = GetLocalResourceObject("lblTransFy.Text").ToString()
+            lblTituloSeccionProper.Text = GetLocalResourceObject("lblTituloSeccionProper.Text").ToString()
+            lblTituloMaterialProper.Text = GetLocalResourceObject("lblTituloMaterialProper.Text").ToString()
+            lblTituloExp.Text = GetLocalResourceObject("lblTituloExp.Text").ToString()
+            lblTituloEsquemaColumna.Text = GetLocalResourceObject("lblTituloEsquemaColumna.Text").ToString()
+            lblTituloAnalysisIndex.Text = GetLocalResourceObject("lblTituloAnalysisIndex.Text").ToString()
+            lblTitle.Text = GetLocalResourceObject("lblTitle.Text").ToString()
+            lblSteelModel.Text = GetLocalResourceObject("lblSteelModel.Text").ToString()
+            lblSpacingStirrups.Text = GetLocalResourceObject("lblSpacingStirrups.Text").ToString()
+            lblSlopeRatio.Text = GetLocalResourceObject("lblSlopeRatio.Text").ToString()
+            lblShearSpan.Text = GetLocalResourceObject("lblShearSpan.Text").ToString()
+            lblPrimeraCurvaturaFluencia.Text = GetLocalResourceObject("lblPrimeraCurvaturaFluencia.Text").ToString()
+            lblMomentResponse.Text = GetLocalResourceObject("lblMomentResponse.Text").ToString()
+            lblMomentoPrimeraFluencia.Text = GetLocalResourceObject("lblMomentoPrimeraFluencia.Text").ToString()
+            lblMomentoNominal.Text = GetLocalResourceObject("lblMomentoNominal.Text").ToString()
+            lblMoment.Text = GetLocalResourceObject("lblMoment.Text").ToString()
+            lblMCResults.Text = GetLocalResourceObject("lblMCResults.Text").ToString()
+            lblMCResponse.Text = GetLocalResourceObject("lblMCResponse.Text").ToString()
+            lblLongRR.Text = GetLocalResourceObject("lblLongRR.Text").ToString()
+            lblLongFy.Text = GetLocalResourceObject("lblLongFy.Text").ToString()
+            lblIncerciaAgrietada.Text = GetLocalResourceObject("lblIncerciaAgrietada.Text").ToString()
+            lblDiameterStirrup.Text = GetLocalResourceObject("lblDiameterStirrup.Text").ToString()
+            lblDiameterLongitudinal.Text = GetLocalResourceObject("lblDiameterLongitudinal.Text").ToString()
+            lblDesignResults.Text = GetLocalResourceObject("lblDesignResults.Text").ToString()
+            lblDesignForces.Text = GetLocalResourceObject("lblDesignForces.Text").ToString()
+            lbldefConc.Text = GetLocalResourceObject("lbldefConc.Text").ToString()
+            lblDamConMom.Text = GetLocalResourceObject("lblDamConMom.Text").ToString()
+            lblDamageControl.Text = GetLocalResourceObject("lblDamageControl.Text").ToString()
+            lblCurvaturaFluencia.Text = GetLocalResourceObject("lblCurvaturaFluencia.Text").ToString()
+            lblCoverLateral.Text = GetLocalResourceObject("lblCoverLateral.Text").ToString()
+            lblConcreteModel.Text = GetLocalResourceObject("lblConcreteModel.Text").ToString()
+            lblConcrComprStrength.Text = GetLocalResourceObject("lblConcrComprStrength.Text").ToString()
+            lblbase.Text = GetLocalResourceObject("lblbase.Text").ToString()
+            lblAxialLoadRatio.Text = GetLocalResourceObject("lblAxialLoadRatio.Text").ToString()
+            lblAxialLoad.Text = GetLocalResourceObject("lblAxialLoad.Text").ToString()
+            lblAnalysisResults.Text = GetLocalResourceObject("lblAnalysisResults.Text").ToString()
+            lblAnalysisResult.Text = GetLocalResourceObject("lblAnalysisResult.Text").ToString()
+            lblAnalysisIndexes.Text = GetLocalResourceObject("lblAnalysisIndexes.Text").ToString()
+            lblAnalysis.Text = GetLocalResourceObject("lblAnalysis.Text").ToString()
+            lblaltura.Text = GetLocalResourceObject("lblaltura.Text").ToString()
+            btnGraficar.Text = GetLocalResourceObject("btnGraficar.Text").ToString()
+            btnCargarEjemplo.Text = GetLocalResourceObject("btnCargarEjemplo.Text").ToString()
+            imgModeloConcreto.ImageUrl = GetLocalResourceObject("imgModeloConcreto.Text").ToString()
+            imgModeloAcero.ImageUrl = GetLocalResourceObject("imgModeloAcero.Text").ToString()
 
-
-            lblTituloExp.Text = Localization.GetString("lblTituloExp.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblGeneralTitle.Text = Localization.GetString("lblGeneralTitle.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblTituloSeccionProper.Text = Localization.GetString("lblTituloSeccionProper.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblbase.Text = Localization.GetString("lblbase.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblaltura.Text = Localization.GetString("lblaltura.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblcoverTopBottom.Text = Localization.GetString("lblcoverTopBottom.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblCoverLateral.Text = Localization.GetString("lblCoverLateral.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblNumBarsTopBottom.Text = Localization.GetString("lblNumBarsTopBottom.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblNumberLateral.Text = Localization.GetString("lblNumberLateral.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblNumStirrups.Text = Localization.GetString("lblNumStirrups.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblLateralBars.Text = Localization.GetString("lblLateralBars.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblSpacingStirrups.Text = Localization.GetString("lblSpacingStirrups.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblShearSpan.Text = Localization.GetString("lblShearSpan.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblMaterialProperties.Text = Localization.GetString("lblMaterialProperties.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblConcrComprStrength.Text = Localization.GetString("lblConcrComprStrength.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblLongFy.Text = Localization.GetString("lblLongFy.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblTransFy.Text = Localization.GetString("lblTransFy.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblDesignForces.Text = Localization.GetString("lblDesignForces.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblAxialLoad.Text = Localization.GetString("lblAxialLoad.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblMoment.Text = Localization.GetString("lblMoment.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblAngle.Text = Localization.GetString("lblAngle.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            btnCargarEjemplo.Text = Localization.GetString("btnCargarEjemplo.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            btnGraficar.Text = Localization.GetString("btnGraficar.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblTituloEsquemaColumna.Text = Localization.GetString("lblTituloEsquemaColumna.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblConcreteModel.Text = Localization.GetString("lblConcreteModel.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblSteelModel.Text = Localization.GetString("lblSteelModel.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblDesignResults.Text = Localization.GetString("lblDesignResults.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblTituloAnalysisIndex.Text = Localization.GetString("lblTituloAnalysisIndex.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblDiameterTop.Text = Localization.GetString("lblDiameterTop.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblDiameterStirrup.Text = Localization.GetString("lblDiameterStirrup.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblMCResults.Text = Localization.GetString("lblMCResults.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblMomentResponse.Text = Localization.GetString("lblMomentResponse.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblAnalysis.Text = Localization.GetString("lblAnalysis.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblMCResponse.Text = Localization.GetString("lblMCResponse.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblAnalysisIndex.Text = Localization.GetString("lblAnalysisIndex.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblLongRR.Text = Localization.GetString("lblLongRR.Text ", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblTransRR.Text = Localization.GetString("lblTransRR.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblAxialLoadRatio.Text = Localization.GetString("lblAxialLoadRatio.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblAnalysisResults.Text = Localization.GetString("lblAnalysisResults.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblMomentoPrimeraFluencia.Text = Localization.GetString("lblMomentoPrimeraFluencia.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblPrimeraCurvaturaFluencia.Text = Localization.GetString("lblPrimeraCurvaturaFluencia.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblMomentoNominal.Text = Localization.GetString("lblMomentoNominal.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblCurvaturaFluencia.Text = Localization.GetString("lblCurvaturaFluencia.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblIncerciaAgrietada.Text = Localization.GetString("lblIncerciaAgrietada.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lbldefConc.Text = Localization.GetString("lbldefConc.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblDamConMom.Text = Localization.GetString("lblDamConMom.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblDamageControl.Text = Localization.GetString("lblDamageControl.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            lblSlopeRatio.Text = Localization.GetString("lblSlopeRatio.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            imgModeloConcreto.ImageUrl = Localization.GetString("imgModeloConcreto.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-            imgModeloAcero.ImageUrl = Localization.GetString("imgModeloAcero.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
-
-            
-            imgRutaTitulo.ImageUrl = Localization.GetString("imgRutaTitulo.Text", Localization.GetResourceFile(Me, "wfmRecCol.aspx"))
+            imgRutaTitulo.ImageUrl = GetLocalResourceObject("imgRutaTitulo.Text").ToString()
         End Sub
 
         Sub obtenerDatos()
 
-            file_in(1) = Me.txtbase.Text
-            file_in(2) = Me.txtaltura.Text
-            file_in(3) = Me.txtConcrComprStrength.Text
-            file_in(4) = Me.txtfyLong.Text
-            file_in(5) = Me.txtfyTrans.Text
-            file_in(6) = CDbl(Me.txtShearSpan.Text) / 1000
-            file_in(7) = Me.txtMoment.Text
-            file_in(8) = Me.txtAxialLoad.Text
-            file_in(9) = Me.txtNumBarsTopBottom.Text
-            file_in(10) = Me.txtNumberLateralBars.Text
-            file_in(11) = Me.txtangle.Text
-            file_in(12) = Me.txtNumberStirrupsX.Text
-            file_in(13) = Me.txtNumStirrupsY.Text
-            file_in(14) = Me.txtSpacingStirrups.Text
-            file_in(15) = Me.txtcoverTopBottom.Text
-            file_in(16) = Me.txtcoverlateral.Text
+            file_in(1) = Me.txtdiameter.Text
+            file_in(2) = Me.txtConcrComprStrength.Text
+            file_in(3) = Me.txtfyLong.Text
+            file_in(4) = Me.txtfyTrans.Text
+            file_in(5) = CDbl(Me.txtShearSpan.Text) / 1000
+            file_in(6) = Me.txtMoment.Text
+            file_in(7) = Me.txtAxialLoad.Text
+            file_in(8) = Me.txtNumBars.Text
+            file_in(9) = Me.txtSpacingStirrups.Text
+            file_in(10) = Me.txtcoverRebar.Text
 
         End Sub
         Sub subGraficarPositivo()
@@ -435,14 +409,77 @@ Namespace VirtualLabIS.VLEE
             'Creacion de imagen
             WebChartViewer1.Image = XYChart_Grafica_MomentoCurvatura.makeWebImage(Chart.PNG)
         End Sub
-        
+        'Sub subGraficarNegativo()
+        '    'Arreglo de linea MC 
+        '    Dim arrXLineMC2(50) As Double
+        '    Dim arrYLineMC2(50) As Double
+
+        '    'Arreglo de linea Bilineal
+        '    Dim arrXLineCorte2(50) As Double
+        '    Dim arrYLineCorte2(50) As Double
+
+        '    'Arreglo de linea Corte
+        '    Dim arrXLineBilineal2(2) As Double
+        '    Dim arrYLineBilineal2(2) As Double
+
+        '    'Extraccion de coordenadas para graficar
+        '    For i As Integer = 1 To 50
+        '        arrXLineMC2(i) = CDbl(MCcurvesR(2, i, 1))
+        '        arrYLineMC2(i) = CDbl(MCcurvesR(2, i, 2))
+        '    Next
+
+        '    For i As Integer = 1 To 50
+        '        arrXLineCorte2(i) = CDbl(MCcurvesR(2, i, 1))
+        '        arrYLineCorte2(i) = CDbl(MCcurvesR(2, i, 6))
+        '    Next
+
+        '    'Extraccion datos de linea de corte
+        '    arrXLineBilineal2(0) = 0
+        '    arrYLineBilineal2(0) = 0
+
+        '    arrXLineBilineal2(1) = CDbl(objVLEE_AMC.Return_sectionproperties(8, 2))
+        '    arrYLineBilineal2(1) = CDbl(objVLEE_AMC.Return_sectionproperties(7, 2))
+
+        '    arrXLineBilineal2(2) = CDbl(objVLEE_AMC.Return_sectionproperties(11, 2))
+        '    arrYLineBilineal2(2) = CDbl(objVLEE_AMC.Return_sectionproperties(7, 2))
+
+        '    'Redimensionamiento de coordenas de lineas MC y blilineal
+        '    ReDim Preserve arrXLineMC2(48)
+        '    ReDim Preserve arrYLineMC2(48)
+
+        '    ReDim Preserve arrXLineCorte2(48)
+        '    ReDim Preserve arrYLineCorte2(48)
+
+
+        '    'Linea mc
+        '    Dim lineMC2 As LineLayer
+        '    lineMC2 = XYChart2_Grafica2_MomentoNegativo.addLineLayer(arrYLineMC2, colores(0), "MC")
+        '    lineMC2.setXData(arrXLineMC2)
+        '    lineMC2.setLineWidth(2)
+
+        '    'Linea de corte
+        '    Dim lineCorte2 As LineLayer
+        '    lineCorte2 = XYChart2_Grafica2_MomentoNegativo.addLineLayer(arrYLineCorte2, colores(1), "Corte")
+        '    lineCorte2.setXData(arrXLineCorte2)
+        '    lineCorte2.setLineWidth(2)
+
+        '    'Linea bilineal
+        '    Dim lineBilineal2 As LineLayer
+        '    lineBilineal2 = XYChart2_Grafica2_MomentoNegativo.addLineLayer(arrYLineBilineal2, colores(2), "Bilineal")
+        '    lineBilineal2.setXData(arrXLineBilineal2)
+        '    lineBilineal2.setLineWidth(2)
+
+        '    'Creacion de imagen
+        '    WebChartViewer2.Image = XYChart2_Grafica2_MomentoNegativo.makeWebImage(Chart.PNG)
+        'End Sub
         Sub Resultados()
+
 
             Dim strdesignresult As String = Nothing
             strdesignresult = arrTextoResultadosDesign(idIdioma, 0) & Chr(13) & _
             arrTextoResultadosDesign(idIdioma, 1) & Chr(13) & _
             Chr(13) & Chr(10) & "  " & _
-            Chr(13) & Chr(10) & "-----------------------------------------------------------" & Chr(13) & _
+            Chr(13) & Chr(10) & "-----------------------------------------------------------" & _
             arrTextoResultadosDesign(idIdioma, 2) & Chr(13) & _
             Chr(13) & Chr(10) & "  " _
             & arrTextoResultadosDesign(idIdioma, 3) & Chr(13) _
@@ -450,31 +487,26 @@ Namespace VirtualLabIS.VLEE
             & arrTextoResultadosDesign(idIdioma, 4) & Chr(13) _
             & Round(designresultR(2), 4) & Chr(13) _
             & arrTextoResultadosDesign(idIdioma, 5) & Chr(13) _
-            & Round(designresultR(3), 4) & "" & "kN" & Chr(13) _
+            & Round(designresultR(3), 4) & " " & "kN" & Chr(13) _
             & arrTextoResultadosDesign(idIdioma, 6) & Chr(13) _
-            & Round(designresultR(4), 4) & "" & "kN" & Chr(13) _
+            & Round(designresultR(4), 4) & " " & "kN" & Chr(13) _
             & arrTextoResultadosDesign(idIdioma, 7) & Chr(13) _
-            & Round(designresultR(5), 4) & "" & "kN" & Chr(13) _
+            & Round(designresultR(5), 4) & " " & "kN" & Chr(13) _
             & arrTextoResultadosDesign(idIdioma, 8) & Chr(13) _
-            & Round(designresultR(6), 4) & "" & "kN" & Chr(13) _
+            & Round(designresultR(6), 4) & " " & "mm" & Chr(13) _
             & arrTextoResultadosDesign(idIdioma, 9) & Chr(13) _
-            & Round(designresultR(7), 4) & "" & "kN" & Chr(13) _
+            & Round(designresultR(7), 4) & Chr(13) _
             & arrTextoResultadosDesign(idIdioma, 10) & Chr(13) _
-            & Round(designresultR(8), 4) & "" & "kN" & Chr(13) _
+            & Round(designresultR(8), 4) & Chr(13) _
             & arrTextoResultadosDesign(idIdioma, 11) & Chr(13) _
-            & Round(designresultR(9), 4) & "" & "mm" & Chr(13) _
+            & Round(designresultR(9), 4) & " " & "mm" & Chr(13) _
             & arrTextoResultadosDesign(idIdioma, 12) & Chr(13) _
-            & Round(designresultR(10), 4) & Chr(13) _
-            & arrTextoResultadosDesign(idIdioma, 13) & Chr(13) _
-            & Round(designresultR(11), 4) & Chr(13) _
-            & arrTextoResultadosDesign(idIdioma, 14) & Chr(13) _
-            & Round(designresultR(12), 4) & "" & "mm" & Chr(13) _
-            & arrTextoResultadosDesign(idIdioma, 15) & Chr(13) _
-            & Round(designresultR(13), 4) & "" & "mm" & Chr(13)
+            & Round(designresultR(10), 4) & " " & "mm"
 
             Me.TextBox1.Text = strdesignresult
 
             'Enviar Resultados a Cajas de Texto Momento Curvatura
+            'MOMENTO POSITIVO
             Me.txtLongRR1.Text = Round(sectionpropertiesR(1, 1) * 100, 4)
             Me.txtTransRR1.Text = Round(sectionpropertiesR(2, 1) * 100, 4)
             Me.txtAxialLoadRatio1.Text = Round(sectionpropertiesR(3, 1) * 100, 4)
@@ -488,12 +520,14 @@ Namespace VirtualLabIS.VLEE
             Me.txtDamCon1.Text = Round(sectionpropertiesR(11, 1), 4)
             Me.txtSlopeRatio1.Text = Round(sectionpropertiesR(12, 1), 4)
 
+
+
             'Enviar Resultados a Cajas de Texto Diseño
             Me.txtDiameterLongitudinal.Text = designresultR(10)
             Me.txtDiameterStirrup.Text = designresultR(6)
 
 
-            'MOMENTO POSITIVO
+            'reporte
             Dim Result As String = Nothing
             Result = arrTextoResultados(idIdioma, 0) & Chr(13) & _
             arrTextoResultados(idIdioma, 1) & Chr(13) & _
@@ -596,15 +630,14 @@ Namespace VirtualLabIS.VLEE
             Next
             Me.txtresult.Text = strResultados
 
-            
+         
         End Sub
 
         Protected Sub btnGraficar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnGraficar.Click
 
             obtenerDatos()
-            objVLEE_AMC.readinput_design_reccol(file_in)
-            objVLEE_AMC.design_reccol()
-
+            objVLEE_AMC.readinput_design_circol(file_in)
+            objVLEE_AMC.design_circol()
             'resultados
             designresultR = objVLEE_AMC.Return_Designresult
             materialpropertiesR = objVLEE_AMC.Return_materialproperties
@@ -613,6 +646,8 @@ Namespace VirtualLabIS.VLEE
 
             'Leer resultados y enviarlos a cajas de texto
             Resultados()
+
+            'graficar curvas momento-curvatura
             subGraficarPositivo()
             'subGraficarNegativo()
 
@@ -621,47 +656,38 @@ Namespace VirtualLabIS.VLEE
         Protected Sub btnCargarEjemplo_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCargarEjemplo.Click
 
             subGraficarPositivo()
-            'subGraficarNegativo()
 
-            Me.txtbase.Text = 600
-            Me.txtaltura.Text = 600
+
+            Me.txtdiameter.Text = 600
             Me.txtConcrComprStrength.Text = 24
             Me.txtfyLong.Text = 420
             Me.txtfyTrans.Text = 420
-            Me.txtShearSpan.Text = 2000
-            Me.txtMoment.Text = 480
+            Me.txtShearSpan.Text = 2500
+            Me.txtMoment.Text = 440
             Me.txtAxialLoad.Text = 900
-            Me.txtNumBarsTopBottom.Text = 8
-            Me.txtNumberLateralBars.Text = 4
-            Me.txtangle.Text = 0
-            Me.txtNumberStirrupsX.Text = 2
-            Me.txtNumStirrupsY.Text = 2
-            Me.txtSpacingStirrups.Text = 100
-            Me.txtcoverTopBottom.Text = 50
-            Me.txtcoverlateral.Text = 50
-
+            Me.txtNumBars.Text = 12
+            Me.txtSpacingStirrups.Text = 150
+            Me.txtcoverRebar.Text = 50
 
         End Sub
 
         Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-            If Request.IsAuthenticated = True Then
-                '-------- INICIALIZACION DE CONTROLES Y VARIABLES --------
-                'objVLEE_AMC = New VLEE_AMC150.VLEE_AMC150_CMain
-                establecerPropCtrlGraficos()
+            'If Request.IsAuthenticated = True Then
+            '-------- INICIALIZACION DE CONTROLES Y VARIABLES --------
+            'objVLEE_AMC = New VLEE_AMC150.VLEE_AMC150_CMain
+            establecerPropCtrlGraficos()
                 If Not Page.IsPostBack Then
                     WebChartViewer1.Image = XYChart_Grafica_MomentoCurvatura.makeWebImage(Chart.PNG)
                 End If
                 subAsignarIdiomaACtrls()
-            Else
-                getIdioma = Request.Params("idioma")
-                Response.BufferOutput = True
-                Response.Redirect("~/VirtualLabIS/Varios/Paginas/RedirectPage.aspx?idioma=" & getIdioma)
-            End If
+            'Else
+            '    getIdioma = Request.Params("idioma")
+            '    Response.BufferOutput = True
+            '    Response.Redirect("~/VirtualLabIS/Varios/Paginas/RedirectPage.aspx?idioma=" & getIdioma)
+            'End If
         End Sub
 
-        Protected Sub txtresult_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtresult.TextChanged
 
-        End Sub
     End Class
 End Namespace
 
