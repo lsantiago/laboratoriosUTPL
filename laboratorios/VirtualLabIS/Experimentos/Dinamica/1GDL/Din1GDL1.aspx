@@ -1,7 +1,4 @@
-﻿
-
-
-<%@ Page Language="VB" AutoEventWireup="false"  MaintainScrollPositionOnPostback ="true" CodeFile="Din1GDL1.aspx.vb" Inherits="VirtualLabIS_Experimentos_Dinamica_1GDL_Din1GDL1" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false"  MaintainScrollPositionOnPostback ="true" CodeFile="Din1GDL1.aspx.vb" Inherits="VirtualLabIS_Experimentos_Dinamica_1GDL_Din1GDL1" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
@@ -22,7 +19,7 @@
 
                 <!-- BEGIN CONTENT HEADER -->
                 <div style="padding-left: 28px; background-color: #ffffff;">
-                    <img src="../Content/Images/Portal/barraPosicion.jpg" />
+                    <img src="../../../../Content/Images/Portal/barraPosicion.jpg" />
                 </div>
                 <section class="content-header">
                     <i class="fa fa-align-left"></i>
@@ -468,7 +465,7 @@
                                     <div class="panel-body">
                                         <div class="row">
                                             <!-- BEGIN SECTION RESULT -->
-                                            <div class="col-md-4" style="border-right: 1.0pt solid #dddddd;">
+                                            <div class="col-md-4">
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-align-left"></i>
@@ -545,7 +542,7 @@
                                                                 <div class="col-sm-offset-3 col-sm-8">
                                                                     <asp:LinkButton ID="ibtnDescRmax" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
+                                                                                    Download Answers
                                                                     </asp:LinkButton>
                                                                 </div>
                                                             </div>
@@ -556,7 +553,7 @@
                                             <!-- END SECTION RESULT -->
                                             
                                             <!-- BEGIN SECTION GRAPHICS -->
-                                            <div class="col-md-8">
+                                            <div class="col-md-8" style="border-left: 1.0pt solid #dddddd;">
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
@@ -581,32 +578,32 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class="col-md-12 text-center">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics0" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdAcSoil" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdAcSoil" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnDownResul1" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
+                                                                                    Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics1" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdFuncionFuerza" runat="server" height="33px" width="188px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdFuncionFuerza" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnDownResul2" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
+                                                                                    Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
@@ -614,14 +611,14 @@
                                                                     <div id="graphics2" style="width: 100%; height: 239px; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdDespVsTime" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdDespVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnDownResul3" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
+                                                                                    Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
@@ -629,59 +626,59 @@
                                                                     <div id="graphics3" style="width: 100%; height: 239px; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdVeloVsTime" runat="server" height="39px" width="194px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdVeloVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnDownResul4" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
+                                                                                    Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics4" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics4" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdAceVsTime" runat="server" height="41px" width="196px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdAceVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnDownResul5" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
+                                                                                    Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics5" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics5" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdForceVsTime" runat="server" height="41px" width="196px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdForceVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnDownResul6" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
+                                                                                    Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics6" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics6" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdFvsD" runat="server" height="46px" width="196px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdFvsD" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnDownResul7" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
+                                                                                    Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>

@@ -25,13 +25,13 @@
 
                 <!-- BEGIN CONTENT HEADER -->
                 <div style="padding-left: 28px; background-color: #ffffff;">
-                    <img src="../Content/Images/Portal/barraPosicion.jpg" />
+                    <img src="../../../Content/Images/Portal/barraPosicion.jpg" />
                 </div>
                 <section class="content-header">
                     <i class="fa fa-align-left"></i>
                     <span><b>SPECTRUM</b></span>
                     <ol class="breadcrumb">
-                        <li>DYNAMIC ANALYSIS OF A TWO-STORY SIMPLE FRAME</li>
+                        <li>SPECTRAL ANALYSIS OF EARTHQUAKE RECORDS AND HARMONIC FUNCTIONS</li>
                     </ol>
                     <h5><b>Description:</b> Spectral analysis of earthquake records and harmonic functions</h5>
                     <h5><b>Authors:</b> Suarez, V.A.; Quinonez, S.</h5>
@@ -105,7 +105,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbPeriodo1" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-3 label-der small">
+                                                                    <div class="col-sm-3 small label-der">
                                                                         <asp:Label ID="lblPeriodo1" runat="server" class="control-label small" Text="PERIODO 1(s)"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbPeriodo1"
                                                                                                             ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -113,7 +113,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbDamping3" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-5 label-der small">
+                                                                    <div class="col-sm-5 small label-der">
                                                                         <asp:Label ID="lblDamping3" runat="server" class="control-label small" Text="DAMPING %"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="tbDamping3"
                                                                                                         ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -123,7 +123,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbPeriodo2" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-3 label-der small">
+                                                                    <div class="col-sm-3 small label-der">
                                                                         <asp:Label ID="lblPeriodo2" runat="server" class="control-label small" Text="PERIODO 2 (s)"></asp:Label>
                                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbPeriodo2"
                                                                                                             ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -131,7 +131,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbR1" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-5 label-der small">
+                                                                    <div class="col-sm-5 small label-der">
                                                                         <asp:Label ID="lblR1" runat="server" class="control-label small" Text="R1"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="tbR1"
                                                                                                         ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -141,7 +141,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbNumPuntos" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-3 label-der small">
+                                                                    <div class="col-sm-3 small label-der">
                                                                         <asp:Label ID="lblNumPuntos" runat="server" class="control-label small" Text="NÚMERO DE PUNTOS"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbNumPuntos"
                                                                                                             ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -149,7 +149,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbR2" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-5 label-der small">
+                                                                    <div class="col-sm-5 small label-der">
                                                                         <asp:Label ID="lblR2" runat="server" class="control-label small" Text="R2"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="tbR2"
                                                                                                         ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -159,7 +159,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbMasa" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-3 label-der small">
+                                                                    <div class="col-sm-3 small label-der">
                                                                         <asp:Label ID="lblMasa" runat="server" class="control-label small" Text="MASA (tonne)"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tbMasa"
                                                                                                         ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -167,7 +167,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbCoefRigidez" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-5 label-der small">
+                                                                    <div class="col-sm-5 small label-der">
                                                                         <asp:Label ID="lblCoefRigidez" runat="server" class="control-label small" Text="COEFICIENTE DE RIGIDEZ POST FLUENCIA"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="tbCoefRigidez"
                                                                                                         ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -177,7 +177,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbDamping1" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-3 label-der small">
+                                                                    <div class="col-sm-3 small label-der">
                                                                         <asp:Label ID="lblDamping1" runat="server" class="control-label small" Text="DAMPING 1 %"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tbDamping1"
                                                                                                         ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -185,7 +185,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbNumCurvas2" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-5 label-der small">
+                                                                    <div class="col-sm-5 small label-der">
                                                                         <asp:Label ID="lblNumCurvas2" runat="server" class="control-label small" Text="NUMERO DE CURVAS"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="tbNumCurvas2"
                                                                                                         ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -195,7 +195,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbDamping2" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-3 label-der small">
+                                                                    <div class="col-sm-3 small label-der">
                                                                         <asp:Label ID="lblDamping2" runat="server" class="control-label small" Text="DAMPING 2 %"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="tbDamping2"
                                                                                                             ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -205,7 +205,7 @@
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="tbNumCurvas" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
-                                                                    <div class="col-sm-3 label-der small">
+                                                                    <div class="col-sm-3 small label-der">
                                                                         <asp:Label ID="lblNumCurvas" runat="server" class="control-label small" Text="NÚMERO DE CURVAS"></asp:Label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="tbNumCurvas"
                                                                                                         ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -323,8 +323,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
-                                                            <div class="col-md-12 text-center">
-                                                                <div id="graphics0" style="width: 100%; height: 100%;">
+                                                            <div class="col-sm-12 text-center">
+                                                                <div id="graphics0" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                     <div class="form-group">
                                                                         <div class="col-sm-12 text-center">
                                                                             <chart:WebChartViewer ID="WebChartViewer1" runat="server" style="position: static"></chart:webchartviewer>
@@ -339,7 +339,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div id="graphics1" style="width: 100%; height: 100%;">
+                                                                <div id="graphics1" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                     <div class="form-group">
                                                                         <div class="col-sm-12 text-center">
                                                                             <chart:WebChartViewer ID="WebChartViewer2" runat="server" style="position: static"></chart:webchartviewer>
@@ -354,10 +354,10 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div id="graphics2" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                <div id="graphics2" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                     <div class="form-group">
                                                                         <div class="col-sm-12 text-center">
-                                                                            <chart:webchartviewer id="WebChartViewer3" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                            <chart:webchartviewer id="WebChartViewer3" runat="server" style="position: static"></chart:webchartviewer>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group">
@@ -369,12 +369,11 @@
                                                                         </div>
                                                                     </div>
                                                                     <asp:PlaceHolder ID="phTipoExitacion" runat="server"></asp:PlaceHolder>
-                                                                            
                                                                 </div>
-                                                                <div id="graphics3" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                <div id="graphics3" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                     <div class="form-group">
                                                                         <div class="col-sm-12 text-center">
-                                                                            <chart:webchartviewer id="WebChartViewer4" runat="server" height="39px" width="194px"></chart:webchartviewer>
+                                                                            <chart:webchartviewer id="WebChartViewer4" runat="server" style="position: static"></chart:webchartviewer>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group">
@@ -420,7 +419,7 @@
         */
 
         //Hide all Graphics
-        var arrGraphics = ["graphics0", "graphics1", "graphics2", "graphics3", "graphics4", "graphics5", "graphics6", "graphics7", "graphics8", "graphics9", "graphics10", "graphics11"];
+        var arrGraphics = ["graphics0", "graphics1", "graphics2", "graphics3"];
         jQuery.each(arrGraphics, function (i, val) {
             $("#" + val).hide();
         });

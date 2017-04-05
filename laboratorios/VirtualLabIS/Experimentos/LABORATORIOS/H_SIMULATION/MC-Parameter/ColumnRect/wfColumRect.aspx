@@ -22,13 +22,13 @@
 
                 <!-- BEGIN CONTENT HEADER -->
                 <div style="padding-left: 28px; background-color: #ffffff;">
-                    <img src="../../Content/Images/Portal/barraPosicion.jpg" />
+                    <img src="../../../../../../Content/Images/Portal/barraPosicion.jpg" />
                 </div>
                 <section class="content-header">
                     <i class="fa fa-align-left"></i>
-                    <span><b>MC-Parameter: Rectangular Column</b></span>
+                    <span><b>M-C PARAMETER : RECTANGULAR COLUMNS</b></span>
                     <ol class="breadcrumb">
-                        <li>PARAMETER STUDY OF MOMENT-CURVATURE RESPONSE OF CIRCULAR AND RECTANGULAR SECTIONS</li>
+                        <li>PARAMETER STUDY OF MOMENT-CURVATURE RESPONSE OF RC-SECTIONS</li>
                     </ol>
                     <h5><b>Description:</b> Parameter study of Moment-Curvature response of circular and rectangular sections</h5>
                     <h5><b>Authors:</b> Suarez, V.A.; Ayala, A.</h5>
@@ -860,7 +860,7 @@
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
                                                     <div class="grid-body">
-                                                        <div class="form-horizontal" role="form" style="width: 100%; height: 270px;">
+                                                        <div class="form-horizontal" role="form" style="width: 100%; height: 420px;">
                                                             <div class="form-group">
                                                                 <asp:Label ID="Label11" runat="server" class="col-sm-3 control-label label-one" Text="Seleccionar:"></asp:Label>
                                                                 <div class="col-sm-7">
@@ -876,18 +876,18 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class="col-md-12 text-center">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics0" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <chart:WebChartViewer ID="WebChartViewer1" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics1" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
-                                                                                    <chart:WebChartViewer ID="WebChartViewer2" runat="server" BorderColor="White" SelectionBorderColor="Transparent" Style="position: static" />
+                                                                                    <chart:WebChartViewer ID="WebChartViewer2" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -895,11 +895,11 @@
                                                                             <asp:Label ID="lblFigura2" runat="server" class="text-justify"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics2" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics2" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
-                                                                                    <chart:webchartviewer id="WebChartViewer3" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                    <chart:webchartviewer id="WebChartViewer3" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -907,11 +907,11 @@
                                                                             <asp:Label ID="lblFigura3" runat="server" class="text-justify"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics3" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics3" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
-                                                                                    <chart:webchartviewer id="WebChartViewer4" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                    <chart:webchartviewer id="WebChartViewer4" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -919,11 +919,11 @@
                                                                             <asp:Label ID="lblFigura4" runat="server" class="text-justify"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics4" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics4" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
-                                                                                    <chart:webchartviewer id="WebChartViewer5" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                    <chart:webchartviewer id="WebChartViewer5" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -931,11 +931,11 @@
                                                                             <asp:Label ID="lblFigura5" runat="server" class="text-justify"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics5" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics5" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
-                                                                                    <chart:webchartviewer id="WebChartViewer6" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                    <chart:webchartviewer id="WebChartViewer6" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                                 </div>
                                                                             </div>
                                                                         </div>

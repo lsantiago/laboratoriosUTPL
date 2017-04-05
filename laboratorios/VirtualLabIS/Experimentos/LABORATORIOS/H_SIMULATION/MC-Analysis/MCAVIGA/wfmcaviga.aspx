@@ -20,13 +20,13 @@
 
                 <!-- BEGIN CONTENT HEADER -->
                 <div style="padding-left: 28px; background-color: #ffffff;">
-                    <img src="../../Content/Images/Portal/barraPosicion.jpg" />
+                    <img src="../../../../../../Content/Images/Portal/barraPosicion.jpg" />
                 </div>
                 <section class="content-header">
                     <i class="fa fa-align-left"></i>
-                    <span><b>RC-Analysis: Beam</b></span>
+                    <span><b>RC ANALYSIS : BEAM</b></span>
                     <ol class="breadcrumb">
-                        <li>Moment-Curvature and Shear Capacity analysis of RC sections</li>
+                        <li>MOMENT-CURVATURE AND SHEAR CAPACITY OF RC SECTIONS</li>
                     </ol>
                     <h5><b>Description:</b> Moment-Curvature and Shear Capacity analysis of RC sections</h5>
                     <h5><b>Authors:</b> Suarez, V.A.; Ayala, A.</h5>
@@ -249,7 +249,7 @@
 
                                                     <!-- BEGIN TEST3 FORM -->
                                                     <div class="tab-pane" id="test3">
-                                                        <div class="col-md-7">
+                                                        <div class="col-md-8">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <div class="col-sm-6 radio">
@@ -309,7 +309,7 @@
                                                             </div>
                                                             <div class="grid-body text-center">
                                                                 <div id="chart-line" style="width: 100%; height: 270px;">
-                                                                    <chart:WebChartViewer ID="WebChartViewer1" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
+                                                                    <chart:WebChartViewer ID="WebChartViewer1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -331,22 +331,22 @@
                                                                             <div class="col-sm-5">
                                                                                 <asp:Label ID="lblTituloAnalysisIndex" runat="server" class="lead"></asp:Label>
                                                                                 <div class="form-group">
-                                                                                    <asp:Label ID="lblLongRR" runat="server" class="col-sm-5 control-label small label-one"></asp:Label>
-                                                                                    <asp:Image ID="imgCargaAxial" runat="server" class="col-sm-3 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_CuantiaAceroLongitudinalAMC.png" />
+                                                                                    <asp:Label ID="lblLongRR" runat="server" class="col-sm-6 control-label small label-one"></asp:Label>
+                                                                                    <asp:Image ID="imgCargaAxial" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_CuantiaAceroLongitudinalAMC.png" />
                                                                                     <div class="col-sm-4">
                                                                                         <asp:TextBox ID="txtLongRR" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <asp:Label ID="lblTransRR" runat="server" class="col-sm-5 control-label small label-one"></asp:Label>
-                                                                                    <asp:Image ID="imgAceroTrans" runat="server" class="col-sm-3 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_CuantiaAceroTransversalAMC.png" />
+                                                                                    <asp:Label ID="lblTransRR" runat="server" class="col-sm-6 control-label small label-one"></asp:Label>
+                                                                                    <asp:Image ID="imgAceroTrans" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_CuantiaAceroTransversalAMC.png" />
                                                                                     <div class="col-sm-4">
                                                                                         <asp:TextBox ID="txtTransRR" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <asp:Label ID="lblAxialLoadRatio" runat="server" class="col-sm-5 control-label small label-one"></asp:Label>
-                                                                                    <asp:Image ID="imgPorcCargaAxial" runat="server" class="col-sm-3 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_RazonCargaAxialAMC.png" />
+                                                                                    <asp:Label ID="lblAxialLoadRatio" runat="server" class="col-sm-6 control-label small label-one"></asp:Label>
+                                                                                    <asp:Image ID="imgPorcCargaAxial" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_RazonCargaAxialAMC.png" />
                                                                                     <div class="col-sm-4">
                                                                                         <asp:TextBox ID="txtAxialLoadRatio" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
@@ -409,7 +409,6 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <asp:Label ID="lblSlopeRatio" runat="server" class="col-sm-9 control-label small label-one"></asp:Label>
-                                                                                    <asp:Image ID="Image13" runat="server" class="col-sm-2" ImageUrl="../../Content/Images/Columna/Ecuaciones/ID_CuantiaAceroLongitudinalAMC.png" />
                                                                                     <div class="col-sm-3">
                                                                                         <asp:TextBox ID="txtSlopeRatio" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>

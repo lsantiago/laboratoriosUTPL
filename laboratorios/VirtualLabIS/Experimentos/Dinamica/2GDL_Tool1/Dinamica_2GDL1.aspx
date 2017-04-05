@@ -26,14 +26,13 @@
                 </div>
                 <section class="content-header">
                     <i class="fa fa-align-left"></i>
-                    <span><b>2S-Porch</b></span>
-                    <div class="pull-right grid-tools">
+                    <span><b>2DOF-Dynamics</b></span>
+                    <div class="pull-right grid-tools" style="padding-right: 10px;">
                          <img src="../../../../Content/Images/Portal/bannerSecundario.png" />
                      </div>
-
+                    
                     <ol class="breadcrumb">
-                        <li>DYNAMIC ANALYSIS OF A TWO-STORY SIMPLE FRAME</li>
-                        
+                        <li>TIME HISTORY ANALYSIS OF TWO DEGREES OF FREEDOM SYSTEMS</li>
                     </ol>
 
                     <h5><b>Description:</b> Time history analysis of two degrees of freedom systems</h5>
@@ -60,7 +59,7 @@
                                         <div class="row">
 
                                             <!-- BEGIN CONTENT LEFT -->
-                                            <div class="col-md-4" style="border-right: 1.0pt solid #dddddd;">
+                                            <div class="col-md-4">
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
@@ -82,7 +81,7 @@
                                             <!-- END CONTENT LEFT -->
 
                                             <!-- BEGIN CONTENT RIGHT -->
-                                            <div class="col-md-8">
+                                            <div class="col-md-8" style="border-left: 1.0pt solid #dddddd;">
                                                 <ul class="nav nav-tabs">
                                                     <li class="active"><a href="#test1" data-toggle="tab">
                                                         <strong>
@@ -97,7 +96,7 @@
                                                         <strong>
                                                             <asp:Label ID="lblAnalisis" runat="server" Text="ANALISIS"></asp:Label></strong></a></li>
                                                 </ul>
-                                                <div class="tab-content" style="width: 100%; height: 252px;">
+                                                <div class="tab-content" style="width: 100%; height: 256px;">
                                                     <!-- BEGIN TEST1 FORM -->
                                                     <div class="tab-pane active" id="test1">
                                                         <div class="col-md-1"></div>
@@ -105,8 +104,8 @@
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2"></label>
-                                                                    <asp:Label ID="lblNudo2" runat="server" class="col-sm-2 text-center lead" Text="Nudo 2"></asp:Label>
-                                                                    <asp:Label ID="lblNudo3" runat="server" class="col-sm-2 text-center lead" Text="Nudo 3"></asp:Label>
+                                                                    <asp:Label ID="lblNudo2" runat="server" class="col-sm-2 lead" style="padding-right: 0px;" Text="Nudo 2"></asp:Label>
+                                                                    <asp:Label ID="lblNudo3" runat="server" class="col-sm-3 lead" Text="Nudo 3"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2 control-label label-one">
@@ -125,9 +124,9 @@
                                                                     <asp:Label ID="lblM" runat="server" class="control-label small" Text="Masa [Tonnes]"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label class="col-sm-1"></label>
-                                                                    <asp:Label ID="lblEle1" runat="server" class="col-sm-3 text-center lead" Text="Elemento 1"></asp:Label>
-                                                                    <asp:Label ID="lblEle2" runat="server" class="col-sm-3 text-center lead" Text="Elemento 2"></asp:Label>
+                                                                    <label class="col-sm-2"></label>
+                                                                    <asp:Label ID="lblEle1" runat="server" class="col-sm-2 lead" style="padding-right: 0px;" Text="Elemento 1"></asp:Label>
+                                                                    <asp:Label ID="lblEle2" runat="server" class="col-sm-3 lead" Text="Elemento 2"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2 control-label label-one">
@@ -284,9 +283,7 @@
                                                             <div id="chart-line" style="width: 100%; height: 100%;">
                                                                 <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
                                                                 <hr />
-                                                                <asp:Image ID="FigMat1"  runat="server" Width="100%" Height="100%" />
-                                                                <%--<asp:Image ID="FigMat2" runat="server" Width="290px" Height="190px" />
-                                                                <asp:Image ID="FigMat3" runat="server" Width="290px" Height="190px" />--%>
+                                                                <asp:Image ID="FigMat1"  runat="server" Width="290px" Height="220px" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -479,10 +476,7 @@
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
                                                             <hr />
                                                             <div id="chart-line" style="width: 100%; height: 100%;">
-                                                                <asp:Image ID="FigExi1" runat="server" Width="100%" Height="100%" />
-                                                                <%--<asp:Image ID="FigExi2" runat="server" Width="290px" Height="190px" />
-                                                                <asp:Image ID="FigExi3" runat="server" Width="290px" Height="190px" />
-                                                                <asp:Image ID="FigExi4" runat="server" Width="290px" Height="220px" />--%>
+                                                                <asp:Image ID="FigExi1" runat="server"  Width="290px" Height="220px" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -538,7 +532,7 @@
                                     <div class="panel-body">
                                         <div class="row">
                                             <!-- BEGIN SECTION RESULT -->
-                                            <div class="col-md-4" style="border-right: 1.0pt solid #dddddd;">
+                                            <div class="col-md-4">
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-align-left"></i>
@@ -648,14 +642,13 @@
                                                                     <asp:Label ID="lblFoMax2" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
                                                             </div>
                                                             <div class="form-group">
+                                                                <asp:Label ID="lblEle26" runat="server" class="col-sm-6 lead" Text="Elemento 1"></asp:Label>
+                                                                <asp:Label ID="lblEle27" runat="server" class="col-sm-6 lead" Text="Elemento 2"></asp:Label>
+                                                            </div>
+                                                            <div class="form-group">
                                                                 <label class="col-sm-2 control-label label-one">
                                                                     <b>
                                                                         <var>Fmax =</var></b></label>
-                                                                <asp:Label ID="lblEle26" runat="server" class="col-sm-4 lead" Text="Elemento 1"></asp:Label>
-                                                                <asp:Label ID="lblEle27" runat="server" class="col-sm-4 text-center lead" Text="Elemento 2"></asp:Label>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-sm-2"></label>
                                                                 <div class="col-md-3">
                                                                     <asp:TextBox ID="txtFomax3" runat="server" class="form-control"></asp:TextBox>
                                                                 </div>
@@ -686,7 +679,7 @@
                                             <!-- END SECTION RESULT -->
 
                                             <!-- BEGIN SECTION GRAPHICS -->
-                                            <div class="col-md-8">
+                                            <div class="col-md-8" style="border-left: 1.0pt solid #dddddd;">
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
@@ -720,10 +713,10 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class="col-md-12 text-center">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics0" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdAcSoil" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdAcSoil" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -735,10 +728,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics1" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:WebChartViewer ID="wcdFuncionFuerza" runat="server" Height="33px" Width="188px" />
+                                                                                <chart:WebChartViewer ID="wcdFuncionFuerza" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -750,10 +743,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics2" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics2" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdDespVsTime1" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdDespVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -765,10 +758,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics3" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics3" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdDespVsTime2" runat="server" height="39px" width="194px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdDespVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -780,10 +773,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics4" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics4" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdVeloVsTime1" runat="server" height="41px" width="196px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdVeloVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -795,10 +788,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics5" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics5" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdVeloVsTime2" runat="server" height="41px" width="196px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdVeloVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -810,10 +803,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics6" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics6" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdAceVsTime1" runat="server" height="46px" width="196px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdAceVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -825,10 +818,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics7" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics7" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdAceVsTime2" runat="server" height="46px" width="196px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdAceVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -840,10 +833,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics8" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics8" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdForceVsTime1" runat="server" height="42px" width="196px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdForceVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -855,10 +848,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics9" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics9" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdForceVsTime2" runat="server" height="42px" width="196px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="wcdForceVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -870,10 +863,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics10" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics10" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:WebChartViewer ID="wcdForceVsTime3" runat="server" Height="42px" Width="196px" />
+                                                                                <chart:WebChartViewer ID="wcdForceVsTime3" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -885,10 +878,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics11" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics11" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:WebChartViewer ID="wcdForceVsTime4" runat="server" Height="42px" Width="196px" />
+                                                                                 <chart:WebChartViewer ID="wcdForceVsTime4" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -901,10 +894,10 @@
                                                                         </div>
                                                                     </div>
                                                                     
-                                                                    <div id="graphics12" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics12" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:webchartviewer id="wcdFvsD1" runat="server" height="41px" width="196px"></chart:webchartviewer>
+                                                                                 <chart:webchartviewer id="wcdFvsD1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -916,10 +909,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics13" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics13" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:webchartviewer id="wcdFvsD2" runat="server" height="41px" width="196px"></chart:webchartviewer>
+                                                                                 <chart:webchartviewer id="wcdFvsD2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -931,10 +924,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics14" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics14" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:WebChartViewer ID="wcdFvsD3" runat="server" Height="42px" Width="196px" />
+                                                                                 <chart:WebChartViewer ID="wcdFvsD3" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -946,10 +939,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics15" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics15" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:WebChartViewer ID="wcdFvsD4" runat="server" Height="42px" Width="196px" />
+                                                                                 <chart:WebChartViewer ID="wcdFvsD4" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">

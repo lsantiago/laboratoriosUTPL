@@ -27,13 +27,13 @@
 
                 <!-- BEGIN CONTENT HEADER -->
                 <div style="padding-left: 28px; background-color: #ffffff;">
-                    <img src="../../Content/Images/Portal/barraPosicion.jpg" />
+                    <img src="../../../../../Content/Images/Portal/barraPosicion.jpg" />
                 </div>
                 <section class="content-header">
                     <i class="fa fa-align-left"></i>
-                    <span><b>PUSH FRAME</b></span>
+                    <span><b>PUSHOVER ANALYSIS: FRAMES FORMED BY TWO STORIES AND TWO SPANS</b></span>
                     <ol class="breadcrumb">
-                        <li>PUSHOVER ANALYSIS: FRAMES FORMED BY TWO STORIES AND TWO SPANS PUSHOVER ANALISIS FOR FRAMES</li>
+                        <li>PUSHOVER ANALISIS FOR FRAMES</li>
                     </ol>
                     <h5><b>Description:</b> Frames formed by two stories and two spans pushover analisis for frames</h5>
                     <h5><b>Authors:</b> Suarez, V.A.; Quinonez, S.</h5>
@@ -135,7 +135,7 @@
                                                         <strong>
                                                             <asp:Label ID="lblDatosAnálisis" runat="server" Text="ANALYSIS"></asp:Label></strong></a></li>
                                                 </ul>
-                                                <div class="tab-content" style="width: 100%; height: 260px;">
+                                                <div class="tab-content" style="width: 100%; height: 400px;">
                                                     <!-- BEGIN TEST1 FORM -->
                                                     <div class="tab-pane active" id="test1">
                                                         <div class="col-md-7">
@@ -643,28 +643,26 @@
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="CheckBoxSelectAll" runat="server" AutoPostBack="True" class="icheck" />
-                                                                                    SELECT ALL BEAMS</label>
+                                                                                    </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cbBeam1" runat="server" class="icheck" />
-                                                                                    BEAM 1</label>
+                                                                                    </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cbBeam2" runat="server" class="icheck" />
-                                                                                    BEAM 2</label>
+                                                                                    </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cbBeam3" runat="server" class="icheck" />
-                                                                                    BEAM 3
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cbBeam4" runat="server" class="icheck" />
-                                                                                    BEAM 4
                                                                                 </label>
                                                                             </div>
                                                                         </div>
@@ -689,42 +687,36 @@
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="CheckBoxAllColumns" runat="server" AutoPostBack="True" class="icheck" />
-                                                                                    SELECT ALL COLUMNS</label>
+                                                                                    </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cbColumn1" runat="server" class="icheck" />
-                                                                                    COLUMN 1
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cdColumn2" runat="server" class="icheck" />
-                                                                                    COLUMN 2
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cdColumn3" runat="server" class="icheck" />
-                                                                                    COLUMN 3
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cdColumn4" runat="server" class="icheck" />
-                                                                                    COLUMN 4
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cdColumn5" runat="server" class="icheck" />
-                                                                                    COLUMN 5
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
                                                                                     <asp:CheckBox ID="cdColumn6" runat="server" class="icheck" />
-                                                                                    COLUMN 6
                                                                                 </label>
                                                                             </div>
                                                                         </div>
