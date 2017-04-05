@@ -31,7 +31,7 @@
 
                 <!-- BEGIN CONTENT HEADER -->
                 <div style="padding-left: 28px; background-color: #ffffff;">
-                    <img src="../Content/Images/Portal/barraPosicion.jpg" />
+                    <img src="../../../Content/Images/Portal/barraPosicion.jpg" />
                 </div>
                 <section class="content-header">
                     <i class="fa fa-align-left"></i>
@@ -172,24 +172,21 @@
                                                                 <div class="form-group">
                                                                     <div class="col-sm-4 text-right">
                                                                         <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius">
-                                                                                RUN ANALYSIS
-                                                                                    <i class="fa fa-play"></i>
+                                                                            <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <div class="col-sm-4 text-right">
                                                                         <asp:LinkButton ID="btnBorrarUltimoTest" runat="server" class="btn btn-warning btn-radius">
-                                                                            DELETE LAST TEST
-                                                                                    <i class="fa fa-play"></i>
+                                                                            <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <div class="col-sm-4 text-right">
                                                                         <asp:LinkButton ID="btnBorrarTodosTests" runat="server" class="btn btn-warning btn-radius">
-                                                                            DELETE ALL TEST's
-                                                                                    <i class="fa fa-play"></i>
+                                                                            <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
                                                                     </div>
                                                                 </div>
@@ -240,62 +237,58 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class="col-md-12 text-center">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics0" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="WebChartViewer1" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="WebChartViewer1" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnGetResult1" runat="server" class="btn btn-warning">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
                                                                             </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics1" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="WebChartViewer2" runat="server" height="33px" width="188px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="WebChartViewer2" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnGetResult2" runat="server" class="btn btn-warning">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics2" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics2" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="WebChartViewer3" runat="server" height="38px" width="199px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="WebChartViewer3" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnGetResult3" runat="server" class="btn btn-warning">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics3" style="width: 100%; height: 239px; padding-top: 10px;">
+                                                                    <div id="graphics3" style="width: 100%; height: 100%; padding-top: 10px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="WebChartViewer4" runat="server" height="39px" width="194px"></chart:webchartviewer>
+                                                                                <chart:webchartviewer id="WebChartViewer4" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <asp:LinkButton ID="btnGetResult4" runat="server" class="btn btn-warning">
                                                                                     <i class="fa fa-download"></i>
-                                                                                    Download answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
@@ -331,7 +324,7 @@
         */
 
         //Hide all Graphics
-        var arrGraphics = ["graphics0", "graphics1", "graphics2", "graphics3", "graphics4", "graphics5", "graphics6", "graphics7", "graphics8", "graphics9", "graphics10", "graphics11"];
+        var arrGraphics = ["graphics0", "graphics1", "graphics2", "graphics3"];
         jQuery.each(arrGraphics, function (i, val) {
             $("#" + val).hide();
         });
