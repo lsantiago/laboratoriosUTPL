@@ -92,6 +92,14 @@
                                                         <div class="col-md-7">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
+                                                                    <asp:Label ID="lblNomSismo" runat="server" class="col-sm-8 control-label small label-one" Text="NUMBER OF EARTHQUAKES TO BE SIMULATED"></asp:Label>
+                                                                    <div class="col-sm-3">
+                                                                        <asp:TextBox ID="txtNomSismo" runat="server" class="form-control"></asp:TextBox>
+                                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="txtNumSimulaciones"
+                                                                                    CssClass="Funcionalidad-Mensajes-Links" ErrorMessage="*"></asp:RequiredFieldValidator>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
                                                                     <asp:Label ID="lblNumSimulaciones" runat="server" class="col-sm-8 control-label small label-one" Text="NUMBER OF EARTHQUAKES TO BE SIMULATED"></asp:Label>
                                                                     <div class="col-sm-3">
                                                                         <asp:TextBox ID="txtNumSimulaciones" runat="server" class="form-control"></asp:TextBox>
