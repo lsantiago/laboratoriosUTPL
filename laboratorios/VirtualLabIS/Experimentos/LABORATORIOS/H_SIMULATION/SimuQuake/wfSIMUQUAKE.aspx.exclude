@@ -234,16 +234,36 @@
                                                         <div class="col-md-7" style="padding-top: 50px;">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
+                                                                    <div class="col-sm-12 text-center">
+                                                                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+																			<ContentTemplate>
+																				<div style="text-align: center">
+																				    <div class="form-group">
+																						<asp:Label ID="lblMensajes" runat="server" CssClass="Funcionalidad-Mensajes-Links" Font-Size="Small"></asp:Label>
+																					</div>
+																					<div class="form-group">
+																						<asp:Image ID="imgIndicador" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Portal/ajax-loader.gif" Visible="False" />
+																					</div>
+																					<div class="form-group">
+																						<asp:Timer ID="timeSimular" runat="server" Enabled="False"  Interval="5000" OnTick="timeSimular_Tick"></asp:Timer>
+																					</div>
+																				</div>
+																			</ContentTemplate>
+																		</asp:UpdatePanel>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
                                                                     <label class="col-sm-2"></label>
                                                                     <div class="col-sm-4 text-right">
                                                                         <asp:LinkButton ID="cmdSimular" runat="server" class="btn btn-warning btn-radius" >
+                                                                            GENERATE
                                                                             <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2"></label>
-                                                                    <asp:Label ID="lblError" runat="server" class="col-sm-12 small" Font-Bold="True" ForeColor="Red">Error!</asp:Label>
+                                                                    <asp:HiddenField ID="hiddIndicador" runat="server" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -263,8 +283,7 @@
                                         <h4 class="panel-title text-center">OUPUT</h4>
                                     </div>
                                     <div class="panel-body">
-                                        <div class="row">
-                                            
+                                        <div class="row">		
                                         </div>
                                     </div>
                                 </div>

@@ -93,13 +93,13 @@
                                                                 <div class="form-group">
                                                                     <label class="col-sm-6"></label>
                                                                     <div class="col-sm-5">
-                                                                        <button class="md-trigger btn btn-warning" data-modal="modal-1">Input data</button>
+                                                                        <button type="button" class="md-trigger btn btn-warning" data-modal="modal-1">Input data</button>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-6"></label>
                                                                     <div class="col-sm-5">
-                                                                        <button class="md-trigger btn btn-warning" data-modal="modal-2">Material properties</button>
+                                                                        <button type="button" class="md-trigger btn btn-warning" data-modal="modal-2">Material properties</button>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
@@ -110,16 +110,15 @@
                                                                         </asp:LinkButton>
                                                                     </div>
                                                                 </div>
-                                                                <div class="md-modal md-effect-9" id="modal-1">
-                                                                    <div class="md-content modal-content" style="height: 590px; width: 950px;">
+                                                                <div class="md-modal md-effect-8" id="modal-1">
+                                                                    <div class="md-content modal-content" style="height: 540px; width: 950px;">
                                                                         <div class="modal-header">
                                                                             <h4 class="modal-title">INPUT DATA</h4>
                                                                         </div>
-                                                                        <div class="modal-body">
+                                                                        <div class="modal-body" style="height: 420px; overflow: auto;">
                                                                             <div class="form-horizontal">
                                                                                 <div class="form-group">
-                                                                                    <b>
-                                                                                    <label  class="col-sm-2 control-label label-one small">SECTION NUMBER:</label></b>
+                                                                                    <label  class="col-sm-2 control-label label-one small"><b>SECTION NUMBER:</b></label>
                                                                                     <label class="col-sm-1 text-center small"><b>1</b></label>
                                                                                     <label class="col-sm-1 text-center small"><b>2</b></label>
                                                                                     <label class="col-sm-1 text-center small"><b>3</b></label>
@@ -133,7 +132,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="Label2" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="Label2" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtBase1" runat="server" class="form-control"></asp:TextBox>
@@ -167,9 +166,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <b>
-                                                                                        <asp:Label ID="lblSectionHeight" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
-                                                                                    </b>
+                                                                                    <b><asp:Label ID="lblSectionHeight" runat="server" class="col-sm-2 control-label small label-one"></asp:Label></b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtHeight1" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
@@ -202,9 +199,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <b>
-                                                                                        <asp:Label ID="lblCoverTop" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
-                                                                                    </b>
+                                                                                    <b><asp:Label ID="lblCoverTop" runat="server" class="col-sm-2 control-label small label-one"></asp:Label></b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtcoverTopBottom1" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
@@ -238,7 +233,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblCoverBottom" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblCoverBottom" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtCoverLateral1" runat="server" class="form-control"></asp:TextBox>
@@ -273,7 +268,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblNumBarsTop" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblNumBarsTop" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtBarsTop1" runat="server" class="form-control"></asp:TextBox>
@@ -308,7 +303,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblDiamTop" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblDiamTop" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtDiamTop1" runat="server" class="form-control"></asp:TextBox>
@@ -343,7 +338,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblNumBarsBottom" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblNumBarsBottom" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtNumBarsBottom1" runat="server" class="form-control"></asp:TextBox>
@@ -378,7 +373,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblDiamBottom" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblDiamBottom" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtDiamBottom1" runat="server" class="form-control"></asp:TextBox>
@@ -413,7 +408,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblNumLateral" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblNumLateral" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtNumBarsLateral1" runat="server" class="form-control"></asp:TextBox>
@@ -448,7 +443,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblDiamLateral" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblDiamLateral" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtDiamLateral1" runat="server" class="form-control"></asp:TextBox>
@@ -483,7 +478,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblStirrupsX" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblStirrupsX" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtNumStirrupsX1" runat="server" class="form-control"></asp:TextBox>
@@ -518,7 +513,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblStirrupsY" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblStirrupsY" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtNumStirrupsY1" runat="server" class="form-control"></asp:TextBox>
@@ -553,7 +548,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblDiamStirrups" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblDiamStirrups" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtDiamStirrups1" runat="server" class="form-control"></asp:TextBox>
@@ -588,7 +583,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblSpacingStirrups" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblSpacingStirrups" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtSpacingStirrups1" runat="server" class="form-control"></asp:TextBox>
@@ -623,7 +618,7 @@
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <b>
-                                                                                        <asp:Label ID="lblShearSpan" runat="server" class="col-sm-2 control-label label-one small"></asp:Label>
+                                                                                        <asp:Label ID="lblShearSpan" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
                                                                                     </b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtShearSpan1" runat="server" class="form-control"></asp:TextBox>
@@ -665,7 +660,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="md-modal md-effect-9" id="modal-2">
+                                                                <div class="md-modal md-effect-8" id="modal-2">
                                                                     <div class="md-content modal-content" style="width: 950px;">
                                                                         <div class="modal-header">
                                                                             <h4 class="modal-title"><asp:Label ID="lblTituloMaterialProper" runat="server"></asp:Label></h4>
@@ -673,8 +668,7 @@
                                                                         <div class="modal-body">
                                                                             <div class="form-horizontal" role="form">
                                                                                 <div class="form-group">
-                                                                                    <b>
-                                                                                    <label runat="server" class="col-sm-2 control-label label-one small">SECTION NUMBER:</label></b>
+                                                                                    <label runat="server" class="col-sm-2 control-label label-one small"><b>SECTION NUMBER:</b></label>
                                                                                     <label class="col-sm-1 text-center small"><b>1</b></label>
                                                                                     <label class="col-sm-1 text-center small"><b>2</b></label>
                                                                                     <label class="col-sm-1 text-center small"><b>3</b></label>
@@ -687,7 +681,7 @@
                                                                                     <label class="col-sm-1 text-center small"><b>10</b></label>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <asp:Label ID="lblFc" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
+                                                                                    <b><asp:Label ID="lblFc" runat="server" class="col-sm-2 control-label small label-one"></asp:Label></b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtfc1" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
@@ -720,7 +714,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <asp:Label ID="lblFyLong" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
+                                                                                    <b><asp:Label ID="lblFyLong" runat="server" class="col-sm-2 control-label small label-one"></asp:Label></b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtFyLong1" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
@@ -753,7 +747,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <asp:Label ID="lblFyTrans" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
+                                                                                    <b><asp:Label ID="lblFyTrans" runat="server" class="col-sm-2 control-label small label-one"></asp:Label></b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtFyTrans1" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
@@ -786,7 +780,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <asp:Label ID="lblSteelRatio" runat="server" class="col-sm-2 control-label small label-one"></asp:Label>
+                                                                                    <b><asp:Label ID="lblSteelRatio" runat="server" class="col-sm-2 control-label small label-one"></asp:Label></b>
                                                                                     <div class="col-sm-1">
                                                                                         <asp:TextBox ID="txtSteelRatio1" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
@@ -1007,7 +1001,7 @@
         </div>
         <asp:PlaceHolder runat="server">
             <%: Scripts.Render("~/Content/assets/js") %>
-            <%: Scripts.Render("~/bundles/modernizr") %>
+            <%--<%: Scripts.Render("~/bundles/modernizr") %>--%>
         </asp:PlaceHolder>
     </form>
     <!-- BEGIN JS PLUGIN -->
@@ -1018,7 +1012,7 @@
         */
 
         //Hide all Graphics
-        var arrGraphics = ["graphics0", "graphics1", "graphics2", "graphics3", "graphics4", "graphics5", "graphics6", "graphics7", "graphics8", "graphics9", "graphics10", "graphics11"];
+        var arrGraphics = ["graphics0", "graphics1", "graphics2", "graphics3", "graphics4", "graphics5"];
         jQuery.each(arrGraphics, function (i, val) {
             $("#" + val).hide();
         });
