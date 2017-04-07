@@ -34,7 +34,7 @@
                     <h5><b>Authors:</b> Suarez, V.A.; Ayala, A.</h5>
                     <h5><b>Info:</b> MC-Parameter</h5>
                     <h5>This application is avalible for registered users only</h5>
-                    <h5>If you experience any problem or if you need assistance running this program please contact vasuarez@utpl.edu.ec</h5>
+                    <h5>If you experience any problem or if you need assistance running this program please contact epduque@utpl.edu.ec</h5>
                 </section>
                 <!-- END CONTENT HEADER -->
 
@@ -62,9 +62,9 @@
                                                             </asp:LinkButton>
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body text-center">
+                                                    <div class="grid-body text-center" style="width: 100%; height: 256px;">
                                                         <div id="chart-line" style="width: 100%; height: 100%;">
-                                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/Mc Analysis Circular.jpg" Width="290px" Height="220px" />
+                                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/Mc Analysis Circular.jpg" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -79,11 +79,11 @@
                                                             <asp:Label ID="lblSectionGraf" runat="server"></asp:Label>
                                                         </strong></a></li>
                                                 </ul>
-                                                <div class="tab-content" style="width: 100%; height: 265px;">
+                                                <div class="tab-content" style="width: 100%; height: 256px;">
                                                     <!-- BEGIN TEST1 FORM -->
-                                                    <div class="tab-pane active" id="test1">
-                                                        <div class="col-md-1" style="padding-top: 50px;"></div>
-                                                        <div class="col-md-7" style="padding-top: 50px;">
+                                                    <div class="tab-pane active" id="test1" style="padding-top: 50px;">
+                                                        <div class="col-md-1"></div>
+                                                        <div class="col-md-7">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblNumSections" runat="server" class="col-sm-6 control-label small"></asp:Label>
@@ -684,9 +684,9 @@
                                                         <div class="pull-right grid-tools">
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body text-center">
+                                                    <div class="grid-body text-center" style="width: 100%; height: 440px;">
                                                         <div id="chart-line" style="width: 100%; height: 100%;">
-                                                            <asp:Image ID="Image11" runat="server" ImageUrl="~/Imagenes/General/Tools/Dinamica_2GDL_Tool2.bmp" Width="290px" Height="220px" />
+                                                            <asp:Image ID="Image11" runat="server" ImageUrl="~/Imagenes/General/Tools/Dinamica_2GDL_Tool2.bmp" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -701,8 +701,8 @@
                                                         <asp:Label ID="lblResults" runat="server" class="grid-title lead"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
-                                                    <div class="grid-body">
-                                                        <div class="form-horizontal" role="form" style="width: 100%; height: 420px;">
+                                                    <div class="grid-body" style="width: 100%; height: 450px;">
+                                                        <div class="form-horizontal" role="form">
                                                             <div class="form-group">
                                                                 <asp:Label ID="Label11" runat="server" class="col-sm-3 control-label label-one" Text="Seleccionar:"></asp:Label>
                                                                 <div class="col-sm-7">
@@ -716,16 +716,16 @@
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group">
+                                                            <div class="form-group" style="padding-top: 10px;">
                                                                 <div class="col-md-12 text-center">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics0" style="width: 100%; height: 100%;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <chart:WebChartViewer ID="WebChartViewer1" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics1" style="width: 100%; height: 100%;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
@@ -733,11 +733,11 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-sm-4">
-                                                                            <asp:Label ID="lblFigura2" runat="server" class="text-justify"></asp:Label>
+                                                                        <div class="col-sm-4 text-justify">
+                                                                            <asp:Label ID="lblFigura2" runat="server"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics2" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics2" style="width: 100%; height: 100%;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
@@ -745,11 +745,11 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-sm-4">
-                                                                            <asp:Label ID="lblFigura3" runat="server" class="text-justify"></asp:Label>
+                                                                        <div class="col-sm-4 text-justify">
+                                                                            <asp:Label ID="lblFigura3" runat="server"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics3" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics3" style="width: 100%; height: 100%;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
@@ -757,11 +757,11 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-sm-4">
-                                                                            <asp:Label ID="lblFigura4" runat="server" class="text-justify"></asp:Label>
+                                                                        <div class="col-sm-4 text-justify">
+                                                                            <asp:Label ID="lblFigura4" runat="server"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics4" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics4" style="width: 100%; height: 100%;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
@@ -769,11 +769,11 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-sm-4">
-                                                                            <asp:Label ID="lblFigura5" runat="server" class="text-justify"></asp:Label>
+                                                                        <div class="col-sm-4 text-justify">
+                                                                            <asp:Label ID="lblFigura5" runat="server"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics5" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics5" style="width: 100%; height: 100%;">
                                                                         <div class="col-sm-8">
                                                                             <div class="form-group">
                                                                                 <div class="col-sm-12 text-center">
@@ -781,8 +781,8 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-sm-4">
-                                                                            <asp:Label ID="lblFigura6" runat="server" class="text-justify"></asp:Label>
+                                                                        <div class="col-sm-4 text-justify">
+                                                                            <asp:Label ID="lblFigura6" runat="server"></asp:Label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -816,7 +816,7 @@
                                                         </div>
                                                         <div id="collapseOne" class="panel-collapse collapse">
                                                             <div class="panel-body">
-                                                                <p><asp:TextBox ID="txtresult" runat="server" Height="600px" TextMode="MultiLine" Width="800px" CssClass="texto-interno-pequeno"></asp:TextBox></p>
+                                                                <p><asp:TextBox ID="txtresult" runat="server" Width="100%" Height="600px" TextMode="MultiLine" CssClass="texto-interno-pequeno"></asp:TextBox></p>
                                                             </div>
                                                         </div>
                                                     </div>

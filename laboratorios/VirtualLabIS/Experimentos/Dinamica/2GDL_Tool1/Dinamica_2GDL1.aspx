@@ -66,8 +66,8 @@
                                                         <asp:Label ID="lblEsquemaMain" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <asp:LinkButton ID="ibtnLoadExample" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo">
-                                                                            Cargar Ejemplo
-                                                                            <i class="fa fa-play"></i>
+                                                                Cargar Ejemplo
+                                                                <i class="fa fa-play"></i>
                                                             </asp:LinkButton>
                                                         </div>
                                                     </div>
@@ -280,7 +280,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5">
-                                                            <div id="chart-line" style="width: 100%; height: 100%;">
+                                                            <div id="chart-line" style="width: 250px; height: 210px;">
                                                                 <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
                                                                 <hr />
                                                                 <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" />
@@ -476,7 +476,7 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
                                                             <hr />
-                                                            <div id="chart-line" style="width: 100%; height: 100%;">
+                                                            <div id="chart-line" style="width: 250px; height: 210px;">
                                                                 <asp:Image ID="FigExi1" runat="server" Width="100%" Height="100%" />
                                                             </div>
                                                         </div>
