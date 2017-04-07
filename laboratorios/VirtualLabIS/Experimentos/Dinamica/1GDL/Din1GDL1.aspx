@@ -60,7 +60,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div id="chart-line" style="width: 100%; height: 100%;">
+                                                        <div id="chart-line" style="width: 355px; height: 226px;">
                                                             <asp:Image ID="FigMain" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/Dinamica/Imagenes/General/Tools/Dinamica_1GDL_Tool1.bmp" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
@@ -218,9 +218,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5">
-                                                            <div id="chart-line" style="width: 100%; height: 100%;">
-                                                                <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
-                                                                <hr />
+                                                            <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
+                                                            <hr />
+                                                            <div style="width: 352px; height: 181px;">
                                                                 <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat2"
                                                                     runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat3" runat="server"
                                                                         Width="100%" Height="100%" />
@@ -245,7 +245,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <%--Value 1--%>
-                                                                <asp:Panel ID="panFS" runat="server" style="padding-top: 15px;">
+                                                                <asp:Panel ID="panFS" runat="server" Style="padding-top: 15px;">
                                                                     <div id="tevalue0">
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -279,7 +279,7 @@
                                                                     </div>
                                                                 </asp:Panel>
                                                                 <%--Value 2--%>
-                                                                <asp:Panel ID="panFL" runat="server" style="padding-top: 15px;">
+                                                                <asp:Panel ID="panFL" runat="server" Style="padding-top: 15px;">
                                                                     <div id="tevalue2">
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -313,7 +313,7 @@
                                                                     </div>
                                                                 </asp:Panel>
                                                                 <%--Value 3--%>
-                                                                <asp:Panel ID="panFT" runat="server" style="padding-top: 15px;">
+                                                                <asp:Panel ID="panFT" runat="server" Style="padding-top: 15px;">
                                                                     <div id="tevalue3">
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -366,7 +366,7 @@
                                                                     </div>
                                                                 </asp:Panel>
                                                                 <%--Value 4--%>
-                                                                <asp:Panel ID="panAC" runat="server" style="padding-top: 15px;">
+                                                                <asp:Panel ID="panAC" runat="server" Style="padding-top: 15px;">
                                                                     <div id="tevalue4">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-8">
@@ -380,7 +380,6 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <asp:Label ID="lblNotaAce" runat="server" class="col-sm-12 text-justify small"
@@ -427,10 +426,10 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
                                                             <hr />
-                                                            <div id="chart-line" style="width: 100%; height: 100%;">
-                                                                <asp:Image ID="FigExi1" runat="server" Width="290px" Height="190px" /><asp:Image ID="FigExi2"
-                                                                    runat="server" Width="290px" Height="190px" /><asp:Image ID="FigExi3" runat="server"
-                                                                        Width="290px" Height="190px" /><asp:Image ID="FigExi4" runat="server" Width="290px" Height="220px" />
+                                                            <div style="width: 302px; height: 188px;">
+                                                                <asp:Image ID="FigExi1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigExi2"
+                                                                    runat="server" Width="100%" Height="100%" /><asp:Image ID="FigExi3" runat="server"
+                                                                        Width="100%" Height="100%" /><asp:Image ID="FigExi4" runat="server" Width="100%" Height="100%" />
                                                             </div>
                                                         </div>
                                                     </div>

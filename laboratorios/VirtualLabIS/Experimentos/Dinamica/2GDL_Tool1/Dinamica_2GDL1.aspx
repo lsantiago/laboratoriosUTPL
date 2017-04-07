@@ -283,7 +283,9 @@
                                                             <div id="chart-line" style="width: 250px; height: 210px;">
                                                                 <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
                                                                 <hr />
-                                                                <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" />
+                                                                <div style="width: 342px; height: 201px;">
+                                                                    <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -476,7 +478,7 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
                                                             <hr />
-                                                            <div id="chart-line" style="width: 250px; height: 210px;">
+                                                            <div id="chart-line" style="width: 300px; height: 187px;">
                                                                 <asp:Image ID="FigExi1" runat="server" Width="100%" Height="100%" />
                                                             </div>
                                                         </div>

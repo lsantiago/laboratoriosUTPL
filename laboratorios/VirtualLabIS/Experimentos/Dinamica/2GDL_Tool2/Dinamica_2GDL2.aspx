@@ -318,12 +318,14 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5">
-                                                            <div id="chart-line" style="width: 100%; height: 100%;">
+                                                            <div style="width: 100%; height: 100%;">
                                                                 <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
                                                                 <hr />
-                                                                <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat2"
+                                                                <div style="width: 342px; height: 201px;">
+                                                                    <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat2"
                                                                     runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat3" runat="server"
                                                                         Width="100%" Height="100%" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -524,7 +526,7 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
                                                             <hr />
-                                                            <div id="chart-line" style="width: 100%; height: 100%;">
+                                                            <div style="width: 300px; height: 187px;">
                                                                 <asp:Image ID="FigExi1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigExi2"
                                                                     runat="server" Width="100%" Height="100%" /><asp:Image ID="FigExi3" runat="server"
                                                                         Width="100%" Height="100%" /><asp:Image ID="FigExi4" runat="server" Width="100%" Height="100%" />
