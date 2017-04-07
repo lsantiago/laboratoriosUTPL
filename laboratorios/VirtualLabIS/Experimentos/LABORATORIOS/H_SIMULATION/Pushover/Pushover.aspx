@@ -638,8 +638,8 @@
                                                                 <div class="col-md-12 text-center">
                                                                     <div id="graphics0" class="col-sm-10">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-left">
-                                                                                <asp:Label ID="lblDraw" runat="server" class="col-sm-12 control-label label-one" Text="Select the beams for wich you want to plot resources. Then press the 'PLOT RESULTS' button"></asp:Label>
+                                                                            <div class="col-sm-12">
+                                                                                <asp:Label ID="lblDraw" runat="server" class="col-sm-12 control-label label-one" style="margin-left: 0px" Text="Select the beams for wich you want to plot resources. Then press the 'PLOT RESULTS' button"></asp:Label>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-sm-7">

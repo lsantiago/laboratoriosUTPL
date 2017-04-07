@@ -199,10 +199,10 @@
                                                                 <hr />
                                                                 <div style="width: 100%; height: 100%;">
                                                                     <div id="graphicsMP0" class="col-sm-11" style="padding-left: 0px">
-                                                                        <asp:Image ID="imgModeloConcreto" runat="server" Width="300px" Height="190px" />
+                                                                        <asp:Image ID="imgModeloConcreto" runat="server" width="300px" height="190px" />
                                                                     </div>
                                                                     <div id="graphicsMP1" class="col-sm-11" style="padding-left: 0px">
-                                                                        <asp:Image ID="imgModeloAcero" runat="server" Width="300px" Height="190px" />
+                                                                        <asp:Image ID="imgModeloAcero" runat="server" width="300px" height="190px" />
                                                                     </div>
                                                                 </div>
                                                             </div>

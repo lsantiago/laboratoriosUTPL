@@ -43,7 +43,7 @@
                     <h5><b>Authors:</b> Suarez, V.A.; Quinonez, S.</h5>
                     <h5><b>Info:</b>Linearization</h5>
                     <h5>This application is avalible for registered users only</h5>
-                    <h5>If you experience any problem or if you need assistance running this program please contact vasuarez@utpl.edu.ec</h5>
+                    <h5>If you experience any problem or if you need assistance running this program please contact epduque@utpl.edu.ec</h5>
                 </section>
                 <!-- END CONTENT HEADER -->
 
@@ -71,9 +71,9 @@
                                                             </asp:LinkButton>--%>
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body text-center">
+                                                    <div class="grid-body text-center" style="width: 100%; height: 256px;">
                                                         <div id="chart-line" style="width: 100%; height: 100%;">
-                                                            <asp:Image ID="img1" runat="server" ImageUrl="~/VirtualLab/Varios/Archivos/Imagenes/Dinamica/ES/1_ES.jpg" Width="290px" Height="220px" />
+                                                            <asp:Image ID="img1" runat="server" ImageUrl="~/VirtualLab/Varios/Archivos/Imagenes/Dinamica/ES/1_ES.jpg" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -93,11 +93,11 @@
                                                         <strong>
                                                             <asp:Label ID="lblAnalisis" runat="server" Text="ANALISIS"></asp:Label></strong></a></li>
                                                 </ul>
-                                                <div class="tab-content" style="width: 100%; height: 250px;">
+                                                <div class="tab-content" style="width: 100%; height: 256px;">
                                                     <!-- BEGIN TEST1 FORM -->
-                                                    <div class="tab-pane active" id="test1">
-                                                        <div class="col-md-1"></div>
-                                                        <div class="col-md-11">
+                                                    <div class="tab-pane active" id="test1" style="padding-top: 60px">
+                                                        <div class="col-md-2"></div>
+                                                        <div class="col-md-9">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <div class="col-sm-2">
@@ -155,36 +155,33 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="col-md-1"></div>
                                                     </div>
                                                     <!-- END TEST1 FORM -->
 
                                                     <!-- BEGIN TEST2 FORM -->
-                                                    <div class="tab-pane" id="test2">
+                                                    <div class="tab-pane" id="test2" style="padding-top: 15px">
                                                         <uc1:ctrlAcelerograma ID="CtrlAcelerograma1" runat="server" />
                                                     </div>
                                                     <!-- END TEST3 FORM -->
 
                                                     <!-- BEGIN TEST3 FORM -->
-                                                    <div class="tab-pane" id="test3" style="padding-top: 15px;">
-                                                        <div class="col-md-2" style="padding-top: 50px;"></div>
-                                                        <div class="col-md-7" style="padding-top: 50px;">
+                                                    <div class="tab-pane" id="test3" style="padding-top: 70px;">
+                                                        <div class="col-md-2"></div>
+                                                        <div class="col-md-7">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
-                                                                    <div class="col-sm-4 text-right">
+                                                                    <div class="col-sm-4 text-center" style="padding-right: 0px;">
                                                                         <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius">
                                                                             <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
                                                                     </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-4 text-right">
+                                                                    <div class="col-sm-4 text-center" style="padding-left: 12px;">
                                                                         <asp:LinkButton ID="btnBorrarUltimoTest" runat="server" class="btn btn-warning btn-radius">
                                                                             <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
                                                                     </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-4 text-right">
+                                                                    <div class="col-sm-4 text-center">
                                                                         <asp:LinkButton ID="btnBorrarTodosTests" runat="server" class="btn btn-warning btn-radius">
                                                                             <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
@@ -192,7 +189,7 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <div class="col-sm-12">
-                                                                        <asp:Label ID="lblResultados" runat="server" CssClass="Funcionalidad-subtitulo" class="control-label" Text="RESULTADOS" Visible="False"></asp:Label>
+                                                                        <asp:Label ID="lblResultados" runat="server" CssClass="Funcionalidad-subtitulo" class="control-label small" Text="RESULTADOS" Visible="False"></asp:Label>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -236,8 +233,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <div class="col-md-12 text-center">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                <div class="col-md-12 text-center" style="padding-top: 10px;">
+                                                                    <div id="graphics0" style="width: 100%; height: 100%;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <chart:webchartviewer id="WebChartViewer1" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
@@ -251,7 +248,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics1" style="width: 100%; height: 100%">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <chart:webchartviewer id="WebChartViewer2" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
@@ -265,7 +262,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics2" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics2" style="width: 100%; height: 100%;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <chart:webchartviewer id="WebChartViewer3" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
@@ -279,7 +276,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics3" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics3" style="width: 100%; height: 100%;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <chart:webchartviewer id="WebChartViewer4" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>

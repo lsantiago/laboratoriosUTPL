@@ -9,7 +9,7 @@
                 </div>
                 <asp:Label ID="lblDuracion" runat="server" class="control-label small" Text="MAX LOAD -Fmax- (kN)"></asp:Label>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbDuracion" ErrorMessage="*"
-                Style="position: static" Width="14px"></asp:RequiredFieldValidator>
+                    Style="position: static" Width="14px"></asp:RequiredFieldValidator>
             </div>
             <div class="form-group">
                 <div class="col-sm-3">
@@ -17,7 +17,7 @@
                 </div>
                 <asp:Label ID="lblPaso" runat="server" class="control-label small" Text="FREQUENCY -Ω- (rad/s)"></asp:Label>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbPaso" ErrorMessage="*"
-                Style="position: static"></asp:RequiredFieldValidator>
+                    Style="position: static"></asp:RequiredFieldValidator>
             </div>
             <div class="form-group">
                 <div class="col-sm-3">
@@ -25,19 +25,17 @@
                 </div>
                 <asp:Label ID="lblFactor" runat="server" class="control-label small" Text="DURATION (s)"></asp:Label>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbFactor" ErrorMessage="*"
-                Style="position: static"></asp:RequiredFieldValidator>
+                    Style="position: static"></asp:RequiredFieldValidator>
             </div>
             <div class="form-group">
-                <div class="col-sm-9">
+                <div class="col-sm-8">
                     <asp:FileUpload ID="fuAcelerograma" runat="server" class="btn btn-warning" />
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <asp:LinkButton ID="btnAcelerograma" runat="server" class="btn btn-warning" Style="height: 33px;">
                         <i class="fa fa-cloud-upload"></i>
                         Upload
-                </asp:LinkButton>
+                    </asp:LinkButton>
                 </div>
             </div>
             <div class="form-group">
@@ -57,8 +55,8 @@
     </div>
 </div>
 <div class="col-md-5">
-    <div id="chart-line" style="width: 100%; height: 100%;">
-        <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/2_EN.jpg" Width="290px" Height="190px" />
+    <div id="chart-line" style="width: 315px; height: 220px;">
+        <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/2_EN.jpg" Width="100%" Height="100%" />
     </div>
 </div>
 
