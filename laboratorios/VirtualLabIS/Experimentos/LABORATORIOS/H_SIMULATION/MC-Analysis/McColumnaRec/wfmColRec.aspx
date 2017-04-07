@@ -32,7 +32,7 @@
                     <h5><b>Authors:</b> Suarez, V.A.; Ayala, A.</h5>
                     <h5><b>Info:</b> RC-Analysis</h5>
                     <h5>This application is avalible for registered users only</h5>
-                    <h5>If you experience any problem or if you need assistance running this program please contact vasuarez@utpl.edu.ec</h5>
+                    <h5>If you experience any problem or if you need assistance running this program please contact epduque@utpl.edu.ec</h5>
                 </section>
                 <!-- END CONTENT HEADER -->
 
@@ -55,14 +55,14 @@
                                                         <asp:Label ID="lblEsquemaMain" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <asp:LinkButton ID="btnCargarEjemplo" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo" >
-                                                                            Cargar Ejemplo
-                                                                            <i class="fa fa-play"></i>
+                                                                Cargar Ejemplo
+                                                                <i class="fa fa-play"></i>
                                                             </asp:LinkButton>
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body text-center">
+                                                    <div class="grid-body text-center" style="width: 100%; height: 256px;">
                                                         <div id="chart-line" style="width: 100%; height: 100%;">
-                                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/MCColumna Retangular.jpg" Width="290px" Height="220px" />
+                                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/MCColumna Retangular.jpg" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -83,9 +83,9 @@
                                                         <strong>
                                                             <asp:Label ID="lblAnalisis" runat="server" Text="ANALISIS"></asp:Label></strong></a></li>
                                                 </ul>
-                                                <div class="tab-content" style="width: 100%; height: 250px;">
+                                                <div class="tab-content" style="width: 100%; height: 256px;">
                                                     <!-- BEGIN TEST1 FORM -->
-                                                    <div class="tab-pane active" id="test1">
+                                                    <div class="tab-pane active" id="test1" style="padding-top: 15px;">
                                                         <div class="col-md-12">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="col-sm-6">
@@ -188,36 +188,36 @@
                                                     <!-- END TEST1 FORM -->
 
                                                     <!-- BEGIN TEST2 FORM -->
-                                                    <div class="tab-pane" id="test2">
+                                                    <div class="tab-pane" id="test2" style="padding-top: 15px;">
                                                         <div class="col-md-7">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblConcrComprStrength" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-4">
+                                                                    <div class="col-sm-3">
                                                                         <asp:TextBox ID="txtConcrComprStrength" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblLongRYS" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-4">
+                                                                    <div class="col-sm-3">
                                                                         <asp:TextBox ID="txtfyLong" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblTransRYS" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-4">
+                                                                    <div class="col-sm-3">
                                                                         <asp:TextBox ID="txtfyTrans" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblindEnd" runat="server"  class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-4">
+                                                                    <div class="col-sm-3">
                                                                         <asp:TextBox ID="txtratioSteel" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblDmode" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-4">
+                                                                    <div class="col-sm-3">
                                                                         <asp:DropDownList ID="ddmode" runat="server" class="form-control">
                                                                             <asp:ListItem Selected="True" Value="uniaxial">uniaxial</asp:ListItem>
                                                                             <asp:ListItem Value="biaxial">biaxial</asp:ListItem>
@@ -238,12 +238,12 @@
                                                                     <div class="col-sm-4"></div>
                                                                 </div>
                                                                 <hr />
-                                                                <div class="form-group">
-                                                                    <div id="graphics0" class="col-sm-11">
-                                                                        <asp:Image ID="imgModeloConcreto" runat="server" Width="290px" Height="190px" />
+                                                                <div style="width: 100%; height: 100%;">
+                                                                    <div id="graphics0" class="col-sm-11" style="padding-left: 0px">
+                                                                        <asp:Image ID="imgModeloConcreto" runat="server" Width="300px" Height="190px" />
                                                                     </div>
-                                                                    <div id="graphics1" class="col-sm-11">
-                                                                        <asp:Image ID="imgModeloAcero" runat="server" Width="290px" Height="190px" />
+                                                                    <div id="graphics1" class="col-sm-11" style="padding-left: 0px">
+                                                                        <asp:Image ID="imgModeloAcero" runat="server" Width="300px" Height="190px" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -252,15 +252,15 @@
                                                     <!-- END TEST2 FORM -->
 
                                                     <!-- BEGIN TEST3 FORM -->
-                                                    <div class="tab-pane" id="test3">
-                                                        <div class="col-md-2" style="padding-top: 50px;"></div>
-                                                        <div class="col-md-7" style="padding-top: 50px;">
+                                                    <div class="tab-pane" id="test3" style="padding-top: 70px;">
+                                                        <div class="col-md-4"></div>
+                                                        <div class="col-md-4">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <div class="col-sm-4 text-right">
                                                                         <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius" >
                                                                             <i class="fa fa-play"></i>
-                                                                </asp:LinkButton>
+                                                                        </asp:LinkButton>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -293,7 +293,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center">
-                                                        <div id="chart-line" style="width: 100%; height: 100%;">
+                                                        <div id="chart-line" style="width: 100%; height: 260px;">
                                                             <chart:WebChartViewer ID="WebChartViewer1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                         </div>
                                                     </div>

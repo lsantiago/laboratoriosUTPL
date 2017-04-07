@@ -4,7 +4,7 @@
 
 <%@ Register Assembly="netchartdir" Namespace="ChartDirector" TagPrefix="chart" %>
 
-<%@ Import Namespace="System.Web.Optimization" %> 
+<%@ Import Namespace="System.Web.Optimization" %>
 
 <!DOCTYPE html>
 
@@ -28,9 +28,9 @@
                     <i class="fa fa-align-left"></i>
                     <span><b>2DOF-Dynamics</b></span>
                     <div class="pull-right grid-tools" style="padding-right: 10px;">
-                         <img src="../../../../Content/Images/Portal/bannerSecundario.png" />
-                     </div>
-                    
+                        <img src="../../../../Content/Images/Portal/bannerSecundario.png" />
+                    </div>
+
                     <ol class="breadcrumb">
                         <li>TIME HISTORY ANALYSIS OF TWO DEGREES OF FREEDOM SYSTEMS</li>
                     </ol>
@@ -39,9 +39,9 @@
                     <h5><b>Authors:</b> Viñán, A.R.; Suarez, V.A</h5>
                     <h5><b>Info:</b> SDOF-Dynamics</h5>
                     <h5>This application is avalible for registered users only</h5>
-                    <h5>If you experience any problem or if you need assistance running this program please contact vasuarez@utpl.edu.ec</h5>
+                    <h5>If you experience any problem or if you need assistance running this program please contact epduque@utpl.edu.ec</h5>
 
-                    
+
                 </section>
 
                 <!-- END CONTENT HEADER -->
@@ -71,7 +71,7 @@
                                                             </asp:LinkButton>
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body text-center">
+                                                    <div class="grid-body text-center" style="width: 100%; height: 256px;">
                                                         <div id="chart-line" style="width: 100%; height: 100%;">
                                                             <asp:Image ID="FigMain" runat="server" ImageUrl="~/Imagenes/General/Tools/Dinamica_2GDL_Tool1.png" Width="100%" Height="100%" />
                                                         </div>
@@ -98,13 +98,13 @@
                                                 </ul>
                                                 <div class="tab-content" style="width: 100%; height: 256px;">
                                                     <!-- BEGIN TEST1 FORM -->
-                                                    <div class="tab-pane active" id="test1">
-                                                        <div class="col-md-1"></div>
+                                                    <div class="tab-pane active" id="test1" style="padding-top: 40px;">
+                                                        <div class="col-md-2"></div>
                                                         <div class="col-md-9">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2"></label>
-                                                                    <asp:Label ID="lblNudo2" runat="server" class="col-sm-2 lead" style="padding-right: 0px;" Text="Nudo 2"></asp:Label>
+                                                                    <asp:Label ID="lblNudo2" runat="server" class="col-sm-2 lead" Style="padding-right: 0px;" Text="Nudo 2"></asp:Label>
                                                                     <asp:Label ID="lblNudo3" runat="server" class="col-sm-3 lead" Text="Nudo 3"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
@@ -113,19 +113,19 @@
                                                                             <var>m =</var></b></label>
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="txtM1" runat="server" class="form-control"></asp:TextBox>
-                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" TargetControlID ="txtM1" FilterType = "Custom, numbers"  ValidChars = ".">
-                                            </cc1:FilteredTextBoxExtender>
+                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" TargetControlID="txtM1" FilterType="Custom, numbers" ValidChars=".">
+                                                                        </cc1:FilteredTextBoxExtender>
                                                                     </div>
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="txtM2" runat="server" class="form-control"></asp:TextBox>
-                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender2" runat="server" TargetControlID ="txtM2" FilterType = "Custom, numbers"  ValidChars = ".">
-                                            </cc1:FilteredTextBoxExtender>
+                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender2" runat="server" TargetControlID="txtM2" FilterType="Custom, numbers" ValidChars=".">
+                                                                        </cc1:FilteredTextBoxExtender>
                                                                     </div>
-                                                                    <asp:Label ID="lblM" runat="server" class="control-label small" Text="Masa [Tonnes]"></asp:Label>
+                                                                    <asp:Label ID="lblM" runat="server" class="control-label" Text="Masa [Tonnes]"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2"></label>
-                                                                    <asp:Label ID="lblEle1" runat="server" class="col-sm-2 lead" style="padding-right: 0px;" Text="Elemento 1"></asp:Label>
+                                                                    <asp:Label ID="lblEle1" runat="server" class="col-sm-2 lead" Style="padding-right: 0px;" Text="Elemento 1"></asp:Label>
                                                                     <asp:Label ID="lblEle2" runat="server" class="col-sm-3 lead" Text="Elemento 2"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
@@ -134,15 +134,15 @@
                                                                             <var>k =</var></b></label>
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="txtK1" runat="server" class="form-control"></asp:TextBox>
-                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender3" runat="server" TargetControlID ="txtK1" FilterType = "Custom, numbers"  ValidChars = ".">
-                                            </cc1:FilteredTextBoxExtender>
+                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender3" runat="server" TargetControlID="txtK1" FilterType="Custom, numbers" ValidChars=".">
+                                                                        </cc1:FilteredTextBoxExtender>
                                                                     </div>
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="txtK2" runat="server" class="form-control"></asp:TextBox>
-                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender5" runat="server" TargetControlID ="txtK2" FilterType = "Custom, numbers"  ValidChars = ".">
-                                            </cc1:FilteredTextBoxExtender>
+                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender5" runat="server" TargetControlID="txtK2" FilterType="Custom, numbers" ValidChars=".">
+                                                                        </cc1:FilteredTextBoxExtender>
                                                                     </div>
-                                                                    <asp:Label ID="lblk" runat="server" class="control-label small" Text="Rigidez [kN/m]"></asp:Label>
+                                                                    <asp:Label ID="lblk" runat="server" class="control-label" Text="Rigidez [kN/m]"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2 control-label label-one">
@@ -150,15 +150,15 @@
                                                                             <var>c =</var></b></label>
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="txtC1" runat="server" class="form-control"></asp:TextBox>
-                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender4" runat="server" TargetControlID ="txtC1" FilterType = "Custom, numbers"  ValidChars = ".">
-                                            </cc1:FilteredTextBoxExtender>
+                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender4" runat="server" TargetControlID="txtC1" FilterType="Custom, numbers" ValidChars=".">
+                                                                        </cc1:FilteredTextBoxExtender>
                                                                     </div>
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="txtC2" runat="server" class="form-control"></asp:TextBox>
-                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender6" runat="server" TargetControlID ="txtC2" FilterType = "Custom, numbers"  ValidChars = ".">
-                                            </cc1:FilteredTextBoxExtender>
+                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender6" runat="server" TargetControlID="txtC2" FilterType="Custom, numbers" ValidChars=".">
+                                                                        </cc1:FilteredTextBoxExtender>
                                                                     </div>
-                                                                    <asp:Label ID="lblc" runat="server" class="control-label small" Text="Coeficiente de amortiguamiento [kN*s/m]"></asp:Label>
+                                                                    <asp:Label ID="lblc" runat="server" class="control-label" Text="Coeficiente de amortiguamiento [kN*s/m]"></asp:Label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -166,20 +166,20 @@
                                                     <!-- END TEST1 FORM -->
 
                                                     <!-- BEGIN TEST2 FORM -->
-                                                    <div class="tab-pane" id="test2">
+                                                    <div class="tab-pane" id="test2" style="padding-top: 15px;">
                                                         <div class="col-md-7">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
-                                                                    <asp:Label ID="lblEscTM" runat="server" class="col-sm-3 control-label label-one" Text="Escoger:"></asp:Label>
+                                                                    <asp:Label ID="lblEscTM" runat="server" class="col-sm-2 control-label label-one" Text="Escoger:"></asp:Label>
                                                                     <div class="col-sm-7">
-                                                                        <asp:DropDownList ID="DDLmatTyp" runat="server"  class="form-control" onclick="HideCtrlsTipoMaterial();">
+                                                                        <asp:DropDownList ID="DDLmatTyp" runat="server" class="form-control" onclick="HideCtrlsTipoMaterial();">
                                                                             <asp:ListItem Selected="True" Value="0">El&#225;stico</asp:ListItem>
                                                                             <asp:ListItem Value="1">Bilineal 1</asp:ListItem>
                                                                             <asp:ListItem Value="2">Bilineal 2</asp:ListItem>
                                                                         </asp:DropDownList>
                                                                     </div>
                                                                 </div>
-                                                                <asp:Panel ID="panBlineal1" runat="server">
+                                                                <asp:Panel ID="panBlineal1" runat="server" style="padding-top: 15px;">
                                                                     <div id="tmvalue1">
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2"></label>
@@ -192,15 +192,15 @@
                                                                                     <var>Fy =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtFy1" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender7" runat="server" TargetControlID ="txtFy1" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender7" runat="server" TargetControlID="txtFy1" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtFy2" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender8" runat="server" TargetControlID ="txtFy2" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender8" runat="server" TargetControlID="txtFy2" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblFyMat21" runat="server" class="small" Text="Fuerza de fluencia [kN]"></asp:Label>
+                                                                            <asp:Label ID="lblFyMat21" runat="server" class="control-label" Text="Fuerza de fluencia [kN]"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -208,19 +208,19 @@
                                                                                     <var>r =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtr1" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender9" runat="server" TargetControlID ="txtr1" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender9" runat="server" TargetControlID="txtr1" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtr2" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender10" runat="server" TargetControlID ="txtr2" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender10" runat="server" TargetControlID="txtr2" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblrMat21" runat="server" class="small" Text="Coeficiente Post-Fluencia"></asp:Label>
+                                                                            <asp:Label ID="lblrMat21" runat="server" class="col-sm-4 label-der" Text="Coeficiente Post-Fluencia"></asp:Label>
                                                                         </div>
                                                                     </div>
                                                                 </asp:Panel>
-                                                                <asp:Panel ID="panBlineal2" runat="server">
+                                                                <asp:Panel ID="panBlineal2" runat="server" style="padding-top: 15px;">
                                                                     <div id="tmvalue2">
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2"></label>
@@ -233,15 +233,15 @@
                                                                                     <var>Fy =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtFy1M3" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender11" runat="server" TargetControlID ="txtFy1M3" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender11" runat="server" TargetControlID="txtFy1M3" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtFy2M3" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender12" runat="server" TargetControlID ="txtFy2M3" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender12" runat="server" TargetControlID="txtFy2M3" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblFyMat31" runat="server" class="small" Text="Fuerza de Fluencia [kN]"></asp:Label>
+                                                                            <asp:Label ID="lblFyMat31" runat="server" class="control-label" Text="Fuerza de Fluencia [kN]"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -249,15 +249,15 @@
                                                                                     <var>r =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtr1M3" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender13" runat="server" TargetControlID ="txtr1M3" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender13" runat="server" TargetControlID="txtr1M3" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtr2M3" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender14" runat="server" TargetControlID ="txtr2M3" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender14" runat="server" TargetControlID="txtr2M3" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblrMat31" runat="server" class="small" Text="Coeficiente Post-Fluencia"></asp:Label>
+                                                                            <asp:Label ID="lblrMat31" runat="server" class="col-sm-4 label-der" Text="Coeficiente Post-Fluencia"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -265,15 +265,15 @@
                                                                                     <var>R =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtRo1" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender15" runat="server" TargetControlID ="txtRo1" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender15" runat="server" TargetControlID="txtRo1" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtRo2" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender16" runat="server" TargetControlID ="txtRo2" FilterType = "Custom, numbers"  ValidChars = ".">
-                                    </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender16" runat="server" TargetControlID="txtRo2" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblRoMat31" runat="server" class="text-justify small" Text="Val. Recom: 10 a 20"></asp:Label>
+                                                                            <asp:Label ID="lblRoMat31" runat="server" class="col-sm-4 label-der" Text="Val. Recom: 10 a 20"></asp:Label>
                                                                         </div>
                                                                     </div>
                                                                 </asp:Panel>
@@ -283,18 +283,18 @@
                                                             <div id="chart-line" style="width: 100%; height: 100%;">
                                                                 <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
                                                                 <hr />
-                                                                <asp:Image ID="FigMat1"  runat="server" Width="290px" Height="220px" />
+                                                                <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" />
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!-- END TEST2 FORM -->
 
                                                     <!-- BEGIN TEST3 FORM -->
-                                                    <div class="tab-pane" id="test3">
+                                                    <div class="tab-pane" id="test3" style="padding-top: 15px;">
                                                         <div class="col-md-7">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
-                                                                    <asp:Label ID="lblEscTE" runat="server" class="col-sm-3 control-label label-one" Text="Seleccionar:"></asp:Label>
+                                                                    <asp:Label ID="lblEscTE" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
                                                                     <div class="col-sm-7">
                                                                         <asp:DropDownList ID="DDLexiTyp" runat="server" class="form-control" onclick="HideCtrlsTipoExcitation()">
                                                                             <asp:ListItem Value="0">Funci&#243;n lineal</asp:ListItem>
@@ -305,7 +305,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <%--Value 1--%>
-                                                                <asp:Panel ID="panFL" runat="server">
+                                                                <asp:Panel ID="panFL" runat="server" style="padding-top: 15px;">
                                                                     <div id="tevalue0">
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -313,10 +313,10 @@
                                                                                     <var>I =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtI" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender17" runat="server" TargetControlID ="txtI" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender17" runat="server" TargetControlID="txtI" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblI" runat="server" class="control-label small" Text="Magnitud del impulso [kN/s]"></asp:Label>
+                                                                            <asp:Label ID="lblI" runat="server" class="control-label" Text="Magnitud del impulso [kN/s]"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -324,10 +324,10 @@
                                                                                     <var>DI =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtDI" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender18" runat="server" TargetControlID ="txtDI" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender18" runat="server" TargetControlID="txtDI" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblDI" runat="server" class="control-label small" Text="Duración del impulso [s]"></asp:Label>
+                                                                            <asp:Label ID="lblDI" runat="server" class="control-label" Text="Duración del impulso [s]"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-8 text-center lead">
@@ -337,7 +337,7 @@
                                                                     </div>
                                                                 </asp:Panel>
                                                                 <%--Value 2--%>
-                                                                <asp:Panel ID="panFT" runat="server">
+                                                                <asp:Panel ID="panFT" runat="server" style="padding-top: 15px;">
                                                                     <div id="tevalue1">
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -345,10 +345,10 @@
                                                                                     <var>Pmax =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtFmax" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender19" runat="server" TargetControlID ="txtFmax" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender19" runat="server" TargetControlID="txtFmax" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblPmax" runat="server" class="control-label small" Text="Carga máxima [kN]"></asp:Label>
+                                                                            <asp:Label ID="lblPmax" runat="server" class="control-label" Text="Carga máxima [kN]"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -356,10 +356,10 @@
                                                                                     <var>t1 =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtT1" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender20" runat="server" TargetControlID ="txtT1" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender20" runat="server" TargetControlID="txtT1" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblT1" runat="server" class="control-label small" Text="Tiempo 1 [s]"></asp:Label>
+                                                                            <asp:Label ID="lblT1" runat="server" class="control-label" Text="Tiempo 1 [s]"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -367,10 +367,10 @@
                                                                                     <var>t2 =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtT2" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender21" runat="server" TargetControlID ="txtT2" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender21" runat="server" TargetControlID="txtT2" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblT2" runat="server" class="control-label small" Text="Tiempo 2 [s]"></asp:Label>
+                                                                            <asp:Label ID="lblT2" runat="server" class="control-label" Text="Tiempo 2 [s]"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -378,15 +378,15 @@
                                                                                     <var>t3 =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtT3" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender22" runat="server" TargetControlID ="txtt3" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender22" runat="server" TargetControlID="txtt3" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblT3" runat="server" class="control-label small" Text="Tiempo 3 [s]"></asp:Label>
+                                                                            <asp:Label ID="lblT3" runat="server" class="control-label" Text="Tiempo 3 [s]"></asp:Label>
                                                                         </div>
                                                                     </div>
                                                                 </asp:Panel>
                                                                 <%--Value 3--%>
-                                                                <asp:Panel ID="panFS" runat="server">
+                                                                <asp:Panel ID="panFS" runat="server" style="padding-top: 15px;">
                                                                     <div id="tevalue2">
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -394,10 +394,10 @@
                                                                                     <var>Po =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtFo" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender23" runat="server" TargetControlID ="txtFo" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender23" runat="server" TargetControlID="txtFo" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblPo" runat="server" class="control-label small" Text="Amplitud [kN]"></asp:Label>
+                                                                            <asp:Label ID="lblPo" runat="server" class="control-label" Text="Amplitud [kN]"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-2 control-label label-one">
@@ -405,10 +405,10 @@
                                                                                     <var>w =</var></b></label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtWa" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender24" runat="server" TargetControlID ="txtWa" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender24" runat="server" TargetControlID="txtWa" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
-                                                                            <asp:Label ID="lblFrecuenciaE" runat="server" class="control-label small" Text="Frecuencia [rad/s]"></asp:Label>
+                                                                            <asp:Label ID="lblFrecuenciaE" runat="server" class="control-label" Text="Frecuencia [rad/s]"></asp:Label>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label class="col-sm-8 text-center lead">
@@ -418,20 +418,21 @@
                                                                     </div>
                                                                 </asp:Panel>
                                                                 <%--Value 4--%>
-                                                                <asp:Panel ID="panAC" runat="server">
+                                                                <asp:Panel ID="panAC" runat="server" style="padding-top: 15px;">
                                                                     <div id="tevalue3">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-9">
+                                                                            <div class="col-sm-8">
                                                                                 <asp:FileUpload ID="FUpLoadAC" runat="server" class="btn btn-warning" />
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="form-group">
                                                                             <div class="col-sm-3">
                                                                                 <asp:LinkButton ID="ImageButton2" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click" Style="height: 33px;">
                                                                                         <i class="fa fa-cloud-upload"></i>
                                                                                         Upload
                                                                                 </asp:LinkButton>
                                                                             </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <asp:Label ID="lblNotaAce" runat="server" class="col-sm-12 text-justify small"
@@ -445,24 +446,24 @@
                                                                             <asp:Label ID="lblDace" runat="server" class="col-sm-8 control-label label-one" Text="Duración del acelerograma [s]"></asp:Label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtdAC" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender25" runat="server" TargetControlID ="txtdAC" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender25" runat="server" TargetControlID="txtdAC" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <asp:Label ID="lblPasoAce" runat="server" class="col-sm-8 control-label label-one" Text="Paso [s]"></asp:Label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtpasoAC" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender26" runat="server" TargetControlID ="txtpasoAC" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender26" runat="server" TargetControlID="txtpasoAC" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <asp:Label ID="lblFacAce" runat="server" class="col-sm-8 control-label label-one" Text="Factor de aceleración [m/s^2]"></asp:Label>
                                                                             <div class="col-sm-3">
                                                                                 <asp:TextBox ID="txtfacAC" runat="server" class="form-control"></asp:TextBox>
-                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender27" runat="server" TargetControlID ="txtfacAC" FilterType = "Custom, numbers"  ValidChars = ".">
-                                        </cc1:FilteredTextBoxExtender>
+                                                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender27" runat="server" TargetControlID="txtfacAC" FilterType="Custom, numbers" ValidChars=".">
+                                                                                </cc1:FilteredTextBoxExtender>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -476,7 +477,7 @@
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
                                                             <hr />
                                                             <div id="chart-line" style="width: 100%; height: 100%;">
-                                                                <asp:Image ID="FigExi1" runat="server"  Width="290px" Height="220px" />
+                                                                <asp:Image ID="FigExi1" runat="server" Width="100%" Height="100%" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -491,8 +492,8 @@
                                                                     <asp:Label ID="lblDA" runat="server" class="col-sm-4 control-label" Text="Duración = "></asp:Label>
                                                                     <div class="col-sm-3">
                                                                         <asp:TextBox ID="txtDA" runat="server" class="form-control"></asp:TextBox>
-                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender28" runat="server" TargetControlID ="txtDA" FilterType = "Custom, numbers"  ValidChars = ".">
-                                </cc1:FilteredTextBoxExtender>
+                                                                        <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender28" runat="server" TargetControlID="txtDA" FilterType="Custom, numbers" ValidChars=".">
+                                                                        </cc1:FilteredTextBoxExtender>
                                                                     </div>
                                                                     <p class="lead">[s]</p>
                                                                     <asp:Label ID="lblMensCE" runat="server" class="badge bg-yellow" Text="Listo!!" Visible="False"></asp:Label>
@@ -539,7 +540,7 @@
                                                         <asp:Label ID="lblRespMax" runat="server" class="grid-title lead" Text="RESPUESTA MAXIMA"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
-                                                    <div class="grid-body">
+                                                    <div class="grid-body" style="height: 560px">
                                                         <div class="form-horizontal" role="form">
                                                             <div class="form-group">
                                                                 <label class="col-sm-2 control-label small"></label>
@@ -713,10 +714,10 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class="col-md-12 text-center">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics0" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdAcSoil" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdAcSoil" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -728,7 +729,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics1" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <chart:WebChartViewer ID="wcdFuncionFuerza" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
@@ -743,10 +744,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics2" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics2" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdDespVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdDespVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -758,10 +759,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics3" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics3" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdDespVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdDespVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -773,10 +774,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics4" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics4" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdVeloVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdVeloVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -788,10 +789,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics5" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics5" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdVeloVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdVeloVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -803,10 +804,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics6" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics6" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdAceVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdAceVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -818,10 +819,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics7" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics7" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdAceVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdAceVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -833,10 +834,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics8" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics8" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdForceVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdForceVsTime1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -848,10 +849,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics9" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics9" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="wcdForceVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdForceVsTime2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -863,7 +864,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics10" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics10" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
                                                                                 <chart:WebChartViewer ID="wcdForceVsTime3" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
@@ -878,10 +879,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics11" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics11" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:WebChartViewer ID="wcdForceVsTime4" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
+                                                                                <chart:WebChartViewer ID="wcdForceVsTime4" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -893,11 +894,11 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    
-                                                                    <div id="graphics12" style="width: 100%; height: 100%; padding-top: 10px;">
+
+                                                                    <div id="graphics12" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:webchartviewer id="wcdFvsD1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdFvsD1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -909,10 +910,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics13" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics13" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:webchartviewer id="wcdFvsD2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                <chart:WebChartViewer ID="wcdFvsD2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -924,10 +925,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics14" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics14" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:WebChartViewer ID="wcdFvsD3" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
+                                                                                <chart:WebChartViewer ID="wcdFvsD3" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -939,10 +940,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics15" style="width: 100%; height: 100%; padding-top: 10px;">
+                                                                    <div id="graphics15" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                 <chart:WebChartViewer ID="wcdFvsD4" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
+                                                                                <chart:WebChartViewer ID="wcdFvsD4" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
