@@ -169,11 +169,11 @@
                                                                 </div>
                                                                 <hr />
                                                                 <div style="width: 100%; height: 100%;">
-                                                                    <div id="graphicsMP0" class="col-sm-11" style="padding-left: 0px">
-                                                                        <asp:Image ID="imgModeloConcreto" runat="server" Width="300px" Height="190px" />
+                                                                    <div id="graphicsMP0" class="col-sm-11" style="width: 315px; height: 187px; padding-left: 0px">
+                                                                        <asp:Image ID="imgModeloConcreto" runat="server" width="100%" height="100%" />
                                                                     </div>
-                                                                    <div id="graphicsMP1" class="col-sm-11" style="padding-left: 0px">
-                                                                        <asp:Image ID="imgModeloAcero" runat="server" Width="300px" Height="190px" />
+                                                                    <div id="graphicsMP1" class="col-sm-11" style="width: 315px; height: 190px; padding-left: 0px">
+                                                                        <asp:Image ID="imgModeloAcero" runat="server" width="100%" height="100%" />
                                                                     </div>
                                                                 </div>
                                                             </div>

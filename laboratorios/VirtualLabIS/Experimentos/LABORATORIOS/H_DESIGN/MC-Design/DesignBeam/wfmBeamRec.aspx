@@ -204,12 +204,12 @@
                                                                     <div class="col-sm-2"></div>
                                                                 </div>
                                                                 <hr />
-                                                                <div style="width: 100%; height: 100%;">
-                                                                    <div id="graphicsMP0" class="col-sm-11" style="padding-left: 0px">
-                                                                        <asp:Image ID="imgModeloConcreto" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/Beam Design.jpg" Width="300px" Height="190px" />
+                                                                <div style="width:100%; height: 100%;">
+                                                                    <div id="graphicsMP0" class="col-sm-11" style="width: 315px; height: 186px; padding-left: 0px">
+                                                                        <asp:Image ID="imgModeloConcreto" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/Beam Design.jpg" width="100%" height="100%" />
                                                                     </div>
-                                                                    <div id="graphicsMP1" class="col-sm-11" style="padding-left: 0px">
-                                                                        <asp:Image ID="imgModeloAcero" runat="server" Width="300px" Height="190px" />
+                                                                    <div id="graphicsMP1" class="col-sm-11" style="width: 315px; height: 186px; padding-left: 0px">
+                                                                        <asp:Image ID="imgModeloAcero" runat="server" width="100%" height="100%" />
                                                                     </div>
                                                                 </div>
                                                             </div>
