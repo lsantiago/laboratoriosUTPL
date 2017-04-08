@@ -475,7 +475,7 @@
                                                         <div id="collapseOne" class="panel-collapse collapse">
                                                             <div class="panel-body">
                                                                 <p>
-                                                                    <asp:TextBox ID="txtresult" runat="server" Height="600px" TextMode="MultiLine" Width="860px" class="form-control"></asp:TextBox></p>
+                                                                    <asp:TextBox ID="txtresult" runat="server" Height="600px" TextMode="MultiLine" Width="100%" class="form-control"></asp:TextBox></p>
                                                             </div>
                                                         </div>
                                                     </div>

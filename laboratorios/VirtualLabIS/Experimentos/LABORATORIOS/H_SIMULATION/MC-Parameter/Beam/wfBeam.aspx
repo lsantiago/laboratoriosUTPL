@@ -845,7 +845,7 @@
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 440px;">
                                                         <div id="chart-line" style="width: 100%; height: 100%;">
-                                                            <asp:Image ID="Image11" runat="server" ImageUrl="../../../../Dinamica/Imagenes/General/Tools/Dinamica_2GDL_Tool2.bmp" Width="100%" Height="100%" />
+                                                            <asp:Image ID="Image11" runat="server" ImageUrl="" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
                                                 </div>
