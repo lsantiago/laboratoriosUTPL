@@ -90,21 +90,15 @@
                                                                         <asp:TextBox ID="txtNumberSections" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
                                                                 </div>
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-6"></label>
-                                                                    <div class="col-sm-5">
-                                                                        <button type="button" class="md-trigger btn btn-warning" data-modal="modal-1">Input data</button>
+                                                                <div class="form-group" style="padding-top: 30px;">
+                                                                    <div class="col-sm-1"></div>
+                                                                    <div class="col-sm-3" style="padding-right: 0px;">
+                                                                        <button type="button" class="md-trigger btn btn-warning btn-radius" data-modal="modal-1">Input data</button>
                                                                     </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-6"></label>
-                                                                    <div class="col-sm-5">
-                                                                        <button type="button" class="md-trigger btn btn-warning" data-modal="modal-2">Material properties</button>
+                                                                    <div class="col-sm-4" style="padding-left: 3px; padding-right: 0px;">
+                                                                        <button type="button" class="md-trigger btn btn-warning btn-radius" data-modal="modal-2">Material properties</button>
                                                                     </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-6"></label>
-                                                                    <div class="col-sm-6">
+                                                                    <div class="col-sm-4" style="padding-left: 0px;">
                                                                         <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius" >
                                                                             <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
