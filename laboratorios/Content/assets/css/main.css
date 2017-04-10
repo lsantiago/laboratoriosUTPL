@@ -3788,12 +3788,17 @@ hr {
     padding-bottom: 0px;
 }
 
+.btn-warning {
+    background-color: #dca528;
+    border-color: #dca528;
+}
+
 .col-md-3 {
     padding-right: 2px;   
 }
 
 .nav-tabs > li.active, .tabs-bottom .nav-tabs > li.active, .tabs-right .nav-tabs > li.active, .tabs-left .nav-tabs > li.active {
-    border-color: #f0ad4e;
+    border-color: #dca528;
 }
 
 .panel-title {
