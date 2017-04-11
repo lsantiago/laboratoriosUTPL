@@ -17,7 +17,7 @@ Public Class General
     Public Shared intAltoGraficas As Integer = 440
     'Public Shared intColorFondo As Integer = &HEFEFFF REM RGB(10, 20, 30) &HFF0000, &H22AAFF
     Public Shared intColorFondo As Integer = &HFFFFFF
-    Public Shared colores() As Integer = {RGB(225, 50, 50), RGB(50, 50, 250), &H22AAFF, &H336622, &H44CCAA, &H551188, &H66EE44, &H77FF77, &H8899AA, &H9944BB, &HAA8822, &HDD8866, &H22EEEE, &HDDAABB, &H0, RGB(225, 100, 120), RGB(84, 96, 250), &HFF0000, &H22AAFF, &H336622, &H44CCAA, &H551188, &H66EE44, &H77FF77, &H8899AA, &H9944BB, &HAA8822, &HDD8866, &H22EEEE, &HDDAABB, &H0, &HFF0000, &H22AAFF, &H336622, &H44CCAA, &H551188, &H66EE44, &H77FF77, &H8899AA, &H9944BB, &HAA8822, &HDD8866, &H22EEEE, &HDDAABB, &H0}
+    Public Shared colores() As Integer = {&H2471A3, &HA93226, &H2E4053, &HF1C40F, &H797D7F, &H196F3D, &H5499C7, &HCD6155, &HDC7633, &HA569BD, &HF1948A, &H1A5276, &H873600, &H626567, &H5D6D7E, RGB(225, 100, 120), RGB(84, 96, 250), &HFF0000, &H22AAFF, &H336622, &H44CCAA, &H551188, &H66EE44, &H77FF77, &H8899AA, &H9944BB, &HAA8822, &HDD8866, &H22EEEE, &HDDAABB, &H0, &HFF0000, &H22AAFF, &H336622, &H44CCAA, &H551188, &H66EE44, &H77FF77, &H8899AA, &H9944BB, &HAA8822, &HDD8866, &H22EEEE, &HDDAABB, &H0}
     Public Shared intAddLegend_Coord_x As Integer = 400
     Public Shared intAddLegend_Coord_y As Integer = 200
     Public Shared bolAddLegend_Bool As Boolean = False
@@ -128,7 +128,7 @@ Public Class General
                                 ByRef grfGrafica As XYChart)
         'grfGrafica.setRoundedFrame(222, 0, 0, 40, 40)
         REM grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor)
-        grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor).set4QBgColor(&HEEEEEE, &HEEEEEE, &HEEEEEE, &HEEEEEE)
+        grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor).set4QBgColor(&HFFFFFF, &HFFFFFF, &HFFFFFF, &HFFFFFF)
         grfGrafica.addTitle(addTitle_text, addTitle_font, addTitle_fontSize)
         grfGrafica.yAxis().setTitle(yAxis_setTitle_text, yAxis_setTitle_font, yAxis_setTitle_fontSize)
         grfGrafica.yAxis().setWidth(yAxis_setWidth_width)
@@ -146,7 +146,7 @@ Public Class General
     Public Shared Sub establecerPropCtrlGraficos(ByRef grfGrafica As XYChart, ByVal NombreGrafico As String, ByVal ejex As String, ByVal ejey As String)
         REM GRÁFICA N 
         'CrearGraficasXYChart(70, 60, 610, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, NombreGrafico, "Times New Roman Bold", 16, 0, 0, 0, ejey, "Arial Bold Italic", 11, 0, 1, 20, -1, ejex, "Arial Bold Italic", 11, 0, 1, 20, -1, grfGrafica)
-        CrearGraficasXYChart(70, 60, 610, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Times New Roman Bold", 16, 0, 0, 0, ejey, "Arial Bold Italic", 11, 0, 1, 20, -1, ejex, "Arial Bold Italic", 11, 0, 1, 20, -1, grfGrafica)
+        CrearGraficasXYChart(70, 60, 610, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Times New Roman Bold", 16, 0, 0, 0, ejey, "Arial", 11, 0, 1, 20, -1, ejex, "Arial", 11, 0, 1, 20, -1, grfGrafica)
         'grfGrafica.addTitle(NombreGrafico, "Times New Roman Bold Italic", 15, &HFFFFFF).setBackground(&H88, 0, _
         'Chart.glassEffect())
         grfGrafica.addLegend(intAddLegend_Coord_x, intAddLegend_Coord_y, bolAddLegend_Bool, strAddLegend_Font, intAddLegend_FontSize).setBackground(Chart.Transparent)
