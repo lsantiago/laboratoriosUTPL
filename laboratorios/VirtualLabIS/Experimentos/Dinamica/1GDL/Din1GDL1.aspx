@@ -61,7 +61,7 @@
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
                                                         <div id="chart-line" style="width: 355px; height: 226px;">
-                                                            <asp:Image ID="FigMain" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/Dinamica/Imagenes/General/Tools/Dinamica_1GDL_Tool1.bmp" Width="100%" Height="100%" />
+                                                            <asp:Image ID="FigMain" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/Dinamica/Imagenes/General/Tools/Dinamica_1GDL_Tool1.png" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
                                                 </div>
