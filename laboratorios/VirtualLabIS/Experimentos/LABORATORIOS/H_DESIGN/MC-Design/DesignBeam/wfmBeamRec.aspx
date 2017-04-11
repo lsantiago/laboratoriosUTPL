@@ -250,29 +250,21 @@
                                                         <div class="col-md-11">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
-                                                                    <div class="col-sm-2"></div>
+                                                                    <div class="col-sm-5"></div>
                                                                     <div class="col-sm-4">
                                                                         <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius" >
                                                                             <i class="fa fa-play"></i>
-                                                                </asp:LinkButton>
+                                                                        </asp:LinkButton>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
+                                                                    <div class="col-sm-3"></div>
                                                                     <asp:Label ID="Label11" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
                                                                     <div class="col-sm-3">
                                                                         <select id="graphics" class="form-control" onchange="setImageGraphicsResult(this, 'graphics');">
                                                                             <option>ANALYSIS</option>
                                                                             <option>DESIGN RESULTSri</option>
                                                                         </select>
-                                                                    </div>
-                                                                    <div id="moment">
-                                                                        <asp:Label ID="Label3" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
-                                                                        <div class="col-sm-5">
-                                                                            <select id="graphicsR" class="form-control" onchange="setImageGraphics(this, 'graphicsR');">
-                                                                                <option>POSITIVE MOMENT</option>
-                                                                                <option>NEGATIVE MOMENT RESPONSE</option>
-                                                                            </select>
-                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -319,7 +311,19 @@
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
                                                         <asp:Label ID="lblAnalysis" runat="server" class="grid-title lead" Text="ANALYSIS"></asp:Label>
-                                                        <div class="pull-right grid-tools"></div>
+                                                        <div class="pull-right grid-tools">
+                                                            <div class="form-group">
+                                                                <div id="moment">
+                                                                    <asp:Label ID="Label3" runat="server" class="col-sm-3 label-der" style="font-size: 85%" Text="Seleccionar:"></asp:Label>
+                                                                    <div class="col-sm-9">
+                                                                        <select id="graphicsR" class="form-control" style="padding-top: 7px; font-size: 85%;" onchange="setImageGraphics(this, 'graphicsR');">
+                                                                            <option>POSITIVE MOMENT</option>
+                                                                            <option>NEGATIVE MOMENT RESPONSE</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="grid-body" style="width: 100%; height: 300px;">
                                                         <div class="form-horizontal" role="form">
