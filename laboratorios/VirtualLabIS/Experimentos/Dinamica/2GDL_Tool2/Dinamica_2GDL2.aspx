@@ -107,8 +107,8 @@
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2"></label>
-                                                                    <asp:Label ID="lblPiso1" runat="server" class="col-sm-2 text-center lead" Text="Piso 1"></asp:Label>
-                                                                    <asp:Label ID="lblPiso2" runat="server" class="col-sm-2 text-center lead" Text="Piso 1"></asp:Label>
+                                                                    <asp:Label ID="lblPiso1" runat="server" class="col-sm-2 text-center lead" Text="Story 1"></asp:Label>
+                                                                    <asp:Label ID="lblPiso2" runat="server" class="col-sm-2 text-center lead" Text="Story 2"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2 control-label label-one">
@@ -126,7 +126,7 @@
                                                                             targetcontrolid="txtM2" validchars=".">
                                                                         </cc1:filteredtextboxextender>
                                                                     </div>
-                                                                    <asp:Label ID="lblM" runat="server" class="control-label" Text="Masa [Tonnes]"></asp:Label>
+                                                                    <asp:Label ID="lblM" runat="server" class="control-label" Text="Mass [Tonne =kN.s^2/m =kN/g]"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2 control-label label-one">
@@ -144,7 +144,7 @@
                                                                             targetcontrolid="txtH2" validchars=".">
                                                                         </cc1:filteredtextboxextender>
                                                                     </div>
-                                                                    <asp:Label ID="lblH" runat="server" class="control-label" Text="Altura entre pisos [m]"></asp:Label>
+                                                                    <asp:Label ID="lblH" runat="server" class="control-label" Text="Height between floors [m]"></asp:Label>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2 control-label label-one">
@@ -162,12 +162,12 @@
                                                                             targetcontrolid="txtEI2" validchars=".">
                                                                         </cc1:filteredtextboxextender>
                                                                     </div>
-                                                                    <asp:Label ID="lblEI" runat="server" class="control-label" Text="Producto de la rigidez por la inercia [kN.m^3]"></asp:Label>
+                                                                    <asp:Label ID="lblEI" runat="server" class="control-label" Text="Stiffness [kN.m^2]"></asp:Label>
                                                                 </div>
-                                                                <div class="form-group">
+                                                                <%--<div class="form-group">
                                                                     <label class="col-sm-2"></label>
                                                                     <asp:Label ID="lblDV" runat="server" class="col-sm-5 text-center lead" Text="Definimos vibración"></asp:Label>
-                                                                </div>
+                                                                </div>--%>
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2 control-label label-one">
                                                                         <b>
@@ -186,7 +186,7 @@
                                                                     </div>
                                                                     <label class="control-label small">
                                                                         Damping [%]</label>
-                                                                    <asp:Label ID="lblA" runat="server" class="control-label" Text="Amortiguamiento (%)"></asp:Label>
+                                                                    <%--<asp:Label ID="lblA" runat="server" class="control-label" Text="Damping (%)"></asp:Label>--%>
                                                                 </div>
                                                             </div>
                                                         </div>

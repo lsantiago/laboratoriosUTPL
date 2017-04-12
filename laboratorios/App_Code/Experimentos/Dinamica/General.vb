@@ -194,7 +194,7 @@ Public Class General
             If Pmax = True Then
                 REM el punto max
                 Dim layerPmax As LineLayer
-                layerPmax = grfGrafica.addScatterLayer(Cxmax, Cymax, "Max", Chart.CircleShape, 12, RGB(0, 250, 250), colores(u))
+                layerPmax = grfGrafica.addScatterLayer(Cxmax, Cymax, "Max", Chart.CircleShape, 12, RGB(255, 255, 255), colores(u))
             Else
                 grfGrafica.setAxisAtOrigin(Chart.XYAxisAtOrigin)
             End If
