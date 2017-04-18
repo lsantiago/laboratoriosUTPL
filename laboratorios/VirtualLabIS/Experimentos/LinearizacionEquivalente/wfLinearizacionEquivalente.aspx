@@ -54,7 +54,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">INPUTS</h4>
+                                        <h4 class="panel-title text-center">INPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -63,7 +63,7 @@
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblTituloEsquemaColumna" runat="server" class="grid-title lead" Text="SECTION"></asp:Label>
+                                                        <asp:Label ID="lblTituloEsquemaColumna" runat="server" class="grid-title lead" Text="OUTLINE"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <%--<asp:LinkButton ID="ibtnLoadExample" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo" OnClick="btnDownResul1_Click">
                                                                             Cargar Ejemplo
@@ -207,7 +207,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">OUTPUTS</h4>
+                                        <h4 class="panel-title text-center">OUTPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -216,7 +216,7 @@
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAFICAS"></asp:Label>
+                                                        <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAPHICS"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
                                                     <div class="grid-body">

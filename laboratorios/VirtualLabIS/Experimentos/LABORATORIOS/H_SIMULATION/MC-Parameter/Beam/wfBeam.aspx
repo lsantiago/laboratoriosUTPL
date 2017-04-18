@@ -44,7 +44,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">INPUTS</h4>
+                                        <h4 class="panel-title text-center">INPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -53,7 +53,7 @@
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblEsquemaMain" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
+                                                        <asp:Label ID="lblEsquemaMain" runat="server" class="grid-title lead" Text="OUTLINE"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <asp:LinkButton ID="btnCargarEjemplo" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo" >
                                                                     Cargar Ejemplo
@@ -93,10 +93,10 @@
                                                                 <div class="form-group" style="padding-top: 30px;">
                                                                     <div class="col-sm-1"></div>
                                                                     <div class="col-sm-3" style="padding-right: 0px;">
-                                                                        <button type="button" class="md-trigger btn btn-warning" data-modal="modal-1">Input data</button>
+                                                                        <button type="button" class="md-trigger btn btn-warning btn-radius" data-modal="modal-1">Input data</button>
                                                                     </div>
                                                                     <div class="col-sm-4" style="padding-left: 3px; padding-right: 0px;">
-                                                                        <button type="button" class="md-trigger btn btn-warning" data-modal="modal-2">Material properties</button>
+                                                                        <button type="button" class="md-trigger btn btn-warning btn-radius" data-modal="modal-2">Material properties</button>
                                                                     </div>
                                                                     <div class="col-sm-4" style="padding-left: 0px;">
                                                                         <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius" >
@@ -830,7 +830,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">OUTPUTS</h4>
+                                        <h4 class="panel-title text-center">OUTPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -857,7 +857,7 @@
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAFICAS"></asp:Label>
+                                                        <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAPHICS"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
                                                     <div class="grid-body" style="width: 100%; height: 450px;">
