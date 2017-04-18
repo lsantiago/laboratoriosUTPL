@@ -54,14 +54,14 @@
                                                         <asp:Label ID="lblEsquemaMain" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <asp:LinkButton ID="ibtnLoadExample" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo">
-                                                                    Cargar Ejemplo
-                                                                    <i class="fa fa-play"></i>
+                                                                Load Example
+                                                                <i class="fa fa-play"></i>
                                                             </asp:LinkButton>
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div id="chart-line" style="width: 355px; height: 226px;">
-                                                            <asp:Image ID="FigMain" runat="server" ImageUrl="../Imagenes/General/Tools/Dinamica_1GDL_Tool1.png" Width="100%" Height="100%" />
+                                                        <div style="width: 355px; height: 226px;">
+                                                            <asp:Image ID="FigMain" runat="server" ImageUrl="../Imagenes/General/Tools/Dinamica_1GDL_Tool1.png" Width="355px" Height="226px" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -220,7 +220,7 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
                                                             <hr />
-                                                            <div style="width: 352px; height: 181px;">
+                                                            <div style="width: 302px; height: 191px;">
                                                                 <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat2"
                                                                     runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat3" runat="server"
                                                                         Width="100%" Height="100%" />
@@ -464,8 +464,9 @@
                                                                             <asp:ListItem Value="2">Borrar todos los analisis</asp:ListItem>
                                                                         </asp:DropDownList>
                                                                     </div>
-                                                                    <asp:Label ID="lblError" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
-
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <asp:Label ID="lblError" runat="server" class="col-sm-12" Font-Bold="True" ForeColor="Red"></asp:Label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -482,7 +483,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">OUPUT</h4>
+                                        <h4 class="panel-title text-center">OUTPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
