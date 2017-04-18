@@ -130,9 +130,9 @@ Public Class General
         REM grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor)
         grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor).set4QBgColor(&HFFFFFF, &HFFFFFF, &HFFFFFF, &HFFFFFF)
         grfGrafica.addTitle(addTitle_text, addTitle_font, addTitle_fontSize)
-        grfGrafica.yAxis().setTitle(yAxis_setTitle_text, yAxis_setTitle_font, yAxis_setTitle_fontSize)
+        grfGrafica.yAxis().setTitle(yAxis_setTitle_text, yAxis_setTitle_font, yAxis_setTitle_fontSize, &H666666)
         grfGrafica.yAxis().setWidth(yAxis_setWidth_width)
-        grfGrafica.xAxis().setTitle(xAxis_setTitle_text, xAxis_setTitle_font, xAxis_setTitle_fontSize)
+        grfGrafica.xAxis().setTitle(xAxis_setTitle_text, xAxis_setTitle_font, xAxis_setTitle_fontSize, &H666666)
         grfGrafica.xAxis().setTickDensity(xAxis_setTickDensityMajorTickSpacing, xAxis_setTickDensityMinorTickSpacing) 'Zoom = + ó - a las lineas graficadas
         grfGrafica.xAxis().setWidth(xAxis_setWidth_width)
         grfGrafica.setClipping()
@@ -146,7 +146,7 @@ Public Class General
     Public Shared Sub establecerPropCtrlGraficos(ByRef grfGrafica As XYChart, ByVal NombreGrafico As String, ByVal ejex As String, ByVal ejey As String)
         REM GRÁFICA N 
         'CrearGraficasXYChart(70, 60, 610, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, NombreGrafico, "Times New Roman Bold", 16, 0, 0, 0, ejey, "Arial Bold Italic", 11, 0, 1, 20, -1, ejex, "Arial Bold Italic", 11, 0, 1, 20, -1, grfGrafica)
-        CrearGraficasXYChart(70, 60, 610, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Times New Roman Bold", 16, 0, 0, 0, ejey, "Arial", 11, 0, 1, 20, -1, ejex, "Arial", 11, 0, 1, 20, -1, grfGrafica)
+        CrearGraficasXYChart(70, 60, 610, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Times New Roman Bold", 16, 0, 0, 0, ejey, "Arial", 10, 2, 1, 20, -1, ejex, "Arial", 10, 2, 1, 20, -1, grfGrafica)
         'grfGrafica.addTitle(NombreGrafico, "Times New Roman Bold Italic", 15, &HFFFFFF).setBackground(&H88, 0, _
         'Chart.glassEffect())
         grfGrafica.addLegend(intAddLegend_Coord_x, intAddLegend_Coord_y, bolAddLegend_Bool, strAddLegend_Font, intAddLegend_FontSize).setBackground(Chart.Transparent)

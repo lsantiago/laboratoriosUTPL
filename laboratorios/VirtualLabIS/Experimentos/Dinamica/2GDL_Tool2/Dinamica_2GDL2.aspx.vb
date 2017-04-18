@@ -620,8 +620,8 @@ mensaje:
             w.WriteLine("set omega2 [expr sqrt([lindex $eigenvalues 1])] ;# Los valores propios estan en una lista, el comando lindex extrae elementos de la lista")
             w.WriteLine("set T1 [expr 2.0*$pi*pow($omega1,-1)] ;# Periodo del primer modo de vibración")
             w.WriteLine("set T2 [expr 2.0*$pi*pow($omega2,-1)] ;# Periodo del segundo modo de vibracion")
-            w.WriteLine("set alpha [expr (2*$omega1*$omega2*($omega1*$lambda2-$omega2*$lambda1))/($omega1**2-$omega2**2)]")
-            w.WriteLine("set beta [expr 2*($omega1*$lambda1-$omega2*$lambda2)/($omega1**2-$omega2**2)]")
+            w.WriteLine("set alpha [expr (2*$omega1*$omega2*($omega1*$lambda2-$omega2*$lambda1))/(pow($omega1, 2) - pow($omega2, 2))]")
+            w.WriteLine("set beta [expr 2*($omega1*$lambda1-$omega2*$lambda2)/(pow($omega1, 2) - pow($omega2, 2))]")
             w.WriteLine("set pasoA [expr $T2*pow(30,-1)]")
             w.WriteLine("set npuntos [format ""%.0f"" [ expr $duracionA*pow($pasoA,-1)]]")
             REM REALIZO EL ANALISIS DINAMICO:
