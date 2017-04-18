@@ -69,8 +69,8 @@
                                                         <asp:Label ID="lblEsquemaMain" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <asp:LinkButton ID="ibtnLoadExample" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo" OnClick="ibtnLoadExample_Click">
-                                                                            Cargar Ejemplo
-                                                                            <i class="fa fa-play"></i>
+                                                                Load Example
+                                                                <i class="fa fa-play"></i>
                                                             </asp:LinkButton>
                                                         </div>
                                                     </div>
@@ -318,14 +318,12 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5">
-                                                            <div style="width: 100%; height: 100%;">
-                                                                <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
-                                                                <hr />
-                                                                <div style="width: 342px; height: 201px;">
-                                                                    <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat2"
-                                                                    runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat3" runat="server"
-                                                                        Width="100%" Height="100%" />
-                                                                </div>
+                                                            <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
+                                                            <hr />
+                                                            <div style="width: 302px; height: 191px;">
+                                                                <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat2"
+                                                                runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat3" runat="server"
+                                                                    Width="100%" Height="100%" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -564,8 +562,10 @@
                                                                             <asp:ListItem Value="2">Borrar todos los analisis</asp:ListItem>
                                                                         </asp:DropDownList>
                                                                     </div>
-                                                                    <asp:Label ID="lblError" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
-
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="col-sm-2"></div>
+                                                                    <asp:Label ID="lblError" runat="server" class="col-sm-10" Font-Bold="True" ForeColor="Red">ADFADF ASDFADF ASDFADF ASDFADSF</asp:Label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -582,7 +582,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">OUPUT</h4>
+                                        <h4 class="panel-title text-center">OUTPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -718,7 +718,7 @@
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAFICAS"></asp:Label>
+                                                        <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAPHICS"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
                                                     <div class="grid-body">
