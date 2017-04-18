@@ -47,7 +47,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">INPUTS</h4>
+                                        <h4 class="panel-title text-center">INPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -59,13 +59,13 @@
                                                         <asp:Label ID="lblTituloEsquemaColumna" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <asp:LinkButton ID="btnCargarEjemplo" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo">
-                                                                Cargar Ejemplo
+                                                                Load Example
                                                                 <i class="fa fa-play"></i>
                                                             </asp:LinkButton>
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div id="chart-line" style="width: 100%; height: 100%;">
+                                                        <div style="width: 355px; height: 226px;">
                                                             <asp:Image ID="Image1" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/Mc Analysis Circular.jpg" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
@@ -160,7 +160,7 @@
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <div class="col-sm-8">
-                                                                        <select id="graphicsMP" class="form-control" onchange="setImageGraphics(this, 'graphicsMP');">
+                                                                        <select id="graphicsMP" class="form-control" onchange="setImageGraphicsMP(this, 'graphicsMP');">
                                                                             <option>Concrete Model</option>
                                                                             <option>Steel Model</option>
                                                                         </select>
@@ -169,10 +169,10 @@
                                                                 </div>
                                                                 <hr />
                                                                 <div style="width: 100%; height: 100%;">
-                                                                    <div id="graphicsMP0" class="col-sm-11" style="width: 315px; height: 187px; padding-left: 0px">
+                                                                    <div id="graphicsMP0" style="width: 302px; height: 191px;">
                                                                         <asp:Image ID="imgModeloConcreto" runat="server" width="100%" height="100%" />
                                                                     </div>
-                                                                    <div id="graphicsMP1" class="col-sm-11" style="width: 315px; height: 190px; padding-left: 0px">
+                                                                    <div id="graphicsMP1" style="width: 302px; height: 191px;">
                                                                         <asp:Image ID="imgModeloAcero" runat="server" width="100%" height="100%" />
                                                                     </div>
                                                                 </div>
@@ -245,20 +245,20 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">OUTPUTS</h4>
+                                        <h4 class="panel-title text-center">OUTPUT</h4>
                                     </div>
                                     <div class="panel-body">
-                                        <div id="graphicsR0">
+                                        <div id="graphicsR0" class="row">
                                             <!-- BEGIN SECTION RESULT LEFT MOMENT-CURVATURE RESULTS-->
                                             <div class="col-md-4">
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblMCResponse" runat="server" class="grid-title lead"></asp:Label>
+                                                        <asp:Label ID="lblMCResponse" runat="server" class="lead" style="font-size: 1.3em"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body text-center" style="width: 100%; height: 300px;">
+                                                    <div class="grid-body text-center" style="width: 100%; height: 320px;">
                                                         <div id="chart-line" style="width: 100%; height: 100%">
                                                             <chart:WebChartViewer ID="WebChartViewer1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                         </div>
@@ -275,8 +275,8 @@
                                                         <asp:Label ID="lblAnalysis" runat="server" class="grid-title lead" Text="ANALYSIS"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
-                                                    <div class="grid-body">
-                                                        <div class="form-horizontal" role="form" style="width: 100%; height: 300px;">
+                                                    <div class="grid-body" style="width: 100%; height: 320px;">
+                                                        <div class="form-horizontal" role="form">
                                                             <div class="form-group">
                                                                 <div class="col-md-12 text-center">
                                                                     <div class="col-sm-5">
@@ -483,6 +483,21 @@
         $("#graphicsMP0").show();
         $("#graphics")[0].selectedIndex = 0;
         $("#graphicsR0").show();
+
+        /**
+         * Show and Hide Graphics
+         * Autor: OneClick
+         * @param {select}: Elemento select
+         * @param {imgName}: Tipo imagen
+        */
+        function setImageGraphicsMP(select, imgName) {
+            //Disabled all Graphics
+            var arrGraphicsMP = ["graphicsMP0", "graphicsMP1"];
+            jQuery.each(arrGraphicsMP, function (i, val) {
+                $("#" + val).hide();
+            });
+            $("#" + imgName + select.selectedIndex).show();
+        }
 
         /**
          * Show and Hide Graphics
