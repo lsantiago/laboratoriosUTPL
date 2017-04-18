@@ -292,7 +292,7 @@
                                                 <div id="graphicsR00" class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblMCResponse" runat="server" style="font-size: 1.3em"></asp:Label>
+                                                        <asp:Label ID="lblMCResponse" runat="server"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                         </div>
                                                     </div>
@@ -305,7 +305,7 @@
                                                 <div id="graphicsR11" class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblMCResponseNeg" runat="server" style="font-size: 1.3em"></asp:Label>
+                                                        <asp:Label ID="lblMCResponseNeg" runat="server"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                         </div>
                                                     </div>

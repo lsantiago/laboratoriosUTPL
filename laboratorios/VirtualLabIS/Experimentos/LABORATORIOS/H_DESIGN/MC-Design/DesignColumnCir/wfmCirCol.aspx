@@ -254,12 +254,12 @@
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblMCResponse" runat="server" class="lead" style="font-size: 1.3em"></asp:Label>
+                                                        <asp:Label ID="lblMCResponse" runat="server" class="lead"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 320px;">
-                                                        <div id="chart-line" style="width: 100%; height: 100%">
+                                                        <div style="width: 100%; height: 100%">
                                                             <chart:WebChartViewer ID="WebChartViewer1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                         </div>
                                                     </div>

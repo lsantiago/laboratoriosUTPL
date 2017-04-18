@@ -45,7 +45,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">INPUTS</h4>
+                                        <h4 class="panel-title text-center">INPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -57,13 +57,13 @@
                                                         <asp:Label ID="lblTituloEsquemaColumna" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <asp:LinkButton ID="btnCargarEjemplo" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo">
-                                                                            Cargar Ejemplo
-                                                                            <i class="fa fa-play"></i>
+                                                                Load Example
+                                                                <i class="fa fa-play"></i>
                                                             </asp:LinkButton>
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div id="chart-line" style="width: 100%; height: 100%;">
+                                                        <div style="width: 355px; height: 226px;">
                                                             <asp:Image ID="Image1" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/MCColumna Retangular.jpg" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
@@ -189,7 +189,7 @@
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <div class="col-sm-8">
-                                                                        <select id="graphicsMP" class="form-control" onchange="setImageGraphics(this, 'graphicsMP');">
+                                                                        <select id="graphicsMP" class="form-control" onchange="setImageGraphicsMP(this, 'graphicsMP');">
                                                                             <option>Concrete Model</option>
                                                                             <option>Steel Model</option>
                                                                         </select>
@@ -280,10 +280,10 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">OUTPUTS</h4>
+                                        <h4 class="panel-title text-center">OUTPUT</h4>
                                     </div>
                                     <div class="panel-body">
-                                        <div id="graphicsR0">
+                                        <div id="graphicsR0" class="row">
                                             <!-- BEGIN SECTION RESULT LEFT MOMENT-CURVATURE RESULTS-->
                                             <div class="col-md-4">
                                                 <div class="grid">
@@ -294,7 +294,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 300px;">
-                                                        <div id="chart-line" style="width: 100%; height: 100%">
+                                                        <div id="chart-line" style="width: 315px; height: 186px;">
                                                             <chart:WebChartViewer ID="WebChartViewer1" runat="server" BorderColor="White" SelectionBorderColor="Transparent" Style="position: static" />
                                                         </div>
                                                     </div>
@@ -515,6 +515,21 @@
         $("#graphicsMP0").show();
         $("#graphics")[0].selectedIndex = 0;
         $("#graphicsR0").show();
+
+        /**
+         * Show and Hide Graphics
+         * Autor: OneClick
+         * @param {select}: Elemento select
+         * @param {imgName}: Tipo imagen
+        */
+        function setImageGraphicsMP(select, imgName) {
+            //Disabled all Graphics
+            var arrGraphicsMP = ["graphicsMP0", "graphicsMP1"];
+            jQuery.each(arrGraphicsMP, function (i, val) {
+                $("#" + val).hide();
+            });
+            $("#" + imgName + select.selectedIndex).show();
+        }
 
         /**
          * Show and Hide Graphics
