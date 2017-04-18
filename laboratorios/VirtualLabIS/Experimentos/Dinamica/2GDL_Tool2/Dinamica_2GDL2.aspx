@@ -75,7 +75,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div id="chart-line" style="width: 100%; height: 100%;">
+                                                        <div id="chart-line" style="width: 355px; height: 226px;">
                                                             <asp:Image ID="FigMain" runat="server" ImageUrl="~/Imagenes/General/Tools/Dinamica_2GDL_Tool2.bmp" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>

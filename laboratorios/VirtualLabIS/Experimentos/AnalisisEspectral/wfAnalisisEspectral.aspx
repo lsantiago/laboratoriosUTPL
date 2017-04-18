@@ -63,7 +63,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div id="chart-line" style="width: 355px; height: 100%;">
+                                                        <div style="width: 355px; height: 226px;">
                                                             <asp:Image ID="img1" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/1_EN.jpg" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
