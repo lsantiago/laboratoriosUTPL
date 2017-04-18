@@ -45,7 +45,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">INPUT</h4>
+                                        <h4 class="panel-title text-center">INPUTS</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -665,7 +665,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">OUPUT</h4>
+                                        <h4 class="panel-title text-center">OUTPUTS</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
