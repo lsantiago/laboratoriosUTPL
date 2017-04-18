@@ -49,7 +49,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">INPUTS</h4>
+                                        <h4 class="panel-title text-center">INPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -86,7 +86,7 @@
                                                 </ul>
                                                 <div class="tab-content" style="width: 100%; height: 256px;">
                                                     <!-- BEGIN TEST1 FORM -->
-                                                    <div class="tab-pane active" id="test1">
+                                                    <div class="tab-pane active" id="test1" style="padding-top: 15px;">
                                                         <div class="col-md-8">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
@@ -227,10 +227,10 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4" style="padding-top: 15px;">
+                                                        <div class="col-md-4">
                                                             <asp:Label ID="lblTituloEsquemaColumna123" runat="server" class="label-title-imge lead" Text="SECTION"></asp:Label>
                                                             <hr />
-                                                            <div id="chart-line" style="width: 245px; height: 185px;">
+                                                            <div style="width: 245px; height: 185px;">
                                                                 <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabis/Varios/Archivos/Imagenes/Dinamica/ES/6_ES.jpg" width="100%" height="100%" />
                                                             </div>
                                                         </div>
@@ -238,7 +238,7 @@
                                                     <!-- END TEST1 FORM -->
 
                                                     <!-- BEGIN TEST2 FORM -->
-                                                    <div class="tab-pane" id="test2">
+                                                    <div class="tab-pane" id="test2" style="padding-top: 15px;">
                                                         <div class="col-md-7">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
@@ -279,17 +279,17 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
                                                             <hr />
-                                                            <div id="chart-line" style="width: 100%; height: 100%;">
-                                                                <asp:Image ID="img3" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/ES/7_ES.jpg" Width="290px" Height="190px" /><asp:Image ID="Image2" runat="server" Width="290px" Height="190px" />
+                                                            <div style="width: 302px; height: 191px;">
+                                                                <asp:Image ID="img3" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/ES/7_ES.jpg" Width="100%" Height="100%" /><asp:Image ID="Image2" runat="server" Width="100%" Height="100%" />
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!-- END TEST2 FORM -->
 
                                                     <!-- BEGIN TEST3 FORM -->
-                                                    <div class="tab-pane" id="test3" style="padding-top: 15px;">
-                                                        <div class="col-md-2" style="padding-top: 50px;"></div>
-                                                        <div class="col-md-7" style="padding-top: 50px;">
+                                                    <div class="tab-pane" id="test3">
+                                                        <div class="col-md-3" style="padding-top: 90px;"></div>
+                                                        <div class="col-md-7" style="padding-top: 90px;">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <div class="col-sm-4 text-right">
@@ -313,7 +313,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">OUTPUTS</h4>
+                                        <h4 class="panel-title text-center">OUTPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -322,7 +322,7 @@
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAFICAS"></asp:Label>
+                                                        <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAPHICS"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
                                                     <div class="grid-body">
