@@ -66,8 +66,8 @@
                                                         <asp:Label ID="lblTituloEsquemaColumna" runat="server" class="grid-title lead" Text="OUTLINE"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <%--<asp:LinkButton ID="ibtnLoadExample" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo" OnClick="btnDownResul1_Click">
-                                                                            Cargar Ejemplo
-                                                                            <i class="fa fa-play"></i>
+                                                                Cargar Ejemplo
+                                                                <i class="fa fa-play"></i>
                                                             </asp:LinkButton>--%>
                                                         </div>
                                                     </div>
@@ -91,7 +91,7 @@
                                                             <asp:Label ID="lblAcelerograma" runat="server" Text="ACCELERATION RECORD"></asp:Label></strong></a></li>
                                                     <li><a href="#test3" data-toggle="tab">
                                                         <strong>
-                                                            <asp:Label ID="lblAnalisis" runat="server" Text="ANALISIS"></asp:Label></strong></a></li>
+                                                            <asp:Label ID="lblAnalisis" runat="server" Text="ANALYSIS"></asp:Label></strong></a></li>
                                                 </ul>
                                                 <div class="tab-content" style="width: 100%; height: 256px;">
                                                     <!-- BEGIN TEST1 FORM -->
@@ -222,8 +222,9 @@
                                                     <div class="grid-body">
                                                         <div class="form-horizontal" role="form">
                                                             <div class="form-group">
-                                                                <asp:Label ID="Label14" runat="server" class="col-sm-3 control-label label-one" Text="Seleccionar:"></asp:Label>
-                                                                <div class="col-sm-7">
+                                                                <div class="col-sm-1"></div>
+                                                                <asp:Label ID="Label14" runat="server" class="col-sm-3 control-label label-one" Text="Select:"></asp:Label>
+                                                                <div class="col-sm-4">
                                                                     <select id="graphics" class="form-control" onchange="setImageGraphics(this, 'graphics');">
                                                                         <option>Strength reduction factor vs. ductility</option>
                                                                         <option>Displacement coefficient vs. ductility</option>
@@ -241,11 +242,9 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnGetResult1" runat="server" class="btn btn-warning">
-                                                                                    <i class="fa fa-download"></i>
+                                                                            <asp:LinkButton ID="btnGetResult1" runat="server" class="btn btn-warning">
+                                                                                <i class="fa fa-download"></i>
                                                                             </asp:LinkButton>
-                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <div id="graphics1" style="width: 100%; height: 100%">
@@ -255,11 +254,9 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnGetResult2" runat="server" class="btn btn-warning">
-                                                                                    <i class="fa fa-download"></i>
-                                                                                </asp:LinkButton>
-                                                                            </div>
+                                                                            <asp:LinkButton ID="btnGetResult2" runat="server" class="btn btn-warning">
+                                                                                <i class="fa fa-download"></i>
+                                                                            </asp:LinkButton>
                                                                         </div>
                                                                     </div>
                                                                     <div id="graphics2" style="width: 100%; height: 100%;">
@@ -269,11 +266,9 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnGetResult3" runat="server" class="btn btn-warning">
-                                                                                    <i class="fa fa-download"></i>
-                                                                                </asp:LinkButton>
-                                                                            </div>
+                                                                            <asp:LinkButton ID="btnGetResult3" runat="server" class="btn btn-warning">
+                                                                                <i class="fa fa-download"></i>
+                                                                            </asp:LinkButton>
                                                                         </div>
                                                                     </div>
                                                                     <div id="graphics3" style="width: 100%; height: 100%;">
@@ -283,11 +278,9 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnGetResult4" runat="server" class="btn btn-warning">
-                                                                                    <i class="fa fa-download"></i>
-                                                                                </asp:LinkButton>
-                                                                            </div>
+                                                                            <asp:LinkButton ID="btnGetResult4" runat="server" class="btn btn-warning">
+                                                                                <i class="fa fa-download"></i>
+                                                                            </asp:LinkButton>
                                                                         </div>
                                                                     </div>
                                                                 </div>

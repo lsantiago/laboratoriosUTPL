@@ -514,7 +514,7 @@
                                                         <div class="col-md-5">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
-                                                                    <div class="col-sm-8">
+                                                                    <div class="col-sm-7">
                                                                         <select id="graphicsMP" class="form-control" onchange="setImageGraphics(this, 'graphicsMP');">
                                                                             <option>Concrete Model</option>
                                                                             <option>Steel Model</option>
@@ -524,10 +524,10 @@
                                                                 </div>
                                                                 <hr />
                                                                 <div class="form-group">
-                                                                    <div id="graphicsMP0" class="col-sm-11" style="width: 330px; height: 220px">
+                                                                    <div id="graphicsMP0" class="col-sm-11" style="width: 333px; height: 220px">
                                                                         <asp:Image ID="imgMP1" runat="server" width="100%" Height="100%" />
                                                                     </div>
-                                                                    <div id="graphicsMP1" class="col-sm-11" style="width: 330px; height: 220px">
+                                                                    <div id="graphicsMP1" class="col-sm-11" style="width: 333px; height: 220px">
                                                                         <asp:Image ID="imgMP2" runat="server" width="100%" Height="100%" />
                                                                     </div>
                                                                 </div>
@@ -617,14 +617,14 @@
                                                     <div class="grid-body" style="width: 100%; height: 286px;">
                                                         <div class="form-horizontal" role="form">
                                                             <div class="form-group">
-                                                                <asp:Label ID="Label11" runat="server" class="col-sm-3 control-label label-one" Text="Seleccionar:"></asp:Label>
+                                                                <asp:Label ID="Label11" runat="server" class="col-sm-3 control-label label-one" Text="Select:"></asp:Label>
                                                                 <div class="col-sm-3">
                                                                     <select id="graphics" class="form-control" onchange="setImageGraphicsResult(this, 'graphics');">
                                                                         <option>Beam</option>
                                                                         <option>Column</option>
                                                                     </select>
                                                                 </div>
-                                                                <asp:Label ID="Label3" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
+                                                                <asp:Label ID="Label3" runat="server" class="col-sm-2 control-label label-one" Text="Select:"></asp:Label>
                                                                 <div class="col-sm-3">
                                                                     <select id="graphicsR" class="form-control" onchange="setImageResult(this, 'graphicsR');">
                                                                         <option>Strain</option>
