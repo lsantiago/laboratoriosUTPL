@@ -138,7 +138,7 @@
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblEscTM" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
-                                                                    <div class="col-sm-7">
+                                                                    <div class="col-sm-5">
                                                                         <asp:DropDownList ID="DDLmatTyp" runat="server" AutoPostBack="True" class="form-control">
                                                                             <asp:ListItem Selected="True" Value="0">El&#225;stico</asp:ListItem>
                                                                             <asp:ListItem Value="1">Bilineal 1</asp:ListItem>
@@ -235,7 +235,7 @@
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblEscTE" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
-                                                                    <div class="col-sm-7">
+                                                                    <div class="col-sm-6">
                                                                         <asp:DropDownList ID="DDLexiTyp" runat="server" AutoPostBack="True" class="form-control">
                                                                             <asp:ListItem Value="0">Funci&#243;n lineal</asp:ListItem>
                                                                             <asp:ListItem Value="1">Funci&#243;n trilineal</asp:ListItem>
@@ -448,8 +448,14 @@
                                                                             TargetControlID="txtDA" ValidChars=".">
                                                                         </cc1:FilteredTextBoxExtender>
                                                                     </div>
-                                                                    <p class="lead">[s]</p>
-                                                                    <asp:Label ID="lblMensCE" runat="server" class="badge bg-yellow" Text="Listo!!" Visible="False"></asp:Label>
+                                                                    <%--<div class="col-sm-1 control-label label-der lead">
+                                                                        <p style="padding-top: 5px; margin-left: 0px;">[s]</p>
+                                                                        
+                                                                    </div>--%>
+                                                                    <label class="col-sm-1 label-der lead" style="padding-top: 5px;">[s]</label>
+                                                                    <div class="col-sm-1 control-label label-der">
+                                                                        <asp:Label ID="lblMensCE" runat="server" class="badge bg-yellow" Text="Listo!!" Visible="False"></asp:Label>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <div class="col-sm-4 text-right">
@@ -457,7 +463,7 @@
                                                                             <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
                                                                     </div>
-                                                                    <div class="col-sm-6">
+                                                                    <div class="col-sm-5">
                                                                         <asp:DropDownList ID="DDLborrarA" runat="server" class="form-control">
                                                                             <asp:ListItem Value="0">Analizar</asp:ListItem>
                                                                             <asp:ListItem Value="1">Borrar &#250;ltimo Analisis</asp:ListItem>
@@ -495,7 +501,7 @@
                                                         <asp:Label ID="lblRespMax" runat="server" class="grid-title lead" Text="RESPUESTA MAXIMA"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
-                                                    <div class="grid-body" style="height: 560px">
+                                                    <div class="grid-body" style="height: 540px">
                                                         <div class="form-horizontal" role="form">
                                                             <div class="form-group">
                                                                 <label class="col-sm-2 control-label small"></label>
@@ -583,11 +589,11 @@
                                                         <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAFICAS"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
-                                                    <div class="grid-body">
+                                                    <div class="grid-body" style="height: 540px">
                                                         <div class="form-horizontal" role="form">
                                                             <div class="form-group">
                                                                 <asp:Label ID="Label11" runat="server" class="col-sm-3 control-label label-one" Text="Seleccionar:"></asp:Label>
-                                                                <div class="col-sm-7">
+                                                                <div class="col-sm-6">
                                                                     <select id="graphics" class="form-control" onchange="setImageGraphics(this, 'graphics');">
                                                                         <option>Ground acceleration (Only with acceleration record)</option>
                                                                         <option>Type of Excitation</option>

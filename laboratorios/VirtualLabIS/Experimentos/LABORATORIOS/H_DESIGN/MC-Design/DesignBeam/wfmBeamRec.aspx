@@ -139,26 +139,26 @@
                                                                 </div>
                                                                 <div class="col-sm-5">
                                                                     <div class="form-group">
-                                                                        <asp:Label ID="lblLateralBars" runat="server" class="col-sm-9 control-label small label-one"></asp:Label>
-                                                                        <div class="col-sm-3">
+                                                                        <asp:Label ID="lblLateralBars" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
+                                                                        <div class="col-sm-4">
                                                                             <asp:TextBox ID="txtNumLateralBars" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <asp:Label ID="lblNumLegsShear" runat="server" class="col-sm-9 control-label small label-one"></asp:Label>
-                                                                        <div class="col-sm-3">
+                                                                        <asp:Label ID="lblNumLegsShear" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
+                                                                        <div class="col-sm-4">
                                                                             <asp:TextBox ID="txtNumStirrups" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <asp:Label ID="lblSpacingStirrups" runat="server" class="col-sm-9 control-label small label-one"></asp:Label>
-                                                                        <div class="col-sm-3">
+                                                                        <asp:Label ID="lblSpacingStirrups" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
+                                                                        <div class="col-sm-4">
                                                                             <asp:TextBox ID="txtSpacingStirrups" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <asp:Label ID="lblShearSpan" runat="server" class="col-sm-9 control-label small label-one"></asp:Label>
-                                                                        <div class="col-sm-3">
+                                                                        <asp:Label ID="lblShearSpan" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
+                                                                        <div class="col-sm-4">
                                                                             <asp:TextBox ID="txtShearSpan" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
                                                                     </div>
@@ -205,10 +205,10 @@
                                                                 </div>
                                                                 <hr />
                                                                 <div style="width: 100%; height: 100%;">
-                                                                    <div id="graphicsMP0" class="col-sm-11" style="width: 315px; height: 186px; padding-left: 0px">
+                                                                    <div id="graphicsMP0" class="col-sm-11" style="width: 318px; height: 186px; padding-left: 0px">
                                                                         <asp:Image ID="imgModeloConcreto" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/Beam Design.jpg" Width="100%" Height="100%" />
                                                                     </div>
-                                                                    <div id="graphicsMP1" class="col-sm-11" style="width: 315px; height: 186px; padding-left: 0px">
+                                                                    <div id="graphicsMP1" class="col-sm-11" style="width: 318px; height: 186px; padding-left: 0px">
                                                                         <asp:Image ID="imgModeloAcero" runat="server" Width="100%" Height="100%" />
                                                                     </div>
                                                                 </div>
@@ -324,7 +324,7 @@
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
                                                         <asp:Label ID="lblAnalysis" runat="server" class="grid-title lead" Text="ANALYSIS"></asp:Label>
-                                                        <asp:Label ID="lblAnalisisNeg" runat="server" class="grid-title lead" Text="ANALYSIS"></asp:Label>
+                                                        <asp:Label ID="lblAnalisisNeg" runat="server" class="grid-title lead" Text=""></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <div class="form-group">
                                                                 <div id="moment">
@@ -368,7 +368,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-sm-6">
+                                                                        <div class="col-sm-7">
                                                                             <asp:Label ID="lblAnalysisResults" runat="server" class="lead text-center" Text="ANALYSIS RESULTS"></asp:Label>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblMomentoPrimeraFluencia" runat="server" class="col-sm-7 control-label small label-one"></asp:Label>
@@ -386,7 +386,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblMomentoNominal" runat="server" class="col-sm-7 control-label small label-one"></asp:Label>
-                                                                                <asp:Image ID="imgMomentoNominal" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-05.png" />
+                                                                                <asp:Image ID="imgMomentoNominal" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-05.png" />
                                                                                 <div class="col-sm-3">
                                                                                     <asp:TextBox ID="tbMomentoNominal1" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>
@@ -442,59 +442,59 @@
                                                                             <asp:Label ID="lblAnalisisIndexNeg" runat="server" class="lead" Text="ANALYSIS"></asp:Label>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblLongRatioNeg" runat="server" class="col-sm-6 control-label small label-one"></asp:Label>
-                                                                                <asp:Image ID="Img1" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_CuantiaAceroLongitudinalAMC.png" />
+                                                                                <asp:Image ID="Img1" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-06.png" />
                                                                                 <div class="col-sm-4">
                                                                                     <asp:TextBox ID="txtLongRR2" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblTranRatioNeg" runat="server" class="col-sm-6 control-label small label-one"></asp:Label>
-                                                                                <asp:Image ID="Img2" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_CuantiaAceroTransversalAMC.png" />
+                                                                                <asp:Image ID="Img2" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-07.png" />
                                                                                 <div class="col-sm-4">
                                                                                     <asp:TextBox ID="txtTransRR2" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblAxialLoadNeg" runat="server" class="col-sm-6 control-label small label-one"></asp:Label>
-                                                                                <asp:Image ID="Img3" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_RazonCargaAxialAMC.png" />
+                                                                                <asp:Image ID="Img3" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-08.png" />
                                                                                 <div class="col-sm-4">
                                                                                     <asp:TextBox ID="txtAxialLoadRatio2" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-sm-7">
-                                                                            <asp:Label ID="lblAnalysisResulNeg" runat="server" class="lead" Text="ANALISIS RESULTS"></asp:Label>
+                                                                            <asp:Label ID="lblAnalysisResulNeg" runat="server" class="lead" Text="ANALYSIS RESULTS"></asp:Label>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblFirstYieldMomNeg" runat="server" class="col-sm-7 control-label small label-one"></asp:Label>
-                                                                                <asp:Image ID="Image2" runat="server" class="col-sm-2 label-one" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Columna/Ecuaciones/IA_PrimeraMomentoFluencia.png" />
+                                                                                <asp:Image ID="Image2" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-01.png" />
                                                                                 <div class="col-sm-3">
                                                                                     <asp:TextBox ID="txtMomentoPrimeraFluencia2" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblFirstYieldCurvNeg" runat="server" class="col-sm-7 control-label small label-one"></asp:Label>
-                                                                                <asp:Image ID="Image3" runat="server" class="col-sm-2 label-one" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Columna/Ecuaciones/IA_PrimeraCurvaturaFluenciaAMC.png" />
+                                                                                <asp:Image ID="Image3" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-02.png" />
                                                                                 <div class="col-sm-3">
                                                                                     <asp:TextBox ID="tbPrimeraCurvaturaFluencia2" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblNominalMomentNeg" runat="server" class="col-sm-7 control-label small label-one"></asp:Label>
-                                                                                <asp:Image ID="Image5" runat="server" class="col-sm-2 label-one" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Columna/Ecuaciones/IA_MomentoNominalAMC.png" />
+                                                                                <asp:Image ID="Image5" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-03.png" />
                                                                                 <div class="col-sm-3">
                                                                                     <asp:TextBox ID="tbMomentoNominal2" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblYieldCurvNeg" runat="server" class="col-sm-7 control-label small label-one"></asp:Label>
-                                                                                <asp:Image ID="Image6" runat="server" class="col-sm-2 label-one" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Columna/Ecuaciones/IA_CurvaturaFluenciaAMC.png" />
+                                                                                <asp:Image ID="Image6" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-04.png" />
                                                                                 <div class="col-sm-3">
                                                                                     <asp:TextBox ID="tbCurvaturaFluencia2" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <asp:Label ID="lblCrackedNeg" runat="server" class="col-sm-7 control-label small label-one"></asp:Label>
-                                                                                <asp:Image ID="Image7" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../Varios/Archivos/Imagenes/Columna/Ecuaciones/ID_RazonCargaAxialAMC.png" />
+                                                                                <asp:Image ID="Image7" runat="server" class="col-sm-2 label-one" ImageUrl="../../../../../../Content/Images/Formulas/FORMULAS%20COMPLETAS-05.png" />
                                                                                 <div class="col-sm-3">
                                                                                     <asp:TextBox ID="tbIncerciaAgrietada2" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>

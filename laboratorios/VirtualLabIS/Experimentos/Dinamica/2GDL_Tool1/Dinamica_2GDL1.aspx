@@ -171,7 +171,7 @@
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblEscTM" runat="server" class="col-sm-2 control-label label-one" Text="Escoger:"></asp:Label>
-                                                                    <div class="col-sm-7">
+                                                                    <div class="col-sm-5">
                                                                         <asp:DropDownList ID="DDLmatTyp" runat="server" class="form-control" onclick="HideCtrlsTipoMaterial();">
                                                                             <asp:ListItem Selected="True" Value="0">El&#225;stico</asp:ListItem>
                                                                             <asp:ListItem Value="1">Bilineal 1</asp:ListItem>
@@ -291,7 +291,7 @@
 
                                                     <!-- BEGIN TEST3 FORM -->
                                                     <div class="tab-pane" id="test3" style="padding-top: 15px;">
-                                                        <div class="col-md-7">
+                                                        <div class="col-md-6">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblEscTE" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
@@ -504,7 +504,7 @@
                                                                                     <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
                                                                     </div>
-                                                                    <div class="col-sm-6">
+                                                                    <div class="col-sm-5">
                                                                         <asp:DropDownList ID="DDLborrarA" runat="server" class="form-control">
                                                                             <asp:ListItem Value="0">Analizar</asp:ListItem>
                                                                             <asp:ListItem Value="1">Borrar &#250;ltimo Analisis</asp:ListItem>
@@ -543,7 +543,7 @@
                                                         <asp:Label ID="lblRespMax" runat="server" class="grid-title lead" Text="RESPUESTA MAXIMA"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
-                                                    <div class="grid-body" style="height: 560px">
+                                                    <div class="grid-body" style="height: 540px">
                                                         <div class="form-horizontal" role="form">
                                                             <div class="form-group">
                                                                 <label class="col-sm-2 control-label small"></label>
@@ -559,20 +559,20 @@
                                                                 <label class="col-sm-2 control-label label-one">
                                                                     <b>
                                                                         <var>umax =</var></b></label>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtXmax1" runat="server" class="form-control"></asp:TextBox>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtXmax1" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>m</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblXmax1" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtXmax2" runat="server" class="form-control"></asp:TextBox>
+                                                                    <asp:Label ID="lblXmax1" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtXmax2" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>m</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblXmax2" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
+                                                                    <asp:Label ID="lblXmax2" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
                                                             </div>
                                                             <div class="form-group">
                                                                 <em>
@@ -582,20 +582,20 @@
                                                                 <label class="col-sm-2 control-label label-one">
                                                                     <b>
                                                                         <var>ůmax =</var></b></label>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtXomax1" runat="server" class="form-control"></asp:TextBox>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtXomax1" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>m/s</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblXoMax1" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtXoMax2" runat="server" class="form-control"></asp:TextBox>
+                                                                    <asp:Label ID="lblXoMax1" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtXoMax2" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>m/s</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblXoMax2" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
+                                                                    <asp:Label ID="lblXoMax2" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
                                                             </div>
                                                             <div class="form-group">
                                                                 <em>
@@ -605,20 +605,20 @@
                                                                 <label class="col-sm-2 control-label label-one">
                                                                     <b>
                                                                         <var>ümax =</var></b></label>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtXoomax1" runat="server" class="form-control"></asp:TextBox>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtXoomax1" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>m/s^2</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblXooMax1" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtXooMax2" runat="server" class="form-control"></asp:TextBox>
+                                                                    <asp:Label ID="lblXooMax1" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtXooMax2" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>m/s^2</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblXooMax2" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
+                                                                    <asp:Label ID="lblXooMax2" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-2 control-label small"></label>
@@ -632,20 +632,20 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-2"></label>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtFomax1" runat="server" class="form-control"></asp:TextBox>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtFomax1" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>kN</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblFomax1" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtFomax2" runat="server" class="form-control"></asp:TextBox>
+                                                                    <asp:Label ID="lblFomax1" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtFomax2" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>kN</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblFoMax2" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
+                                                                    <asp:Label ID="lblFoMax2" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-2 control-label small"></label>
@@ -656,28 +656,26 @@
                                                                 <label class="col-sm-2 control-label label-one">
                                                                     <b>
                                                                         <var>Fmax =</var></b></label>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtFomax3" runat="server" class="form-control"></asp:TextBox>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtFomax3" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>kN</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblFomax3" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtFomax4" runat="server" class="form-control"></asp:TextBox>
+                                                                    <asp:Label ID="lblFomax3" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
+                                                                <div class="col-md-2">
+                                                                    <asp:TextBox ID="txtFomax4" runat="server" class="form-control" Width="65px"></asp:TextBox>
                                                                 </div>
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>kN</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblFomax4" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
+                                                                    <asp:Label ID="lblFomax4" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
                                                             </div>
-                                                            <div class="form-group">
-                                                                <div class="col-sm-offset-3 col-sm-8">
-                                                                    <asp:LinkButton ID="ImageButton14" runat="server" class="btn btn-warning" OnClick="ImageButton14_Click">
-                                                                                    <i class="fa fa-download"></i>
-                                                                                    Download answers
-                                                                    </asp:LinkButton>
-                                                                </div>
+                                                            <div class="form-group text-center">
+                                                                <asp:LinkButton ID="ImageButton14" runat="server" class="btn btn-warning" OnClick="ImageButton14_Click">
+                                                                    <i class="fa fa-download"></i>
+                                                                    Download answers
+                                                                </asp:LinkButton>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -693,11 +691,11 @@
                                                         <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAFICAS"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
-                                                    <div class="grid-body">
+                                                    <div class="grid-body" style="height: 540px">
                                                         <div class="form-horizontal" role="form">
                                                             <div class="form-group">
                                                                 <asp:Label ID="Label11" runat="server" class="col-sm-3 control-label label-one" Text="Seleccionar:"></asp:Label>
-                                                                <div class="col-sm-7">
+                                                                <div class="col-sm-6">
                                                                     <select id="graphics" class="form-control" onchange="setImageGraphics(this, 'graphics');">
                                                                         <option>Ground acceleration (Only with acceleration record)</option>
                                                                         <option>Type of Excitation</option>
@@ -953,12 +951,10 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul16" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
-                                                                                    <i class="fa fa-download"></i>
-                                                                                    Download answers
-                                                                                </asp:LinkButton>
-                                                                            </div>
+                                                                            <asp:LinkButton ID="btnDownResul16" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <i class="fa fa-download"></i>
+                                                                                Download answers
+                                                                            </asp:LinkButton>
                                                                         </div>
                                                                     </div>
                                                                 </div>
