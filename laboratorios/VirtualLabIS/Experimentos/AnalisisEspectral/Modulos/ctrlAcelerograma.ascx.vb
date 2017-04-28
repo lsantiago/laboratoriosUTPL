@@ -262,7 +262,7 @@ Partial Class Modulos_ctrlAcelerograma
     Protected Sub subSetIdiomaControles()
         lblAcelerograma.Text = GetLocalResourceObject("lblAcelerograma.Text").ToString()
         lblDuracion.Text = GetLocalResourceObject("lblDuracion.Text").ToString()
-        btnAcelerograma.Text = GetLocalResourceObject("btnAcelerograma").ToString()
+        btnAcelerograma.Text = GetLocalResourceObject("btnAcelerograma.Text").ToString()
         lblPaso.Text = GetLocalResourceObject("lblPaso.Text").ToString()
         lblFactor.Text = GetLocalResourceObject("lblFactor.Text").ToString()
         img2.ImageUrl = GetLocalResourceObject("img2.Text").ToString()

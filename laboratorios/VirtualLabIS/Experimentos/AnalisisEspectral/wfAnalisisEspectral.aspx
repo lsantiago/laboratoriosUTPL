@@ -92,12 +92,12 @@
                                                                 <div class="form-group">
                                                                     <div class="col-sm-6 radio">
                                                                         <label>
-                                                                            <asp:RadioButton ID="rbAnalisisElastico" runat="server" class="icheck" AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
+                                                                            <asp:RadioButton ID="rbAnalisisElastico" runat="server"  AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
                                                                             <asp:Label ID="lblAElastico" runat="server" Text="ANALISIS ELASTICO" class="label-radioButton"></asp:Label></label>
                                                                     </div>
                                                                     <div class="col-sm-6 radio">
                                                                         <label>
-                                                                            <asp:RadioButton ID="rbAnalisisInelastico" runat="server" GroupName="gTipoAnalisis" class="icheck" AutoPostBack="True" />
+                                                                            <asp:RadioButton ID="rbAnalisisInelastico" runat="server" GroupName="gTipoAnalisis"  AutoPostBack="True" />
                                                                             <asp:Label ID="lblAInelastico" runat="server" Text="ANALISIS INELASTICO" class="label-radioButton"></asp:Label></label>
                                                                     </div>
                                                                 </div>
@@ -244,14 +244,15 @@
                                                                 <div class="form-group">
                                                                     <div class="col-sm-6 radio">
                                                                         <label>
-                                                                            <asp:RadioButton ID="rbCargaSinusoidal" runat="server" class="icheck" AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
+                                                                            <asp:RadioButton ID="rbCargaSinusoidal" runat="server"  AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
                                                                             <asp:Label ID="lblCargaSinusoidal" runat="server" Text="FUNCION DE CARGA SINUSOIDAL" class="label-radioButton"></asp:Label></label>
                                                                     </div>
                                                                     <div class="col-sm-6 radio">
                                                                         <label>
-                                                                            <asp:RadioButton ID="rbAcelerograma" runat="server" GroupName="gTipoAnalisis" class="icheck" AutoPostBack="True" />
+                                                                            <asp:RadioButton ID="rbAcelerograma" runat="server" GroupName="gTipoAnalisis"  AutoPostBack="True" />
                                                                             <asp:Label ID="lblAcelerograma" runat="server" Text="ACELEROGRAMA" class="label-radioButton"></asp:Label></label>
                                                                     </div>
+                                                                    <asp:PlaceHolder ID="phTipoExitacion" runat="server"></asp:PlaceHolder>
                                                                 </div>
                                                                 <%--Value 1--%>
                                                                 <div id="tevalue0">
@@ -379,7 +380,7 @@
                                                                                 Download answers
                                                                             </asp:LinkButton>
                                                                         </div>
-                                                                        <asp:PlaceHolder ID="phTipoExitacion" runat="server"></asp:PlaceHolder>
+                                                                        
                                                                     </div>
                                                                     <div id="graphics3" style="width: 100%; height: 100%;">
                                                                         <div class="form-group">
