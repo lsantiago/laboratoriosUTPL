@@ -63,7 +63,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div style="width: 355px; height: 226px;">
+                                                        <div style="width: 355px; height: 229px;">
                                                             <asp:Image ID="img1" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/1_EN.jpg" Width="100%" Height="100%" />
                                                         </div>
                                                     </div>
@@ -90,12 +90,14 @@
                                                         <div class="col-md-8">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
-                                                                    <div class="col-sm-6 radio">
+                                                                    <div class="col-sm-1"></div>
+                                                                    <div class="col-sm-4" style="padding-left: 5px;">
                                                                         <label>
                                                                             <asp:RadioButton ID="rbAnalisisElastico" runat="server"  AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
                                                                             <asp:Label ID="lblAElastico" runat="server" Text="ANALISIS ELASTICO" class="label-radioButton"></asp:Label></label>
                                                                     </div>
-                                                                    <div class="col-sm-6 radio">
+                                                                    <div class="col-sm-1"></div>
+                                                                    <div class="col-sm-5" style="padding-left: 35px;">
                                                                         <label>
                                                                             <asp:RadioButton ID="rbAnalisisInelastico" runat="server" GroupName="gTipoAnalisis"  AutoPostBack="True" />
                                                                             <asp:Label ID="lblAInelastico" runat="server" Text="ANALISIS INELASTICO" class="label-radioButton"></asp:Label></label>
@@ -230,7 +232,7 @@
                                                         <div class="col-md-4">
                                                             <asp:Label ID="lblTituloEsquemaColumna123" runat="server" class="label-title-imge lead" Text="SECTION"></asp:Label>
                                                             <hr />
-                                                            <div style="width: 245px; height: 185px;">
+                                                            <div style="width: 245px; height: 191px;">
                                                                 <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabis/Varios/Archivos/Imagenes/Dinamica/ES/6_ES.jpg" width="100%" height="100%" />
                                                             </div>
                                                         </div>
@@ -242,37 +244,15 @@
                                                         <div class="col-md-7">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
-                                                                    <div class="col-sm-6 radio">
+                                                                    <div class="col-sm-6">
                                                                         <label>
                                                                             <asp:RadioButton ID="rbCargaSinusoidal" runat="server"  AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
                                                                             <asp:Label ID="lblCargaSinusoidal" runat="server" Text="FUNCION DE CARGA SINUSOIDAL" class="label-radioButton"></asp:Label></label>
                                                                     </div>
-                                                                    <div class="col-sm-6 radio">
+                                                                    <div class="col-sm-6">
                                                                         <label>
                                                                             <asp:RadioButton ID="rbAcelerograma" runat="server" GroupName="gTipoAnalisis"  AutoPostBack="True" />
                                                                             <asp:Label ID="lblAcelerograma" runat="server" Text="ACELEROGRAMA" class="label-radioButton"></asp:Label></label>
-                                                                    </div>
-                                                                    <asp:PlaceHolder ID="phTipoExitacion" runat="server"></asp:PlaceHolder>
-                                                                </div>
-                                                                <%--Value 1--%>
-                                                                <div id="tevalue0">
-                                                                    <div class="form-group">
-                                                                        <div class="col-sm-3">
-                                                                            <asp:TextBox ID="tbCargaMaxima" runat="server" class="form-control" Style="padding-right: 0px;"></asp:TextBox>
-                                                                        </div>
-                                                                        <asp:Label ID="lblCargaMaxima" runat="server" class="control-label small" Text="MAX LOAD -Fmax- (kN)"></asp:Label>
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <div class="col-sm-3">
-                                                                            <asp:TextBox ID="tbFrecuencia" runat="server" class="form-control"></asp:TextBox>
-                                                                        </div>
-                                                                        <asp:Label ID="lblFrecuencia" runat="server" class="control-label small" Text="FREQUENCY -Ω- (rad/s)"></asp:Label>
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <div class="col-sm-3">
-                                                                            <asp:TextBox ID="tbDuracExitacion" runat="server" class="form-control"></asp:TextBox>
-                                                                        </div>
-                                                                        <asp:Label ID="lblDuracExitacion" runat="server" class="control-label small" Text="DURATION (s)"></asp:Label>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -280,8 +260,13 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="OUTLINE"></asp:Label>
                                                             <hr />
-                                                            <div style="width: 303px; height: 188px;">
-                                                                <asp:Image ID="img3" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/ES/7_ES.jpg" Width="100%" Height="100%" /><asp:Image ID="Image2" runat="server" Width="100%" Height="100%" />
+                                                            <div style="width: 0px; height: 0px;">
+                                                                <asp:Image ID="img3" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/ES/7_ES.jpg" Width="100%" Height="100%" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <asp:PlaceHolder ID="phTipoExitacion" runat="server"></asp:PlaceHolder>
                                                             </div>
                                                         </div>
                                                     </div>
