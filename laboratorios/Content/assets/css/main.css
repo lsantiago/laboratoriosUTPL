@@ -3789,8 +3789,8 @@ hr {
 }
 
 .btn-warning {
-    background-color: #dca528;
-    border-color: #dca528;
+    background-color: #fbc200;
+    border-color: #fbc200;
 }
 
 .col-md-3 {
@@ -3798,7 +3798,7 @@ hr {
 }
 
 .nav-tabs > li.active, .tabs-bottom .nav-tabs > li.active, .tabs-right .nav-tabs > li.active, .tabs-left .nav-tabs > li.active {
-    border-color: #dca528;
+    border-color: #fbc200;
 }
 
 .panel-title {
