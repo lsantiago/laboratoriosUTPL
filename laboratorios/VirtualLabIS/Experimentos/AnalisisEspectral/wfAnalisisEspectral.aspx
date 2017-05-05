@@ -255,7 +255,7 @@
                                                                     <asp:PlaceHolder ID="phTipoExitacion" runat="server"></asp:PlaceHolder>
                                                                 </div>
                                                                 <%--Value 1--%>
-                                                                <div id="tevalue0">
+                                                               <%-- <div id="tevalue0">
                                                                     <div class="form-group">
                                                                         <div class="col-sm-3">
                                                                             <asp:TextBox ID="tbCargaMaxima" runat="server" class="form-control" Style="padding-right: 0px;"></asp:TextBox>
@@ -274,14 +274,14 @@
                                                                         </div>
                                                                         <asp:Label ID="lblDuracExitacion" runat="server" class="control-label small" Text="DURATION (s)"></asp:Label>
                                                                     </div>
-                                                                </div>
+                                                                </div>--%>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="OUTLINE"></asp:Label>
                                                             <hr />
                                                             <div style="width: 303px; height: 188px;">
-                                                                <asp:Image ID="img3" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/ES/7_ES.jpg" Width="100%" Height="100%" /><asp:Image ID="Image2" runat="server" Width="100%" Height="100%" />
+                                                                <%--<asp:Image ID="img3" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/ES/7_ES.jpg" Width="100%" Height="100%" /><asp:Image ID="Image2" runat="server" Width="100%" Height="100%" />--%>
                                                             </div>
                                                         </div>
                                                     </div>

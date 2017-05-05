@@ -1,9 +1,9 @@
 ﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="ctrlAcelerograma.ascx.vb" Inherits="Modulos_ctrlAcelerograma" %>
 &nbsp;<table style="position: static" class="TablaDatos-Graficas" width="95%">
-    <tr>
+    <%--<tr>
         <td style="height: 90%; border-top-width: 1px; width: 90%; border-top-color: activecaption;" align="left" colspan="2" class="PanelHeader">
             <asp:Label ID="lblAcelerograma" runat="server" Style="position: static" Text="ACELEROGRAMA" CssClass="Funcionalidad-subtitulo"></asp:Label></td>
-    </tr>
+    </tr>--%>
     <tr>
         <td align="left" style="width: 500px; border-left-color: activeborder; border-bottom-color: activeborder; border-top-color: activeborder; text-align: center; border-right-color: activeborder;" valign="top">
             <table style="border-top-width: 1px; width: 90%; border-top-color: activecaption; height: 90%;" width="400">

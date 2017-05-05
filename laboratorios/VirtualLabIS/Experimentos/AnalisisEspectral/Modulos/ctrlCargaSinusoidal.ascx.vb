@@ -58,7 +58,7 @@ Partial Class Modulos_ctrlCargaSinusoidal
 
     Protected Sub subSetIdiomaControles()
         img2.ImageUrl = GetLocalResourceObject("img2.Text").ToString()
-        lblFuncionCargaLineal.Text = GetLocalResourceObject("lblFuncionCargaLineal.Text").ToString()
+        'lblFuncionCargaLineal.Text = GetLocalResourceObject("lblFuncionCargaLineal.Text").ToString()
         lblCargaMaxima.Text = GetLocalResourceObject("lblCargaMaxima.Text").ToString()
         lblFrecuencia.Text = GetLocalResourceObject("lblFrecuencia.Text").ToString()
         lblDuracExitacion.Text = GetLocalResourceObject("lblDuracExitacion.Text").ToString()

@@ -1,9 +1,9 @@
 ﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="ctrlCargaSinusoidal.ascx.vb" Inherits="Modulos_ctrlCargaSinusoidal" %>
 <table class="TablaDatos-Graficas" width="95%">
-    <tr>
+    <%--<tr>
         <td colspan="3" class="PanelHeader" align="left">
             <asp:Label ID="lblFuncionCargaLineal" runat="server" Style="position: static" CssClass="Funcionalidad-subtitulo">FUNCION DE CARGA SINUSOIDAL</asp:Label></td>
-    </tr>
+    </tr>--%>
     <tr>
         <td align="left" colspan="" rowspan="1" style="width: 355px" valign="top">
             <table style="position: static" width="355">
