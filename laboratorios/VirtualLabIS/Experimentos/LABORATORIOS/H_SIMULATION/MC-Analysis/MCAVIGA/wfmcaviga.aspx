@@ -255,12 +255,12 @@
                                                                 <div class="form-group">
                                                                     <div class="col-sm-6 radio">
                                                                         <label>
-                                                                            <asp:RadioButton ID="tensionarriba" runat="server" class="icheck" AutoPostBack="True" Checked="True" GroupName="rbtDirMom" />
+                                                                            <asp:RadioButton ID="tensionarriba" runat="server"  AutoPostBack="True" Checked="True" GroupName="rbtDirMom" />
                                                                             <asp:Label ID="lblTopTension" runat="server" Text="TOP TENSION" class="label-radioButton"></asp:Label></label>
                                                                     </div>
                                                                     <div class="col-sm-6 radio">
                                                                         <label>
-                                                                            <asp:RadioButton ID="tensionabajo" runat="server" GroupName="rbtDirMom" class="icheck" AutoPostBack="True" />
+                                                                            <asp:RadioButton ID="tensionabajo" runat="server" GroupName="rbtDirMom"  AutoPostBack="True" />
                                                                             <asp:Label ID="lblBottomTension" runat="server" Text="BOTTOM TENSION" class="label-radioButton"></asp:Label></label>
                                                                     </div>
                                                                 </div>

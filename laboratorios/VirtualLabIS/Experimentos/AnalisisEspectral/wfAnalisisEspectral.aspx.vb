@@ -406,9 +406,9 @@ Namespace VirtualLabIS.VLEE
                     lblCoefRigidez.Enabled = False
                     lblNumCurvas2.Enabled = False
                     img2.Visible = True
-                    img3.Visible = False
+                'img3.Visible = False
 
-                    RequiredFieldValidator9.Enabled = False
+                RequiredFieldValidator9.Enabled = False
                     RequiredFieldValidator10.Enabled = False
                     RequiredFieldValidator11.Enabled = False
                     RequiredFieldValidator12.Enabled = False
@@ -438,9 +438,9 @@ Namespace VirtualLabIS.VLEE
                     lblDamping2.Enabled = False
                     lblNumCurvas.Enabled = False
                     img2.Visible = False
-                    img3.Visible = True
+                'img3.Visible = True
 
-                    RequiredFieldValidator9.Enabled = True
+                RequiredFieldValidator9.Enabled = True
                     RequiredFieldValidator10.Enabled = True
                     RequiredFieldValidator11.Enabled = True
                     RequiredFieldValidator12.Enabled = True
@@ -690,7 +690,7 @@ Namespace VirtualLabIS.VLEE
             lblTituloEsquemaColumna.Text = GetLocalResourceObject("lblTituloEsquemaColumna.Text").ToString()
             img1.ImageUrl = GetLocalResourceObject("img1.Text").ToString()
             img2.ImageUrl = GetLocalResourceObject("img2.Text").ToString()
-            img3.ImageUrl = GetLocalResourceObject("img3.Text").ToString()
+            'img3.ImageUrl = GetLocalResourceObject("img3.Text").ToString()
             'TITULOS DE GRAFICOS
             'lblTituloFig4.Text = GetLocalResourceObject("lblTituloFig4.Text").ToString()
             'lblTituloFig3.Text = GetLocalResourceObject("lblTituloFig3.Text").ToString()

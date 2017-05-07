@@ -348,7 +348,7 @@ Namespace VirtualLabIS.VLEE
         ''' <param name="sender"></param>
         ''' <param name="e"></param>
         ''' <remarks></remarks>
-        Protected Sub btnGraficar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnGraficar.Click
+        Protected Sub btnGraficar_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnGraficar.Click
             Try
                 getDatosInterfaz()
                 getResultados()
@@ -357,7 +357,7 @@ Namespace VirtualLabIS.VLEE
             Catch ex As Exception
                 Response.Write("<script>alert('" + arrAlertaRUN(idIdioma, 0) + "')</script>")
             End Try
-            
+
         End Sub
 
 
