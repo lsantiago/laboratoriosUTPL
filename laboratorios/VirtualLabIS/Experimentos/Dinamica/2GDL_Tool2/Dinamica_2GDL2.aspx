@@ -75,8 +75,10 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 260px;">
-                                                        <div id="chart-line" style="width: 355px; height: 230px;">
-                                                            <asp:Image ID="FigMain" runat="server" ImageUrl="~/Imagenes/General/Tools/Dinamica_2GDL_Tool2.bmp" Width="100%" Height="100%" />
+                                                        <div style="width: 100%; height: 230px;">
+                                                            <div class="image">
+                                                                <asp:Image ID="FigMain" runat="server" ImageUrl="~/Imagenes/General/Tools/Dinamica_2GDL_Tool2.bmp" />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -320,10 +322,11 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
                                                             <hr />
-                                                            <div style="width: 302px; height: 195px;">
-                                                                <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat2"
-                                                                runat="server" Width="100%" Height="100%" /><asp:Image ID="FigMat3" runat="server"
-                                                                    Width="100%" Height="100%" />
+                                                            <div style="width: 100%; height: 195px;">
+                                                                <div class="image">
+                                                                    <asp:Image ID="FigMat1" runat="server" /><asp:Image ID="FigMat2"
+                                                                runat="server" /><asp:Image ID="FigMat3" runat="server" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -524,10 +527,11 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
                                                             <hr />
-                                                            <div style="width: 300px; height: 192px;">
-                                                                <asp:Image ID="FigExi1" runat="server" Width="100%" Height="100%" /><asp:Image ID="FigExi2"
-                                                                    runat="server" Width="100%" Height="100%" /><asp:Image ID="FigExi3" runat="server"
-                                                                        Width="100%" Height="100%" /><asp:Image ID="FigExi4" runat="server" Width="100%" Height="100%" />
+                                                            <div style="width: 100%; height: 192px;">
+                                                                <div class="image">
+                                                                    <asp:Image ID="FigExi1" runat="server" /><asp:Image ID="FigExi2"
+                                                                    runat="server" /><asp:Image ID="FigExi3" runat="server" /><asp:Image ID="FigExi4" runat="server" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

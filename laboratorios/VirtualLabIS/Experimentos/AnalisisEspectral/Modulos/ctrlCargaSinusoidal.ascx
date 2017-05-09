@@ -34,7 +34,7 @@
     </div>
 </div>
 <div class="col-sm-5">
-    <div style="width: 305px; height: 191px;">
+    <div style="width: 100%; height: 191px;">
         <div class="image">
             <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLab/Varios/Archivos/Imagenes/Dinamica/EN/2_EN.jpg" />
         </div>

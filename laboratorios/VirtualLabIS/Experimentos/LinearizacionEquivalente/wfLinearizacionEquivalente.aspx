@@ -72,8 +72,10 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div id="chart-line" style="width: 100%; height: 100%;">
-                                                            <asp:Image ID="img1" runat="server" ImageUrl="~/VirtualLab/Varios/Archivos/Imagenes/Dinamica/ES/1_ES.jpg" Width="100%" Height="100%" />
+                                                        <div style="width: 100%; height: 100%;">
+                                                            <div class="image">
+                                                                <asp:Image ID="img1" runat="server" ImageUrl="~/VirtualLab/Varios/Archivos/Imagenes/Dinamica/ES/1_ES.jpg" />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -55,8 +55,10 @@
     </div>
 </div>
 <div class="col-md-5">
-    <div id="chart-line" style="width: 315px; height: 220px;">
-        <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/2_EN.jpg" Width="100%" Height="100%" />
+    <div style="width: 100%; height: 220px;">
+        <div class="image">
+            <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/2_EN.jpg" />
+        </div>
     </div>
 </div>
 

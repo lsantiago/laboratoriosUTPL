@@ -72,8 +72,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div id="chart-line" style="width: 100%; height: 100%;">
-                                                            <asp:Image ID="FigMain" runat="server" ImageUrl="~/Imagenes/General/Tools/Dinamica_2GDL_Tool1.png" Width="100%" Height="100%" />
+                                                        <div class="image">
+                                                            <asp:Image ID="FigMain" runat="server" ImageUrl="~/Imagenes/General/Tools/Dinamica_2GDL_Tool1.png" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -282,8 +282,10 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
                                                             <hr />
-                                                            <div style="width: 302px; height: 191px;">
-                                                                <asp:Image ID="FigMat1" runat="server" Width="100%" Height="100%" />
+                                                            <div style="width: 100%; height: 191px;">
+                                                                <div class="image">
+                                                                    <asp:Image ID="FigMat1" runat="server" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -291,7 +293,7 @@
 
                                                     <!-- BEGIN TEST3 FORM -->
                                                     <div class="tab-pane" id="test3" style="padding-top: 15px;">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-7">
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblEscTE" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
@@ -476,8 +478,10 @@
                                                         <div class="col-md-5">
                                                             <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
                                                             <hr />
-                                                            <div id="chart-line" style="width: 300px; height: 187px;">
-                                                                <asp:Image ID="FigExi1" runat="server" Width="100%" Height="100%" />
+                                                            <div style="width: 100%; height: 187px;">
+                                                                <div class="image">
+                                                                    <asp:Image ID="FigExi1" runat="server" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

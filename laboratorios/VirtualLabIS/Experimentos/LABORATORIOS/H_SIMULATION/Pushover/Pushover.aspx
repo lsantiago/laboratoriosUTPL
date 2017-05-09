@@ -68,8 +68,10 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 400px;">
-                                                        <div id="picture0" style="width: 355px; height: 320px">
-                                                            <asp:Image ID="imgPortico" runat="server" Width="100%" Height="100%" style="padding-top: 40px" />
+                                                        <div id="picture0" style="width: 100%; height: 320px">
+                                                            <div class="image">
+                                                                <asp:Image ID="imgPortico" runat="server" />
+                                                            </div>
                                                         </div>
                                                         <div id="picture1" class="form-horizontal" role="form">
                                                             <div class="form-group">
@@ -83,11 +85,15 @@
                                                             </div>
                                                             <hr />
                                                             <div class="form-group">
-                                                                <div id="graphicsColumns0" class="text-center" style="width: 375px; height: 320px">
-                                                                    <asp:Image ID="imgColumn" runat="server" ImageUrl="../../imagenes/ESQUEMA%20COLUMNA-EN.jpg" width="100%" height="100%" style="padding-top: 25px; padding-left: 15px" />
+                                                                <div id="graphicsColumns0" class="text-center" style="width: 100%; height: 320px">
+                                                                    <div class="image">
+                                                                        <asp:Image ID="imgColumn" runat="server" ImageUrl="../../imagenes/ESQUEMA%20COLUMNA-EN.jpg" style="padding-top: 20px; padding-left: 10px; padding-right: 10px;" />
+                                                                    </div>
                                                                 </div>
-                                                                <div id="graphicsColumns1" class="text-center" style="width: 375px; height: 320px">
-                                                                    <asp:Image ID="Image5" runat="server" ImageUrl="../../imagenes/CORTE%20COLUMNA.jpg" width="100%" height="100%" style="padding-top: 25px; padding-left: 15px" />
+                                                                <div id="graphicsColumns1" class="text-center" style="width: 100%; height: 320px">
+                                                                    <div class="image">
+                                                                        <asp:Image ID="Image5" runat="server" ImageUrl="../../imagenes/CORTE%20COLUMNA.jpg" style="padding-top: 20px; padding-left: 10px; padding-right: 10px;" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -103,11 +109,15 @@
                                                             </div>
                                                             <hr />
                                                             <div class="form-group">
-                                                                <div id="graphicsBeams0" class="text-center" style="width: 375px; height: 320px">
-                                                                    <asp:Image ID="imgViga" runat="server" ImageUrl="../../imagenes/ESQUEMA%20VIGA-EN.jpg"  width="100%" height="100%" style="padding-top: 20px; padding-left: 15px" />
+                                                                <div id="graphicsBeams0" class="text-center" style="width: 100%; height: 320px">
+                                                                    <div class="image">
+                                                                        <asp:Image ID="imgViga" runat="server" ImageUrl="../../imagenes/ESQUEMA%20VIGA-EN.jpg" style="padding-top: 20px; padding-left: 10px; padding-right: 10px;" />
+                                                                    </div>
                                                                 </div>
-                                                                <div id="graphicsBeams1" class="text-center" style="width: 375px; height: 320px">
-                                                                    <asp:Image ID="Image4" runat="server" ImageUrl="../../imagenes/CORTE%20VIGA.jpg"  width="100%" height="100%" style="padding-top: 20px; padding-left: 15px" />
+                                                                <div id="graphicsBeams1" class="text-center" style="width: 100%; height: 320px">
+                                                                    <div class="image">
+                                                                        <asp:Image ID="Image4" runat="server" ImageUrl="../../imagenes/CORTE%20VIGA.jpg" style="padding-top: 20px; padding-left: 10px; padding-right: 10px;" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -524,11 +534,15 @@
                                                                 </div>
                                                                 <hr />
                                                                 <div class="form-group">
-                                                                    <div id="graphicsMP0" class="col-sm-11" style="width: 333px; height: 220px">
-                                                                        <asp:Image ID="imgMP1" runat="server" width="100%" Height="100%" />
+                                                                    <div id="graphicsMP0" style="width: 100%; height: 220px">
+                                                                        <div class="image">
+                                                                            <asp:Image ID="imgMP1" runat="server" />
+                                                                        </div>
                                                                     </div>
-                                                                    <div id="graphicsMP1" class="col-sm-11" style="width: 333px; height: 220px">
-                                                                        <asp:Image ID="imgMP2" runat="server" width="100%" Height="100%" />
+                                                                    <div id="graphicsMP1" style="width: 100%; height: 220px">
+                                                                        <div class="image">
+                                                                            <asp:Image ID="imgMP2" runat="server" />
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -567,7 +581,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-7" style="padding-top: 15px">
-                                                            <div id="chart-line" style="width: 240px; height: 190px;">
+                                                            <div style="width: 240px; height: 190px;">
                                                                 <chart:WebChartViewer ID="WebChartViewerPushover" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                             </div>
                                                         </div>
@@ -598,7 +612,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 286px;">
-                                                        <div id="chart-line" style="width: 355px; height: 260px">
+                                                        <div style="width: 355px; height: 260px">
                                                             <asp:Image ID="imgPortico2" runat="server" width="100%" height="100%" />
                                                         </div>
                                                     </div>

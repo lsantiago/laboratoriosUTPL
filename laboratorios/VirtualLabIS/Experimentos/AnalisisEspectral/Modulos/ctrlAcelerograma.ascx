@@ -1,5 +1,15 @@
 ﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="ctrlAcelerograma.ascx.vb" Inherits="Modulos_ctrlAcelerograma" %>
+<style type="text/css">
+    .image {
+    width: 100%;
+    height: 100%;
+    }
 
+    .image #img2 {
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <div class="col-sm-7">
     <asp:Label ID="lblAcelerograma" runat="server" Style="position: static" Text="ACELEROGRAMA" CssClass="Funcionalidad-subtitulo"></asp:Label>
     <div class="form-group">
@@ -51,8 +61,10 @@
     </div>
 </div>
 <div class="col-sm-5">
-    <div style="width: 305px; height: 191px;">
-        <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/2_EN.jpg" Style="position: static" Width="100%" Height="100%" />
+    <div style="width: 100%; height: 191px;">
+        <div class="image">
+            <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/2_EN.jpg" />
+        </div>
     </div>
 </div>
 <asp:HiddenField ID="hfArchivosSismo1" runat="server" Value="0" />

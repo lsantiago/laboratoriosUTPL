@@ -92,12 +92,16 @@
                                                                 <div class="form-group">
                                                                     <div class="col-sm-4"></div>
                                                                     <div class="col-sm-4" style="padding-left: 5px; padding-right: 0px;">
-                                                                        <asp:RadioButton ID="rbAnalisisElastico" runat="server" AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
-                                                                        <asp:Label ID="lblAElastico" runat="server" Text="ANALISIS ELASTICO" class="label-radioButton"></asp:Label>
+                                                                        <div class="radio">
+                                                                            <asp:RadioButton ID="rbAnalisisElastico" runat="server" AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
+                                                                            <asp:Label ID="lblAElastico" runat="server" Text="ANALISIS ELASTICO" class="label-radioButton"></asp:Label>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="col-sm-4" style="padding-left: 0px;">
-                                                                        <asp:RadioButton ID="rbAnalisisInelastico" runat="server" GroupName="gTipoAnalisis" AutoPostBack="True" />
-                                                                        <asp:Label ID="lblAInelastico" runat="server" Text="ANALISIS INELASTICO" class="label-radioButton"></asp:Label>
+                                                                        <div class="radio">
+                                                                            <asp:RadioButton ID="rbAnalisisInelastico" runat="server" GroupName="gTipoAnalisis" AutoPostBack="True" />
+                                                                            <asp:Label ID="lblAInelastico" runat="server" Text="ANALISIS INELASTICO" class="label-radioButton"></asp:Label>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-6">
@@ -248,14 +252,16 @@
                                                             <div class="form-horizontal" role="form">
                                                                 <div class="form-group">
                                                                     <div class="col-sm-6">
-                                                                        <label>
+                                                                        <div class="radio">
                                                                             <asp:RadioButton ID="rbCargaSinusoidal" runat="server" AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
-                                                                            <asp:Label ID="lblCargaSinusoidal" runat="server" Text="FUNCION DE CARGA SINUSOIDAL" class="label-radioButton"></asp:Label></label>
+                                                                            <asp:Label ID="lblCargaSinusoidal" runat="server" Text="FUNCION DE CARGA SINUSOIDAL" class="label-radioButton"></asp:Label>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="col-sm-6">
-                                                                        <label>
+                                                                        <div class="radio">
                                                                             <asp:RadioButton ID="rbAcelerograma" runat="server" GroupName="gTipoAnalisis" AutoPostBack="True" />
-                                                                            <asp:Label ID="lblAcelerograma" runat="server" Text="ACELEROGRAMA" class="label-radioButton"></asp:Label></label>
+                                                                            <asp:Label ID="lblAcelerograma" runat="server" Text="ACELEROGRAMA" class="label-radioButton"></asp:Label>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
