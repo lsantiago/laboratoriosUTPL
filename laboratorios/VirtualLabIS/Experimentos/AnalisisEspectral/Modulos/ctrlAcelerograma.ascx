@@ -3,30 +3,30 @@
 <div class="col-sm-7">
     <asp:Label ID="lblAcelerograma" runat="server" Style="position: static" Text="ACELEROGRAMA" CssClass="Funcionalidad-subtitulo"></asp:Label>
     <div class="form-group">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <asp:TextBox ID="tbDuracion" runat="server" class="form-control" AutoCompleteType="Disabled" Style="padding-right: 0px;"></asp:TextBox>
         </div>
-        <div class="col-sm-8 label-der">
+        <div class="col-sm-9 label-der">
             <asp:Label ID="lblDuracion" runat="server" class="control-label small" Text="DURACIÓN (s)"></asp:Label>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbDuracion" ErrorMessage="*"
                 Style="position: static" Width="14px"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <asp:TextBox ID="tbPaso" runat="server" class="form-control" Style="padding-right: 0px;"></asp:TextBox>
         </div>
-        <div class="col-sm-8 label-der">
+        <div class="col-sm-9 label-der">
             <asp:Label ID="lblPaso" runat="server" class="control-label small" Text="PASO (s)"></asp:Label>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbPaso" ErrorMessage="*"
                 Style="position: static"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <asp:TextBox ID="tbFactor" runat="server" class="form-control" Style="padding-right: 0px;"></asp:TextBox>
         </div>
-        <div class="col-sm-8 label-der">
+        <div class="col-sm-9 label-der">
             <asp:Label ID="lblFactor" runat="server" class="control-label small" Text="FACTOR PARA OBTENER m/s^2"></asp:Label>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbFactor" ErrorMessage="*"
                 Style="position: static"></asp:RequiredFieldValidator>

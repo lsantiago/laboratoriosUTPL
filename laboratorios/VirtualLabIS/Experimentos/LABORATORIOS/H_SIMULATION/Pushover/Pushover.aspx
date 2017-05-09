@@ -121,19 +121,19 @@
                                                 <ul class="nav nav-tabs">
                                                     <li class="active"><a href="#test1" data-toggle="tab" onclick="a_onClick(0, 'picture')">
                                                         <strong>
-                                                            <asp:Label ID="lblGeometryProperties" runat="server" Text="GEOMETRY PROPERTIES"></asp:Label></strong></a></li>
+                                                            <asp:Label ID="lblGeometryProperties" runat="server" Text="GEOMETRY PROPERTIES" style="font-size: 0.9em;"></asp:Label></strong></a></li>
                                                     <li><a href="#test2" data-toggle="tab" onclick="a_onClick(1, 'picture')">
                                                         <strong>
-                                                            <asp:Label ID="lblTM" runat="server" Text="PROPERTIES OF COLUMNS"></asp:Label></strong></a></li>
+                                                            <asp:Label ID="lblTM" runat="server" Text="PROPERTIES OF COLUMNS" style="font-size: 0.9em;"></asp:Label></strong></a></li>
                                                     <li><a href="#test3" data-toggle="tab" onclick="a_onClick(2, 'picture')">
                                                         <strong>
-                                                            <asp:Label ID="lblTE" runat="server" Text="PROPERTIES OF BEAMS"></asp:Label></strong></a></li>
+                                                            <asp:Label ID="lblTE" runat="server" Text="PROPERTIES OF BEAMS" style="font-size: 0.9em;"></asp:Label></strong></a></li>
                                                     <li><a href="#test4" data-toggle="tab" onclick="a_onClick(0, 'picture')">
                                                         <strong>
-                                                            <asp:Label ID="lblMaterialProperties" runat="server" Text="MATERIAL PROPERTIES"></asp:Label></strong></a></li>
+                                                            <asp:Label ID="lblMaterialProperties" runat="server" Text="MATERIAL PROPERTIES" style="font-size: 0.9em;"></asp:Label></strong></a></li>
                                                     <li><a href="#test5" data-toggle="tab" onclick="a_onClick(0, 'picture')">
                                                         <strong>
-                                                            <asp:Label ID="lblDatosAnálisis" runat="server" Text="ANALYSIS"></asp:Label></strong></a></li>
+                                                            <asp:Label ID="lblDatosAnálisis" runat="server" Text="ANALYSIS" style="font-size: 0.9em;"></asp:Label></strong></a></li>
                                                 </ul>
                                                 <div class="tab-content" style="width: 100%; height: 400px;">
                                                     <!-- BEGIN TEST1 FORM -->
@@ -645,27 +645,27 @@
                                                                         <div class="col-sm-7">
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="CheckBoxSelectAll" runat="server" AutoPostBack="True" class="icheck" />
+                                                                                    <asp:CheckBox ID="CheckBoxSelectAll" runat="server" AutoPostBack="True" />
                                                                                     </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cbBeam1" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cbBeam1" runat="server" />
                                                                                     </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cbBeam2" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cbBeam2" runat="server" />
                                                                                     </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cbBeam3" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cbBeam3" runat="server" />
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cbBeam4" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cbBeam4" runat="server" />
                                                                                 </label>
                                                                             </div>
                                                                         </div>
@@ -689,37 +689,37 @@
                                                                         <div class="col-sm-7">
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="CheckBoxAllColumns" runat="server" AutoPostBack="True" class="icheck" />
+                                                                                    <asp:CheckBox ID="CheckBoxAllColumns" runat="server" AutoPostBack="True" />
                                                                                     </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cbColumn1" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cbColumn1" runat="server" />
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cdColumn2" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cdColumn2" runat="server" />
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cdColumn3" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cdColumn3" runat="server" />
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cdColumn4" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cdColumn4" runat="server" />
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cdColumn5" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cdColumn5" runat="server" />
                                                                                 </label>
                                                                             </div>
                                                                             <div class="checkbox">
                                                                                 <label>
-                                                                                    <asp:CheckBox ID="cdColumn6" runat="server" class="icheck" />
+                                                                                    <asp:CheckBox ID="cdColumn6" runat="server" />
                                                                                 </label>
                                                                             </div>
                                                                         </div>
@@ -769,7 +769,7 @@
                                                                     <div class="col-sm-6">
                                                                         <div class="form-group">
                                                                             <div id="graphicsRBeam0" class="col-sm-12 text-center">
-                                                                                <asp:Image ID="Image1" runat="server" Width="290px" Height="220px" />
+                                                                                <asp:Image ID="Image1" runat="server" Width="265px" Height="220px" />
                                                                                 <chart:WebChartViewer ID="WebChar11" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" Width="250px" Height="220px" />
                                                                             </div>
                                                                         </div>
@@ -792,7 +792,7 @@
                                                                     <div class="col-sm-6">
                                                                         <div class="form-group">
                                                                             <div id="graphicsRBeam00" class="col-sm-12 text-center">
-                                                                                <asp:Image ID="Image2" runat="server" Width="290px" Height="220px" />
+                                                                                <asp:Image ID="Image2" runat="server" Width="265px" Height="220px" />
                                                                                 <chart:WebChartViewer ID="WebChart12" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" Width="250px" Height="220px" />
                                                                             </div>
                                                                         </div>
@@ -833,7 +833,7 @@
                                                                     <div class="col-sm-6">
                                                                         <div class="form-group">
                                                                             <div id="graphicsRBeam000" class="col-sm-12 text-center">
-                                                                                <asp:Image ID="Image3" runat="server" Width="290px" Height="220px" />
+                                                                                <asp:Image ID="Image3" runat="server" Width="265px" Height="220px" />
                                                                                 <chart:WebChartViewer ID="WebChart13" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" Width="250px" Height="220px" />
                                                                             </div>
                                                                         </div>
@@ -856,7 +856,7 @@
                                                                     <div class="col-sm-6">
                                                                         <div id="graphicsRBeam0000" class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:Image ID="Image6" runat="server" Width="290px" Height="220px" />
+                                                                                <asp:Image ID="Image6" runat="server" Width="265px" Height="220px" />
                                                                                 <chart:WebChartViewer ID="WebChart14" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" Width="250px" Height="220px" />
                                                                             </div>
                                                                         </div>

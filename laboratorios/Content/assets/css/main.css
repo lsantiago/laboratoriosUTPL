@@ -3815,3 +3815,28 @@ hr {
     font-family: 'Raleway SemiBold', Raleway-SemiBold;
     font-size: 1.1em;
 }
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.image #img1 {
+    width: 100%;
+    height: 100%;
+}
+
+.image #img2 {
+    width: 100%;
+    height: 100%;
+}
+
+.image #ctl04_img2 {
+    width: 100%;
+    height: 100%;
+}
+
+.image #WebChartViewer1 {
+    width: 100%;
+    height: 100%;
+}
