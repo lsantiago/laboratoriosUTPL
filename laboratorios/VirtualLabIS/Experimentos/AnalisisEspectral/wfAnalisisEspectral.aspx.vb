@@ -226,14 +226,19 @@ Namespace VirtualLabIS.VLEE
         ''' </summary>
         ''' <remarks></remarks>
         Private Sub subCrearWebChartViewer()
+
+
             WebChartViewer1.Image = XYChart_Grafica_EspectroAceleracion.makeWebImage(Chart.PNG)
-            
+
+
+
+
             WebChartViewer2.Image = XYChart_Grafica_EspectroVelocidad.makeWebImage(Chart.PNG)
-            
+
             WebChartViewer3.Image = XYChart_Grafica_EspectroDesplazamiento.makeWebImage(Chart.PNG)
-            
+
             WebChartViewer4.Image = XYChart_Grafica_EspectroDuctilidad.makeWebImage(Chart.PNG)
-            
+
         End Sub
 
 
@@ -317,6 +322,7 @@ Namespace VirtualLabIS.VLEE
             grfGrafica.yAxis().setWidth(yAxis_setWidth_width)
             grfGrafica.xAxis().setTitle(xAxis_setTitle_text, xAxis_setTitle_font, xAxis_setTitle_fontSize)
             grfGrafica.xAxis().setWidth(xAxis_setWidth_width)
+
         End Sub
 
 
@@ -388,60 +394,60 @@ Namespace VirtualLabIS.VLEE
 
                 'CONTROL DE CAMBIO PARA TIPO DE ANALISIS
                 If rbAnalisisElastico.Checked Then
-                    tbDamping1.Enabled = True
-                    tbDamping2.Enabled = True
-                    tbNumCurvas.Enabled = True
-                    lblDamping1.Enabled = True
-                    lblDamping2.Enabled = True
-                    lblNumCurvas.Enabled = True
+                tbDamping1.Visible = True
+                tbDamping2.Visible = True
+                tbNumCurvas.Visible = True
+                lblDamping1.Visible = True
+                lblDamping2.Visible = True
+                lblNumCurvas.Visible = True
 
-                    tbDamping3.Enabled = False
-                    tbR1.Enabled = False
-                    tbR2.Enabled = False
-                    tbCoefRigidez.Enabled = False
-                    tbNumCurvas2.Enabled = False
-                    lblDamping3.Enabled = False
-                    lblR1.Enabled = False
-                    lblR2.Enabled = False
-                    lblCoefRigidez.Enabled = False
-                    lblNumCurvas2.Enabled = False
-                    img2.Visible = True
+                tbDamping3.Visible = False
+                tbR1.Visible = False
+                tbR2.Visible = False
+                tbCoefRigidez.Visible = False
+                tbNumCurvas2.Visible = False
+                lblDamping3.Visible = False
+                lblR1.Visible = False
+                lblR2.Visible = False
+                lblCoefRigidez.Visible = False
+                lblNumCurvas2.Visible = False
+                img2.Visible = True
                 'img3.Visible = False
 
                 RequiredFieldValidator9.Enabled = False
-                    RequiredFieldValidator10.Enabled = False
-                    RequiredFieldValidator11.Enabled = False
-                    RequiredFieldValidator12.Enabled = False
-                    RequiredFieldValidator13.Enabled = False
+                RequiredFieldValidator10.Enabled = False
+                RequiredFieldValidator11.Enabled = False
+                RequiredFieldValidator12.Enabled = False
+                RequiredFieldValidator13.Enabled = False
 
-                    RequiredFieldValidator6.Enabled = True
-                    RequiredFieldValidator7.Enabled = True
-                    RequiredFieldValidator8.Enabled = True
+                RequiredFieldValidator6.Enabled = True
+                RequiredFieldValidator7.Enabled = True
+                RequiredFieldValidator8.Enabled = True
 
 
-                ElseIf rbAnalisisInelastico.Checked Then
-                    tbDamping3.Enabled = True
-                    tbR1.Enabled = True
-                    tbR2.Enabled = True
-                    tbCoefRigidez.Enabled = True
-                    tbNumCurvas2.Enabled = True
-                    lblDamping3.Enabled = True
-                    lblR1.Enabled = True
-                    lblR2.Enabled = True
-                    lblCoefRigidez.Enabled = True
-                    lblNumCurvas2.Enabled = True
+            ElseIf rbAnalisisInelastico.Checked Then
+                tbDamping3.Visible = True
+                tbR1.Visible = True
+                tbR2.Visible = True
+                tbCoefRigidez.Visible = True
+                tbNumCurvas2.Visible = True
+                lblDamping3.Visible = True
+                lblR1.Visible = True
+                lblR2.Visible = True
+                lblCoefRigidez.Visible = True
+                lblNumCurvas2.Visible = True
 
-                    tbDamping1.Enabled = False
-                    tbDamping2.Enabled = False
-                    tbNumCurvas.Enabled = False
-                    lblDamping1.Enabled = False
-                    lblDamping2.Enabled = False
-                    lblNumCurvas.Enabled = False
-                    img2.Visible = False
+                tbDamping1.Visible = False
+                tbDamping2.Visible = False
+                tbNumCurvas.Visible = False
+                lblDamping1.Visible = False
+                lblDamping2.Visible = False
+                lblNumCurvas.Visible = False
+                img2.Visible = False
                 'img3.Visible = True
 
                 RequiredFieldValidator9.Enabled = True
-                    RequiredFieldValidator10.Enabled = True
+                RequiredFieldValidator10.Enabled = True
                     RequiredFieldValidator11.Enabled = True
                     RequiredFieldValidator12.Enabled = True
                     RequiredFieldValidator13.Enabled = True
