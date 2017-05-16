@@ -14,7 +14,10 @@
     <script src="../../../../Varios/Archivos/Scripts/Validacion.js" type="text/javascript"></script>
 </head>
 <body>
+    
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- BEGIN MAIN CONTENT -->
             <aside class="right-side">
@@ -56,7 +59,7 @@
                                                         <asp:Label ID="lblEsquemaMain" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
                                                         <div class="pull-right grid-tools">
                                                             <asp:LinkButton ID="ibtnLoadExample" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo" >
-                                                                Cargar Ejemplo
+                                                                Load Sample
                                                                 <i class="fa fa-play"></i>
                                                             </asp:LinkButton>
                                                         </div>
@@ -302,6 +305,8 @@
                 <!-- END SECTION CONTENT -->
             </aside>
             <!-- END MAIN CONTENT -->
+
+            
         </div>
         <asp:PlaceHolder runat="server">
             <%: Scripts.Render("~/Content/assets/js") %>

@@ -58,7 +58,7 @@ Namespace VirtualLabIS.VLEE
         ' Create a XYChart object of size 450 x 450 pixels
         Dim intAnchoGraficas As Integer = 480
         Dim intAltoGraficas As Integer = 390
-        Dim intColorFondo As Integer = &HEFEFEE
+        Dim intColorFondo As Integer = &HFFFFFF
 
         'GRAFICAS DE VIGAS
         Dim XYChart_Grafica_Pushover As XYChart = New XYChart(480, 390 - 90, intColorFondo, intColorFondo, 0) 'XYChart para el primer gráfico
@@ -179,7 +179,7 @@ Namespace VirtualLabIS.VLEE
                                     ByVal xAxis_setTitle_fontSize As Double, ByVal xAxis_setTitle_fontColor As Integer, _
                                     ByVal xAxis_setWidth_width As Integer, _
                                     ByRef grfGrafica As XYChart)
-            grfGrafica.setRoundedFrame(222, 0, 0, 0, 0)
+            'grfGrafica.setRoundedFrame(222, 0, 0, 0, 0)
             grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor)
             grfGrafica.addTitle(addTitle_text, addTitle_font, addTitle_fontSize)
             grfGrafica.yAxis().setTitle(yAxis_setTitle_text, yAxis_setTitle_font, yAxis_setTitle_fontSize)
@@ -240,105 +240,105 @@ Namespace VirtualLabIS.VLEE
             Dim intColorFondoFormulasGraficas As Integer = &HD6DAFF
 
             ' GRÁFICA NÚMERO#1   "Pushover"
-            CrearGraficasXYChart(60, 10, 300, 250, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 9), "Arial Bold", 9, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 9, 0, 3, XYChart_Grafica_Pushover)
+            CrearGraficasXYChart(60, 10, 300, 250, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 9), "Arial", 9, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 9, 0, 1, XYChart_Grafica_Pushover)
             legendBox = XYChart_Grafica_Pushover.addLegend(380, 60, bolAddLegend_Bool, strAddLegend_Font, intAddLegend_FontSize)
             legendBox.setBackground(Chart.Transparent)
 
             ' GRÁFICA NÚMERO#2   "STRAIN LEFT END TOP BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_StrainLeftEndTopBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_StrainLeftEndTopBeams)
             XYChart_Grafica_StrainLeftEndTopBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica1 As ChartDirector.TextBox = XYChart_Grafica_StrainLeftEndTopBeams.addText(130, 3, "TOP STRAIN", "", 10)
             txtBox_NombreGráfica1.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             '' GRÁFICA NÚMERO#3   "STRAIN LEFT END BOTTOM BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_StrainLeftEndBottomBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_StrainLeftEndBottomBeams)
             XYChart_Grafica_StrainLeftEndBottomBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica2 As ChartDirector.TextBox = XYChart_Grafica_StrainLeftEndBottomBeams.addText(130, 3, "BOTTOM STRAIN", "", 10)
             txtBox_NombreGráfica2.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#4   "STRAIN RIGHT END TOP BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_StrainRightEndTopBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_StrainRightEndTopBeams)
             XYChart_Grafica_StrainRightEndTopBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica3 As ChartDirector.TextBox = XYChart_Grafica_StrainRightEndTopBeams.addText(130, 3, "TOP STRAIN", "", 10)
             txtBox_NombreGráfica3.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICA NÚMERO#5 "STRAIN RIGHT END BOTTOM BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_StrainRightEndBottomBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_StrainRightEndBottomBeams)
             XYChart_Grafica_StrainRightEndBottomBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica4 As ChartDirector.TextBox = XYChart_Grafica_StrainRightEndBottomBeams.addText(130, 3, "BOTTOM STRAIN", "", 10)
             txtBox_NombreGráfica4.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICA NÚMERO#6 "DCR LEFT END TOP BEAMS"      
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_DCRLeftEndTopBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_DCRLeftEndTopBeams)
             XYChart_Grafica_DCRLeftEndTopBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica5 As ChartDirector.TextBox = XYChart_Grafica_DCRLeftEndTopBeams.addText(130, 3, "TOP DCR", "", 10)
             txtBox_NombreGráfica5.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#7 "DCR LEFT END BOTTOM BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_DCRLeftEndBottomBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_DCRLeftEndBottomBeams)
             XYChart_Grafica_DCRLeftEndBottomBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica6 As ChartDirector.TextBox = XYChart_Grafica_DCRLeftEndBottomBeams.addText(130, 3, "BOTTOM DCR", "", 10)
             txtBox_NombreGráfica6.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#8 "DCR RIGHT END TOP BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_DCRRightEndTopBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_DCRRightEndTopBeams)
             XYChart_Grafica_DCRRightEndTopBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica7 As ChartDirector.TextBox = XYChart_Grafica_DCRRightEndTopBeams.addText(130, 3, "TOP DCR", "", 10)
             txtBox_NombreGráfica7.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICO NÚMERO#9 "DCR RIGHT END BOTTOM BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_DCRRightEndBottom)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_DCRRightEndBottom)
             XYChart_Grafica_DCRRightEndBottom.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica8 As ChartDirector.TextBox = XYChart_Grafica_DCRRightEndBottom.addText(130, 3, "BOTTOM DCR", "", 10)
             txtBox_NombreGráfica8.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#10 "MOMENT LEFT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 5), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_MomentLeftEndBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 5), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_MomentLeftEndBeams)
             XYChart_Grafica_MomentLeftEndBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica9 As ChartDirector.TextBox = XYChart_Grafica_MomentLeftEndBeams.addText(130, 3, "MOMENT", "", 10)
             txtBox_NombreGráfica9.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#11 "CURVATURE LEFT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 6), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_CurvatureLeftEndBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 6), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_CurvatureLeftEndBeams)
             XYChart_Grafica_CurvatureLeftEndBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica10 As ChartDirector.TextBox = XYChart_Grafica_CurvatureLeftEndBeams.addText(130, 3, "CURVATURE", "", 10)
             txtBox_NombreGráfica10.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#12 "MOMENT RIGHT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 5), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_MomentRightEndBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 5), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_MomentRightEndBeams)
             XYChart_Grafica_MomentRightEndBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica11 As ChartDirector.TextBox = XYChart_Grafica_MomentRightEndBeams.addText(130, 3, "MOMENT", "", 10)
             txtBox_NombreGráfica11.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#13 "CURVATURE RIGHT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 6), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_CurvatureRightEndBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 6), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_CurvatureRightEndBeams)
             XYChart_Grafica_CurvatureRightEndBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica12 As ChartDirector.TextBox = XYChart_Grafica_CurvatureRightEndBeams.addText(130, 3, "CURVATURE", "", 10)
             txtBox_NombreGráfica12.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#14 "SHEAR LEFT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 7), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_ShearLeftEndBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 7), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_ShearLeftEndBeams)
             XYChart_Grafica_ShearLeftEndBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica13 As ChartDirector.TextBox = XYChart_Grafica_ShearLeftEndBeams.addText(130, 3, "SHEAR", "", 10)
             txtBox_NombreGráfica13.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#15 "AXIAL LEFT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 8), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_AxialLeftEndBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 8), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_AxialLeftEndBeams)
             XYChart_Grafica_AxialLeftEndBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica14 As ChartDirector.TextBox = XYChart_Grafica_AxialLeftEndBeams.addText(130, 3, "AXIAL", "", 10)
             txtBox_NombreGráfica14.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#16 "SHEAR RIGHT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 7), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_ShearRightEndBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 7), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_ShearRightEndBeams)
             XYChart_Grafica_ShearRightEndBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica15 As ChartDirector.TextBox = XYChart_Grafica_ShearRightEndBeams.addText(130, 3, "SHEAR", "", 10)
             txtBox_NombreGráfica15.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#17 "AXIAL RIGHT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 8), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_AxialRightEndBeams)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 8), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_AxialRightEndBeams)
             XYChart_Grafica_AxialRightEndBeams.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica16 As ChartDirector.TextBox = XYChart_Grafica_AxialRightEndBeams.addText(130, 3, "AXIAL", "", 10)
             txtBox_NombreGráfica16.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
@@ -347,106 +347,106 @@ Namespace VirtualLabIS.VLEE
 
             'GRAFICAS DE COLUMNAS
             ' GRÁFICA NÚMERO#18   "STRAIN LEFT END TOP BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_StrainLeftEndTopColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_StrainLeftEndTopColumns)
             XYChart_Grafica_StrainLeftEndTopColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica21 As ChartDirector.TextBox = XYChart_Grafica_StrainLeftEndTopColumns.addText(130, 3, "TOP STRAIN", "", 10)
             txtBox_NombreGráfica21.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             '' GRÁFICA NÚMERO#19   "STRAIN LEFT END BOTTOM BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_StrainLeftEndBottomColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_StrainLeftEndBottomColumns)
             XYChart_Grafica_StrainLeftEndBottomColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica22 As ChartDirector.TextBox = XYChart_Grafica_StrainLeftEndBottomColumns.addText(130, 3, "BOTTOM STRAIN", "", 10)
             txtBox_NombreGráfica22.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICO NÚMERO#20   "STRAIN RIGHT END TOP BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_StrainRightEndTopColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_StrainRightEndTopColumns)
             XYChart_Grafica_StrainRightEndTopColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica23 As ChartDirector.TextBox = XYChart_Grafica_StrainRightEndTopColumns.addText(130, 3, "TOP STRAIN", "", 10)
             txtBox_NombreGráfica23.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICA NÚMERO#21 "STRAIN RIGHT END BOTTOM BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_StrainRightEndBottomColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_StrainRightEndBottomColumns)
             XYChart_Grafica_StrainRightEndBottomColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica24 As ChartDirector.TextBox = XYChart_Grafica_StrainRightEndBottomColumns.addText(130, 3, "BOTTOM STRAIN", "", 10)
             txtBox_NombreGráfica24.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICA NÚMERO#22 "DCR LEFT END TOP BEAMS"      
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_DCRLeftEndTopColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_DCRLeftEndTopColumns)
             XYChart_Grafica_DCRLeftEndTopColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica25 As ChartDirector.TextBox = XYChart_Grafica_DCRLeftEndTopColumns.addText(130, 3, "TOP DCR", "", 10)
             txtBox_NombreGráfica25.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#23 "DCR LEFT END BOTTOM BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_DCRLeftEndBottomColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_DCRLeftEndBottomColumns)
             XYChart_Grafica_DCRLeftEndBottomColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica26 As ChartDirector.TextBox = XYChart_Grafica_DCRLeftEndBottomColumns.addText(130, 3, "BOTTOM DCR", "", 10)
             txtBox_NombreGráfica26.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICO NÚMERO#24 "DCR RIGHT END TOP BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_DCRRightEndTopColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_DCRRightEndTopColumns)
             XYChart_Grafica_DCRRightEndTopColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica27 As ChartDirector.TextBox = XYChart_Grafica_DCRRightEndTopColumns.addText(130, 3, "TOP DCR", "", 10)
             txtBox_NombreGráfica27.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#25 "DCR RIGHT END BOTTOM BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_DCRRightEndBottomColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_DCRRightEndBottomColumns)
             XYChart_Grafica_DCRRightEndBottomColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica28 As ChartDirector.TextBox = XYChart_Grafica_DCRRightEndBottomColumns.addText(130, 3, "BOTTOM DCR", "", 10)
             txtBox_NombreGráfica28.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#26 "MOMENT LEFT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 5), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_MomentLeftEndColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 5), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_MomentLeftEndColumns)
             XYChart_Grafica_MomentLeftEndColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica29 As ChartDirector.TextBox = XYChart_Grafica_MomentLeftEndColumns.addText(130, 3, "MOMENT", "", 10)
             txtBox_NombreGráfica29.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#27 "CURVATURE LEFT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 6), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_CurvatureLeftEndColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 6), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_CurvatureLeftEndColumns)
             XYChart_Grafica_CurvatureLeftEndColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica210 As ChartDirector.TextBox = XYChart_Grafica_CurvatureLeftEndColumns.addText(130, 3, "CURVATURE", "", 10)
             txtBox_NombreGráfica210.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICO NÚMERO#28 "MOMENT RIGHT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 5), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_MomentRightEndColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 5), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_MomentRightEndColumns)
             XYChart_Grafica_MomentRightEndColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica211 As ChartDirector.TextBox = XYChart_Grafica_MomentRightEndColumns.addText(130, 3, "MOMENT", "", 10)
             txtBox_NombreGráfica211.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICO NÚMERO#29 "CURVATURE RIGHT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 6), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_CurvatureRightEndColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 6), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_CurvatureRightEndColumns)
             XYChart_Grafica_CurvatureRightEndColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica212 As ChartDirector.TextBox = XYChart_Grafica_CurvatureRightEndColumns.addText(130, 3, "CURVATURE", "", 10)
             txtBox_NombreGráfica212.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICO NÚMERO#30 "SHEAR LEFT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 7), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_ShearLeftEndColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 7), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_ShearLeftEndColumns)
             XYChart_Grafica_ShearLeftEndColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica213 As ChartDirector.TextBox = XYChart_Grafica_ShearLeftEndColumns.addText(130, 3, "SHEAR", "", 10)
             txtBox_NombreGráfica213.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
             ' GRÁFICO NÚMERO#31 "AXIAL LEFT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 8), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_AxialLeftEndColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 8), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_AxialLeftEndColumns)
             XYChart_Grafica_AxialLeftEndColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica214 As ChartDirector.TextBox = XYChart_Grafica_AxialLeftEndColumns.addText(130, 3, "AXIAL", "", 10)
             txtBox_NombreGráfica214.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICO NÚMERO#32 "SHEAR RIGHT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 7), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_ShearRightEndColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 7), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_ShearRightEndColumns)
             XYChart_Grafica_ShearRightEndColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica215 As ChartDirector.TextBox = XYChart_Grafica_ShearRightEndColumns.addText(130, 3, "SHEAR", "", 10)
             txtBox_NombreGráfica215.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)
 
 
             ' GRÁFICO NÚMERO#33 "AXIAL RIGHT END BEAMS"
-            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 8), "Arial Bold", 8, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold", 8, 0, 3, XYChart_Grafica_AxialRightEndColumns)
+            CrearGraficasXYChart(60, 40, 320, 300, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Arial Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 8), "Arial", 8, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 8, 0, 1, XYChart_Grafica_AxialRightEndColumns)
             XYChart_Grafica_AxialRightEndColumns.addLegend(380, 85, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             Dim txtBox_NombreGráfica216 As ChartDirector.TextBox = XYChart_Grafica_AxialRightEndColumns.addText(130, 3, "AXIAL", "", 10)
             txtBox_NombreGráfica216.setBackground(intColorFondoFormulasGraficas, intColorFondoFormulasGraficas, 1)

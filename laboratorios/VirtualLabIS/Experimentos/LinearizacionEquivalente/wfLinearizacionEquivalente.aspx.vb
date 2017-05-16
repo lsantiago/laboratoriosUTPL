@@ -60,7 +60,7 @@ Namespace VirtualLabIS.VLEE
         ' Create a XYChart object of size 450 x 450 pixels
         Dim intAnchoGraficas As Integer = 955
         Dim intAltoGraficas As Integer = 390
-        Dim intColorFondo As Integer = &HEFEFEE
+        Dim intColorFondo As Integer = &HFFFFFF
         Dim XYChart_Grafica_R As XYChart = New XYChart(intAnchoGraficas, intAltoGraficas, intColorFondo, intColorFondo, 0) 'XYChart para el primer gráfico
         Dim XYChart_Grafica_Di As XYChart = New XYChart(intAnchoGraficas, intAltoGraficas, intColorFondo, intColorFondo, 0) 'XYChart para el segundo gráfico
         Dim XYChart_Grafica_Damping As XYChart = New XYChart(intAnchoGraficas, intAltoGraficas, intColorFondo, intColorFondo, 0) 'XYChart para el tercer gráfico
@@ -212,17 +212,17 @@ Namespace VirtualLabIS.VLEE
         ''' <remarks></remarks>
         Private Sub establecerPropCtrlGraficos()
             ' GRÁFICA NÚMERO#1   "ACELERACION DEL SUELO"
-            CrearGraficasXYChart(50, 8, 850, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, " ", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial Bold Italic", 9, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold Italic", 9, 0, 3, XYChart_Grafica_R)
+            CrearGraficasXYChart(60, 40, 700, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, " ", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 1), "Arial", 9, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 9, 0, 1, XYChart_Grafica_R)
             XYChart_Grafica_R.addLegend(894, 20, False, "Arial Bold", 9).setBackground(Chart.Transparent)
 
             ' GRÁFICA NÚMERO#2   "FUNCIÓN DE CARGA"
-            CrearGraficasXYChart(50, 8, 850, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, " ", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial Bold Italic", 9, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold Italic", 9, 0, 3, XYChart_Grafica_Di)
+            CrearGraficasXYChart(60, 40, 700, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, " ", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 2), "Arial", 9, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 9, 0, 1, XYChart_Grafica_Di)
             XYChart_Grafica_Di.addLegend(894, 20, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             ' GRÁFICO NÚMERO#3   "DESPLAZAMIENTO RELATIVO"
-            CrearGraficasXYChart(50, 8, 850, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, " ", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial Bold Italic", 9, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold Italic", 9, 0, 3, XYChart_Grafica_Damping)
+            CrearGraficasXYChart(60, 40, 700, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, " ", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 3), "Arial", 9, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 9, 0, 1, XYChart_Grafica_Damping)
             XYChart_Grafica_Damping.addLegend(894, 20, False, "Arial Bold", 9).setBackground(Chart.Transparent)
             ' GRÁFICO NÚMERO#4   "VELOCIDAD RELATIVA"
-            CrearGraficasXYChart(50, 8, 850, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, " ", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial Bold Italic", 9, 0, 3, arrTextoEjes(idIdioma, 0), "Arial Bold Italic", 9, 0, 3, XYChart_Grafica_Teff)
+            CrearGraficasXYChart(60, 40, 700, 300, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, " ", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 4), "Arial", 9, 0, 1, arrTextoEjes(idIdioma, 0), "Arial", 9, 0, 1, XYChart_Grafica_Teff)
             XYChart_Grafica_Teff.addLegend(894, 20, False, "Arial Bold", 9).setBackground(Chart.Transparent)
         End Sub
 
@@ -271,8 +271,8 @@ Namespace VirtualLabIS.VLEE
                                     ByVal xAxis_setTitle_fontSize As Double, ByVal xAxis_setTitle_fontColor As Integer, _
                                     ByVal xAxis_setWidth_width As Integer, _
                                     ByRef grfGrafica As XYChart)
-            grfGrafica.setRoundedFrame(222, 0, 0, 0, 0)
-            grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor)
+            'grfGrafica.setRoundedFrame(222, 0, 0, 0, 0)
+            grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor).set4QBgColor(&HFFFFFF, &HFFFFFF, &HFFFFFF, &HFFFFFF)
             grfGrafica.addTitle(addTitle_text, addTitle_font, addTitle_fontSize)
             grfGrafica.yAxis().setTitle(yAxis_setTitle_text, yAxis_setTitle_font, yAxis_setTitle_fontSize)
             grfGrafica.yAxis().setWidth(yAxis_setWidth_width)

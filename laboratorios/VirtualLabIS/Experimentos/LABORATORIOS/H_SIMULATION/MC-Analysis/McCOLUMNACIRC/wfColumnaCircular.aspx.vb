@@ -124,9 +124,9 @@ Namespace VirtualLabIS.VLEE
         Public intExpColumna_Id As Integer = 0
         ' Create a XYChart object of size 450 x 450 pixels
         Dim intAnchoGraficas As Integer = 480
-        Dim intAltoGraficas As Integer = 390
-        Dim intColorFondo As Integer = &HEFEFEE
-        Dim XYChart_Grafica_MomentoCurvatura As XYChart = New XYChart(intAnchoGraficas - 75, intAltoGraficas - 90, intColorFondo, intColorFondo, 0) 'XYChart para el primer gráfico
+        Dim intAltoGraficas As Integer = 240
+        Dim intColorFondo As Integer = &HFFFFFF
+        Dim XYChart_Grafica_MomentoCurvatura As XYChart = New XYChart(intAnchoGraficas - 75, intAltoGraficas, intColorFondo, intColorFondo, 0) 'XYChart para el primer gráfico
 
         'Variables para configurar las Leyendas que se agregan a las Gráficas
         Dim intAddLegend_Coord_x As Integer = 315
@@ -220,7 +220,7 @@ Namespace VirtualLabIS.VLEE
         ''' <remarks></remarks>
         Private Sub establecerPropCtrlGraficos()
             ' GRÁFICA NÚMERO#1   "ANÁLISIS MOMENTO CURVATURA"
-            CrearGraficasXYChart(60, 5, 250, 250, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 0), "Arial Bold Italic", 9, 0, 3, arrTextoEjes(idIdioma, 1), "Arial Bold Italic", 9, 0, 3, XYChart_Grafica_MomentoCurvatura)
+            CrearGraficasXYChart(60, 5, 250, 190, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 0), "Arial", 10, 0, 1, arrTextoEjes(idIdioma, 1), "Arial", 10, 0, 1, XYChart_Grafica_MomentoCurvatura)
             legendBox = XYChart_Grafica_MomentoCurvatura.addLegend(intAddLegend_Coord_x, intAddLegend_Coord_y, bolAddLegend_Bool, strAddLegend_Font, intAddLegend_FontSize)
             legendBox.setBackground(Chart.Transparent)
         End Sub

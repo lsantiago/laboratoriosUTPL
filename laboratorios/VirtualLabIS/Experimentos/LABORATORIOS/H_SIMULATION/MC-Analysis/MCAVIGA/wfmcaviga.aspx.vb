@@ -22,7 +22,7 @@ Namespace VirtualLabIS.VLEE
 
 #Region "Constantes"
         'Alpha Rojo Verde Azul   - AA RR GG BB son los componentes que pueden ir desde 00 - FF (0 -255)
-        Dim colores() As Integer = {&HFF0000, &H22AAFF, &H336622, &H44CCAA, &H551188, &H66EE44, &H77FF77, &H8899AA, &H9944BB, &HAA8822, &HDD8866, &H22EEEE, &HDDAABB}
+        Dim colores() As Integer = {&H2471A3, &HA93226, &H2E4053, &HF1C40F, &H797D7F, &H196F3D, &H5499C7, &HCD6155, &HDC7633, &HA569BD, &HF1948A, &H1A5276, &H873600, &H626567, &H5D6D7E, RGB(225, 100, 120), RGB(84, 96, 250), &HFF0000, &H22AAFF, &H336622, &H44CCAA, &H551188, &H66EE44, &H77FF77, &H8899AA, &H9944BB, &HAA8822, &HDD8866, &H22EEEE, &HDDAABB, &H0, &HFF0000, &H22AAFF, &H336622, &H44CCAA, &H551188, &H66EE44, &H77FF77, &H8899AA, &H9944BB, &HAA8822, &HDD8866, &H22EEEE, &HDDAABB, &H0}
         Dim arrTextoEjes(,) As String = {{"MOMENTO (kN-m)", _
                                                   "CURVATURA (1/m)"}, _
                                                 {"MOMENT(kN-m)", _
@@ -122,10 +122,10 @@ Namespace VirtualLabIS.VLEE
         Dim intNumeroIteracionesAMC As Integer
         Public intExpColumna_Id As Integer = 0
         ' Create a XYChart object of size 450 x 450 pixels
-        Dim intAnchoGraficas As Integer = 480
-        Dim intAltoGraficas As Integer = 390
-        Dim intColorFondo As Integer = &HEFEFEE
-        Dim XYChart_Grafica_MomentoCurvatura As XYChart = New XYChart(intAnchoGraficas - 75, intAltoGraficas - 90, intColorFondo, intColorFondo, 0) 'XYChart para el primer gráfico
+        Dim intAnchoGraficas As Integer = 440
+        Dim intAltoGraficas As Integer = 260
+        Dim intColorFondo As Integer = &HFFFFFF
+        Dim XYChart_Grafica_MomentoCurvatura As XYChart = New XYChart(intAnchoGraficas - 20, intAltoGraficas, intColorFondo, intColorFondo, 0) 'XYChart para el primer gráfico
 
         'Variables para configurar las Leyendas que se agregan a las Gráficas
         Dim intAddLegend_Coord_x As Integer = 315
@@ -192,12 +192,12 @@ Namespace VirtualLabIS.VLEE
                                     ByVal xAxis_setTitle_fontSize As Double, ByVal xAxis_setTitle_fontColor As Integer, _
                                     ByVal xAxis_setWidth_width As Integer, _
                                     ByRef grfGrafica As XYChart)
-            grfGrafica.setRoundedFrame(222, 0, 0, 0, 0)
-            grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor)
+            'grfGrafica.setRoundedFrame(222, 0, 0, 0, 0)
+            grfGrafica.setPlotArea(setPlotArea_x, setPlotArea_y, setPlotArea_width, setPlotArea_height, setPlotArea_bgColor, setPlotArea_altBgColor, setPlotArea_edgeColor, setPlotArea_hGridColor, setPlotArea_vGridColor).set4QBgColor(&HFFFFFF, &HFFFFFF, &HFFFFFF, &HFFFFFF)
             grfGrafica.addTitle(addTitle_text, addTitle_font, addTitle_fontSize)
-            grfGrafica.yAxis().setTitle(yAxis_setTitle_text, yAxis_setTitle_font, yAxis_setTitle_fontSize)
+            grfGrafica.yAxis().setTitle(yAxis_setTitle_text, yAxis_setTitle_font, yAxis_setTitle_fontSize, &H666666)
             grfGrafica.yAxis().setWidth(yAxis_setWidth_width)
-            grfGrafica.xAxis().setTitle(xAxis_setTitle_text, xAxis_setTitle_font, xAxis_setTitle_fontSize)
+            grfGrafica.xAxis().setTitle(xAxis_setTitle_text, xAxis_setTitle_font, xAxis_setTitle_fontSize, &H666666)
             grfGrafica.xAxis().setWidth(xAxis_setWidth_width)
         End Sub
 
@@ -218,7 +218,7 @@ Namespace VirtualLabIS.VLEE
         ''' <remarks></remarks>
         Private Sub establecerPropCtrlGraficos()
             ' GRÁFICA NÚMERO#1   "ANÁLISIS MOMENTO CURVATURA"
-            CrearGraficasXYChart(60, 5, 250, 250, &HFFFFFF, -1, -1, &HCCCCCC, &HCCCCCC, "", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 0), "Arial Bold Italic", 9, 0, 3, arrTextoEjes(idIdioma, 1), "Arial Bold Italic", 9, 0, 3, XYChart_Grafica_MomentoCurvatura)
+            CrearGraficasXYChart(60, 5, 250, 200, &HFFFFFF, -1, -1, &HFFFFFF, &HFFFFFF, "", "Times New Roman Bold", 16, 0, 0, 0, arrTextoEjes(idIdioma, 0), "Arial", 9, 0, 1, arrTextoEjes(idIdioma, 1), "Arial", 9, 0, 1, XYChart_Grafica_MomentoCurvatura)
             legendBox = XYChart_Grafica_MomentoCurvatura.addLegend(intAddLegend_Coord_x, intAddLegend_Coord_y, bolAddLegend_Bool, strAddLegend_Font, intAddLegend_FontSize)
             legendBox.setBackground(Chart.Transparent)
         End Sub
