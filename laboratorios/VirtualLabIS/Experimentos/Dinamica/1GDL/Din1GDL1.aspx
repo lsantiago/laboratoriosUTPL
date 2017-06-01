@@ -617,9 +617,9 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <asp:LinkButton ID="btnDownResul1" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
-                                                                                    <i class="fa fa-download"></i>
-                                                                                    Download Answers
-                                                                                </asp:LinkButton>
+                                                                                <i class="fa fa-download"></i>
+                                                                                Download Answers
+                                                                            </asp:LinkButton>
                                                                         </div>
                                                                     </div>
                                                                     <div id="graphics1" style="padding-top: 15px;">
