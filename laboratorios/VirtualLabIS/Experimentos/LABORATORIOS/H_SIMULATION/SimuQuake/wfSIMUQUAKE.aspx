@@ -33,7 +33,7 @@
                         <li>ARTIFICIAL EARTHQUAKE GENERATION</li>
                     </ol>
                     <h5><b>Description:</b> Artificial Earthquake Generation</h5>
-                    <h5><b>Authors:</b> Suarez, V.A.; Quinonez, S.</h5>
+                    <h5><b>Authors:</b> Suarez, V.A.; Quinonez, S.; Duque, E.</h5>
                     <h5><b>Info:</b> SIMUQUAKE</h5>
                     <h5>This application is avalible for registered users only</h5>
                     <h5>If you experience any problem or if you need assistance running this program please contact vasuarez@utpl.edu.ec</h5>

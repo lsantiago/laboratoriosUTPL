@@ -545,7 +545,7 @@ Namespace VirtualLabIS.VLEE
             'Ponemos el tipo de la respuesta al valor adecuado
             Response.ContentType = "application/vnd.ms-excel"
 
-            Select Case CType(sender, Button).ID
+            Select Case CType(sender, LinkButton).ID
                 Case "btnGetResult1"
                     Response.AddHeader("content-disposition", "attachment; filename=" & arrTextoTitulosExperimentos(idIdioma, 0) & ".xls")
                     Response.Write(ge.DoExcell(arr_auxDuct, arr_auxR, maxPuntosEnLinea, numLinea - 1, arrTextoTitulosExperimentos(idIdioma, 0), arrTextoEjes(idIdioma, 0), arrTextoEjes(idIdioma, 1), arr_NumPuntosInputFile).ToString)

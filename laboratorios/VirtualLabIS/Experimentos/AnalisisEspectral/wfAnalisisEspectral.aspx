@@ -34,7 +34,7 @@
                         <li>SPECTRAL ANALYSIS OF EARTHQUAKE RECORDS AND HARMONIC FUNCTIONS</li>
                     </ol>
                     <h5><b>Description:</b> Spectral analysis of earthquake records and harmonic functions</h5>
-                    <h5><b>Authors:</b> Suarez, V.A.; Quinonez, S.</h5>
+                    <h5><b>Authors:</b> Suarez, V.A.; Quinonez, S.; Duque, E.</h5>
                     <h5><b>Info:</b> Spectrum</h5>
                     <h5>This application is avalible for registered users only</h5>
                     <h5>If you experience any problem or if you need assistance running this program please contact epduque@utpl.edu.ec</h5>

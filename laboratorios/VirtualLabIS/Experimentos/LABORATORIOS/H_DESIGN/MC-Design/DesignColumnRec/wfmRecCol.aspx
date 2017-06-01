@@ -31,7 +31,7 @@
                         <li>DESIGN OF RC SECTIONS</li>
                     </ol>
                     <h5><b>Description:</b> Design of Reinforced Concrete Sections</h5>
-                    <h5><b>Authors:</b> Suarez, V.A.; Ayala, A.</h5>
+                    <h5><b>Authors:</b> Suarez, V.A.; Ayala, A.; Duque, E.</h5>
                     <h5><b>Info:</b> RC-Design</h5>
                     <h5>This application is avalible for registered users only</h5>
                     <h5>If you experience any problem or if you need assistance running this program please contact epduque@utpl.edu.ec</h5>

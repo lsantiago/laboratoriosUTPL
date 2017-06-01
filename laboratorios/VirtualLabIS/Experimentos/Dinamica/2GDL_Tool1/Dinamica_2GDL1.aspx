@@ -36,7 +36,7 @@
                     </ol>
 
                     <h5><b>Description:</b> Time history analysis of two degrees of freedom systems</h5>
-                    <h5><b>Authors:</b> Viñán, A.R.; Suarez, V.A</h5>
+                    <h5><b>Authors:</b> Viñán, A.R.; Suarez, V.A; Duque, E.</h5>
                     <h5><b>Info:</b> SDOF-Dynamics</h5>
                     <h5>This application is avalible for registered users only</h5>
                     <h5>If you experience any problem or if you need assistance running this program please contact epduque@utpl.edu.ec</h5>
@@ -427,7 +427,7 @@
                                                                                 <asp:FileUpload ID="FUpLoadAC" runat="server" class="btn btn-warning" />
                                                                             </div>
                                                                             <div class="col-sm-3">
-                                                                                <asp:LinkButton ID="ImageButton2" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click" Style="height: 33px;">
+                                                                                <asp:LinkButton ID="ImageButton2" runat="server" class="btn btn-warning"  Style="height: 33px;">
                                                                                         <i class="fa fa-cloud-upload"></i>
                                                                                         Upload
                                                                                 </asp:LinkButton>
@@ -730,7 +730,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul1" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul1" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -745,7 +745,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul2" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul2" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -760,7 +760,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul3" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul3" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -775,7 +775,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul4" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul4" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -790,7 +790,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul5" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul5" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -805,7 +805,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul6" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul6" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -820,7 +820,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul7" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul7" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -835,7 +835,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul8" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul8" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -850,7 +850,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul9" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul9" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -865,7 +865,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul10" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul10" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -880,7 +880,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul13" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul13" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -895,7 +895,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul14" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul14" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -911,7 +911,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul11" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul11" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -926,7 +926,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul12" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul12" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -941,7 +941,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul15" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                                <asp:LinkButton ID="btnDownResul15" runat="server" class="btn btn-warning" >
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download answers
                                                                                 </asp:LinkButton>
@@ -955,7 +955,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            <asp:LinkButton ID="btnDownResul16" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
+                                                                            <asp:LinkButton ID="btnDownResul16" runat="server" class="btn btn-warning" >
                                                                                 <i class="fa fa-download"></i>
                                                                                 Download answers
                                                                             </asp:LinkButton>

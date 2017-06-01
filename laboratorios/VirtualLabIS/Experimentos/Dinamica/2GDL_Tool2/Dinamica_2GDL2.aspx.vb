@@ -1500,7 +1500,7 @@ mensaje:
         MGExiTypXX = Session("MGExiTypXXS") : MGacSoilXX = Session("MGacSoilXXS")
         NDG1X = ViewState("NDG1XS") : NDG2X = ViewState("NDG2XS") : NDEXX = ViewState("NDEXXS") : NDAcSoilXX = ViewState("NDAcSoilXXS")
 
-        Select Case CType(sender, ImageButton).ID
+        Select Case CType(sender, LinkButton).ID
             Case "btnDownResul1"
                 REM grafico la aceleración del suelo
                 Call DescargarResp(MGacSoilXX, NombreGraficoAS2, ejexExi, ejeyAS, NDAcSoilXX, nserieAS2Gtool2)

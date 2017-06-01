@@ -1680,7 +1680,7 @@ mensaje:
         MGDesp1 = Session("MGDesp1S") : MGVelo1 = Session("MGVelo1S") : MGAce1 = Session("MGAce1S") : MGForce1 = Session("MGForce1S") : MGForce3 = Session("MGForce3S")
         MGDesp2 = Session("MGDesp2S") : MGVelo2 = Session("MGVelo2S") : MGAce2 = Session("MGAce2S") : MGForce2 = Session("MGForce2S") : MGForce4 = Session("MGForce4S")
         Session("MGFvsD1S") = MGFvsD1 : Session("MGFvsD2S") = MGFvsD2 : Session("MGFvsD3S") = MGFvsD3 : Session("MGFvsD4S") = MGFvsD4
-        Select Case CType(sender, ImageButton).ID
+        Select Case CType(sender, LinkButton).ID
             Case "btnDownResul1"
                 REM grafico la aceleración del suelo
                 Call DescargarResp(MGacSoilX, NombreGraficoAS1, ejexExi, ejeyAS, NDAcSoilX, nserieAS2Gtool1)

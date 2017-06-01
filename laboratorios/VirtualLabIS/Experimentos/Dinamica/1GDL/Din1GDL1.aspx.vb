@@ -1265,7 +1265,7 @@ mensaje:
         NDG = ViewState("NDG_S") : NDE = ViewState("NDES") : NDAcSoil = ViewState("NDAcSoilS")
         MGExiTyp = Session("MGExiTypS") : MGacSoil = Session("MGacSoilS")
 
-        Select Case CType(sender, ImageButton).ID
+        Select Case CType(sender, LinkButton).ID
             Case "btnDownResul1"
                 REM grafico la aceleración del suelo
                 Call DescargarResp(MGacSoil, NombreGraficoAS, ejexExi, ejeyAS, NDAcSoil, nserieAS1Gtool1)

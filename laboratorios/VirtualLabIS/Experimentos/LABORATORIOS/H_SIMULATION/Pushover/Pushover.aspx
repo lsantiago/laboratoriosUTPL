@@ -36,7 +36,7 @@
                         <li>PUSHOVER ANALISIS FOR FRAMES</li>
                     </ol>
                     <h5><b>Description:</b> Frames formed by two stories and two spans pushover analisis for frames</h5>
-                    <h5><b>Authors:</b> Suarez, V.A.; Quinonez, S.</h5>
+                    <h5><b>Authors:</b> Suarez, V.A.; Quinonez, S.; Duque, E.</h5>
                     <h5><b>Info:</b> Push-Frame</h5>
                     <h5>This application is avalible for registered users only</h5>
                     <h5>If you experience any problem or if you need assistance running this program please contact epduque@utpl.edu.ec</h5>
