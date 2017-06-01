@@ -299,7 +299,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 100%;">
-                                                        <div style="width: 98%; height: 268px;">
+                                                        <div style="width: 98%; height: 270px;">
                                                             <div class="image">
                                                                 <chart:WebChartViewer ID="WebChartViewer1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                             </div>
@@ -314,7 +314,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 100%;">
-                                                        <div style="width: 98%; height: 268px;">
+                                                        <div style="width: 98%; height: 270px;">
                                                             <div class="image">
                                                                 <chart:WebChartViewer ID="WebChartViewer2" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                             </div>
@@ -345,7 +345,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body" style="width: 100%;">
+                                                    <div class="grid-body">
                                                         <div class="form-horizontal">
                                                             <div id="graphicsR0">
                                                                 <div class="form-group">

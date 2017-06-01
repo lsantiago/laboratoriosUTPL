@@ -64,7 +64,7 @@
                                                             </asp:LinkButton>
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body text-center" style="width: 100%; height: 256px;">
+                                                    <div class="grid-body text-center">
                                                         <div style="width: 100%; height: 226px;">
                                                             <div class="image">
                                                                 <asp:Image ID="Image1" runat="server" ImageUrl="~/VirtualLabIS/Experimentos/LABORATORIOS/imagenes/Mc Analysis Circular.jpg" />
@@ -91,13 +91,13 @@
                                                         <strong>
                                                             <asp:Label ID="lblAnalisis" runat="server" Text="ANALYSIS DATA"></asp:Label></strong></a></li>
                                                 </ul>
-                                                <div class="tab-content" style="width: 100%; height: 256px;">
-                                                    <!-- BEGIN TEST1 FORM -->
-                                                    <div class="tab-pane active" id="test1" style="padding-top: 50px">
-                                                        <div class="col-md-12">
-                                                            <div class="form-horizontal" role="form">
+                                                <div class="form-horizontal">
+                                                    <div class="tab-content">
+                                                        <!-- BEGIN TEST1 FORM -->
+                                                        <div class="tab-pane active" id="test1">
+                                                            <div class="form-group">
                                                                 <div class="col-sm-1"></div>
-                                                                <div class="col-sm-7">
+                                                                <div class="col-sm-7" style="padding-top: 7%; padding-bottom: 6%;">
                                                                     <div class="form-group">
                                                                         <asp:Label ID="lblbase" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
                                                                         <div class="col-sm-3">
@@ -131,114 +131,112 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- END TEST1 FORM -->
+                                                        <!-- END TEST1 FORM -->
 
-                                                    <!-- BEGIN TEST2 FORM -->
-                                                    <div class="tab-pane" id="test2" style="padding-top: 15px">
-                                                        <div class="col-md-7">
-                                                            <div class="form-horizontal" role="form">
-                                                                <div class="form-group">
-                                                                    <asp:Label ID="lblConcrComprStrength" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-3">
-                                                                        <asp:TextBox ID="txtConcrComprStrength" runat="server" class="form-control"></asp:TextBox>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <asp:Label ID="lblLongFy" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-3">
-                                                                        <asp:TextBox ID="txtfyLong" runat="server" class="form-control"></asp:TextBox>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <asp:Label ID="lblTransFy" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-3">
-                                                                        <asp:TextBox ID="txtfyTrans" runat="server" class="form-control"></asp:TextBox>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-5">
-                                                            <div class="form-horizontal" role="form">
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-7">
-                                                                        <select id="graphicsMP" class="form-control" onchange="setImageGraphicsMP(this, 'graphicsMP');">
-                                                                            <option>Concrete Model</option>
-                                                                            <option>Steel Model</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="col-sm-4"></div>
-                                                                </div>
-                                                                <hr />
-                                                                <div style="width: 100%; height: 100%;">
-                                                                    <div id="graphicsMP0" style="width: 100%; height: 188px;">
-                                                                        <div class="image">
-                                                                            <asp:Image ID="imgModeloConcreto" runat="server" />
+                                                        <!-- BEGIN TEST2 FORM -->
+                                                        <div class="tab-pane" id="test2" style="padding-top: 15px">
+                                                            <div class="form-group">
+                                                                <div class="col-md-7">
+                                                                    <div class="form-group">
+                                                                        <asp:Label ID="lblConcrComprStrength" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
+                                                                        <div class="col-sm-3">
+                                                                            <asp:TextBox ID="txtConcrComprStrength" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphicsMP1" style="width: 100%; height: 188px;">
-                                                                        <div class="image">
-                                                                            <asp:Image ID="imgModeloAcero" runat="server" />
+                                                                    <div class="form-group">
+                                                                        <asp:Label ID="lblLongFy" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
+                                                                        <div class="col-sm-3">
+                                                                            <asp:TextBox ID="txtfyLong" runat="server" class="form-control"></asp:TextBox>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <asp:Label ID="lblTransFy" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
+                                                                        <div class="col-sm-3">
+                                                                            <asp:TextBox ID="txtfyTrans" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- END TEST2 FORM -->
-
-                                                    <!-- BEGIN TEST3 FORM -->
-                                                    <div class="tab-pane" id="test3" style="padding-top: 60px;">
-                                                        <div class="col-md-2"></div>
-                                                        <div class="col-md-5">
-                                                            <div class="form-horizontal" role="form">
-                                                                <div class="form-group">
-                                                                    <asp:Label ID="lblAxialLoad" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-4">
-                                                                        <asp:TextBox ID="txtAxialLoad" runat="server" class="form-control"></asp:TextBox>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <asp:Label ID="lblMoment" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
-                                                                    <div class="col-sm-4">
-                                                                        <asp:TextBox ID="txtMoment" runat="server" class="form-control"></asp:TextBox>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- END TEST3 FORM -->
-
-                                                    <!-- BEGIN TEST4 FORM -->
-                                                    <div class="tab-pane" id="test4" style="padding-top: 60px;">
-                                                        <div class="col-md-3"></div>
-                                                        <div class="col-md-9">
-                                                            <div class="form-horizontal" role="form">
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-2"></div>
-                                                                    <div class="col-sm-4">
-                                                                        <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius">
-                                                                            <i class="fa fa-play"></i>
-                                                                        </asp:LinkButton>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <asp:Label ID="Label11" runat="server" class="col-sm-2 control-label label-one" Text="Select:"></asp:Label>
-                                                                    <div class="col-sm-4">
-                                                                        <select id="graphics" class="form-control" onchange="setImageGraphics(this, 'graphicsR');">
-                                                                            <option>ANALYSIS</option>
-                                                                            <option>DESIGN RESULTS</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div id="moment">
+                                                                <div class="col-md-5">
+                                                                    <div class="form-group">
                                                                         <div class="col-sm-7">
+                                                                            <select id="graphicsMP" class="form-control" onchange="setImageGraphicsMP(this, 'graphicsMP');">
+                                                                                <option>Concrete Model</option>
+                                                                                <option>Steel Model</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-4"></div>
+                                                                    </div>
+                                                                    <hr />
+                                                                    <div style="width: 100%; height: 100%;">
+                                                                        <div id="graphicsMP0" style="width: 100%; height: 188px;">
+                                                                            <div class="image">
+                                                                                <asp:Image ID="imgModeloConcreto" runat="server" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="graphicsMP1" style="width: 100%; height: 188px;">
+                                                                            <div class="image">
+                                                                                <asp:Image ID="imgModeloAcero" runat="server" />
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!-- END TEST2 FORM -->
+
+                                                        <!-- BEGIN TEST3 FORM -->
+                                                        <div class="tab-pane" id="test3">
+                                                            <div class="form-group">
+                                                                <div class="col-md-2"></div>
+                                                                <div class="col-md-5" style="padding-top: 13%; padding-bottom: 10%;">
+                                                                    <div class="form-group">
+                                                                        <asp:Label ID="lblAxialLoad" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
+                                                                        <div class="col-sm-4">
+                                                                            <asp:TextBox ID="txtAxialLoad" runat="server" class="form-control"></asp:TextBox>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <asp:Label ID="lblMoment" runat="server" class="col-sm-8 control-label small label-one"></asp:Label>
+                                                                        <div class="col-sm-4">
+                                                                            <asp:TextBox ID="txtMoment" runat="server" class="form-control"></asp:TextBox>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- END TEST3 FORM -->
+
+                                                        <!-- BEGIN TEST4 FORM -->
+                                                        <div class="tab-pane" id="test4">
+                                                            <div class="form-group">
+                                                                <div class="col-md-3"></div>
+                                                            <div class="col-md-9" style="padding-top: 11%; padding-bottom: 10%;">
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-2"></div>
+                                                                        <div class="col-sm-4">
+                                                                            <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius">
+                                                                            <i class="fa fa-play"></i>
+                                                                            </asp:LinkButton>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <asp:Label ID="Label11" runat="server" class="col-sm-2 control-label label-one" Text="Select:"></asp:Label>
+                                                                        <div class="col-sm-4">
+                                                                            <select id="graphics" class="form-control" onchange="setImageGraphics(this, 'graphicsR');">
+                                                                                <option>ANALYSIS</option>
+                                                                                <option>DESIGN RESULTS</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div id="moment">
+                                                                            <div class="col-sm-7">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- END TEST4 FORM -->
                                                     </div>
-                                                    <!-- END TEST4 FORM -->
                                                 </div>
                                                 <!-- END CONTENT RIGHT -->
                                             </div>
@@ -264,9 +262,11 @@
                                                         <div class="pull-right grid-tools">
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body text-center" style="width: 100%; height: 305px;">
-                                                        <div style="width: 100%; height: 100%">
-                                                            <chart:WebChartViewer ID="WebChartViewer1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
+                                                    <div class="grid-body text-center">
+                                                        <div style="height: 265px;">
+                                                            <div class="image">
+                                                                <chart:WebChartViewer ID="WebChartViewer1" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -281,10 +281,9 @@
                                                         <asp:Label ID="lblAnalysis" runat="server" class="grid-title lead" Text="ANALYSIS"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
-                                                    <div class="grid-body" style="width: 100%; height: 305px;">
+                                                    <div class="grid-body">
                                                         <div class="form-horizontal" role="form">
                                                             <div class="form-group">
-                                                                <div class="col-md-12 text-center">
                                                                     <div class="col-sm-5">
                                                                         <asp:Label ID="lblAnalysisIndexes" runat="server" class="lead" Text="ANALYSIS"></asp:Label>
                                                                         <div class="form-group">
@@ -403,7 +402,6 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -446,10 +444,10 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-12">
-                                                                        <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" class="form-control"></asp:TextBox>
-                                                                    </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="col-sm-12">
+                                                                    <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" class="form-control"></asp:TextBox>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -553,6 +551,9 @@
             });
             $("#" + imgName + select.selectedIndex).show();
         }
+
+        document.getElementById("WebChartViewer1").style.width = "";
+        document.getElementById("WebChartViewer1").style.height = "";
     </script>
     <!-- END JS PLUGIN -->
 </body>
