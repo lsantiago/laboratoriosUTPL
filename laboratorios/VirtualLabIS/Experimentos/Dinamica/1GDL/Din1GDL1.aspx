@@ -45,53 +45,53 @@
                                         <h4 class="panel-title text-center">INPUT</h4>
                                     </div>
                                     <div class="panel-body">
-                                        <div class="row">
-                                            <!-- BEGIN CONTENT LEFT -->
-                                            <div class="col-md-4">
-                                                <div class="grid">
-                                                    <div class="grid-header">
-                                                        <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblEsquemaMain" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
-                                                        <div class="pull-right grid-tools">
-                                                            <asp:LinkButton ID="ibtnLoadExample" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo">
+                                        <!-- BEGIN CONTENT LEFT -->
+                                        <div class="col-md-4">
+                                            <div class="grid">
+                                                <div class="grid-header">
+                                                    <i class="fa fa-bar-chart-o"></i>
+                                                    <asp:Label ID="lblEsquemaMain" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
+                                                    <div class="pull-right grid-tools">
+                                                        <asp:LinkButton ID="ibtnLoadExample" runat="server" class="btn btn-warning btn-radius btn-xs button-Carga-Ejemplo">
                                                                 Load Example
                                                                 <i class="fa fa-play"></i>
-                                                            </asp:LinkButton>
-                                                        </div>
+                                                        </asp:LinkButton>
                                                     </div>
-                                                    <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div style="width: 100%; height: 226px;">
-                                                            <div class="image">
-                                                                <asp:Image ID="FigMain" runat="server" ImageUrl="../Imagenes/General/Tools/Dinamica_1GDL_Tool1.bmp" />
-                                                            </div>
+                                                </div>
+                                                <div class="grid-body text-center" style="width: 100%; height: 100%;">
+                                                    <div style="width: 100%; height: 226px;">
+                                                        <div class="image">
+                                                            <asp:Image ID="FigMain" runat="server" ImageUrl="../Imagenes/General/Tools/Dinamica_1GDL_Tool1.png" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- END CONTENT LEFT -->
+                                        </div>
+                                        <!-- END CONTENT LEFT -->
 
-                                            <!-- BEGIN CONTENT RIGHT -->
-                                            <div class="col-md-8" style="border-left: 1.0pt solid #dddddd;">
-                                                <ul class="nav nav-tabs">
-                                                    <li class="active"><a href="#test1" data-toggle="tab">
-                                                        <strong>
-                                                            <asp:Label ID="lblProSis" runat="server" Text="PROPIEDADES DEL SISTEMA"></asp:Label></strong></a></li>
-                                                    <li><a href="#test2" data-toggle="tab">
-                                                        <strong>
-                                                            <asp:Label ID="lblTM" runat="server" Text="TIPO DE MATERIAL"></asp:Label></strong></a></li>
-                                                    <li><a href="#test3" data-toggle="tab">
-                                                        <strong>
-                                                            <asp:Label ID="lblTE" runat="server" Text="TIPO DE EXITACIÓN"></asp:Label></strong></a></li>
-                                                    <li><a href="#test4" data-toggle="tab">
-                                                        <strong>
-                                                            <asp:Label ID="lblAnalisis" runat="server" Text="ANALISIS"></asp:Label></strong></a></li>
-                                                </ul>
-                                                <div class="tab-content" style="width: 100%; height: 256px;">
+                                        <!-- BEGIN CONTENT RIGHT -->
+                                        <div class="col-md-8" style="border-left: 1.0pt solid #dddddd;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a href="#test1" data-toggle="tab">
+                                                    <strong>
+                                                        <asp:Label ID="lblProSis" runat="server" Text="PROPIEDADES DEL SISTEMA"></asp:Label></strong></a></li>
+                                                <li><a href="#test2" data-toggle="tab">
+                                                    <strong>
+                                                        <asp:Label ID="lblTM" runat="server" Text="TIPO DE MATERIAL"></asp:Label></strong></a></li>
+                                                <li><a href="#test3" data-toggle="tab">
+                                                    <strong>
+                                                        <asp:Label ID="lblTE" runat="server" Text="TIPO DE EXITACIÓN"></asp:Label></strong></a></li>
+                                                <li><a href="#test4" data-toggle="tab">
+                                                    <strong>
+                                                        <asp:Label ID="lblAnalisis" runat="server" Text="ANALISIS"></asp:Label></strong></a></li>
+                                            </ul>
+                                            <div class="form-horizontal">
+                                                <div class="tab-content">
                                                     <!-- BEGIN TEST1 FORM -->
-                                                    <div class="tab-pane active" id="test1" style="padding-top: 60px;">
-                                                        <div class="col-sm-3"></div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-horizontal" role="form">
+                                                    <div class="tab-pane active" id="test1">
+                                                        <div class="form-group">
+                                                            <div class="col-sm-3"></div>
+                                                            <div class="col-sm-6" style="padding-top: 10%; padding-bottom: 10%;">
                                                                 <div class="form-group">
                                                                     <label class="col-sm-2 control-label label-one">
                                                                         <b>
@@ -136,8 +136,8 @@
 
                                                     <!-- BEGIN TEST2 FORM -->
                                                     <div class="tab-pane" id="test2" style="padding-top: 15px;">
-                                                        <div class="col-md-7">
-                                                            <div class="form-horizontal" role="form">
+                                                        <div class="form-group">
+                                                            <div class="col-md-7">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblEscTM" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
                                                                     <div class="col-sm-5">
@@ -218,14 +218,14 @@
                                                                     </div>
                                                                 </asp:Panel>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-5">
-                                                            <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
-                                                            <hr />
-                                                            <div style="width: 100%; height: 191px;">
-                                                                <div class="image">
-                                                                    <asp:Image ID="FigMat1" runat="server" /><asp:Image ID="FigMat2"
-                                                                    runat="server" /><asp:Image ID="FigMat3" runat="server" />
+                                                            <div class="col-md-5">
+                                                                <asp:Label ID="lblCT" runat="server" class="label-title-imge lead" Text="COMPORTAMIENTO TIPO"></asp:Label>
+                                                                <hr />
+                                                                <div style="width: 100%; height: 191px;">
+                                                                    <div class="image">
+                                                                        <asp:Image ID="FigMat1" runat="server" /><asp:Image ID="FigMat2"
+                                                                            runat="server" /><asp:Image ID="FigMat3" runat="server" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -234,8 +234,8 @@
 
                                                     <!-- BEGIN TEST3 FORM -->
                                                     <div class="tab-pane" id="test3" style="padding-top: 15px;">
-                                                        <div class="col-md-7">
-                                                            <div class="form-horizontal" role="form">
+                                                        <div class="form-group">
+                                                            <div class="col-md-7">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblEscTE" runat="server" class="col-sm-2 control-label label-one" Text="Seleccionar:"></asp:Label>
                                                                     <div class="col-sm-6">
@@ -376,7 +376,7 @@
                                                                                 <asp:FileUpload ID="FUpLoadAC" runat="server" class="btn btn-warning" />
                                                                             </div>
                                                                             <div class="col-sm-4">
-                                                                                <asp:LinkButton ID="ibtnLoadAce" runat="server" class="btn btn-warning"  Height="33px">
+                                                                                <asp:LinkButton ID="ibtnLoadAce" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click" Height="33px">
                                                                                         <i class="fa fa-cloud-upload"></i>
                                                                                         Upload
                                                                                 </asp:LinkButton>
@@ -425,14 +425,14 @@
                                                                     </div>
                                                                 </asp:Panel>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-5">
-                                                            <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
-                                                            <hr />
-                                                            <div style="width: 100%; height: 188px;">
-                                                                <div class="image">
-                                                                    <asp:Image ID="FigExi1" runat="server" /><asp:Image ID="FigExi2"
-                                                                    runat="server" /><asp:Image ID="FigExi3" runat="server" /><asp:Image ID="FigExi4" runat="server" />
+                                                            <div class="col-md-5">
+                                                                <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="ESQUEMA"></asp:Label>
+                                                                <hr />
+                                                                <div style="width: 100%; height: 188px;">
+                                                                    <div class="image">
+                                                                        <asp:Image ID="FigExi1" runat="server" /><asp:Image ID="FigExi2"
+                                                                            runat="server" /><asp:Image ID="FigExi3" runat="server" /><asp:Image ID="FigExi4" runat="server" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -440,10 +440,10 @@
                                                     <!-- END TEST3 FORM -->
 
                                                     <!-- BEGIN TEST4 FORM -->
-                                                    <div class="tab-pane" id="test4" style="padding-top: 15px;">
-                                                        <div class="col-md-2" style="padding-top: 50px;"></div>
-                                                        <div class="col-md-7" style="padding-top: 50px;">
-                                                            <div class="form-horizontal" role="form">
+                                                    <div class="tab-pane" id="test4" style="padding-top: 5px;">
+                                                        <div class="form-group">
+                                                            <div class="col-md-2"></div>
+                                                            <div class="col-md-7" style="padding-top: 10%; padding-bottom: 10%;">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblDA" runat="server" class="col-sm-4 control-label" Text="Duración = "></asp:Label>
                                                                     <div class="col-sm-3">
@@ -452,17 +452,14 @@
                                                                             TargetControlID="txtDA" ValidChars=".">
                                                                         </cc1:FilteredTextBoxExtender>
                                                                     </div>
-                                                                    <%--<div class="col-sm-1 control-label label-der lead">
-                                                                        <p style="padding-top: 5px; margin-left: 0px;">[s]</p>
-                                                                        
-                                                                    </div>--%>
                                                                     <label class="col-sm-1 label-der lead" style="padding-top: 5px;">[s]</label>
                                                                     <div class="col-sm-1 control-label label-der">
                                                                         <asp:Label ID="lblMensCE" runat="server" class="badge bg-yellow" Text="Listo!!" Visible="False"></asp:Label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <div class="col-sm-4 text-right">
+                                                                    <div class="col-sm-4">
+                                                                        <div class="col-sm-7"></div>
                                                                         <asp:LinkButton ID="ibtnRun" runat="server" class="btn btn-warning btn-radius">
                                                                             <i class="fa fa-play"></i>
                                                                         </asp:LinkButton>
@@ -484,8 +481,8 @@
                                                     <!-- END TEST4 FORM -->
                                                 </div>
                                             </div>
-                                            <!-- END CONTENT RIGHT -->
                                         </div>
+                                        <!-- END CONTENT RIGHT -->
                                     </div>
                                 </div>
                             </div>
@@ -496,7 +493,6 @@
                                         <h4 class="panel-title text-center">OUTPUT</h4>
                                     </div>
                                     <div class="panel-body">
-                                        <div class="row">
                                             <!-- BEGIN SECTION RESULT -->
                                             <div class="col-md-4">
                                                 <div class="grid">
@@ -521,9 +517,9 @@
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>m</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblXmax" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
+                                                                    <asp:Label ID="lblXmax" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
                                                                 <em>
-                                                                    <asp:Label ID="lblRdespMax" runat="server" class="col-sm-6" Text="Desplazamiento máximo"></asp:Label></em>
+                                                                    <asp:Label ID="lblRdespMax" runat="server" class="col-sm-4" Text="Desplazamiento máximo"></asp:Label></em>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-2 control-label label-one">
@@ -535,9 +531,9 @@
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>m/s</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblXoMax" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
+                                                                    <asp:Label ID="lblXoMax" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
                                                                 <em>
-                                                                    <asp:Label ID="lblRVeloMax" runat="server" class="col-sm-6" Text="Velocidad máxima"></asp:Label></em>
+                                                                    <asp:Label ID="lblRVeloMax" runat="server" class="col-sm-4" Text="Velocidad máxima"></asp:Label></em>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-2 control-label label-one">
@@ -549,9 +545,9 @@
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>m/s</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblXooMax" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
+                                                                    <asp:Label ID="lblXooMax" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
                                                                 <em>
-                                                                    <asp:Label ID="lblRacelMax" runat="server" class="col-sm-6" Text="Velocidad máxima"></asp:Label></em>
+                                                                    <asp:Label ID="lblRacelMax" runat="server" class="col-sm-4" Text="Velocidad máxima"></asp:Label></em>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-2 control-label small"></label>
@@ -567,13 +563,13 @@
                                                                 <label class="col-sm-1 label-der small">
                                                                     <var>kN</var></label>
                                                                 <var>
-                                                                    <asp:Label ID="lblFomax" runat="server" class="col-sm-1 label-der small"></asp:Label></var>
+                                                                    <asp:Label ID="lblFomax" runat="server" class="col-sm-2 label-der small"></asp:Label></var>
                                                                 <em>
-                                                                    <asp:Label ID="lblRfuerzaMax" runat="server" class="col-sm-6" Text="Fuerza máxima"></asp:Label></em>
+                                                                    <asp:Label ID="lblRfuerzaMax" runat="server" class="col-sm-4" Text="Fuerza máxima"></asp:Label></em>
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class="col-sm-offset-3 col-sm-8">
-                                                                    <asp:LinkButton ID="ibtnDescRmax" runat="server" class="btn btn-warning" >
+                                                                    <asp:LinkButton ID="ibtnDescRmax" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                         <i class="fa fa-download"></i>
                                                                         Download Answers
                                                                     </asp:LinkButton>
@@ -610,61 +606,69 @@
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <div class="col-md-12 text-center">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%; padding-top: 15px;">
+                                                                <div class="col-md-12">
+                                                                    <div id="graphics0" style="padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:WebChartViewer ID="wcdAcSoil" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                            <div style="width: 86.68%; height: 440px; margin-left: 55px;">
+                                                                                <div class="image">
+                                                                                    <chart:WebChartViewer ID="wcdAcSoil" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul1" runat="server" class="btn btn-warning" >
+                                                                                <asp:LinkButton ID="btnDownResul1" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%; padding-top: 15px;">
+                                                                    <div id="graphics1" style="padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:WebChartViewer ID="wcdFuncionFuerza" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                            <div style="width: 86.68%; height: 440px; margin-left: 55px;">
+                                                                                <div class="image">
+                                                                                    <chart:WebChartViewer ID="wcdFuncionFuerza" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul2" runat="server" class="btn btn-warning" >
+                                                                                <asp:LinkButton ID="btnDownResul2" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics2" style="width: 100%; height: 239px; padding-top: 15px;">
+                                                                    <div id="graphics2" style="padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:WebChartViewer ID="wcdDespVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                            <div style="width: 86.68%; height: 440px; margin-left: 55px;">
+                                                                                <div class="image">
+                                                                                    <chart:WebChartViewer ID="wcdDespVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul3" runat="server" class="btn btn-warning" >
+                                                                                <asp:LinkButton ID="btnDownResul3" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download Answers
                                                                                 </asp:LinkButton>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics3" style="width: 100%; height: 239px; padding-top: 15px;">
+                                                                    <div id="graphics3" style="padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:WebChartViewer ID="wcdVeloVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                            <div style="width: 86.68%; height: 440px; margin-left: 55px;">
+                                                                                <div class="image">
+                                                                                    <chart:WebChartViewer ID="wcdVeloVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul4" runat="server" class="btn btn-warning" >
+                                                                                <asp:LinkButton ID="btnDownResul4" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download Answers
                                                                                 </asp:LinkButton>
@@ -673,13 +677,15 @@
                                                                     </div>
                                                                     <div id="graphics4" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:WebChartViewer ID="wcdAceVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                            <div style="width: 86.68%; height: 440px; margin-left: 55px;">
+                                                                                <div class="image">
+                                                                                    <chart:WebChartViewer ID="wcdAceVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul5" runat="server" class="btn btn-warning" >
+                                                                                <asp:LinkButton ID="btnDownResul5" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download Answers
                                                                                 </asp:LinkButton>
@@ -688,13 +694,15 @@
                                                                     </div>
                                                                     <div id="graphics5" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:WebChartViewer ID="wcdForceVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                            <div style="width: 86.68%; height: 440px; margin-left: 55px;">
+                                                                                <div class="image">
+                                                                                    <chart:WebChartViewer ID="wcdForceVsTime" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul6" runat="server" class="btn btn-warning" >
+                                                                                <asp:LinkButton ID="btnDownResul6" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download Answers
                                                                                 </asp:LinkButton>
@@ -703,13 +711,15 @@
                                                                     </div>
                                                                     <div id="graphics6" style="width: 100%; height: 100%; padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:WebChartViewer ID="wcdFvsD" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                            <div style="width: 86.68%; height: 440px; margin-left: 55px;">
+                                                                                <div class="image">
+                                                                                    <chart:WebChartViewer ID="wcdFvsD" runat="server" Style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:WebChartViewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <div class="col-sm-12 text-center">
-                                                                                <asp:LinkButton ID="btnDownResul7" runat="server" class="btn btn-warning" >
+                                                                                <asp:LinkButton ID="btnDownResul7" runat="server" class="btn btn-warning" OnClick="btnDownResul1_Click">
                                                                                     <i class="fa fa-download"></i>
                                                                                     Download Answers
                                                                                 </asp:LinkButton>
@@ -723,7 +733,6 @@
                                                 </div>
                                             </div>
                                             <!-- END SECTION GRAPHICS -->
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -738,7 +747,6 @@
             <%: Scripts.Render("~/Content/assets/js") %>
             <%: Scripts.Render("~/bundles/modernizr") %>
         </asp:PlaceHolder>
-
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
     </form>
@@ -770,6 +778,21 @@
             });
             $("#" + imgName + select.selectedIndex).show();
         }
+
+        document.getElementById("wcdAcSoil").style.width = "";
+        document.getElementById("wcdAcSoil").style.height = "";
+        document.getElementById("wcdFuncionFuerza").style.width = "";
+        document.getElementById("wcdFuncionFuerza").style.height = "";
+        document.getElementById("wcdDespVsTime").style.width = "";
+        document.getElementById("wcdDespVsTime").style.height = "";
+        document.getElementById("wcdVeloVsTime").style.width = "";
+        document.getElementById("wcdVeloVsTime").style.height = "";
+        document.getElementById("wcdAceVsTime").style.width = "";
+        document.getElementById("wcdAceVsTime").style.height = "";
+        document.getElementById("wcdForceVsTime").style.width = "";
+        document.getElementById("wcdForceVsTime").style.height = "";
+        document.getElementById("wcdFvsD").style.width = "";
+        document.getElementById("wcdFvsD").style.height = "";
     </script>
     <!-- END JS PLUGIN -->
 </body>
