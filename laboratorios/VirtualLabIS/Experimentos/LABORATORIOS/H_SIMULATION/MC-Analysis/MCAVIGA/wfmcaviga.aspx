@@ -328,7 +328,7 @@
                                                         </div>
                                                         <div class="grid-body">
                                                             <div class="form-horizontal" role="form">
-                                                                <div class="form-group">
+                                                                <div class="form-group text-center">
                                                                     <div class="col-sm-5">
                                                                         <asp:Label ID="lblTituloAnalysisIndex" runat="server" class="lead"></asp:Label>
                                                                         <div class="form-group">
