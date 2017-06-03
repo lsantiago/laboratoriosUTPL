@@ -80,19 +80,19 @@
                                                         <strong>
                                                             <asp:Label ID="lblTituloSeccionProper" runat="server" Text="SECTION PROPERTIES"></asp:Label></strong></a></li>
                                                 </ul>
-                                                <div class="tab-content" style="width: 100%; height: 256px;">
+                                                <div class="form-horizontal" role="form">
+                                                <div class="tab-content">
                                                     <!-- BEGIN TEST1 FORM -->
-                                                    <div class="tab-pane active" id="test1" style="padding-top: 50px;">
+                                                    <div class="tab-pane active" id="test1">
                                                         <div class="col-md-1"></div>
-                                                        <div class="col-md-7">
-                                                            <div class="form-horizontal" role="form">
+                                                        <div class="col-md-7" style="padding-top: 10%; padding-bottom: 7.5%;">
                                                                 <div class="form-group">
                                                                     <asp:Label ID="lblNumSecciones" runat="server" class="col-sm-6 control-label small" Text="NUMBER OF SECTIONS TO ANALYZE:"></asp:Label>
                                                                     <div class="col-sm-3">
                                                                         <asp:TextBox ID="txtNumberSections" runat="server" class="form-control"></asp:TextBox>
                                                                     </div>
                                                                 </div>
-                                                                <div class="form-group" style="padding-top: 30px;">
+                                                                <div class="form-group text-center" style="padding-top: 30px;">
                                                                     <div class="col-sm-1"></div>
                                                                     <div class="col-sm-3" style="padding-right: 0px;">
                                                                         <button type="button" class="md-trigger btn btn-warning btn-radius" data-modal="modal-1">Input data</button>
@@ -112,7 +112,6 @@
                                                                             <h4 class="modal-title" id="myModalLabel27"><asp:Label ID="lblInputData1" runat="server" CssClass="Funcionalidad-titulo"></asp:Label></h4>
                                                                         </div>
                                                                         <div class="modal-body" style="height: 420px; overflow: auto;">
-                                                                                <div class="form-horizontal" role="form">
                                                                                     <div class="form-group">
                                                                                         <label class="col-sm-2 control-label small label-one"><b>SECTION NUMBER:</b></label>
                                                                                         <label class="col-sm-1 text-center small"><b>1</b></label>
@@ -636,7 +635,6 @@
                                                                                             <asp:TextBox ID="txtShearSpan10" runat="server" class="form-control"></asp:TextBox>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <div class="btn-group">
@@ -651,7 +649,6 @@
                                                                             <h4 class="modal-title" id="myModalLabel27"><asp:Label ID="lblTituloMaterialProper" runat="server" CssClass="Funcionalidad-subtitulo"></asp:Label></h4>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            <div class="form-horizontal" role="form">
                                                                                 <div class="form-group">
                                                                                     <b>
                                                                                         <asp:Label ID="Label27" runat="server" class="col-sm-2 control-label small label-one" Text="SECTION NUMBER:"></asp:Label></b>
@@ -798,7 +795,6 @@
                                                                                         <asp:TextBox ID="txtSteelRatio10" runat="server" class="form-control"></asp:TextBox>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <div class="btn-group">
@@ -807,12 +803,12 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- END TEST1 FORM -->
                                                 </div>
-                                            </div>
+                                                </div>
+                                                </div>
                                             <!-- END CONTENT RIGHT -->
                                         </div>
                                     </div>
@@ -834,7 +830,7 @@
                                                         <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAPHICS"></asp:Label>
                                                         <div class="pull-right grid-tools"></div>
                                                     </div>
-                                                    <div class="grid-body" style="width: 100%; height: 450px;">
+                                                    <div class="grid-body">
                                                         <div class="form-horizontal text-center" role="form">
                                                             <div class="form-group">
                                                                 <div class="col-sm-1"></div>
@@ -850,79 +846,70 @@
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group" style="padding-top: 15px;">
-                                                                <div class="col-md-12 text-center">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%;">
-                                                                        <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
+                                                            <div class="form-group text-center">
+                                                                <div class="col-md-12 text-center" style="padding-top: 10px;">
+                                                                    <div id="graphics0" class="form-group">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-5" style="height: 290px;">
+                                                                            <div class="image">
                                                                                 <chart:WebChartViewer ID="WebChartViewer1" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics1" class="form-group">
                                                                         <div class="col-sm-2"></div>
                                                                         <div class="col-sm-5">
-                                                                            <div class="form-group">
-                                                                                <div class="col-sm-12 text-center">
+                                                                            <div class="image">
                                                                                     <chart:WebChartViewer ID="WebChartViewer2" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent" />
                                                                                 </div>
-                                                                            </div>
                                                                         </div>
                                                                         <div class="col-sm-3 text-justify">
                                                                             <asp:Label ID="lblFigura2" runat="server"></asp:Label>
                                                                         </div>
                                                                         <div class="col-sm-2"></div>
                                                                     </div>
-                                                                    <div id="graphics2" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics2" class="form-group">
                                                                         <div class="col-sm-2"></div>
                                                                         <div class="col-sm-5">
-                                                                            <div class="form-group">
-                                                                                <div class="col-sm-12 text-center">
+                                                                            <div class="image">
                                                                                     <chart:webchartviewer id="WebChartViewer3" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                                 </div>
-                                                                            </div>
                                                                         </div>
                                                                         <div class="col-sm-3 text-justify">
                                                                             <asp:Label ID="lblFigura3" runat="server"></asp:Label>
                                                                         </div>
                                                                         <div class="col-sm-2"></div>
                                                                     </div>
-                                                                    <div id="graphics3" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics3" class="form-group">
                                                                         <div class="col-sm-2"></div>
                                                                         <div class="col-sm-5">
-                                                                            <div class="form-group">
-                                                                                <div class="col-sm-12 text-center">
+                                                                            <div class="image">
                                                                                     <chart:webchartviewer id="WebChartViewer4" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                                 </div>
-                                                                            </div>
                                                                         </div>
                                                                         <div class="col-sm-3 text-justify">
                                                                             <asp:Label ID="lblFigura4" runat="server"></asp:Label>
                                                                         </div>
                                                                         <div class="col-sm-2"></div>
                                                                     </div>
-                                                                    <div id="graphics4" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics4" class="form-group">
                                                                         <div class="col-sm-2"></div>
                                                                         <div class="col-sm-5">
-                                                                            <div class="form-group">
-                                                                                <div class="col-sm-12 text-center">
+                                                                            <div class="image">
                                                                                     <chart:webchartviewer id="WebChartViewer5" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                                 </div>
-                                                                            </div>
                                                                         </div>
                                                                         <div class="col-sm-3 text-justify">
                                                                             <asp:Label ID="lblFigura5" runat="server"></asp:Label>
                                                                         </div>
                                                                         <div class="col-sm-2"></div>
                                                                     </div>
-                                                                    <div id="graphics5" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics5" class="form-group">
                                                                         <div class="col-sm-2"></div>
                                                                         <div class="col-sm-5">
-                                                                            <div class="form-group">
-                                                                                <div class="col-sm-12 text-center">
+                                                                            <div class="image">
                                                                                     <chart:webchartviewer id="WebChartViewer6" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
                                                                                 </div>
-                                                                            </div>
                                                                         </div>
                                                                         <div class="col-sm-3 text-justify">
                                                                             <asp:Label ID="lblFigura6" runat="server"></asp:Label>
@@ -1011,6 +998,19 @@
             });
             $("#" + imgName + select.selectedIndex).show();
         }
+
+        document.getElementById("WebChartViewer1").style.width = "";
+        document.getElementById("WebChartViewer1").style.height = ""; 
+        document.getElementById("WebChartViewer2").style.width = "";
+        document.getElementById("WebChartViewer2").style.height = ""; 
+        document.getElementById("WebChartViewer3").style.width = "";
+        document.getElementById("WebChartViewer3").style.height = "";
+        document.getElementById("WebChartViewer4").style.width = "";
+        document.getElementById("WebChartViewer4").style.height = ""; 
+        document.getElementById("WebChartViewer5").style.width = "";
+        document.getElementById("WebChartViewer5").style.height = ""; 
+        document.getElementById("WebChartViewer6").style.width = "";
+        document.getElementById("WebChartViewer6").style.height = "";
     </script>
     <!-- END JS PLUGIN -->
 </body>
