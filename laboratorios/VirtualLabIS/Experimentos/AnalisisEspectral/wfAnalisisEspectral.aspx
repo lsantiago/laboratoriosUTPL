@@ -54,7 +54,7 @@
                                     <div class="panel-body">
                                         <div class="row">
                                             <!-- BEGIN CONTENT LEFT -->
-                                            <div class="col-md-4" style="border-right: 1.0pt solid #dddddd;">
+                                            <div class="col-md-4">
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
@@ -72,7 +72,7 @@
                                             <!-- END CONTENT LEFT -->
 
                                             <!-- BEGIN CONTENT RIGHT -->
-                                            <div class="col-md-8">
+                                            <div class="col-md-8" style="border-left: 1.0pt solid #dddddd;">
                                                 <ul class="nav nav-tabs">
                                                     <li class="active"><a href="#test1" data-toggle="tab">
                                                         <strong>
@@ -84,7 +84,8 @@
                                                         <strong>
                                                             <asp:Label ID="lblAnalisis" runat="server" Text="ANALYSIS"></asp:Label></strong></a></li>
                                                 </ul>
-                                                <div class="tab-content" style="width: 100%; height: 256px;">
+                                                <div class="form-horizontal">
+                                                    <div class="tab-content" style="width: 100%; height: 256px;">
                                                     <!-- BEGIN TEST1 FORM -->
                                                     <div class="tab-pane active" id="test1" style="padding-top: 15px;">
                                                         <div class="col-md-8">
@@ -294,6 +295,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END TEST3 FORM -->
+                                                </div>
                                                 </div>
                                             </div>
                                             <!-- END CONTENT RIGHT -->

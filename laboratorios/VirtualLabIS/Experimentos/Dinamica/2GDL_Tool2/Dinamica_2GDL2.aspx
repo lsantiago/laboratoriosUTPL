@@ -596,7 +596,7 @@
                                                     <asp:Label ID="lblRespMax" runat="server" class="grid-title lead" Text="RESPUESTA MAXIMA"></asp:Label>
                                                     <div class="pull-right grid-tools"></div>
                                                 </div>
-                                                <div class="grid-body" style="height: 545px">
+                                                <div class="grid-body">
                                                     <div class="form-horizontal" role="form">
                                                         <div class="form-group">
                                                             <label class="col-sm-2 control-label small"></label>
@@ -721,7 +721,7 @@
                                                     <asp:Label ID="lblGraficas" runat="server" class="grid-title lead" Text="GRAPHICS"></asp:Label>
                                                     <div class="pull-right grid-tools"></div>
                                                 </div>
-                                                <div class="grid-body" style="height: 545px">
+                                                <div class="grid-body">
                                                     <div class="form-horizontal" role="form">
                                                         <div class="form-group">
                                                             <asp:Label ID="Label11" runat="server" class="col-sm-3 control-label label-one" Text="Seleccionar:"></asp:Label>
