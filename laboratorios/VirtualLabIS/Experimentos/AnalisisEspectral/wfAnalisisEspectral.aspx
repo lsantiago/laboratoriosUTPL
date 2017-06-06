@@ -52,65 +52,64 @@
                                         <h4 class="panel-title text-center">INPUT</h4>
                                     </div>
                                     <div class="panel-body">
-                                        <div class="row">
-                                            <!-- BEGIN CONTENT LEFT -->
-                                            <div class="col-md-4">
-                                                <div class="grid">
-                                                    <div class="grid-header">
-                                                        <i class="fa fa-bar-chart-o"></i>
-                                                        <asp:Label ID="lblTituloEsquemaColumna" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
-                                                        <div class="pull-right grid-tools">
-                                                        </div>
+                                        <!-- BEGIN CONTENT LEFT -->
+                                        <div class="col-md-4">
+                                            <div class="grid">
+                                                <div class="grid-header">
+                                                    <i class="fa fa-bar-chart-o"></i>
+                                                    <asp:Label ID="lblTituloEsquemaColumna" runat="server" class="grid-title lead" Text="ESQUEMA"></asp:Label>
+                                                    <div class="pull-right grid-tools">
                                                     </div>
-                                                    <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div class="image">
-                                                            <asp:Image ID="img1" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/1_EN.jpg" />
-                                                        </div>
+                                                </div>
+                                                <div class="grid-body text-center" style="width: 100%; height: 265px;">
+                                                    <div class="image">
+                                                        <asp:Image ID="img1" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/1_EN.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- END CONTENT LEFT -->
+                                        </div>
+                                        <!-- END CONTENT LEFT -->
 
-                                            <!-- BEGIN CONTENT RIGHT -->
-                                            <div class="col-md-8" style="border-left: 1.0pt solid #dddddd;">
-                                                <ul class="nav nav-tabs">
-                                                    <li class="active"><a href="#test1" data-toggle="tab">
-                                                        <strong>
-                                                            <asp:Label ID="lblTituloSeccionProper" runat="server" Text="PARAMETERS"></asp:Label></strong></a></li>
-                                                    <li><a href="#test2" data-toggle="tab">
-                                                        <strong>
-                                                            <asp:Label ID="lblTituloMaterialProper" runat="server" Text="TIPO DE EXITACIÓN"></asp:Label></strong></a></li>
-                                                    <li><a href="#test3" data-toggle="tab">
-                                                        <strong>
-                                                            <asp:Label ID="lblAnalisis" runat="server" Text="ANALYSIS"></asp:Label></strong></a></li>
-                                                </ul>
-                                                <div class="form-horizontal">
-                                                    <div class="tab-content" style="width: 100%; height: 256px;">
+                                        <!-- BEGIN CONTENT RIGHT -->
+                                        <div class="col-md-8" style="border-left: 1.0pt solid #dddddd;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a href="#test1" data-toggle="tab">
+                                                    <strong>
+                                                        <asp:Label ID="lblTituloSeccionProper" runat="server" Text="PARAMETERS"></asp:Label></strong></a></li>
+                                                <li><a href="#test2" data-toggle="tab">
+                                                    <strong>
+                                                        <asp:Label ID="lblTituloMaterialProper" runat="server" Text="TIPO DE EXITACIÓN"></asp:Label></strong></a></li>
+                                                <li><a href="#test3" data-toggle="tab">
+                                                    <strong>
+                                                        <asp:Label ID="lblAnalisis" runat="server" Text="ANALYSIS"></asp:Label></strong></a></li>
+                                            </ul>
+                                            <div class="form-horizontal">
+                                                <div class="tab-content">
                                                     <!-- BEGIN TEST1 FORM -->
                                                     <div class="tab-pane active" id="test1" style="padding-top: 15px;">
-                                                        <div class="col-md-8">
-                                                            <div class="form-horizontal" role="form">
+                                                        <div class="form-group">
+                                                            <div class="col-md-8">
                                                                 <div class="form-group">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-4" style="padding-left: 5px; padding-right: 0px;">
-                                                                        <div class="radio">
+                                                                    <div class="col-sm-2"></div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
                                                                             <asp:RadioButton ID="rbAnalisisElastico" runat="server" AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
                                                                             <asp:Label ID="lblAElastico" runat="server" Text="ANALISIS ELASTICO" class="label-radioButton"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-sm-4" style="padding-left: 0px;">
-                                                                        <div class="radio">
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
                                                                             <asp:RadioButton ID="rbAnalisisInelastico" runat="server" GroupName="gTipoAnalisis" AutoPostBack="True" />
                                                                             <asp:Label ID="lblAInelastico" runat="server" Text="ANALISIS INELASTICO" class="label-radioButton"></asp:Label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-sm-6">
+                                                                <div class="col-sm-6" style="padding-left: 0px; padding-right: 0px;">
                                                                     <div class="form-group">
                                                                         <div class="col-sm-5">
                                                                             <asp:TextBox ID="tbPeriodo1" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
-                                                                        <div class="col-sm-7 label-der">
+                                                                        <div class="col-sm-7 small label-der">
                                                                             <asp:Label ID="lblPeriodo1" runat="server" class="control-label small" Text="PERIODO 1(s)"></asp:Label>
                                                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbPeriodo1"
                                                                                 ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
@@ -147,100 +146,96 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-sm-6">
-                                                                    <div id="texto1">
-                                                                        <div class="form-group">
-                                                                            <div class="col-sm-5">
-                                                                                <asp:TextBox ID="tbDamping1" runat="server" class="form-control"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="col-sm-7 small label-der">
-                                                                                <asp:Label ID="lblDamping1" runat="server" class="control-label small" Text="DAMPING 1 %"></asp:Label>
-                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tbDamping1"
-                                                                                    ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
-                                                                            </div>
+                                                                <div class="col-sm-6" style="padding-left: 0px; padding-right: 0px;">
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-5">
+                                                                            <asp:TextBox ID="tbDamping1" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
-                                                                        <div class="form-group">
-                                                                            <div class="col-sm-5">
-                                                                                <asp:TextBox ID="tbDamping2" runat="server" class="form-control"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="col-sm-7 small label-der">
-                                                                                <asp:Label ID="lblDamping2" runat="server" class="control-label small" Text="DAMPING 2 %"></asp:Label>
-                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="tbDamping2"
-                                                                                    ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <div class="col-sm-5 small">
-                                                                                <asp:TextBox ID="tbNumCurvas" runat="server" class="form-control"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="col-sm-7 small label-der">
-                                                                                <asp:Label ID="lblNumCurvas" runat="server" class="control-label small" Text="NÚMERO DE CURVAS"></asp:Label>
-                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="tbNumCurvas"
-                                                                                    ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
-                                                                            </div>
+                                                                        <div class="col-sm-7 small label-der">
+                                                                            <asp:Label ID="lblDamping1" runat="server" class="control-label small" Text="DAMPING 1 %"></asp:Label>
+                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tbDamping1"
+                                                                                ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="texto2">
-                                                                        <div class="form-group">
-                                                                            <div class="col-sm-5">
-                                                                                <asp:TextBox ID="tbDamping3" runat="server" class="form-control"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="col-sm-7 small label-der">
-                                                                                <asp:Label ID="lblDamping3" runat="server" class="control-label small" Text="DAMPING %"></asp:Label>
-                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="tbDamping3"
-                                                                                    ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
-                                                                            </div>
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-5">
+                                                                            <asp:TextBox ID="tbDamping2" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
-                                                                        <div class="form-group">
-                                                                            <div class="col-sm-5">
-                                                                                <asp:TextBox ID="tbR1" runat="server" class="form-control"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="col-sm-7 small label-der">
-                                                                                <asp:Label ID="lblR1" runat="server" class="control-label small" Text="R1"></asp:Label>
-                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="tbR1"
-                                                                                    ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
-                                                                            </div>
+                                                                        <div class="col-sm-7 small label-der">
+                                                                            <asp:Label ID="lblDamping2" runat="server" class="control-label small" Text="DAMPING 2 %"></asp:Label>
+                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="tbDamping2"
+                                                                                ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
                                                                         </div>
-                                                                        <div class="form-group">
-                                                                            <div class="col-sm-5">
-                                                                                <asp:TextBox ID="tbR2" runat="server" class="form-control"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="col-sm-7 small label-der">
-                                                                                <asp:Label ID="lblR2" runat="server" class="control-label small" Text="R2"></asp:Label>
-                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="tbR2"
-                                                                                    ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
-                                                                            </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-5">
+                                                                            <asp:TextBox ID="tbNumCurvas" runat="server" class="form-control"></asp:TextBox>
                                                                         </div>
-                                                                        <div class="form-group">
-                                                                            <div class="col-sm-5">
-                                                                                <asp:TextBox ID="tbCoefRigidez" runat="server" class="form-control"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="col-sm-7 small label-der">
-                                                                                <asp:Label ID="lblCoefRigidez" runat="server" class="control-label small" Text="COEFICIENTE DE RIGIDEZ POST FLUENCIA"></asp:Label>
-                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="tbCoefRigidez"
-                                                                                    ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
-                                                                            </div>
+                                                                        <div class="col-sm-7 small label-der">
+                                                                            <asp:Label ID="lblNumCurvas" runat="server" class="control-label small" Text="NÚMERO DE CURVAS"></asp:Label>
+                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="tbNumCurvas"
+                                                                                ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
                                                                         </div>
-                                                                        <div class="form-group">
-                                                                            <div class="col-sm-5">
-                                                                                <asp:TextBox ID="tbNumCurvas2" runat="server" class="form-control small"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="col-sm-7 small label-der">
-                                                                                <asp:Label ID="lblNumCurvas2" runat="server" class="control-label small" Text="NUMERO DE CURVAS"></asp:Label>
-                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="tbNumCurvas2"
-                                                                                    ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
-                                                                            </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-5">
+                                                                            <asp:TextBox ID="tbDamping3" runat="server" class="form-control"></asp:TextBox>
+                                                                        </div>
+                                                                        <div class="col-sm-7 small label-der">
+                                                                            <asp:Label ID="lblDamping3" runat="server" class="control-label small" Text="DAMPING %"></asp:Label>
+                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="tbDamping3"
+                                                                                ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-5">
+                                                                            <asp:TextBox ID="tbR1" runat="server" class="form-control"></asp:TextBox>
+                                                                        </div>
+                                                                        <div class="col-sm-7 small label-der">
+                                                                            <asp:Label ID="lblR1" runat="server" class="control-label small" Text="R1"></asp:Label>
+                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="tbR1"
+                                                                                ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-5">
+                                                                            <asp:TextBox ID="tbR2" runat="server" class="form-control"></asp:TextBox>
+                                                                        </div>
+                                                                        <div class="col-sm-7 small label-der">
+                                                                            <asp:Label ID="lblR2" runat="server" class="control-label small" Text="R2"></asp:Label>
+                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="tbR2"
+                                                                                ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-5">
+                                                                            <asp:TextBox ID="tbCoefRigidez" runat="server" class="form-control"></asp:TextBox>
+                                                                        </div>
+                                                                        <div class="col-sm-7 small label-der">
+                                                                            <asp:Label ID="lblCoefRigidez" runat="server" class="control-label small" Text="COEFICIENTE DE RIGIDEZ POST FLUENCIA"></asp:Label>
+                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="tbCoefRigidez"
+                                                                                ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-5">
+                                                                            <asp:TextBox ID="tbNumCurvas2" runat="server" class="form-control small"></asp:TextBox>
+                                                                        </div>
+                                                                        <div class="col-sm-7 small label-der">
+                                                                            <asp:Label ID="lblNumCurvas2" runat="server" class="control-label small" Text="NUMERO DE CURVAS"></asp:Label>
+                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="tbNumCurvas2"
+                                                                                ErrorMessage="*" Style="position: static"></asp:RequiredFieldValidator>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <asp:Label ID="lblTituloEsquemaColumna123" runat="server" class="label-title-imge lead" Text="SECTION"></asp:Label>
-                                                            <hr />
-                                                            <div style="width: 100%; height: 190px;">
-                                                                <div class="image">
-                                                                    <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabis/Varios/Archivos/Imagenes/Dinamica/ES/6_ES.jpg" />
+                                                            <div class="col-md-4">
+                                                                <asp:Label ID="lblTituloEsquemaColumna123" runat="server" class="label-title-imge lead" Text="SECTION"></asp:Label>
+                                                                <hr />
+                                                                <div style="width: 100%; height: 190px;">
+                                                                    <div class="image">
+                                                                        <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabis/Varios/Archivos/Imagenes/Dinamica/ES/6_ES.jpg" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -249,30 +244,29 @@
 
                                                     <!-- BEGIN TEST2 FORM -->
                                                     <div class="tab-pane" id="test2" style="padding-top: 15px;">
-                                                        <div class="col-md-7">
-                                                            <div class="form-horizontal" role="form">
+                                                        <div class="form-group">
+                                                            <div class="col-md-7">
                                                                 <div class="form-group">
-                                                                    <div class="col-sm-6">
-                                                                        <div class="radio">
+                                                                    <div class="col-sm-1"></div>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="form-group">
                                                                             <asp:RadioButton ID="rbCargaSinusoidal" runat="server" AutoPostBack="True" Checked="True" GroupName="gTipoAnalisis" />
                                                                             <asp:Label ID="lblCargaSinusoidal" runat="server" Text="FUNCION DE CARGA SINUSOIDAL" class="label-radioButton"></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-sm-6">
-                                                                        <div class="radio">
+                                                                    <div class="col-sm-5">
+                                                                        <div class="form-group">
                                                                             <asp:RadioButton ID="rbAcelerograma" runat="server" GroupName="gTipoAnalisis" AutoPostBack="True" />
                                                                             <asp:Label ID="lblAcelerograma" runat="server" Text="ACELEROGRAMA" class="label-radioButton"></asp:Label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-5">
-                                                            <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="OUTLINE"></asp:Label>
-                                                            <hr />
-                                                        </div>
-                                                        <div class="form-horizontal" role="form">
-                                                            <div class="form-group">
+                                                            <div class="col-md-5">
+                                                                <asp:Label ID="lblEsqTE" runat="server" class="label-title-imge lead" Text="OUTLINE"></asp:Label>
+                                                                <hr />
+                                                            </div>
+                                                            <div class="col-sm-12">
                                                                 <asp:PlaceHolder ID="phTipoExitacion" runat="server"></asp:PlaceHolder>
                                                             </div>
                                                         </div>
@@ -281,25 +275,21 @@
 
                                                     <!-- BEGIN TEST3 FORM -->
                                                     <div class="tab-pane" id="test3">
-                                                        <div class="col-md-3" style="padding-top: 90px;"></div>
-                                                        <div class="col-md-7" style="padding-top: 90px;">
-                                                            <div class="form-horizontal" role="form">
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-4 text-right">
-                                                                        <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius">
-                                                                            <i class="fa fa-play"></i>
-                                                                        </asp:LinkButton>
-                                                                    </div>
+                                                        <div class="form-group">
+                                                            <div class="col-md-12" style="padding-top: 13%; padding-bottom: 13%;">
+                                                                <div class="form-group text-center">
+                                                                    <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius">
+                                                                        <i class="fa fa-play"></i>
+                                                                    </asp:LinkButton>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!-- END TEST3 FORM -->
                                                 </div>
-                                                </div>
                                             </div>
-                                            <!-- END CONTENT RIGHT -->
                                         </div>
+                                        <!-- END CONTENT RIGHT -->
                                     </div>
                                 </div>
                             </div>
@@ -334,12 +324,13 @@
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <div class="col-sm-12 text-center" style="padding-top: 10px;">
+                                                                <div class="col-sm-2"></div>
+                                                                <div class="col-sm-8 text-center" style="padding-top: 10px;">
                                                                     <div id="graphics0">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center image">
-                                                                                <chart:WebChartViewer ID="WebChartViewer1" runat="server"></chart:WebChartViewer>
-                                                                            </div>
+                                                                            <div class="image">
+                                                                                    <chart:WebChartViewer ID="WebChartViewer1" runat="server"></chart:WebChartViewer>
+                                                                                </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <asp:LinkButton ID="btnGetResult1" runat="server" class="btn btn-warning">
@@ -350,7 +341,7 @@
                                                                     </div>
                                                                     <div id="graphics1">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center image">
+                                                                            <div class="image">
                                                                                 <chart:WebChartViewer ID="WebChartViewer2" runat="server"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
@@ -363,7 +354,7 @@
                                                                     </div>
                                                                     <div id="graphics2">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center image">
+                                                                            <div class="image">
                                                                                 <chart:WebChartViewer ID="WebChartViewer3" runat="server" Style="position: static"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
@@ -377,7 +368,7 @@
                                                                     </div>
                                                                     <div id="graphics3">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center image">
+                                                                            <div class="image">
                                                                                 <chart:WebChartViewer ID="WebChartViewer4" runat="server" Style="position: static"></chart:WebChartViewer>
                                                                             </div>
                                                                         </div>
@@ -389,6 +380,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                <div class="col-sm-2"></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -442,6 +434,15 @@
             });
             $("#" + imgName + select.selectedIndex).show();
         }
+
+        document.getElementById("WebChartViewer1").style.width = "";
+        document.getElementById("WebChartViewer1").style.height = "";
+        document.getElementById("WebChartViewer2").style.width = "";
+        document.getElementById("WebChartViewer2").style.height = "";
+        document.getElementById("WebChartViewer3").style.width = "";
+        document.getElementById("WebChartViewer3").style.height = ""; 
+        document.getElementById("WebChartViewer4").style.width = "";
+        document.getElementById("WebChartViewer4").style.height = "";
     </script>
     <!-- END JS PLUGIN -->
 </body>
