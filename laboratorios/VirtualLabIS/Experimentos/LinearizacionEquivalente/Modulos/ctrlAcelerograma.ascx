@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="ctrlAcelerograma.ascx.vb" Inherits="Modulos_ctrlAcelerograma" %>
-<div class="col-md-7">
-    <div class="form-horizontal" role="form">
+<div class="form-group">
+    <div class="col-md-7" style="padding-top: 2%; padding-bottom: 6.5%;">
         <%--Value 1--%>
         <div id="tevalue0">
             <div class="form-group">
@@ -53,14 +53,13 @@
             </div>
         </div>
     </div>
-</div>
-<div class="col-md-5">
-    <div style="width: 100%; height: 220px;">
-        <div class="image">
-            <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/2_EN.jpg" />
+    <div class="col-md-5">
+        <div style="width: 100%; height: 220px;">
+            <div class="image">
+                <asp:Image ID="img2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/Dinamica/EN/2_EN.jpg" />
+            </div>
         </div>
     </div>
+
+    <asp:HiddenField ID="hfArchivosSismo1" runat="server" Value="0" />
 </div>
-
-<asp:HiddenField ID="hfArchivosSismo1" runat="server" Value="0" />
-

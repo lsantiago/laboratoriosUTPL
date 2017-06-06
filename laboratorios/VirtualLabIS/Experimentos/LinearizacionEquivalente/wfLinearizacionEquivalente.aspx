@@ -59,7 +59,7 @@
                                     <div class="panel-body">
                                         <div class="row">
                                             <!-- BEGIN CONTENT LEFT -->
-                                            <div class="col-md-4" style="border-right: 1.0pt solid #dddddd;">
+                                            <div class="col-md-4">
                                                 <div class="grid">
                                                     <div class="grid-header">
                                                         <i class="fa fa-bar-chart-o"></i>
@@ -71,8 +71,8 @@
                                                             </asp:LinkButton>--%>
                                                         </div>
                                                     </div>
-                                                    <div class="grid-body text-center" style="width: 100%; height: 256px;">
-                                                        <div style="width: 100%; height: 100%;">
+                                                    <div class="grid-body text-center" style="width: 100%; height: 100%;">
+                                                        <div style="width: 100%; height: 256px;">
                                                             <div class="image">
                                                                 <asp:Image ID="img1" runat="server" ImageUrl="~/VirtualLab/Varios/Archivos/Imagenes/Dinamica/ES/1_ES.jpg" />
                                                             </div>
@@ -83,7 +83,7 @@
                                             <!-- END CONTENT LEFT -->
 
                                             <!-- BEGIN CONTENT RIGHT -->
-                                            <div class="col-md-8">
+                                            <div class="col-md-8" style="border-left: 1.0pt solid #dddddd;">
                                                 <ul class="nav nav-tabs">
                                                     <li class="active"><a href="#test1" data-toggle="tab">
                                                         <strong>
@@ -95,12 +95,13 @@
                                                         <strong>
                                                             <asp:Label ID="lblAnalisis" runat="server" Text="ANALYSIS"></asp:Label></strong></a></li>
                                                 </ul>
-                                                <div class="tab-content" style="width: 100%; height: 256px;">
+                                                <div class="form-horizontal">
+                                                <div class="tab-content">
                                                     <!-- BEGIN TEST1 FORM -->
                                                     <div class="tab-pane active" id="test1" style="padding-top: 60px">
+                                                        <div class="form-group">
                                                         <div class="col-md-2"></div>
-                                                        <div class="col-md-9">
-                                                            <div class="form-horizontal" role="form">
+                                                        <div class="col-md-9" style="padding-top: 4%; padding-bottom: 11%;">
                                                                 <div class="form-group">
                                                                     <div class="col-sm-2">
                                                                         <asp:TextBox ID="txtPeriodo" runat="server" class="form-control"></asp:TextBox>
@@ -155,9 +156,9 @@
                                                                                                 ErrorMessage="*" Style="position: static">*</asp:RequiredFieldValidator>
                                                                     </div>
                                                                 </div>
-                                                            </div>
                                                         </div>
                                                         <div class="col-md-1"></div>
+                                                            </div>
                                                     </div>
                                                     <!-- END TEST1 FORM -->
 
@@ -168,11 +169,11 @@
                                                     <!-- END TEST3 FORM -->
 
                                                     <!-- BEGIN TEST3 FORM -->
-                                                    <div class="tab-pane" id="test3" style="padding-top: 70px;">
+                                                    <div class="tab-pane" id="test3">
+                                                        <div class="form-group text-center">
                                                         <div class="col-md-2"></div>
-                                                        <div class="col-md-7">
-                                                            <div class="form-horizontal" role="form">
-                                                                <div class="form-group">
+                                                        <div class="col-md-7" style="padding-top: 13%; padding-bottom: 14%;">
+                                                                <div class="form-group text-center">
                                                                     <div class="col-sm-4 text-center" style="padding-right: 0px;">
                                                                         <asp:LinkButton ID="btnGraficar" runat="server" class="btn btn-warning btn-radius">
                                                                             <i class="fa fa-play"></i>
@@ -194,11 +195,12 @@
                                                                         <asp:Label ID="lblResultados" runat="server" CssClass="Funcionalidad-subtitulo" class="control-label small" Text="RESULTADOS" Visible="False"></asp:Label>
                                                                     </div>
                                                                 </div>
-                                                            </div>
                                                         </div>
+                                                            </div>
                                                     </div>
                                                     <!-- END TEST4 FORM -->
                                                 </div>
+                                                    </div>
                                             </div>
                                             <!-- END CONTENT RIGHT -->
                                         </div>
@@ -235,12 +237,15 @@
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group">
-                                                                <div class="col-md-12 text-center" style="padding-top: 10px;">
-                                                                    <div id="graphics0" style="width: 100%; height: 100%;">
+                                                            <div class="form-group text-center">
+                                                                <div class="col-md-12">
+                                                                    <div id="graphics0" style="padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
+                                                                            <div class="col-sm-2"></div>
+                                                                            <div class="col-sm-10 text-center">
+                                                                                <div class="image">
                                                                                 <chart:webchartviewer id="WebChartViewer1" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                            </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -249,10 +254,13 @@
                                                                             </asp:LinkButton>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics1" style="width: 100%; height: 100%">
+                                                                    <div id="graphics1" style="padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="WebChartViewer2" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                            <div class="col-sm-2"></div>
+                                                                            <div class="col-sm-10 text-center">
+                                                                                <div class="image">
+                                                                                    <chart:webchartviewer id="WebChartViewer2" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -261,10 +269,13 @@
                                                                             </asp:LinkButton>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics2" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics2" style="padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="WebChartViewer3" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                            <div class="col-sm-2"></div>
+                                                                            <div class="col-sm-10 text-center">
+                                                                                <div class="image">
+                                                                                    <chart:webchartviewer id="WebChartViewer3" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -273,10 +284,13 @@
                                                                             </asp:LinkButton>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="graphics3" style="width: 100%; height: 100%;">
+                                                                    <div id="graphics3" style="padding-top: 15px;">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-12 text-center">
-                                                                                <chart:webchartviewer id="WebChartViewer4" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                            <div class="col-sm-2"></div>
+                                                                            <div class="col-sm-10 text-center">
+                                                                                <div class="image">
+                                                                                    <chart:webchartviewer id="WebChartViewer4" runat="server" style="position: static" BorderColor="White" SelectionBorderColor="Transparent"></chart:webchartviewer>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group">
@@ -336,6 +350,15 @@
             });
             $("#" + imgName + select.selectedIndex).show();
         }
+
+        document.getElementById("WebChartViewer1").style.width = "";
+        document.getElementById("WebChartViewer1").style.height = ""; 
+        document.getElementById("WebChartViewer2").style.width = "";
+        document.getElementById("WebChartViewer2").style.height = ""; 
+        document.getElementById("WebChartViewer3").style.width = "";
+        document.getElementById("WebChartViewer3").style.height = "";
+        document.getElementById("WebChartViewer4").style.width = "";
+        document.getElementById("WebChartViewer4").style.height = "";
     </script>
     <!-- END JS PLUGIN -->
 </body>
