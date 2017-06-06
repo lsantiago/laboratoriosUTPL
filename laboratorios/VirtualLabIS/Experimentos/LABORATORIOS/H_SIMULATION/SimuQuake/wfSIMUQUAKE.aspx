@@ -65,7 +65,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid-body text-center" style="width: 100%; height: 100%;">
-                                                        <div style="width: 100%; height: 226px;">
+                                                        <div style="width: 100%; height: 239px;">
                                                             <div class="image">
                                                                 <asp:Image ID="FigMain" runat="server" ImageUrl="~/Imagenes/General/Tools/Dinamica_2GDL_Tool2.bmp" />
                                                             </div>
@@ -152,8 +152,8 @@
                                                         <!-- END TEST1 FORM -->
 
                                                         <!-- BEGIN TEST2 FORM -->
-                                                        <div class="tab-pane" id="test2" style="padding-top: 15px;">
-                                                            <div class="form-group">
+                                                        <div class="tab-pane" id="test2">
+                                                            <div class="form-group" style="padding-top: 15px;">
                                                                 <div class="col-md-7">
                                                                     <div class="form-group">
                                                                         <asp:Label ID="lblFactorA" runat="server" class="col-sm-8 control-label label-one" Text="FA FACTOR."></asp:Label>
@@ -197,13 +197,11 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-5">
-                                                                    <div id="chart-line">
-                                                                        <asp:Label ID="lblNomFig2" runat="server" class="label-title-imge lead" Text="TARGET SPECTRUM PARAMETERS"></asp:Label>
-                                                                        <hr />
-                                                                        <div style="width: 100%; height: 191px;">
-                                                                            <div class="image">
-                                                                                <asp:Image ID="imgFig2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/SIMUQUAKE/FigTargetSpectrumPar-EN.gif" />
-                                                                            </div>
+                                                                    <asp:Label ID="lblNomFig2" runat="server" class="label-title-imge lead" Text="TARGET SPECTRUM PARAMETERS"></asp:Label>
+                                                                    <hr />
+                                                                    <div style="width: 100%; height: 191px;">
+                                                                        <div class="image">
+                                                                            <asp:Image ID="imgFig2" runat="server" ImageUrl="~/VirtualLabIS/Varios/Archivos/Imagenes/SIMUQUAKE/FigTargetSpectrumPar-EN.gif" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -213,8 +211,8 @@
 
                                                         <!-- BEGIN TEST3 FORM -->
                                                         <div class="tab-pane" id="test3">
-                                                            <div class="col-md-8">
-                                                                <div class="form-horizontal" role="form">
+                                                            <div class="form-group">
+                                                            <div class="col-md-8" style="padding-top: 5%; padding-bottom: 8.6%;">
                                                                     <div class="form-group">
                                                                         <asp:Label ID="lblPeriodoInicial" runat="server" class="col-sm-8 control-label small label-one" Text="MATCH FROM (s)"></asp:Label>
                                                                         <div class="col-sm-3">
@@ -239,16 +237,16 @@
                                                                                 CssClass="Funcionalidad-Mensajes-Links" ErrorMessage="*"></asp:RequiredFieldValidator>
                                                                         </div>
                                                                     </div>
-                                                                </div>
                                                             </div>
+                                                                </div>
                                                         </div>
                                                         <!-- END TEST3 FORM -->
 
                                                         <!-- BEGIN TEST4 FORM -->
                                                         <div class="tab-pane" id="test4">
-                                                            <div class="col-md-2" style="padding-top: 50px;"></div>
-                                                            <div class="col-md-7" style="padding-top: 50px;">
-                                                                <div class="form-horizontal" role="form">
+                                                            <div class="form-group">
+                                                            <div class="col-md-2"></div>
+                                                            <div class="col-md-7" style="padding-top: 11%; padding-bottom: 11.7%">
                                                                     <div class="form-group">
                                                                         <div class="col-sm-12 text-center">
                                                                             <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
@@ -281,8 +279,8 @@
                                                                         <label class="col-sm-2"></label>
                                                                         <asp:HiddenField ID="hiddIndicador" runat="server" />
                                                                     </div>
-                                                                </div>
                                                             </div>
+                                                                </div>
                                                         </div>
                                                         <!-- END TEST4 FORM -->
                                                     </div>
@@ -297,7 +295,7 @@
                             <div class="panel-group" style="margin-bottom: 0px;">
                                 <div class="panel panel-primary" style="border-bottom: none;">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title text-center">OUTPUTS</h4>
+                                        <h4 class="panel-title text-center">OUTPUT</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
