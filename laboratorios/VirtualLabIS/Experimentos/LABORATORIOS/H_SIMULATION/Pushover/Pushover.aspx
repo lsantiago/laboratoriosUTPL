@@ -1286,7 +1286,23 @@
         document.getElementById("WebChartC32").style.width = "";
         document.getElementById("WebChartC32").style.height = "";
         document.getElementById("WebChartC42").style.width = "";
-        document.getElementById("WebChartC42").style.height = "";
+        document.getElementById("WebChartC42").style.height = ""; 
+        document.getElementById("WebChartC13").style.width = "";
+        document.getElementById("WebChartC13").style.height = ""; 
+        document.getElementById("WebChartC23").style.width = "";
+        document.getElementById("WebChartC23").style.height = ""; 
+        document.getElementById("WebChartC33").style.width = "";
+        document.getElementById("WebChartC33").style.height = ""; 
+        document.getElementById("WebChartC43").style.width = "";
+        document.getElementById("WebChartC43").style.height = ""; 
+        document.getElementById("WebChartC14").style.width = "";
+        document.getElementById("WebChartC14").style.height = ""; 
+        document.getElementById("WebChartC24").style.width = "";
+        document.getElementById("WebChartC24").style.height = ""; 
+        document.getElementById("WebChartC34").style.width = "";
+        document.getElementById("WebChartC34").style.height = ""; 
+        document.getElementById("WebChartC44").style.width = "";
+        document.getElementById("WebChartC44").style.height = "";
     </script>
     <!-- END JS PLUGIN -->
 </body>
